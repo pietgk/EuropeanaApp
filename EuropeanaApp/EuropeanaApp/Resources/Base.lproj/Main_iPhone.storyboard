@@ -23,6 +23,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="260" image="Europeana logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SC1-WJ-Otq">
+                                <rect key="frame" x="-13" y="0.0" width="240" height="260"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="glimworm-ibeacons.png" translatesAutoresizingMaskIntoConstraints="NO" id="RdD-rZ-geW">
+                                <rect key="frame" x="16" y="253" width="288" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -32,6 +38,10 @@
             <point key="canvasLocation" x="44" y="416"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Europeana logo.jpg" width="374" height="539"/>
+        <image name="glimworm-ibeacons.png" width="323" height="99"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

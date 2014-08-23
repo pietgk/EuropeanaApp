@@ -7,7 +7,8 @@
 //
 
 #import "IXManager.h"
+#import "IXLocationManager.h"
 
-@implementation IXManager
+@implementation IXManager <IXLo
 
 @end
