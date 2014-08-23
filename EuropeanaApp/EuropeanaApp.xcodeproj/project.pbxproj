@@ -25,6 +25,7 @@
 		E597DA0C19A9104C00E308A9 /* IXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0B19A9104C00E308A9 /* IXManager.m */; };
 		E597DA0F19A9105D00E308A9 /* IXAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0E19A9105D00E308A9 /* IXAudioManager.m */; };
 		E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA1119A9106800E308A9 /* IXAppDelegate.m */; };
+		E597DA1519A910AD00E308A9 /* IXLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA1419A910AD00E308A9 /* IXLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		E597DA0E19A9105D00E308A9 /* IXAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXAudioManager.m; sourceTree = "<group>"; };
 		E597DA1019A9106800E308A9 /* IXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXAppDelegate.h; sourceTree = "<group>"; };
 		E597DA1119A9106800E308A9 /* IXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXAppDelegate.m; sourceTree = "<group>"; };
+		E597DA1319A910AD00E308A9 /* IXLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocation.h; sourceTree = "<group>"; };
+		E597DA1419A910AD00E308A9 /* IXLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 		E597D9EF19A90EF800E308A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E597DA1319A910AD00E308A9 /* IXLocation.h */,
+				E597DA1419A910AD00E308A9 /* IXLocation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				E597DA0619A9100D00E308A9 /* main.m in Sources */,
 				E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */,
 				E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */,
+				E597DA1519A910AD00E308A9 /* IXLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
