@@ -7,7 +7,32 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IXBeacon.h"
+
+@class IXLocationManager;
+@protocol IXLocationManagerDelegate
+
+@optional
+/*
+ *
+ */
+- (void) ixLocationManager : (IXLocationManager *)ixLocationManager spottedIXBeacon:(IXBeacon *) ixBeacon;
+
+/*
+ *
+ */
+- (void) ixLocationManger : (IXLocationManager *)ixLocationManager exitAssetRegion:(IXBeacon *) ixBeacon;
+
+/*
+ *
+ */
+- (void) ixLocationManager : (IXLocationManager *)ixLocationManager enteredIXBeaconRegion: (IXBeacon *) ixBeacon;
+
+
+@end
 
 @interface IXLocationManager : NSObject
 
+- (instancetype) initWithDelegate:(id <IXLocationManagerDelegate>)aDelegate;
+- (void) start;
 @end

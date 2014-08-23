@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IXLocationManager.h"
 
-@interface IXManager : NSObject
+@interface IXManager : NSObject  <IXLocationManagerDelegate>
 
 @end
