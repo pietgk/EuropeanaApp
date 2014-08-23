@@ -10,4 +10,9 @@
 
 @interface IXAudioManager : NSObject
 
+- (instancetype)init;
+- (void)tryPlayMusic;
+- (void)playSystemSound;
+
 @end
+
