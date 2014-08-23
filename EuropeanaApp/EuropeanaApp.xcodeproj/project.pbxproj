@@ -22,6 +22,7 @@
 		77D3C4C919A903AB001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
 		77D3C4D119A903AB001F00EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77D3C4CF19A903AB001F00EC /* InfoPlist.strings */; };
 		77D3C4D319A903AB001F00EC /* EuropeanaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3C4D219A903AB001F00EC /* EuropeanaAppTests.m */; };
+		77E3D7BF19A90BA00058C62B /* IXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7BE19A90BA00058C62B /* IXManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		77D3C4CE19A903AB001F00EC /* EuropeanaAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EuropeanaAppTests-Info.plist"; sourceTree = "<group>"; };
 		77D3C4D019A903AB001F00EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77D3C4D219A903AB001F00EC /* EuropeanaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EuropeanaAppTests.m; sourceTree = "<group>"; };
+		77E3D7BD19A90BA00058C62B /* IXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXManager.h; sourceTree = "<group>"; };
+		77E3D7BE19A90BA00058C62B /* IXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				77D3C4B919A903AB001F00EC /* Main_iPad.storyboard */,
 				77D3C4BC19A903AB001F00EC /* IXViewController.h */,
 				77D3C4BD19A903AB001F00EC /* IXViewController.m */,
+				77E3D7BD19A90BA00058C62B /* IXManager.h */,
+				77E3D7BE19A90BA00058C62B /* IXManager.m */,
 				77D3C4BF19A903AB001F00EC /* Images.xcassets */,
 				77D3C4AB19A903AA001F00EC /* Supporting Files */,
 			);
@@ -256,6 +261,7 @@
 			files = (
 				77D3C4B119A903AA001F00EC /* main.m in Sources */,
 				77D3C4B519A903AB001F00EC /* IXAppDelegate.m in Sources */,
+				77E3D7BF19A90BA00058C62B /* IXManager.m in Sources */,
 				77D3C4BE19A903AB001F00EC /* IXViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +477,7 @@
 				77D3C4D819A903AB001F00EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77D3C4D919A903AB001F00EC /* Build configuration list for PBXNativeTarget "EuropeanaAppTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +486,7 @@
 				77D3C4DB19A903AB001F00EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
