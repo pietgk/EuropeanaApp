@@ -9,9 +9,11 @@
 #import "IXManager.h"
 #import "IXLocationManager.h"
 #import "IXBeacon.h"
+#import "IXAudioManager.h"
 
 @interface IXManager ()
 @property (nonatomic, strong) IXLocationManager *locationManager;
+@property (nonatomic, strong) IXAudioManager *audioManager;
 @end
 
 @implementation IXManager
@@ -33,10 +35,19 @@
     return _locationManager;
 }
 
+
+- (IXAudioManager *) audioManager
+{
+    if (!_audioManager) {
+        _audioManager = [[IXAudioManager alloc] init];
+    }
+    return _audioManager;
+}
+
 #pragma mark - Location Manager Delegate stuff
 - (void) ixLocationManager : (IXLocationManager *)ixLocationManager spottedIXBeacon:(IXBeacon *) ixBeacon
 {
-    
+    [self.audioManager tryPlayMusic];
 }
 /*
  *
