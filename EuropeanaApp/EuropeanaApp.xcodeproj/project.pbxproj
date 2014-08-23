@@ -15,6 +15,8 @@
 		77D3C4C919A903AB001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
 		77D3C4D119A903AB001F00EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77D3C4CF19A903AB001F00EC /* InfoPlist.strings */; };
 		77D3C4D319A903AB001F00EC /* EuropeanaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3C4D219A903AB001F00EC /* EuropeanaAppTests.m */; };
+		77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C119A910FA0058C62B /* Europeana logo.jpg */; };
+		77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */; };
 		E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
 		E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FA19A90FE900E308A9 /* Images.xcassets */; };
 		E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FC19A90FFE00E308A9 /* Main_iPad.storyboard */; };
@@ -48,6 +50,8 @@
 		77D3C4CE19A903AB001F00EC /* EuropeanaAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EuropeanaAppTests-Info.plist"; sourceTree = "<group>"; };
 		77D3C4D019A903AB001F00EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77D3C4D219A903AB001F00EC /* EuropeanaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EuropeanaAppTests.m; sourceTree = "<group>"; };
+		77E3D7C119A910FA0058C62B /* Europeana logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Europeana logo.jpg"; sourceTree = "<group>"; };
+		77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glimworm-ibeacons.png"; sourceTree = "<group>"; };
 		E597D9F719A90FA700E308A9 /* IXLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocationManager.h; sourceTree = "<group>"; };
 		E597D9F819A90FA700E308A9 /* IXLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXLocationManager.m; sourceTree = "<group>"; };
 		E597D9FA19A90FE900E308A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -160,6 +164,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		77E3D7C019A910FA0058C62B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				77E3D7C119A910FA0058C62B /* Europeana logo.jpg */,
+				77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */,
+			);
+			name = images;
+			path = EuropeanaApp/images;
+			sourceTree = SOURCE_ROOT;
+		};
 		E597D9EC19A90EF800E308A9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +228,7 @@
 		E597D9F419A90F3700E308A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				77E3D7C019A910FA0058C62B /* images */,
 				E597D9FC19A90FFE00E308A9 /* Main_iPad.storyboard */,
 				E597D9FE19A90FFE00E308A9 /* Main_iPhone.storyboard */,
 				E597D9FA19A90FE900E308A9 /* Images.xcassets */,
@@ -300,7 +315,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E597DA0119A90FFE00E308A9 /* Main_iPhone.storyboard in Resources */,
+				77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */,
 				E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */,
+				77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
 				E597DA0519A9100D00E308A9 /* EuropeanaApp-Info.plist in Resources */,
 			);
