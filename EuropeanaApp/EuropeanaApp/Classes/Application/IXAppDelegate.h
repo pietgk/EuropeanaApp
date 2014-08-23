@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IXManager.h"
 
 @interface IXAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) IXManager *manager;
 @end

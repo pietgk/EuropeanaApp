@@ -8,11 +8,15 @@
 
 #import "IXAppDelegate.h"
 
+@interface IXAppDelegate ()
+
+@end
 @implementation IXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.manager = [[IXManager alloc] init];
     return YES;
 }
 							
