@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4456DD9619A9348A00B5B707 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4456DD9419A9348A00B5B707 /* background-music-aac.caf */; };
+		4456DD9719A9348A00B5B707 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4456DD9519A9348A00B5B707 /* pew-pew-lei.caf */; };
 		77D3C4A519A903AA001F00EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A419A903AA001F00EC /* Foundation.framework */; };
 		77D3C4A719A903AA001F00EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A619A903AA001F00EC /* CoreGraphics.framework */; };
 		77D3C4A919A903AA001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4456DD9419A9348A00B5B707 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "background-music-aac.caf"; path = "../../../../Downloads/ATBasicSounds/background-music-aac.caf"; sourceTree = "<group>"; };
+		4456DD9519A9348A00B5B707 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "../../../../Downloads/ATBasicSounds/pew-pew-lei.caf"; sourceTree = "<group>"; };
 		77D3C4A119A903AA001F00EC /* EuropeanaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuropeanaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77D3C4A619A903AA001F00EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -236,6 +240,8 @@
 		E597D9F419A90F3700E308A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4456DD9419A9348A00B5B707 /* background-music-aac.caf */,
+				4456DD9519A9348A00B5B707 /* pew-pew-lei.caf */,
 				77E3D7C019A910FA0058C62B /* images */,
 				E597D9FC19A90FFE00E308A9 /* Main_iPad.storyboard */,
 				E597D9FE19A90FFE00E308A9 /* Main_iPhone.storyboard */,
@@ -330,8 +336,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4456DD9719A9348A00B5B707 /* pew-pew-lei.caf in Resources */,
 				E597DA0119A90FFE00E308A9 /* Main_iPhone.storyboard in Resources */,
 				77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */,
+				4456DD9619A9348A00B5B707 /* background-music-aac.caf in Resources */,
 				E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */,
 				77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
