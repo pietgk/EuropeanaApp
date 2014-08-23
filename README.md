@@ -1,4 +1,4 @@
 EuropeanaApp
 ============
 
-iBeacon Hackaton Challenge EuripeanaApp
+iBeacon Hackathon Challenge EuropeanaApp
