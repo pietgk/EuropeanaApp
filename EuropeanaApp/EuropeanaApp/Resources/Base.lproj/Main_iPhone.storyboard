@@ -84,7 +84,6 @@
                     </view>
                     <connections>
                         <outlet property="infoLabel" destination="c4U-SU-fQg" id="ChX-gQ-0B3"/>
-                        <outlet property="stop" destination="BDO-7o-Acq" id="Sjm-Yf-t9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
