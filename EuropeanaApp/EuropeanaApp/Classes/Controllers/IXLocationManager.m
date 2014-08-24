@@ -148,14 +148,14 @@
     switch (state) {
         case CLRegionStateInside: {
             // Inform the delegate for inside region event.
-            if (self.delegate ){//if @optional && [self.delegate respondToSelector:@selector(ixLocationManager:enteredAssetRegion:)]) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManger:enteredAssetRegion:)]) {
                 [self.delegate ixLocationManger:self enteredAssetRegion:region];;
             }
         }   break;
         case CLRegionStateOutside:
         case CLRegionStateUnknown:{
             // Inform the delegate for outside region event.
-            if ([self.delegate respondsToSelector:@selector(ixLocationManager:exitedAssetRegion:)]) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:exitedAssetRegion:)]) {
                 [self.delegate ixLocationManager:self exitedAssetRegion:region];
             }
         } break;
