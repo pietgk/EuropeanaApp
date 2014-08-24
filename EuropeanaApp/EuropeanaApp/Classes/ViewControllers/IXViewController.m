@@ -13,6 +13,7 @@
 @interface IXViewController ()
 - (IBAction)test:(id)sender;
 - (IBAction)speak:(id)sender;
+- (IBAction)stop:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (nonatomic, strong) IXAudioManager *audioManager;
@@ -61,6 +62,15 @@
         [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum"];
         [self.audioManager playBackgroundAudio];
         self.playing = YES;
+    }
+}
+
+
+- (IBAction)stop:(id)sender
+{
+    if (self.playing) {
+        [self.audioManager fadeOutBackgroundAudio];
+        self.playing = NO;
     }
 }
 @end

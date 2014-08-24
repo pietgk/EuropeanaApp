@@ -56,6 +56,15 @@
                                     <action selector="speak:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vyg-uI-3QE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-7o-Acq">
+                                <rect key="frame" x="49" y="386" width="50" height="30"/>
+                                <state key="normal" title="STOP!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Vt-rc-HPg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -75,6 +84,7 @@
                     </view>
                     <connections>
                         <outlet property="infoLabel" destination="c4U-SU-fQg" id="ChX-gQ-0B3"/>
+                        <outlet property="stop" destination="BDO-7o-Acq" id="Sjm-Yf-t9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
