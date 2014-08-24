@@ -78,7 +78,11 @@
     NSMutableArray *result = [NSMutableArray array];
     
     for (NSDictionary *elem in plistArray) {
-        CLBeaconRegion *beacon = [[CLBeaconRegion alloc] initWithProximityUUID:elem[@"UUID"] major:[elem[@"major"] integerValue] minor:[elem[@"minor"] integerValue] identifier:elem[@"identifier"]];
+        CLBeaconRegion *beacon = [[CLBeaconRegion alloc]
+                                             initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:elem[@"UUID"]]
+                                             major:[elem[@"major"] integerValue]
+                                             minor:[elem[@"minor"] integerValue]
+                                             identifier:elem[@"identifier"]];
         
         // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
         
@@ -151,7 +155,7 @@
         case CLRegionStateOutside:
         case CLRegionStateUnknown:{
             // Inform the delegate for outside region event.
-            if (self.delegate) { //if @optional && [self.delegate respondToSelector:@selector(ixLocationManager:exitedAssetRegion:)]) {
+            if ([self.delegate respondsToSelector:@selector(ixLocationManager:exitedAssetRegion:)]) {
                 [self.delegate ixLocationManager:self exitedAssetRegion:region];
             }
         } break;
