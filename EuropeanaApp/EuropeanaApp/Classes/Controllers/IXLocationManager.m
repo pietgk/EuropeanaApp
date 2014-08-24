@@ -51,21 +51,6 @@
 
 - (void) start;
 {
-/*    dispatch_async(self.myQueue, ^{
-        // Perform ...
-        NSUInteger major = 3001;
-        NSUInteger minor = 1;
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            IXBeacon *beacon = [[IXBeacon alloc] init];
-            beacon.major = major;
-            beacon.minor = minor;
-            if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:spottedIXBeacon:)]) {
-                [self.delegate ixLocationManager:self spottedIXBeacon:beacon];
-            }
-        });
-    });
-*/
     [self startRangingBeacons];
 }
 
@@ -178,16 +163,30 @@
         // Inform the delegate of all the foundend beacons.
         // Note: A beacon region could contains several beacons (in musuem exposition we could have different beacons just to index the room not a one-to-one relationship between beacon and asset)
         for (CLBeacon *currentBeacon in validBeacons) {
-            NSLog(@"Beacon region: %@ major: %@ minor %@ distance: %@",region.identifier, currentBeacon.major, currentBeacon.minor, @(currentBeacon.accuracy));
             
-            if (self.delegate){ //if @optional&& [self.delegate respondToSelector:@selector(ixLocationManager:spottedIXBeacon:)]){
-                IXBeacon *ixBeacon = [IXBeacon createWithIdentifier:region.identifier major:[currentBeacon.major integerValue] minor:[currentBeacon.minor integerValue] distance:currentBeacon.accuracy];
-                
-                [self.delegate ixLocationManager:self spottedIXBeacon:ixBeacon];
+            NSLog(@"Beacons identifier: %@ major: %@ minor %@ distance: %@",region.identifier, currentBeacon.major, currentBeacon.minor, @(currentBeacon.accuracy));
+            if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:spottedIXBeacon:)]) {
+
+                if (currentBeacon.accuracy < 6) {
+                    IXBeacon *ixBeacon = [IXBeacon createWithIdentifier:region.identifier major:[currentBeacon.major integerValue] minor:[currentBeacon.minor integerValue] distance:currentBeacon.accuracy];
+                        [self tellDelegateBeaconIsSpotted:ixBeacon];
+                }
             }
         }
     }
 }
+
+- (void) tellDelegateBeaconIsSpotted:(IXBeacon*)beacon
+{
+    NSLog(@"Beacon major: %lu minor %lu ", beacon.major, (unsigned long)beacon.minor);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:spottedIXBeacon:)]) {
+            [self.delegate ixLocationManager:self spottedIXBeacon:beacon];
+        }
+    });
+}
+
+
 
 - (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
 {
