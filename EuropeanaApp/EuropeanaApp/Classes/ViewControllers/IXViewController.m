@@ -8,9 +8,13 @@
 
 #import "IXViewController.h"
 #import "IXAppDelegate.h"
+#import "IXAudioManager.h"
 
 @interface IXViewController ()
 - (IBAction)test:(id)sender;
+- (IBAction)speak:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @property (nonatomic, strong) IXManager *manager;
 @end
@@ -34,5 +38,10 @@
 {
     IXBeacon *ixBeacon = [[IXBeacon alloc] init];
     [self.manager ixLocationManager:nil spottedIXBeacon:ixBeacon];
+}
+
+- (IBAction)speak:(id)sender
+{
+    
 }
 @end
