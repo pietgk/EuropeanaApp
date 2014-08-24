@@ -11,8 +11,7 @@
 @interface IXBeacon : NSObject
 @property (nonatomic, assign) NSUInteger major;
 @property (nonatomic, assign) NSUInteger minor;
-@property (nonatomic, assign) CGFloat distance;
-@property (nonatomic, copy) NSString *identifier;
+@property (nonatomic, assign) double distance;
+@property (nonatomic, strong) NSString *uuid;
 
-+ (instancetype) createWithIdentifier:(NSString *)identifier major:(NSUInteger)major minor:(NSUInteger)minor distance:(CGFloat) distance;
 @end
