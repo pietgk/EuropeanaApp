@@ -134,7 +134,7 @@
         case CLRegionStateInside: {
             // Inform the delegate for inside region event.
             if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManger:enteredAssetRegion:)]) {
-                [self.delegate ixLocationManger:self enteredAssetRegion:region];;
+                [self.delegate ixLocationManger:self enteredAssetRegion:region];
             }
         }   break;
         case CLRegionStateOutside:
@@ -151,9 +151,7 @@
 {
     if ([beacons count] > 0) {
         // To keep it simple we rely on Apple accuracy algorithm. Soon I'll checkout something more accurate but should be fine for hackathon demo app.
-        for (CLBeacon *beacon in beacons) {
-            NSLog(@"All beacons identifier: %@ major: %@ minor %@ distance: %@",region.identifier, beacon.major, beacon.minor, @(beacon.accuracy));
-        }
+
         // Before we inspect all the ranged beacons let's clean up all the beacons that have unknown distance.
         NSArray *validBeacons = [beacons filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(CLBeacon *evaluatedBeacon, NSDictionary *bindings) {
             return evaluatedBeacon.rssi != 0; //or accuracy == -1.0 or proximity == Unknown
@@ -167,10 +165,10 @@
             NSLog(@"Beacons identifier: %@ major: %@ minor %@ distance: %@",region.identifier, currentBeacon.major, currentBeacon.minor, @(currentBeacon.accuracy));
             if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:spottedIXBeacon:)]) {
 
-                if (currentBeacon.accuracy < 6) {
+                //if (currentBeacon.accuracy < 4) { // hard coded 4m for hackaton
                     IXBeacon *ixBeacon = [IXBeacon createWithIdentifier:region.identifier major:[currentBeacon.major integerValue] minor:[currentBeacon.minor integerValue] distance:currentBeacon.accuracy];
                         [self tellDelegateBeaconIsSpotted:ixBeacon];
-                }
+                //}
             }
         }
     }
