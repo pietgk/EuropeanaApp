@@ -10,13 +10,21 @@
 
 @import AVFoundation;
 
-@interface IXAudioManager () <AVAudioPlayerDelegate>
+#define VOLUMEDECREMENTDURATION 2.0
+#define INTERVAL 0.2
+
+@interface IXAudioManager () <AVAudioPlayerDelegate> {
+    double fading;
+}
 
 @property (strong, nonatomic) AVAudioSession *audioSession;
 @property (strong, nonatomic) AVAudioPlayer *backgroundMusicPlayer;
 @property (assign) BOOL backgroundMusicPlaying;
 @property (assign) BOOL backgroundMusicInterrupted;
 @property (assign) SystemSoundID pewPewSound;
+@property (nonatomic, strong) NSTimer *fadeTimer;
+
+- (void) fadeDecrement:(NSTimer *)aTimer;
 
 @end
 
@@ -31,6 +39,7 @@
         [self configureAudioSession];
         [self configureAudioPlayer];
         [self configureSystemSound];
+        fading = 0.1;
     }
     return self;
 }
@@ -82,11 +91,13 @@
 {
     // Create audio player with background music
     NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:audioFile ofType:@"caf"];
+    NSLog(@"Will play audio file: %@",audioFile);
     NSURL *backgroundMusicURL = [NSURL fileURLWithPath:backgroundMusicPath];
     if (backgroundMusicURL) {
         self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:nil];
         self.backgroundMusicPlayer.delegate = self;  // We need this so we can restart after interruptions
         self.backgroundMusicPlayer.numberOfLoops = -1;	// Negative number means loop forever
+        self.backgroundMusicPlayer.volume = 1.0;
     }
 }
 
@@ -100,8 +111,16 @@
     //Note: prepareToPlay preloads the music file and can help avoid latency. If you don't
     [self.backgroundMusicPlayer play];
     self.backgroundMusicPlaying = YES;
-
 }
+
+- (void)stopBackgroundAudio
+{
+    if (self.backgroundMusicPlaying) {
+        [self.backgroundMusicPlayer stop];
+        self.backgroundMusicPlaying = NO;
+    }
+}
+
 - (void)configureAudioPlayer
 {
     // Create audio player with background music
@@ -111,6 +130,72 @@
     self.backgroundMusicPlayer.delegate = self;  // We need this so we can restart after interruptions
     self.backgroundMusicPlayer.numberOfLoops = -1;	// Negative number means loop forever
 }
+
+- (void)fadeOutBackgroundAudio
+{
+    if (self.backgroundMusicPlayer.volume <= 0.0) {
+        return;
+    } else {
+        if (self.fadeTimer) {
+            [self.fadeTimer invalidate];
+            self.fadeTimer = nil;
+        }
+        fading = self.backgroundMusicPlayer.volume / (VOLUMEDECREMENTDURATION / INTERVAL);
+        self.fadeTimer = [NSTimer scheduledTimerWithTimeInterval:INTERVAL target:self selector:@selector(fadeDecrement:) userInfo:nil repeats:YES];
+    }
+    
+}
+
+- (void) fadeDecrement:(NSTimer *)aTimer
+{
+    if (!self.backgroundMusicPlayer) {
+        [self.fadeTimer invalidate];
+        self.fadeTimer = nil;
+    } else {
+        double volume = self.backgroundMusicPlayer.volume;
+        // dirty hack!
+        volume -= fading;
+        if (volume <= 0.0) {
+            volume = 0.0;
+        }
+        self.backgroundMusicPlayer.volume = volume;
+        if (0.0 == volume) {
+            [self.fadeTimer invalidate];
+            self.fadeTimer = nil;
+            [self.backgroundMusicPlayer stop];
+            self.backgroundMusicPlayer = nil;
+            self.backgroundMusicPlaying = NO;
+            NSLog(@"finished fading out audio");
+        }
+    }
+}
+
+//-(void) fadeIn
+//{
+//    if (self.currentPlayer.volume >= 1.0f) return;
+//    else {
+//        self.currentPlayer.volume+=0.10;
+//        __weak typeof (self) weakSelf = self;
+//        [NSThread sleepForTimeInterval:0.2f];
+//        [self.fadingQueue addOperationWithBlock:^{
+//            NSLog(@"fading in %.2f", self.currentPlayer.volume);
+//            [weakSelf fadeIn];
+//        }];
+//    }
+//}
+//-(void) fadeOut
+//{
+//    if (self.currentPlayer.volume <= 0.0f) return;
+//    else {
+//        self.currentPlayer.volume -=0.1;
+//        __weak typeof (self) weakSelf = self;
+//        [NSThread sleepForTimeInterval:0.2f];
+//        [self.fadingQueue addOperationWithBlock:^{
+//            NSLog(@"fading out %.2f", self.currentPlayer.volume);
+//            [weakSelf fadeOut];
+//        }];
+//    }
+//}
 
 - (void)configureSystemSound {
     // This is the simplest way to play a sound.

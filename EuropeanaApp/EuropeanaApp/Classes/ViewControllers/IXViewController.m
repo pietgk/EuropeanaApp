@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (nonatomic, strong) IXAudioManager *audioManager;
 @property (nonatomic, strong) IXManager *manager;
+@property (nonatomic, assign) BOOL playing;
 @end
 
 @implementation IXViewController
@@ -27,6 +28,7 @@
     self.manager = APPDelegate.manager;
     self.audioManager = APPDelegate.audioManager;
 	// Do any additional setup after loading the view, typically from a nib.
+    self.playing = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,14 +39,28 @@
 
 - (IBAction)test:(id)sender
 {
-    IXBeacon *ixBeacon = [[IXBeacon alloc] init];
-    [self.manager ixLocationManager:nil spottedIXBeacon:ixBeacon];
+//    IXBeacon *ixBeacon = [[IXBeacon alloc] init];
+//    [self.manager ixLocationManager:nil spottedIXBeacon:ixBeacon];
+    if (self.playing) {
+        [self.audioManager fadeOutBackgroundAudio];
+        self.playing = NO;          // should set this upon finishing the audio, but hey: it's a hack!
+    } else {
+        [self.audioManager prepareBackgroundPlayerWithFile:@"background-music-aac"];
+        [self.audioManager playBackgroundAudio];
+        self.playing = YES;
+    }
     
 }
 
 - (IBAction)speak:(id)sender
 {
-    [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum"];
-    [self.audioManager playBackgroundAudio];
+    if (self.playing) {
+        [self.audioManager fadeOutBackgroundAudio];
+        self.playing = NO;
+    } else {
+        [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum"];
+        [self.audioManager playBackgroundAudio];
+        self.playing = YES;
+    }
 }
 @end
