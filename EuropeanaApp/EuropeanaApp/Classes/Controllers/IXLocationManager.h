@@ -8,14 +8,12 @@
 
 #import "IXBeacon.h"
 
-@class IXLocationManager;
-
 @class IXLocationManager, IXBeacon, CLBeaconRegion;
 
 @protocol IXLocationManagerDelegate <NSObject>
 
 //TO DISCUSS: I don't think this should be optional (FM)
-
+@optional
 /**
  *  Inform the delegate a new beacon has been founded.
  *
@@ -50,6 +48,8 @@
 @end
 
 @interface IXLocationManager : NSObject
+
+- (instancetype)initWithDelegate: (id<IXLocationManagerDelegate>) aDelegate;
 
 @property (nonatomic, weak) id<IXLocationManagerDelegate> delegate;
 

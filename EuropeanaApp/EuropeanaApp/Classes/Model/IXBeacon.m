@@ -10,7 +10,7 @@
 
 @implementation IXBeacon
 
-+ (instancetype) createWithUUID:(NSString *)identifier major:(NSUInteger)major minor:(NSUInteger)minor distance:(CGFloat) distance;
++ (instancetype) createWithIdentifier:(NSString *)identifier major:(NSUInteger)major minor:(NSUInteger)minor distance:(CGFloat) distance;
 {
     return [[self alloc]initWithIdentifier:identifier major:major minor:minor distance:distance];
 }
