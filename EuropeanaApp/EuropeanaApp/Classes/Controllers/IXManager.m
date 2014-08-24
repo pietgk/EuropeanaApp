@@ -11,7 +11,7 @@
 #import "IXBeacon.h"
 #import "IXAudioManager.h"
 
-typedef enum {outside, leavingOutside, stopPlaying, inside, leavingInside, startPlaying} state_t;
+typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavingInside} state_t;
 
 @interface IXManager ()
 @property (nonatomic, strong) IXLocationManager *locationManager;
@@ -19,7 +19,6 @@ typedef enum {outside, leavingOutside, stopPlaying, inside, leavingInside, start
 
 @property (nonatomic, assign) state_t state;
 @property (nonatomic, assign) NSTimeInterval filterSeconds;
-@property (nonatomic, assign) NSTimeInterval triggerAtSeconds;
 
 @property (nonatomic, strong) NSDate* firstOutside;
 @property (nonatomic, strong) NSDate* firstInside;
@@ -40,26 +39,63 @@ typedef enum {outside, leavingOutside, stopPlaying, inside, leavingInside, start
 
 - (void) triggerSoundReset {
     self.state = outside;
-    self.triggerAtSeconds = 5.0;
+    self.filterSeconds = 5.0;
     self.firstOutside = [NSDate date];
     self.firstInside = [NSDate date];
 }
 
-- (Boolean) isOutside {
+- (Boolean) isOutsideFor5s {
     NSDate* now = [NSDate date];
     NSTimeInterval timeOutside = [now timeIntervalSinceDate:self.firstOutside];
     return (timeOutside > self.filterSeconds);
 }
-- (Boolean) isInside {
+- (Boolean) isInsideFor5s {
     NSDate* now = [NSDate date];
     NSTimeInterval timeInside = [now timeIntervalSinceDate:self.firstInside];
     return (timeInside > self.filterSeconds);
 }
 
-- (void) weAreOutside {
-    
+- (void) weDetectedOutside {
+    switch (self.state) {
+        case inside:
+            self.state = leavingInside;
+            self.firstOutside = [NSDate date];
+            break;
+        case leavingInside:
+            if ([self isOutsideFor5s]) {
+                self.state = stopPlaying;
+            }
+            break;
+        case outside:
+            break;
+        case leavingOutside:
+            self.state = outside;
+            break;
+        default:
+            break;
+    }
 }
-//
+
+- (void) weDetectedInside {
+    switch (self.state) {
+        case outside:
+            self.state = leavingOutside;
+            self.firstInside = [NSDate date];
+            break;
+        case leavingOutside:
+            if ([self isInsideFor5s]) {
+                self.state = startPlaying;
+            }
+            break;
+        case inside:
+            break;
+        case leavingInside:
+            self.state = inside;
+            break;
+        default:
+            break;
+    }
+}
 
 - (IXLocationManager *) locationManager
 {
@@ -82,14 +118,18 @@ typedef enum {outside, leavingOutside, stopPlaying, inside, leavingInside, start
 {
     if (ixBeacon.distance < 5)
     {
-        [self.weAreInside];
-        
+        [self weDetectedInside];
     } else {
-        [self.weAreOutside];
+        [self weDetectedOutside];
     }
-    if (self.state == startPlaying)
-    {
-        [self.audioManager startPlay];
+    if (self.state == stopPlaying) {
+        [self.audioManager fadeOutBackgroundAudio];
+        self.state = outside;
+    }
+    if (self.state == startPlaying) {
+        [self.audioManager prepareBackgroundPlayerWithFile:@"background-music-aac"];
+        [self.audioManager playBackgroundAudio];
+        self.state = inside;
     }
 }
 /*
