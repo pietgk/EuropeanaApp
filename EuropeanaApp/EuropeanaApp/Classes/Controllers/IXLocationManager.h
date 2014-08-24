@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Phluxus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "IXBeacon.h"
 
 @class IXLocationManager;
-@protocol IXLocationManagerDelegate
+
+@protocol IXLocationManagerDelegate <NSObject>
 
 @optional
 /*
