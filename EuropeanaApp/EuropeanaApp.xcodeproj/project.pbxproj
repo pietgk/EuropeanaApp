@@ -309,7 +309,7 @@
 				ORGANIZATIONNAME = Phluxus;
 				TargetAttributes = {
 					77D3C4A019A903AA001F00EC = {
-						DevelopmentTeam = PKNPK2UYN4;
+						DevelopmentTeam = 8EXZH89K22;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
