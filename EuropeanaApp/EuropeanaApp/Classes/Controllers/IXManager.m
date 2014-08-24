@@ -35,7 +35,6 @@
     return _locationManager;
 }
 
-
 - (IXAudioManager *) audioManager
 {
     if (!_audioManager) {

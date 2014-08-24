@@ -15,7 +15,7 @@
 - (IBAction)speak:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
-
+@property (nonatomic, strong) IXAudioManager *audioManager;
 @property (nonatomic, strong) IXManager *manager;
 @end
 
@@ -25,6 +25,7 @@
 {
     [super viewDidLoad];
     self.manager = APPDelegate.manager;
+    self.audioManager = APPDelegate.audioManager;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -38,10 +39,12 @@
 {
     IXBeacon *ixBeacon = [[IXBeacon alloc] init];
     [self.manager ixLocationManager:nil spottedIXBeacon:ixBeacon];
+    
 }
 
 - (IBAction)speak:(id)sender
 {
-    
+    [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum"];
+    [self.audioManager playBackgroundAudio];
 }
 @end

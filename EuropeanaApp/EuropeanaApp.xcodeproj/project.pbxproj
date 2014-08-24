@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4456DD9819A935A500B5B707 /* background-music-aac.caf */; };
 		4456DD9B19A935A500B5B707 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4456DD9919A935A500B5B707 /* pew-pew-lei.caf */; };
+		7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */; };
 		77D3C4A519A903AA001F00EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A419A903AA001F00EC /* Foundation.framework */; };
 		77D3C4A719A903AA001F00EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A619A903AA001F00EC /* CoreGraphics.framework */; };
 		77D3C4A919A903AA001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		4456DD9819A935A500B5B707 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		4456DD9919A935A500B5B707 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmmuseum.caf; sourceTree = "<group>"; };
 		77D3C4A119A903AA001F00EC /* EuropeanaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuropeanaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77D3C4A619A903AA001F00EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E597DA1619A9D5A900E308A9 /* beacons.plist */,
+				7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */,
 				4456DD9819A935A500B5B707 /* background-music-aac.caf */,
 				4456DD9919A935A500B5B707 /* pew-pew-lei.caf */,
 				77E3D7C019A910FA0058C62B /* images */,
@@ -347,6 +350,7 @@
 				4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */,
 				E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */,
 				77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */,
+				7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

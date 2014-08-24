@@ -13,10 +13,13 @@
 @end
 @implementation IXAppDelegate
 
+// @synthesize manager=_manager;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    self.manager = [[IXManager alloc] init];
+    // self.manager = [[IXManager alloc] init];
+    
     return YES;
 }
 							
@@ -45,6 +48,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - lazy properties
+- (IXManager *) manager
+{
+    if (!_manager) {
+        _manager = [[IXManager alloc] init];
+    }
+    return _manager;
+}
+
+- (IXAudioManager *) audioManager
+{
+    if (!_audioManager) {
+        _audioManager = [[IXAudioManager alloc] init];
+    }
+    return _audioManager;
 }
 
 @end

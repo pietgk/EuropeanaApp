@@ -13,6 +13,8 @@
 - (instancetype)init;
 - (void)tryPlayMusic;
 - (void)playSystemSound;
-
+- (void)prepareBackgroundPlayerWithFile:(NSString *)audioFile;
+- (void)playBackgroundAudio;
+;
 @end
 
