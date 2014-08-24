@@ -15,6 +15,7 @@
 - (void)playSystemSound;
 - (void)prepareBackgroundPlayerWithFile:(NSString *)audioFile;
 - (void)playBackgroundAudio;
-;
+- (void)fadeOutBackgroundAudio;
+
 @end
 
