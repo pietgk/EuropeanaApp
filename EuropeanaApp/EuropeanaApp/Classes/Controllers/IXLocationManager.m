@@ -166,7 +166,9 @@
 {
     if ([beacons count] > 0) {
         // To keep it simple we rely on Apple accuracy algorithm. Soon I'll checkout something more accurate but should be fine for hackathon demo app.
-        
+        for (CLBeacon *beacon in beacons) {
+            NSLog(@"All beacons identifier: %@ major: %@ minor %@ distance: %@",region.identifier, beacon.major, beacon.minor, @(beacon.accuracy));
+        }
         // Before we inspect all the ranged beacons let's clean up all the beacons that have unknown distance.
         NSArray *validBeacons = [beacons filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(CLBeacon *evaluatedBeacon, NSDictionary *bindings) {
             return evaluatedBeacon.rssi != 0; //or accuracy == -1.0 or proximity == Unknown

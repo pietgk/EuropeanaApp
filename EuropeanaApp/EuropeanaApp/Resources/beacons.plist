@@ -4,13 +4,13 @@
 <array>
 	<dict>
 		<key>identifier</key>
-		<string>SomeIdentifier</string>
+		<string>Studio B</string>
 		<key>UUID</key>
 		<string>74278bda-b644-4520-8f0c-720eaf059935</string>
 		<key>major</key>
-		<integer>1</integer>
+		<integer>300</integer>
 		<key>minor</key>
-		<integer>1</integer>
+		<integer>3001</integer>
 	</dict>
 </array>
 </plist>
