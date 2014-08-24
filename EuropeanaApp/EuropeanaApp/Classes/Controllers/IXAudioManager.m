@@ -78,7 +78,32 @@
     }
 }
 
-- (void)configureAudioPlayer {
+- (void)prepareBackgroundPlayerWithFile:(NSString *)audioFile
+{
+    // Create audio player with background music
+    NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:audioFile ofType:@"caf"];
+    NSURL *backgroundMusicURL = [NSURL fileURLWithPath:backgroundMusicPath];
+    if (backgroundMusicURL) {
+        self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:nil];
+        self.backgroundMusicPlayer.delegate = self;  // We need this so we can restart after interruptions
+        self.backgroundMusicPlayer.numberOfLoops = -1;	// Negative number means loop forever
+    }
+}
+
+- (void)playBackgroundAudio;
+{
+    if (self.backgroundMusicPlaying || !self.backgroundMusicPlayer) {
+        return;
+    }
+    
+    // Play background music if no other music is playing and we aren't playing already
+    //Note: prepareToPlay preloads the music file and can help avoid latency. If you don't
+    [self.backgroundMusicPlayer play];
+    self.backgroundMusicPlaying = YES;
+
+}
+- (void)configureAudioPlayer
+{
     // Create audio player with background music
     NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:@"background-music-aac" ofType:@"caf"];
     NSURL *backgroundMusicURL = [NSURL fileURLWithPath:backgroundMusicPath];
