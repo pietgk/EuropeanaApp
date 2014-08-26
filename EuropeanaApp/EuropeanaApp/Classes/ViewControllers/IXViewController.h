@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IXViewController : UIViewController
+#include "IXManager.h"
+
+@interface IXViewController : UIViewController <IXManagerDelegateProtocol>
 
 @end

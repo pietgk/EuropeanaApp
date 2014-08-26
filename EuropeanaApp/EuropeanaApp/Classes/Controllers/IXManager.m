@@ -27,7 +27,7 @@ typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavin
 
 @implementation IXManager
 
-- (instancetype)init
+- (instancetype)initWithDelegate: (id <IXManagerDelegateProtocol>) delegate
 {
     self = [super init];
     if (self) {

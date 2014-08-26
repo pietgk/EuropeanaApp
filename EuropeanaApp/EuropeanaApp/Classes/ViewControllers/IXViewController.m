@@ -53,6 +53,12 @@
     
 }
 
+- (void) ixManager: (IXManager *)ixManager stateChange: (NSString *)newState
+{
+    self.infoLabel.text = newState;
+}
+
+
 - (IBAction)speak:(id)sender
 {
     if (self.playing) {
