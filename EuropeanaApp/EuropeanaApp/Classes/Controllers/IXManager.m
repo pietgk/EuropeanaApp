@@ -127,7 +127,7 @@ typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavin
         self.state = outside;
     }
     if (self.state == startPlaying) {
-        [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum human.caf"]; // "background-music-aac"];
+        [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum human"]; // "background-music-aac"];
         [self.audioManager playBackgroundAudio];
         self.state = inside;
     }

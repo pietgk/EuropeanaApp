@@ -46,7 +46,7 @@
         [self.audioManager fadeOutBackgroundAudio];
         self.playing = NO;          // should set this upon finishing the audio, but hey: it's a hack!
     } else {
-        [self.audioManager prepareBackgroundPlayerWithFile:@"background-music-aac"];
+        [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum human"];
         [self.audioManager playBackgroundAudio];
         self.playing = YES;
     }

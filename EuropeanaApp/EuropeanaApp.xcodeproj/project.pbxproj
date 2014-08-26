@@ -22,6 +22,7 @@
 		77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */; };
 		77E3D7C719A916590058C62B /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
 		77E3D7C919A91A9B0058C62B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E3D7C819A91A9B0058C62B /* CoreLocation.framework */; };
+		9B6481D019AB33300028A8EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9B6481CF19AB33300028A8EA /* README.md */; };
 		9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */; };
 		E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
 		E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FA19A90FE900E308A9 /* Images.xcassets */; };
@@ -64,6 +65,7 @@
 		77E3D7C519A916590058C62B /* IXBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXBeacon.h; path = EuropeanaApp/Classes/Model/IXBeacon.h; sourceTree = SOURCE_ROOT; };
 		77E3D7C619A916590058C62B /* IXBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IXBeacon.m; path = EuropeanaApp/Classes/Model/IXBeacon.m; sourceTree = SOURCE_ROOT; };
 		77E3D7C819A91A9B0058C62B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9B6481CF19AB33300028A8EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "filmmuseum human.caf"; sourceTree = "<group>"; };
 		E597D9F719A90FA700E308A9 /* IXLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocationManager.h; sourceTree = "<group>"; };
 		E597D9F819A90FA700E308A9 /* IXLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXLocationManager.m; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		77D3C4AA19A903AA001F00EC /* EuropeanaApp */ = {
 			isa = PBXGroup;
 			children = (
+				9B6481CF19AB33300028A8EA /* README.md */,
 				E597D9EC19A90EF800E308A9 /* Classes */,
 				E597D9F419A90F3700E308A9 /* Resources */,
 			);
@@ -309,7 +312,7 @@
 				ORGANIZATIONNAME = Phluxus;
 				TargetAttributes = {
 					77D3C4A019A903AA001F00EC = {
-						DevelopmentTeam = PKNPK2UYN4;
+						DevelopmentTeam = 8EXZH89K22;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -380,6 +383,7 @@
 				E597DA0619A9100D00E308A9 /* main.m in Sources */,
 				E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */,
 				E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */,
+				9B6481D019AB33300028A8EA /* README.md in Sources */,
 				77E3D7C719A916590058C62B /* IXBeacon.m in Sources */,
 				E597DA1519A910AD00E308A9 /* IXLocation.m in Sources */,
 			);
