@@ -78,7 +78,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="WJw-Ln-npZ" secondAttribute="trailing" constant="28" id="cnw-Nv-cod"/>
                             <constraint firstItem="WJw-Ln-npZ" firstAttribute="bottom" secondItem="ZHe-Lc-oJD" secondAttribute="bottom" id="jtS-vs-0xh"/>
                             <constraint firstItem="WJw-Ln-npZ" firstAttribute="top" secondItem="RdD-rZ-geW" secondAttribute="bottom" constant="66" id="l46-Mn-fal"/>
-                            <constraint firstItem="FWY-ao-SvU" firstAttribute="top" secondItem="RdD-rZ-geW" secondAttribute="bottom" constant="190" id="lUx-tq-Aky"/>
+                            <constraint firstItem="FWY-ao-SvU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RdD-rZ-geW" secondAttribute="bottom" priority="500" constant="190" id="lUx-tq-Aky"/>
                             <constraint firstItem="SC1-WJ-Otq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="ywO-ce-5wa"/>
                         </constraints>
                     </view>
