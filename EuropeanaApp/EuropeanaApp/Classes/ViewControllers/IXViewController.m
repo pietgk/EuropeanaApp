@@ -44,11 +44,13 @@
 //    [self.manager ixLocationManager:nil spottedIXBeacon:ixBeacon];
     if (self.playing) {
         [self.audioManager fadeOutBackgroundAudio];
+        [self ixManager:self.manager stateChange:@"already playing"];
         self.playing = NO;          // should set this upon finishing the audio, but hey: it's a hack!
     } else {
         [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum human"];
         [self.audioManager playBackgroundAudio];
         self.playing = YES;
+        [self ixManager:self.manager stateChange:@"playing"];
     }
     
 }

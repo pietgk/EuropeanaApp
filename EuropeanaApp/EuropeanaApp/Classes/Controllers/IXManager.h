@@ -11,12 +11,14 @@
 
 @class IXManager;
 
-@protocol IXManagerDelegateProtocol <NSObject>
+@protocol IXManagerDelegate <NSObject>
 - (void) ixManager: (IXManager *)ixManager stateChange: (NSString *)newState;
 @end
 
 @interface IXManager : NSObject  <IXLocationManagerDelegate>
 
-- (instancetype)initWithDelegate: (id<IXManagerDelegateProtocol>) delegate;
+- (instancetype)initWithDelegate: (id<IXManagerDelegate>) aDelegate;
+
+@property (nonatomic, weak) id<IXManagerDelegate> delegate;
 
 @end

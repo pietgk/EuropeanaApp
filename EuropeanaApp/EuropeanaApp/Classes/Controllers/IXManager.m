@@ -12,6 +12,14 @@
 #import "IXAudioManager.h"
 
 typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavingInside} state_t;
+NSString * const stateAsString[] = {
+    [outside] = @"outside",
+    [leavingOutside] = @"leavingOutside",
+    [stopPlaying] = @"stopPlaying",
+    [startPlaying] = @"startPlaying",
+    [inside] = @"inside",
+    [leavingInside] = @"leavingInside"
+};
 
 @interface IXManager ()
 @property (nonatomic, strong) IXLocationManager *locationManager;
@@ -27,10 +35,12 @@ typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavin
 
 @implementation IXManager
 
-- (instancetype)initWithDelegate: (id <IXManagerDelegateProtocol>) delegate
+- (instancetype)initWithDelegate: (id <IXManagerDelegate>) aDelegate
 {
     self = [super init];
     if (self) {
+        self.delegate = aDelegate;
+
         [self.locationManager start];
         [self triggerSoundReset];
     }
@@ -44,12 +54,12 @@ typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavin
     self.firstInside = [NSDate date];
 }
 
-- (Boolean) isOutsideFor5s {
+- (Boolean) isOutsideFiltered {
     NSDate* now = [NSDate date];
     NSTimeInterval timeOutside = [now timeIntervalSinceDate:self.firstOutside];
     return (timeOutside > self.filterSeconds);
 }
-- (Boolean) isInsideFor5s {
+- (Boolean) isInsideFiltered {
     NSDate* now = [NSDate date];
     NSTimeInterval timeInside = [now timeIntervalSinceDate:self.firstInside];
     return (timeInside > self.filterSeconds);
@@ -62,7 +72,7 @@ typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavin
             self.firstOutside = [NSDate date];
             break;
         case leavingInside:
-            if ([self isOutsideFor5s]) {
+            if ([self isOutsideFiltered]) {
                 self.state = stopPlaying;
             }
             break;
@@ -83,7 +93,7 @@ typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavin
             self.firstInside = [NSDate date];
             break;
         case leavingOutside:
-            if ([self isInsideFor5s]) {
+            if ([self isInsideFiltered]) {
                 self.state = startPlaying;
             }
             break;
@@ -131,19 +141,8 @@ typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavin
         [self.audioManager playBackgroundAudio];
         self.state = inside;
     }
-}
-/*
- *
- */
-- (void) ixLocationManger : (IXLocationManager *)ixLocationManager exitAssetRegion:(IXBeacon *) ixBeacon;
-{
-    
-}
-/*
- *
- */
-- (void) ixLocationManager : (IXLocationManager *)ixLocationManager enteredIXBeaconRegion: (IXBeacon *) ixBeacon;
-{
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ixManager:stateChange:)]) {
+        [self.delegate ixManager:self stateChange:stateAsString[self.state]];
+    }
 }
 @end

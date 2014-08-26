@@ -10,6 +10,6 @@
 
 #include "IXManager.h"
 
-@interface IXViewController : UIViewController <IXManagerDelegateProtocol>
+@interface IXViewController : UIViewController <IXManagerDelegate>
 
 @end
