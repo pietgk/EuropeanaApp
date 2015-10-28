@@ -49,7 +49,7 @@
 -(void)testBeaconsFromfile
 {
     IXData* data = [[IXData alloc] init];
-    NSDictionary* beacon = [data beaconWithUuid:@"" major:@100 minor:@66];
+    NSDictionary* beacon = [data beaconWithUuid:@"74278bda-b644-4520-8f0c-720eaf059939" major:@100 minor:@66];
     XCTAssertNotNil(beacon, @"there should be a beacon");
     XCTAssert([@100 isEqualToNumber:beacon[@"major"]] , @"the major should match");
     XCTAssert([@66 isEqualToNumber:beacon[@"minor"]] , @"the major should match");

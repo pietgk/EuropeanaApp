@@ -42,7 +42,8 @@
     NSDictionary* result = nil;
     // todo uuid
     for (NSDictionary*b in self->beacons) {
-        if ([major isEqualToNumber:b[@"major"]]
+        if ([uuid isEqualToString:b[@"uuid"]]
+            && [major isEqualToNumber:b[@"major"]]
             && [minor isEqualToNumber:b[@"minor"]] ) {
             result = b;
             break;
