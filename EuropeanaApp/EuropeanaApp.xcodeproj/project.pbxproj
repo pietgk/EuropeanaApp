@@ -22,6 +22,10 @@
 		77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */; };
 		77E3D7C719A916590058C62B /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
 		77E3D7C919A91A9B0058C62B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E3D7C819A91A9B0058C62B /* CoreLocation.framework */; };
+		9B15221D1BE14D4700B3A52B /* IXData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B15221C1BE14D4700B3A52B /* IXData.m */; };
+		9B15221E1BE14D4700B3A52B /* IXData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B15221C1BE14D4700B3A52B /* IXData.m */; };
+		9B1522201BE14EA700B3A52B /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B15221F1BE14EA700B3A52B /* beacons.json */; };
+		9B1522211BE14EA700B3A52B /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B15221F1BE14EA700B3A52B /* beacons.json */; };
 		9B6481D019AB33300028A8EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9B6481CF19AB33300028A8EA /* README.md */; };
 		9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */; };
 		E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
@@ -65,6 +69,9 @@
 		77E3D7C519A916590058C62B /* IXBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXBeacon.h; path = EuropeanaApp/Classes/Model/IXBeacon.h; sourceTree = SOURCE_ROOT; };
 		77E3D7C619A916590058C62B /* IXBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IXBeacon.m; path = EuropeanaApp/Classes/Model/IXBeacon.m; sourceTree = SOURCE_ROOT; };
 		77E3D7C819A91A9B0058C62B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9B15221B1BE14D4700B3A52B /* IXData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXData.h; sourceTree = "<group>"; };
+		9B15221C1BE14D4700B3A52B /* IXData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXData.m; sourceTree = "<group>"; };
+		9B15221F1BE14EA700B3A52B /* beacons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beacons.json; sourceTree = "<group>"; };
 		9B6481CF19AB33300028A8EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "filmmuseum human.caf"; sourceTree = "<group>"; };
 		E597D9F719A90FA700E308A9 /* IXLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocationManager.h; sourceTree = "<group>"; };
@@ -224,6 +231,8 @@
 			children = (
 				E597DA1319A910AD00E308A9 /* IXLocation.h */,
 				E597DA1419A910AD00E308A9 /* IXLocation.m */,
+				9B15221B1BE14D4700B3A52B /* IXData.h */,
+				9B15221C1BE14D4700B3A52B /* IXData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,6 +268,7 @@
 				E597D9FE19A90FFE00E308A9 /* Main_iPhone.storyboard */,
 				E597D9FA19A90FE900E308A9 /* Images.xcassets */,
 				77D3C4AB19A903AA001F00EC /* Supporting Files */,
+				9B15221F1BE14EA700B3A52B /* beacons.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -358,6 +368,7 @@
 				77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */,
 				7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
+				9B1522201BE14EA700B3A52B /* beacons.json in Resources */,
 				9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77D3C4D119A903AB001F00EC /* InfoPlist.strings in Resources */,
+				9B1522211BE14EA700B3A52B /* beacons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +397,7 @@
 				E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */,
 				9B6481D019AB33300028A8EA /* README.md in Sources */,
 				77E3D7C719A916590058C62B /* IXBeacon.m in Sources */,
+				9B15221D1BE14D4700B3A52B /* IXData.m in Sources */,
 				E597DA1519A910AD00E308A9 /* IXLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B15221E1BE14D4700B3A52B /* IXData.m in Sources */,
 				77D3C4D319A903AB001F00EC /* EuropeanaAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

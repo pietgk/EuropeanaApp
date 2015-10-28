@@ -11,6 +11,7 @@
 #import "IXLocationManager.h"
 #import "IXBeacon.h"
 #import "IXAudioManager.h"
+#import "IXData.h"
 
 @interface EuropeanaAppTests : XCTestCase
 @property (nonatomic, strong) IXManager *manager;
@@ -43,6 +44,15 @@
 
     [self.manager ixLocationManager:nil spottedIXBeacon:self.ixBeacon];
     
+}
+
+-(void)testBeaconsFromfile
+{
+    IXData* data = [[IXData alloc] init];
+    NSDictionary* beacon = [data beaconWithUuid:@"" major:@100 minor:@66];
+    XCTAssertNotNil(beacon, @"there should be a beacon");
+    XCTAssert([@100 isEqualToNumber:beacon[@"major"]] , @"the major should match");
+    XCTAssert([@66 isEqualToNumber:beacon[@"minor"]] , @"the major should match");
 }
 
 @end
