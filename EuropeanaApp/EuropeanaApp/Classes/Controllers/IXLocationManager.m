@@ -108,8 +108,12 @@
 - (void) locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     switch (status) {
-        case kCLAuthorizationStatusAuthorized: {
-            NSLog(@"LOCATION AUTHORIZED");
+        case kCLAuthorizationStatusAuthorizedAlways: {
+            NSLog(@"LOCATION always AUTHORIZED");
+            // Notify that the user has granted access to location service
+        }   break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse: {
+            NSLog(@"LOCATION when in use AUTHORIZED");
             // Notify that the user has granted access to location service
         }   break;
         case kCLAuthorizationStatusDenied:
