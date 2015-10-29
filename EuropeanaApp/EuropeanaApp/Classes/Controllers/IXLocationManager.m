@@ -108,8 +108,12 @@
 - (void) locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     switch (status) {
-        case kCLAuthorizationStatusAuthorized: {
-            NSLog(@"LOCATION AUTHORIZED");
+        case kCLAuthorizationStatusAuthorizedAlways: {
+            NSLog(@"LOCATION always AUTHORIZED");
+            // Notify that the user has granted access to location service
+        }   break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse: {
+            NSLog(@"LOCATION when in use AUTHORIZED");
             // Notify that the user has granted access to location service
         }   break;
         case kCLAuthorizationStatusDenied:
@@ -165,6 +169,8 @@
             NSLog(@"Beacons identifier: %@ major: %@ minor %@ distance: %@",region.identifier, currentBeacon.major, currentBeacon.minor, @(currentBeacon.accuracy));
             if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:spottedIXBeacon:)]) {
 
+                // 2015: we probably need to add beacons to a queue and have a bg task determine where we are in the position of artworks
+                
                 //if (currentBeacon.accuracy < 4) { // hard coded 4m for hackaton
                     IXBeacon *ixBeacon = [IXBeacon createWithIdentifier:region.identifier major:[currentBeacon.major integerValue] minor:[currentBeacon.minor integerValue] distance:currentBeacon.accuracy];
                         [self tellDelegateBeaconIsSpotted:ixBeacon];

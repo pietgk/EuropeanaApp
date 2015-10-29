@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,28 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-SU-fQg">
-                                <rect key="frame" x="20" y="527" width="284" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-SU-fQg">
+                                <rect key="frame" x="20" y="548" width="284" height="0.0"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="260" image="Europeana logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SC1-WJ-Otq">
                                 <rect key="frame" x="16" y="0.0" width="170" height="250"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="h7J-Mz-VOs"/>
                                     <constraint firstAttribute="width" constant="170" id="kUq-3r-Pgj"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="glimworm-ibeacons.png" translatesAutoresizingMaskIntoConstraints="NO" id="RdD-rZ-geW">
-                                <rect key="frame" x="16" y="250" width="288" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="YVE-Zg-uJ5"/>
-                                    <constraint firstAttribute="height" constant="128" id="krJ-sv-RE4"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHe-Lc-oJD">
-                                <rect key="frame" x="49" y="444" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHe-Lc-oJD">
+                                <rect key="frame" x="50" y="465" width="49" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Human">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -47,8 +43,9 @@
                                     <action selector="test:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ypz-q2-wjm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJw-Ln-npZ">
-                                <rect key="frame" x="180" y="444" width="96" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJw-Ln-npZ">
+                                <rect key="frame" x="180" y="465" width="96" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Speech Synth">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,8 +53,9 @@
                                     <action selector="speak:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vyg-uI-3QE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-7o-Acq">
-                                <rect key="frame" x="49" y="386" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-7o-Acq">
+                                <rect key="frame" x="50" y="386" width="44" height="30"/>
+                                <animations/>
                                 <state key="normal" title="STOP!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -66,19 +64,19 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WJw-Ln-npZ" firstAttribute="leading" secondItem="ZHe-Lc-oJD" secondAttribute="trailing" constant="81" id="0fI-eD-AA9"/>
-                            <constraint firstItem="RdD-rZ-geW" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" constant="-16" id="397-6o-vyY"/>
+                            <constraint firstItem="ZHe-Lc-oJD" firstAttribute="top" secondItem="BDO-7o-Acq" secondAttribute="bottom" constant="49" id="22Y-2i-xWt"/>
                             <constraint firstItem="SC1-WJ-Otq" firstAttribute="top" secondItem="ffd-ed-VWd" secondAttribute="bottom" constant="-20" id="6lG-FJ-VHY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c4U-SU-fQg" secondAttribute="trailing" id="IAG-el-QA3"/>
                             <constraint firstItem="FWY-ao-SvU" firstAttribute="top" secondItem="c4U-SU-fQg" secondAttribute="bottom" constant="20" id="Isq-Bd-Y5U"/>
                             <constraint firstItem="c4U-SU-fQg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="JQ5-Jl-LzI"/>
                             <constraint firstItem="c4U-SU-fQg" firstAttribute="top" secondItem="WJw-Ln-npZ" secondAttribute="bottom" constant="53" id="Jjc-zz-OSg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WJw-Ln-npZ" secondAttribute="trailing" constant="28" id="cnw-Nv-cod"/>
+                            <constraint firstItem="BDO-7o-Acq" firstAttribute="leading" secondItem="ZHe-Lc-oJD" secondAttribute="leading" id="hBM-mS-1r1"/>
                             <constraint firstItem="WJw-Ln-npZ" firstAttribute="bottom" secondItem="ZHe-Lc-oJD" secondAttribute="bottom" id="jtS-vs-0xh"/>
-                            <constraint firstItem="WJw-Ln-npZ" firstAttribute="top" secondItem="RdD-rZ-geW" secondAttribute="bottom" constant="66" id="l46-Mn-fal"/>
-                            <constraint firstItem="FWY-ao-SvU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RdD-rZ-geW" secondAttribute="bottom" priority="500" constant="190" id="lUx-tq-Aky"/>
                             <constraint firstItem="SC1-WJ-Otq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="ywO-ce-5wa"/>
                         </constraints>
                     </view>
@@ -93,14 +91,5 @@
     </scenes>
     <resources>
         <image name="Europeana logo.jpg" width="374" height="539"/>
-        <image name="glimworm-ibeacons.png" width="323" height="99"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
-    </simulatedMetricsContainer>
 </document>
