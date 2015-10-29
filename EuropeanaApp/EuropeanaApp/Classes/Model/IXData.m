@@ -30,6 +30,8 @@
 
 -(NSArray*)beaconsFromResourceFile;
 {
+    // Glimworm beacons.json from http://85.17.193.165:1880/beacons/
+    // plus Hermitage 2015: tentoonstelling v.h. Amsterdam Museum: Hollanders van de Gouden Eeuw 
     NSString *path = [[NSBundle mainBundle] pathForResource:@"beacons" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];

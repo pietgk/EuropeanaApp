@@ -46,7 +46,7 @@
     
 }
 
--(void)testBeaconsFromfile
+-(void)testBeaconsFromFile
 {
     IXData* data = [[IXData alloc] init];
     NSDictionary* beacon = [data beaconWithUuid:@"74278bda-b644-4520-8f0c-720eaf059939" major:@100 minor:@66];
