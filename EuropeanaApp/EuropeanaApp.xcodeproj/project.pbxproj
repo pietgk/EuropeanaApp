@@ -28,6 +28,7 @@
 		9B1522211BE14EA700B3A52B /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B15221F1BE14EA700B3A52B /* beacons.json */; };
 		9B6481D019AB33300028A8EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9B6481CF19AB33300028A8EA /* README.md */; };
 		9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */; };
+		E151FFA2A279885AA44A64DA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321679898299C85865CF0E83 /* Pods.framework */; };
 		E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
 		E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FA19A90FE900E308A9 /* Images.xcassets */; };
 		E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FC19A90FFE00E308A9 /* Main_iPad.storyboard */; };
@@ -52,8 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		321679898299C85865CF0E83 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4456DD9819A935A500B5B707 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		4456DD9919A935A500B5B707 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		531859C7F72D5413B4FEE892 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmmuseum.caf; sourceTree = "<group>"; };
 		77D3C4A119A903AA001F00EC /* EuropeanaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuropeanaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +75,7 @@
 		9B15221B1BE14D4700B3A52B /* IXData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXData.h; sourceTree = "<group>"; };
 		9B15221C1BE14D4700B3A52B /* IXData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXData.m; sourceTree = "<group>"; };
 		9B15221F1BE14EA700B3A52B /* beacons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beacons.json; sourceTree = "<group>"; };
+		80894D2A9DCF0FE7CFECBC62 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9B6481CF19AB33300028A8EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "filmmuseum human.caf"; sourceTree = "<group>"; };
 		E597D9F719A90FA700E308A9 /* IXLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocationManager.h; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				77D3C4A719A903AA001F00EC /* CoreGraphics.framework in Frameworks */,
 				77D3C4A919A903AA001F00EC /* UIKit.framework in Frameworks */,
 				77D3C4A519A903AA001F00EC /* Foundation.framework in Frameworks */,
+				E151FFA2A279885AA44A64DA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42A9367F9E49AAF5408E85F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				531859C7F72D5413B4FEE892 /* Pods.debug.xcconfig */,
+				80894D2A9DCF0FE7CFECBC62 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		77D3C49819A903AA001F00EC = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,7 @@
 				77D3C4CC19A903AB001F00EC /* EuropeanaAppTests */,
 				77D3C4A319A903AA001F00EC /* Frameworks */,
 				77D3C4A219A903AA001F00EC /* Products */,
+				42A9367F9E49AAF5408E85F4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +162,7 @@
 				77D3C4A619A903AA001F00EC /* CoreGraphics.framework */,
 				77D3C4A819A903AA001F00EC /* UIKit.framework */,
 				77D3C4C619A903AB001F00EC /* XCTest.framework */,
+				321679898299C85865CF0E83 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,9 +296,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77D3C4D619A903AB001F00EC /* Build configuration list for PBXNativeTarget "EuropeanaApp" */;
 			buildPhases = (
+				47A0DC1FC2BE701E1582C5C2 /* Check Pods Manifest.lock */,
 				77D3C49D19A903AA001F00EC /* Sources */,
 				77D3C49E19A903AA001F00EC /* Frameworks */,
 				77D3C49F19A903AA001F00EC /* Resources */,
+				CBF77020C601B80F31C288B1 /* Embed Pods Frameworks */,
+				A71E1A9DE333FB3649ACF3F6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,11 +337,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = IX;
-				LastUpgradeCheck = 0510;
+				LastSwiftMigration = 0710;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Phluxus;
 				TargetAttributes = {
 					77D3C4A019A903AA001F00EC = {
-						DevelopmentTeam = PKNPK2UYN4;
+						DevelopmentTeam = 8EXZH89K22;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -384,6 +404,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47A0DC1FC2BE701E1582C5C2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A71E1A9DE333FB3649ACF3F6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF77020C601B80F31C288B1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77D3C49D19A903AA001F00EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -395,7 +463,6 @@
 				E597DA0619A9100D00E308A9 /* main.m in Sources */,
 				E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */,
 				E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */,
-				9B6481D019AB33300028A8EA /* README.md in Sources */,
 				77E3D7C719A916590058C62B /* IXBeacon.m in Sources */,
 				9B15221D1BE14D4700B3A52B /* IXData.m in Sources */,
 				E597DA1519A910AD00E308A9 /* IXLocation.m in Sources */,
@@ -467,6 +534,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -523,6 +591,7 @@
 		};
 		77D3C4D719A903AB001F00EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 531859C7F72D5413B4FEE892 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -531,6 +600,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/EuropeanaApp-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/EuropeanaApp/Resources/EuropeanaApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -539,6 +610,7 @@
 		};
 		77D3C4D819A903AB001F00EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80894D2A9DCF0FE7CFECBC62 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -547,6 +619,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/EuropeanaApp-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/EuropeanaApp/Resources/EuropeanaApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -571,6 +645,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "EuropeanaAppTests/EuropeanaAppTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -592,6 +667,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/EuropeanaApp-Prefix.pch";
 				INFOPLIST_FILE = "EuropeanaAppTests/EuropeanaAppTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
