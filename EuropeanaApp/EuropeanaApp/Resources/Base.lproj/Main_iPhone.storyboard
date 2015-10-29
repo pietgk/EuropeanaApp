@@ -53,8 +53,8 @@
                                     <action selector="speak:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vyg-uI-3QE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-7o-Acq">
-                                <rect key="frame" x="49" y="386" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-7o-Acq">
+                                <rect key="frame" x="50" y="386" width="44" height="30"/>
                                 <animations/>
                                 <state key="normal" title="STOP!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,12 +68,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WJw-Ln-npZ" firstAttribute="leading" secondItem="ZHe-Lc-oJD" secondAttribute="trailing" constant="81" id="0fI-eD-AA9"/>
+                            <constraint firstItem="ZHe-Lc-oJD" firstAttribute="top" secondItem="BDO-7o-Acq" secondAttribute="bottom" constant="49" id="22Y-2i-xWt"/>
                             <constraint firstItem="SC1-WJ-Otq" firstAttribute="top" secondItem="ffd-ed-VWd" secondAttribute="bottom" constant="-20" id="6lG-FJ-VHY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c4U-SU-fQg" secondAttribute="trailing" id="IAG-el-QA3"/>
                             <constraint firstItem="FWY-ao-SvU" firstAttribute="top" secondItem="c4U-SU-fQg" secondAttribute="bottom" constant="20" id="Isq-Bd-Y5U"/>
                             <constraint firstItem="c4U-SU-fQg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="JQ5-Jl-LzI"/>
                             <constraint firstItem="c4U-SU-fQg" firstAttribute="top" secondItem="WJw-Ln-npZ" secondAttribute="bottom" constant="53" id="Jjc-zz-OSg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WJw-Ln-npZ" secondAttribute="trailing" constant="28" id="cnw-Nv-cod"/>
+                            <constraint firstItem="BDO-7o-Acq" firstAttribute="leading" secondItem="ZHe-Lc-oJD" secondAttribute="leading" id="hBM-mS-1r1"/>
                             <constraint firstItem="WJw-Ln-npZ" firstAttribute="bottom" secondItem="ZHe-Lc-oJD" secondAttribute="bottom" id="jtS-vs-0xh"/>
                             <constraint firstItem="SC1-WJ-Otq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="ywO-ce-5wa"/>
                         </constraints>
