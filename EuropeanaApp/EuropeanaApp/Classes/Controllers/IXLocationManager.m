@@ -54,6 +54,8 @@
     [self startRangingBeacons];
 }
 
+#warning TODO: get beacons from IXData
+
 - (NSArray *)initialBeaconsRangingSetup
 {
     // For now we retrieve all the beacons' asset from a convenience PLIST
