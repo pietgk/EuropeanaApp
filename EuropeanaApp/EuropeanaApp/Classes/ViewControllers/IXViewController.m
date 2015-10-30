@@ -9,6 +9,8 @@
 #import "IXViewController.h"
 #import "IXAppDelegate.h"
 #import "IXAudioManager.h"
+#import "IXData.h"
+
 
 @interface IXViewController ()
 - (IBAction)test:(id)sender;
@@ -19,6 +21,7 @@
 @property (nonatomic, strong) IXAudioManager *audioManager;
 @property (nonatomic, strong) IXManager *manager;
 @property (nonatomic, assign) BOOL playing;
+@property (nonatomic, strong) IXData *dataManager;
 @end
 
 @implementation IXViewController
@@ -30,6 +33,7 @@
     self.audioManager = APPDelegate.audioManager;
 	// Do any additional setup after loading the view, typically from a nib.
     self.playing = NO;
+    self.dataManager = [[IXData alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
