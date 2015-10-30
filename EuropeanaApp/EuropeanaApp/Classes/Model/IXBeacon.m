@@ -62,4 +62,9 @@
     return -1.0f;
 }
 
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@: %p> uuid:%@ (%@,%@)",self.class, self, self.uuid, self.major, self.minor];
+}
+
 @end

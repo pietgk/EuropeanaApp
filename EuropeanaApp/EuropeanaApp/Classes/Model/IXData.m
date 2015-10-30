@@ -31,6 +31,8 @@
     if (self = [super init]) {
         NSArray *hoi = self.beacons;
         NSArray *hoipipeloi = self.pois;
+        NSLog(@"Beacons: %@",self.beacons);
+        NSLog(@"Points of interest: %@",self.pois);
     }
     return self;
 }

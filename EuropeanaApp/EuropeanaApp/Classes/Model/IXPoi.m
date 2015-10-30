@@ -34,7 +34,7 @@
                 }
             }];
         }
-        NSDictionary *beaconJson = newDict[kBeaconsKey];
+        NSArray *beaconJson = newDict[kBeaconsKey];
         if (beaconJson) {
             NSAssert([beaconJson isKindOfClass:NSArray.class],@"beacons json is not an array");
             [self createBeaconsWithJSONArray:beaconJson];
@@ -56,5 +56,11 @@
         }
     }
     self.beacons = [NSArray arrayWithArray:newBeacons];
+}
+
+-(NSString *)description
+{
+//    return [NSString stringWithFormat:@"<%@: %p> %@ (%@)\n%@",self.class, self, self.name, self.caption, self.beacons];
+    return [NSString stringWithFormat:@"<%@: %p> %@ %@",self.class, self, self.name, self.beacons];
 }
 @end
