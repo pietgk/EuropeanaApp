@@ -15,13 +15,13 @@
 #import <Foundation/Foundation.h>
 
 @interface IXPoi : NSObject
-@property (nonatomic, strong) NSArray *beacons;                 // which beacons are associated with this artpiece?
-@property (nonatomic, strong) NSString *name;                   // the name of the place
-@property (nonatomic, strong) NSString *caption;                // the initial text spoken
-@property (nonatomic, strong) NSString *audio;                  // audio file name
-@property (nonatomic, strong) NSArray *infoSources;             // contains further information URLs
+@property (nonatomic, strong, nonnull) NSArray *beacons;                 // which beacons are associated with this artpiece?
+@property (nonatomic, strong, nonnull) NSString *name;                   // the name of the place
+@property (nonatomic, strong, nullable) NSString *caption;                // the initial text spoken
+@property (nonatomic, strong, nullable) NSString *audio;                  // audio file name
+@property (nonatomic, strong, nullable) NSArray *infoSources;             // contains further information URLs
 
-+ (instancetype) createWithDictionary:(NSDictionary *)newDict;
-- (instancetype) initWithDictionary:(nonnull NSDictionary *)newDict;
++ (nonnull instancetype) createWithDictionary:(nonnull NSDictionary *)newDict;
+- (nonnull instancetype) initWithDictionary:(nonnull NSDictionary *)newDict;
 
 @end

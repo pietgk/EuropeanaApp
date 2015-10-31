@@ -27,10 +27,9 @@
 		9B1522201BE14EA700B3A52B /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B15221F1BE14EA700B3A52B /* beacons.json */; };
 		9B1522211BE14EA700B3A52B /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B15221F1BE14EA700B3A52B /* beacons.json */; };
 		9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */; };
-		9BDC46611BE2BF6F00162557 /* art.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC46601BE2BF6F00162557 /* art.json */; };
-		9BDC46621BE2BF6F00162557 /* art.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC46601BE2BF6F00162557 /* art.json */; };
 		9BDC46651BE4C17F00162557 /* IXPoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC46641BE4C17F00162557 /* IXPoi.m */; };
 		9BDC46661BE4C17F00162557 /* IXPoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC46641BE4C17F00162557 /* IXPoi.m */; };
+		9BDC46681BE5152000162557 /* poi.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC46671BE5152000162557 /* poi.json */; };
 		E151FFA2A279885AA44A64DA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321679898299C85865CF0E83 /* Pods.framework */; };
 		E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
 		E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FA19A90FE900E308A9 /* Images.xcassets */; };
@@ -66,7 +65,7 @@
 		77D3C4A819A903AA001F00EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		77D3C4C519A903AB001F00EC /* EuropeanaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuropeanaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4C619A903AB001F00EC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		77D3C4CE19A903AB001F00EC /* EuropeanaAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EuropeanaAppTests-Info.plist"; sourceTree = "<group>"; };
+		77D3C4CE19A903AB001F00EC /* ArtWhisperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArtWhisperTests-Info.plist"; sourceTree = "<group>"; };
 		77D3C4D019A903AB001F00EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77D3C4D219A903AB001F00EC /* EuropeanaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EuropeanaAppTests.m; sourceTree = "<group>"; };
 		77E3D7C119A910FA0058C62B /* Europeana logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Europeana logo.jpg"; sourceTree = "<group>"; };
@@ -80,9 +79,9 @@
 		9B15221F1BE14EA700B3A52B /* beacons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beacons.json; sourceTree = "<group>"; };
 		9B6481CF19AB33300028A8EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "filmmuseum human.caf"; sourceTree = "<group>"; };
-		9BDC46601BE2BF6F00162557 /* art.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = art.json; sourceTree = "<group>"; };
 		9BDC46631BE4C17F00162557 /* IXPoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXPoi.h; sourceTree = "<group>"; };
 		9BDC46641BE4C17F00162557 /* IXPoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXPoi.m; sourceTree = "<group>"; };
+		9BDC46671BE5152000162557 /* poi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poi.json; sourceTree = "<group>"; };
 		E597D9F719A90FA700E308A9 /* IXLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocationManager.h; sourceTree = "<group>"; };
 		E597D9F819A90FA700E308A9 /* IXLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXLocationManager.m; sourceTree = "<group>"; };
 		E597D9FA19A90FE900E308A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -203,7 +202,7 @@
 		77D3C4CD19A903AB001F00EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				77D3C4CE19A903AB001F00EC /* EuropeanaAppTests-Info.plist */,
+				77D3C4CE19A903AB001F00EC /* ArtWhisperTests-Info.plist */,
 				77D3C4CF19A903AB001F00EC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -288,7 +287,7 @@
 				E597D9FA19A90FE900E308A9 /* Images.xcassets */,
 				77D3C4AB19A903AA001F00EC /* Supporting Files */,
 				9B15221F1BE14EA700B3A52B /* beacons.json */,
-				9BDC46601BE2BF6F00162557 /* art.json */,
+				9BDC46671BE5152000162557 /* poi.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -394,7 +393,7 @@
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
 				9B1522201BE14EA700B3A52B /* beacons.json in Resources */,
 				9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */,
-				9BDC46611BE2BF6F00162557 /* art.json in Resources */,
+				9BDC46681BE5152000162557 /* poi.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +403,6 @@
 			files = (
 				77D3C4D119A903AB001F00EC /* InfoPlist.strings in Resources */,
 				9B1522211BE14EA700B3A52B /* beacons.json in Resources */,
-				9BDC46621BE2BF6F00162557 /* art.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +649,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "EuropeanaAppTests/EuropeanaAppTests-Info.plist";
+				INFOPLIST_FILE = "EuropeanaAppTests/ArtWhisperTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
