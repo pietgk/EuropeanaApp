@@ -11,8 +11,8 @@
 #import "IXPoi.h"
 
 @interface IXData ()
-@property (nonatomic, strong) NSArray *beacons;
-@property (nonatomic, strong) NSArray *pois;
+@property (nonatomic, strong) NSArray<IXBeacon *> *beacons;
+@property (nonatomic, strong) NSArray<IXPoi *> *pois;
 @end
 
 @implementation IXData
@@ -94,13 +94,13 @@
     return newPois;
 }
 
--(NSDictionary*)beaconWithUuid:(NSString*)uuid major:(NSNumber*)major minor:(NSNumber*)minor;
+-(IXBeacon*)beaconWithUuid:(NSString*)uuid major:(NSNumber*)major minor:(NSNumber*)minor;
 {
-    NSDictionary* result = nil;
-    for (NSDictionary* b in self.beacons) {
-        if ([uuid isEqualToString:b[@"uuid"]]
-            && [major isEqualToNumber:b[@"major"]]
-            && [minor isEqualToNumber:b[@"minor"]] ) {
+    IXBeacon* result = nil;
+    for (IXBeacon* b in self.beacons) {
+        if ([uuid isEqualToString:b.uuid]
+            && [major isEqualToNumber:b.major]
+            && [minor isEqualToNumber:b.minor] ) {
             result = b;
             break;
         }

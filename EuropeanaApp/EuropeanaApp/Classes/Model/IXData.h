@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IXBeacon.h"
 
 @interface IXData : NSObject
 
--(NSDictionary*)beaconWithUuid:(NSString*)uuid major:(NSNumber*)major minor:(NSNumber*)minor;
+-(IXBeacon*)beaconWithUuid:(NSString*)uuid major:(NSNumber*)major minor:(NSNumber*)minor;
 
 @end
