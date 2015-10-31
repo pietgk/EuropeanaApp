@@ -29,6 +29,8 @@
 		9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */; };
 		9BDC46611BE2BF6F00162557 /* art.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC46601BE2BF6F00162557 /* art.json */; };
 		9BDC46621BE2BF6F00162557 /* art.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC46601BE2BF6F00162557 /* art.json */; };
+		9BDC46651BE4C17F00162557 /* IXPoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC46641BE4C17F00162557 /* IXPoi.m */; };
+		9BDC46661BE4C17F00162557 /* IXPoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC46641BE4C17F00162557 /* IXPoi.m */; };
 		E151FFA2A279885AA44A64DA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321679898299C85865CF0E83 /* Pods.framework */; };
 		E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
 		E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FA19A90FE900E308A9 /* Images.xcassets */; };
@@ -39,7 +41,6 @@
 		E597DA0C19A9104C00E308A9 /* IXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0B19A9104C00E308A9 /* IXManager.m */; };
 		E597DA0F19A9105D00E308A9 /* IXAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0E19A9105D00E308A9 /* IXAudioManager.m */; };
 		E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA1119A9106800E308A9 /* IXAppDelegate.m */; };
-		E597DA1519A910AD00E308A9 /* IXLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA1419A910AD00E308A9 /* IXLocation.m */; };
 		E597DA1719A9D5A900E308A9 /* beacons.plist in Resources */ = {isa = PBXBuildFile; fileRef = E597DA1619A9D5A900E308A9 /* beacons.plist */; };
 /* End PBXBuildFile section */
 
@@ -80,13 +81,15 @@
 		9B6481CF19AB33300028A8EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "filmmuseum human.caf"; sourceTree = "<group>"; };
 		9BDC46601BE2BF6F00162557 /* art.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = art.json; sourceTree = "<group>"; };
+		9BDC46631BE4C17F00162557 /* IXPoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXPoi.h; sourceTree = "<group>"; };
+		9BDC46641BE4C17F00162557 /* IXPoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXPoi.m; sourceTree = "<group>"; };
 		E597D9F719A90FA700E308A9 /* IXLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocationManager.h; sourceTree = "<group>"; };
 		E597D9F819A90FA700E308A9 /* IXLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXLocationManager.m; sourceTree = "<group>"; };
 		E597D9FA19A90FE900E308A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E597D9FD19A90FFE00E308A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		E597D9FF19A90FFE00E308A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		E597DA0219A9100D00E308A9 /* EuropeanaApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "EuropeanaApp-Info.plist"; path = "Resources/EuropeanaApp-Info.plist"; sourceTree = "<group>"; };
-		E597DA0319A9100D00E308A9 /* EuropeanaApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EuropeanaApp-Prefix.pch"; path = "Resources/EuropeanaApp-Prefix.pch"; sourceTree = "<group>"; };
+		E597DA0219A9100D00E308A9 /* ArtWhisper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ArtWhisper-Info.plist"; path = "Resources/ArtWhisper-Info.plist"; sourceTree = "<group>"; };
+		E597DA0319A9100D00E308A9 /* ArtWhisper-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ArtWhisper-Prefix.pch"; path = "Resources/ArtWhisper-Prefix.pch"; sourceTree = "<group>"; };
 		E597DA0419A9100D00E308A9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		E597DA0719A9103E00E308A9 /* IXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXViewController.h; sourceTree = "<group>"; };
 		E597DA0819A9103E00E308A9 /* IXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXViewController.m; sourceTree = "<group>"; };
@@ -96,8 +99,6 @@
 		E597DA0E19A9105D00E308A9 /* IXAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXAudioManager.m; sourceTree = "<group>"; };
 		E597DA1019A9106800E308A9 /* IXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXAppDelegate.h; sourceTree = "<group>"; };
 		E597DA1119A9106800E308A9 /* IXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXAppDelegate.m; sourceTree = "<group>"; };
-		E597DA1319A910AD00E308A9 /* IXLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocation.h; sourceTree = "<group>"; };
-		E597DA1419A910AD00E308A9 /* IXLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXLocation.m; sourceTree = "<group>"; };
 		E597DA1619A9D5A900E308A9 /* beacons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = beacons.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,8 +183,8 @@
 		77D3C4AB19A903AA001F00EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E597DA0219A9100D00E308A9 /* EuropeanaApp-Info.plist */,
-				E597DA0319A9100D00E308A9 /* EuropeanaApp-Prefix.pch */,
+				E597DA0219A9100D00E308A9 /* ArtWhisper-Info.plist */,
+				E597DA0319A9100D00E308A9 /* ArtWhisper-Prefix.pch */,
 				E597DA0419A9100D00E308A9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -247,8 +248,8 @@
 		E597D9EF19A90EF800E308A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E597DA1319A910AD00E308A9 /* IXLocation.h */,
-				E597DA1419A910AD00E308A9 /* IXLocation.m */,
+				9BDC46631BE4C17F00162557 /* IXPoi.h */,
+				9BDC46641BE4C17F00162557 /* IXPoi.m */,
 				9B15221B1BE14D4700B3A52B /* IXData.h */,
 				9B15221C1BE14D4700B3A52B /* IXData.m */,
 			);
@@ -468,9 +469,9 @@
 				E597DA0619A9100D00E308A9 /* main.m in Sources */,
 				E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */,
 				E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */,
+				9BDC46651BE4C17F00162557 /* IXPoi.m in Sources */,
 				77E3D7C719A916590058C62B /* IXBeacon.m in Sources */,
 				9B15221D1BE14D4700B3A52B /* IXData.m in Sources */,
-				E597DA1519A910AD00E308A9 /* IXLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDC46661BE4C17F00162557 /* IXPoi.m in Sources */,
 				9B15221E1BE14D4700B3A52B /* IXData.m in Sources */,
 				77D3C4D319A903AB001F00EC /* EuropeanaAppTests.m in Sources */,
 			);
@@ -603,8 +605,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/EuropeanaApp-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/EuropeanaApp/Resources/EuropeanaApp-Info.plist";
+				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/ArtWhisper-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/EuropeanaApp/Resources/ArtWhisper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -622,8 +624,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/EuropeanaApp-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/EuropeanaApp/Resources/EuropeanaApp-Info.plist";
+				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/ArtWhisper-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/EuropeanaApp/Resources/ArtWhisper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -644,7 +646,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/EuropeanaApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/ArtWhisper-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -670,7 +672,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/EuropeanaApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/ArtWhisper-Prefix.pch";
 				INFOPLIST_FILE = "EuropeanaAppTests/EuropeanaAppTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

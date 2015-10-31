@@ -1,0 +1,88 @@
+ [
+  {
+    "beacons":[{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 100,
+                "minor": 1,
+                "signal": 50
+                },
+                {
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 100,
+                "minor": 2,
+                "signal": 10
+                }
+    ],
+    "poi": {
+        "caption":"nice painting of rembrand",
+        "audio":"filmmuseum human"
+    }
+  },
+  
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":13, "signal": 50}
+    ],
+    "poi":
+      { "name": "Hermitage Bovenaan de trap bij entree 13", "caption": "Schuttersmaaltijd ter ere van de benoeming van de Amsterdamse burgemeester Jan van de Poll tot kolonel van de schutterij  Johannes Spilberg 1650" }
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":12, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage In tussenzaal 12", "caption": "De Dam met het Stadhuis in aanbouw  Jacob van der Ulft  1689"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":17 , "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  17", "caption": "De overlieden van de Handboogdoelen Bartholomeus van der Helst  1653"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":20, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  20", "caption": "Schutters van de compagnie van luitenant Pieter Pietersz Hasselaer  Cornelis van der Voort  1623"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":22, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  22", "caption": "Schutters van de compagnie van kapitein Cornelis de Graeff en luitenant Hendrick Lauwrensz  Jacob Adriaensz. Backer 1642"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":21, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  21", "caption": "Nachtwacht (projectie)  Rembrandt van Rijn  1642"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":18, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  18", "caption": "Schutters van de compagnie van kapitein Joan Huydecoper en luitenant Frans van Waveren  Govert Flinck 1648"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":19, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  19", "caption": "Maaltijd van schutters van de compagnie van kapitein Jacob Backer en luitenant Jacob Rogh Nicolaes Eliasz Pickenoy  1632"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":14, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  14", "caption": "De regenten en regentessen van het Oude Mannen- en Vrouwengasthuis  Nicolaes Moeyaert 1640"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":15, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  15", "caption": "De regentessen en binnenmoeders van het Spinhuis  Dirck Dircksz. van Santvoort"}
+  },
+  { "beacons":[
+        {"uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":16, "signal": 50}
+    ],
+    "poi":
+      {"name": "Hermitage Grote zaal  16", "caption": "De regenten en de bediende van het Binnengasthuis Cornelis van der Voort  1617 – 1618"}
+  }
+  ]

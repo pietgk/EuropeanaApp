@@ -20,12 +20,39 @@
     self = [super init];
     
     if (self) {
+        self.extraInfo = [NSMutableArray array];
         self.identifier = identifier;
-        self.major = major;
-        self.minor = minor;
+        self.major = [NSNumber numberWithInteger:major];
+        self.minor = [NSNumber numberWithInteger:minor];
         self.distance = distance; //OR convenience algorithm to improve distance accuracy (the one provided by Apple is a little bit shitty)
     }
     
+    return self;
+}
+
++ (instancetype) createWithDictionary:(nonnull NSDictionary *)newDict
+{
+    return [[self alloc] initWithDictionary:newDict];
+}
+
+- (instancetype) initWithDictionary:(nonnull NSDictionary *)newDict
+{
+    self = [super init];
+    
+    if (self) {
+        self.extraInfo = [NSMutableArray array];
+
+        [newDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            @try {
+                [self setValue:obj forKey:key];
+            }
+            @catch (NSException *exception) {
+            }
+            @finally {
+            }
+        }];
+        
+    }
     return self;
 }
 
@@ -33,6 +60,11 @@
 {
     // New distance's algotrithm
     return -1.0f;
+}
+
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@: %p> uuid:%@ (%@,%@)",self.class, self, self.uuid, self.major, self.minor];
 }
 
 @end

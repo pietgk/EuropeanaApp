@@ -54,6 +54,8 @@
     [self startRangingBeacons];
 }
 
+#warning TODO: get beacons from IXData
+
 - (NSArray *)initialBeaconsRangingSetup
 {
     // For now we retrieve all the beacons' asset from a convenience PLIST
@@ -182,7 +184,7 @@
 
 - (void) tellDelegateBeaconIsSpotted:(IXBeacon*)beacon
 {
-    NSLog(@"Beacon major: %lu minor %lu ", beacon.major, (unsigned long)beacon.minor);
+    NSLog(@"Beacon major: %@ minor %lu ", beacon.major, (unsigned long)beacon.minor);
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:spottedIXBeacon:)]) {
             [self.delegate ixLocationManager:self spottedIXBeacon:beacon];
