@@ -10,6 +10,7 @@
 
 @implementation IXData {
     NSArray* beacons;
+    NSArray* art;
 }
 
 + (IXData*)sharedData {
@@ -42,7 +43,6 @@
 -(NSDictionary*)beaconWithUuid:(NSString*)uuid major:(NSNumber*)major minor:(NSNumber*)minor;
 {
     NSDictionary* result = nil;
-    // todo uuid
     for (NSDictionary*b in self->beacons) {
         if ([uuid isEqualToString:b[@"uuid"]]
             && [major isEqualToNumber:b[@"major"]]
@@ -52,6 +52,22 @@
         }
     }
     return result;
+}
+
+-(BOOL)art:(NSDictionary*)art closerToBeacons:(NSArray*)beacons thanPreviousClosestArt:(NSDictionary*)previousClosestArt;
+{
+    return true;
+}
+
+-(NSDictionary*)artClosestToBeacons:(NSArray*)artBeacons;
+{
+    NSDictionary* result = nil;
+    for (NSDictionary*a in self->art) {
+        if ([self art:a closerToBeacons:artBeacons thanPreviousClosestArt:result]) {
+            result = a;
+        }
+    }
+    return result[@"art"];
 }
 
 @end

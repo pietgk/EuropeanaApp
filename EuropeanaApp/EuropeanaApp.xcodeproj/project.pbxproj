@@ -26,8 +26,9 @@
 		9B15221E1BE14D4700B3A52B /* IXData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B15221C1BE14D4700B3A52B /* IXData.m */; };
 		9B1522201BE14EA700B3A52B /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B15221F1BE14EA700B3A52B /* beacons.json */; };
 		9B1522211BE14EA700B3A52B /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B15221F1BE14EA700B3A52B /* beacons.json */; };
-		9B6481D019AB33300028A8EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9B6481CF19AB33300028A8EA /* README.md */; };
 		9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */; };
+		9BDC46611BE2BF6F00162557 /* art.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC46601BE2BF6F00162557 /* art.json */; };
+		9BDC46621BE2BF6F00162557 /* art.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC46601BE2BF6F00162557 /* art.json */; };
 		E151FFA2A279885AA44A64DA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321679898299C85865CF0E83 /* Pods.framework */; };
 		E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
 		E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FA19A90FE900E308A9 /* Images.xcassets */; };
@@ -72,12 +73,13 @@
 		77E3D7C519A916590058C62B /* IXBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXBeacon.h; path = EuropeanaApp/Classes/Model/IXBeacon.h; sourceTree = SOURCE_ROOT; };
 		77E3D7C619A916590058C62B /* IXBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IXBeacon.m; path = EuropeanaApp/Classes/Model/IXBeacon.m; sourceTree = SOURCE_ROOT; };
 		77E3D7C819A91A9B0058C62B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		80894D2A9DCF0FE7CFECBC62 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9B15221B1BE14D4700B3A52B /* IXData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXData.h; sourceTree = "<group>"; };
 		9B15221C1BE14D4700B3A52B /* IXData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXData.m; sourceTree = "<group>"; };
 		9B15221F1BE14EA700B3A52B /* beacons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beacons.json; sourceTree = "<group>"; };
-		80894D2A9DCF0FE7CFECBC62 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9B6481CF19AB33300028A8EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "filmmuseum human.caf"; sourceTree = "<group>"; };
+		9BDC46601BE2BF6F00162557 /* art.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = art.json; sourceTree = "<group>"; };
 		E597D9F719A90FA700E308A9 /* IXLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocationManager.h; sourceTree = "<group>"; };
 		E597D9F819A90FA700E308A9 /* IXLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXLocationManager.m; sourceTree = "<group>"; };
 		E597D9FA19A90FE900E308A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				E597D9FA19A90FE900E308A9 /* Images.xcassets */,
 				77D3C4AB19A903AA001F00EC /* Supporting Files */,
 				9B15221F1BE14EA700B3A52B /* beacons.json */,
+				9BDC46601BE2BF6F00162557 /* art.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
 				9B1522201BE14EA700B3A52B /* beacons.json in Resources */,
 				9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */,
+				9BDC46611BE2BF6F00162557 /* art.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +403,7 @@
 			files = (
 				77D3C4D119A903AB001F00EC /* InfoPlist.strings in Resources */,
 				9B1522211BE14EA700B3A52B /* beacons.json in Resources */,
+				9BDC46621BE2BF6F00162557 /* art.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
