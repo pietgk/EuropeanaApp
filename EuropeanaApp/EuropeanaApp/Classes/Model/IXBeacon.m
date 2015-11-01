@@ -56,6 +56,11 @@
     return self;
 }
 
+- (NSString *) uniqueKey
+{
+    return [NSString stringWithFormat:@"%@_%05d_%05d",self.uuid, self.major.intValue, self.minor.intValue];
+}
+            
 - (CGFloat)realDistance
 {
     // New distance's algotrithm
