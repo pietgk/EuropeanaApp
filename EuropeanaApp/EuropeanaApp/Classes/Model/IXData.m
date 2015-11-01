@@ -11,8 +11,8 @@
 #import "IXPoi.h"
 
 @interface IXData ()
-@property (nonatomic, strong) NSArray *beacons;
-@property (nonatomic, strong) NSArray *pois;
+@property (nonatomic, strong) NSArray<IXBeacon *> *beacons;
+@property (nonatomic, strong) NSArray<IXPoi *> *pois;
 @end
 
 @implementation IXData
@@ -29,8 +29,8 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        NSArray *hoi = self.beacons;
-        NSArray *hoipipeloi = self.pois;
+        //NSArray *hoi = self.beacons;
+        //NSArray *hoipipeloi = self.pois;
         NSLog(@"Beacons: %@",self.beacons);
         NSLog(@"Points of interest: %@",self.pois);
     }
@@ -94,19 +94,34 @@
     return newPois;
 }
 
--(NSDictionary*)beaconWithUuid:(NSString*)uuid major:(NSNumber*)major minor:(NSNumber*)minor;
+-(IXBeacon*)beaconWithUuid:(NSString*)uuid major:(NSNumber*)major minor:(NSNumber*)minor;
 {
-    NSDictionary* result = nil;
-    // todo uuid
-    for (NSDictionary*b in self.beacons) {
-        if ([uuid isEqualToString:b[@"uuid"]]
-            && [major isEqualToNumber:b[@"major"]]
-            && [minor isEqualToNumber:b[@"minor"]] ) {
+    IXBeacon* result = nil;
+    for (IXBeacon* b in self.beacons) {
+        if ([uuid isEqualToString:b.uuid]
+            && [major isEqualToNumber:b.major]
+            && [minor isEqualToNumber:b.minor] ) {
             result = b;
             break;
         }
     }
     return result;
+}
+
+-(BOOL)isPoi:(NSDictionary*)poi closerToBeacons:(NSArray*)beacons thanPreviousClosestPoi:(NSDictionary*)previousClosestPoi;
+{
+    return true;
+}
+
+-(NSDictionary*)poiClosestToBeacons:(NSArray*)currentBeacons;
+{
+    NSDictionary* result = nil;
+    for (NSDictionary* p in self.pois) {
+        if ([self isPoi:p closerToBeacons:currentBeacons thanPreviousClosestPoi:result]) {
+            result = p;
+        }
+    }
+    return result[@"art"];
 }
 
 @end
