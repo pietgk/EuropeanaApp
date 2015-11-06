@@ -27,4 +27,8 @@
 + (nonnull instancetype) createWithDictionary:(nonnull NSDictionary *)newDict;
 - (nonnull instancetype) initWithDictionary:(nonnull NSDictionary *)newDict;
 
++ (nonnull NSString*)beaconKeyForUuid:(nonnull NSString*)uuid major:(int)major minor:(int)minor;
+- (nonnull NSString*)key;
+- (nonnull NSUUID*) UUID;
+
 @end

@@ -8,18 +8,21 @@
 
 #import "IXLocationManager.h"
 #import "IXBeacon.h"
+#import "IXData.h"
+#import "EuropeanaApp-Swift.h"
+
 @import CoreLocation;
 
 @interface IXLocationManager ()<CLLocationManagerDelegate>
-//@property (nonatomic, strong) id <IXLocationManagerDelegate> delegate;
+
 @property (nonatomic, strong) dispatch_queue_t myQueue;
 
 @property (nonatomic) CLLocationManager *locationManager;
 
-/**
- *  Contains every ranged beacons mapped from plist file.
- */
-@property (nonatomic) NSArray *rangedBeacons;
+@property (nonatomic) OperationQueue *operationQueue;
+
+@property (nonatomic, strong) NSArray<IXBeacon*> *rangedBeacons;
+@property (nonatomic, strong) IXData *data;
 
 @end
 
@@ -39,22 +42,59 @@
 {
     self = [super init];
     if (self) {
-        self.delegate = aDelegate;
+        _delegate = aDelegate;
         
-        self.locationManager = [CLLocationManager new];
-        self.locationManager.delegate = self;
+        _locationManager = [CLLocationManager new];
+        _locationManager.delegate = self;
+        // start a monitoring operation using the data from beacons.json
         self.rangedBeacons = [self initialBeaconsRangingSetup];
-        
+        _operationQueue = [[OperationQueue alloc] init];
     }
     return self;
 }
 
-- (void) start;
+- (IXData *) data
 {
-    [self startRangingBeacons];
+    if (!_data) {
+        _data = [IXData sharedData];
+    }
+    return _data;
 }
 
-#warning TODO: get beacons from IXData
+- (void) start;
+{
+    [self startRangingBeacons]; // old
+    
+//new    BeaconMonitorOperation* beaconMonitorOperation = [[BeaconMonitorOperation alloc] init];
+//new    [_operationQueue addOperation:beaconMonitorOperation];
+}
+
+//[self startRangingBeacons];
+
+//    __weak IXLocationManager* weakSelf = self;
+//
+//    void (^beaconMonitorBlock)() = ^void(){
+//        IXData *data = [IXData sharedData];
+//        if (! [CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]]) {
+//            NSLog(@"This device doesn't support beacons' monitoring");
+//        }
+//        else {
+//            for (NSUUID *beaconUUID in data.monitoredBeaconUuidSet) {
+//                CLBeaconRegion* beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:beaconUUID
+//                                                                                  identifier:[beaconUUID UUIDString]];
+//                [weakSelf startMonitoringForRegion:beaconRegion];
+//            }
+//            return YES;
+//        }
+//        [[IXData sharedData] initialBeaconsMonitoringSetup];
+//    };
+//    BlockOperation* beaconMonitorOperation = [[BlockOperation alloc] initWithBlock:beaconMonitorBlock];
+//
+//
+//    void (^beaconRangingBlock)() = ^void(){
+//        [[IXData sharedData] initialBeaconsMonitoringSetup];
+//    };
+//[_operationQueue addOperation:monitorOperation]
 
 - (NSArray *)initialBeaconsRangingSetup
 {
@@ -66,10 +106,10 @@
     
     for (NSDictionary *elem in plistArray) {
         CLBeaconRegion *beacon = [[CLBeaconRegion alloc]
-                                             initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:elem[@"UUID"]]
-                                             major:[elem[@"major"] integerValue]
-                                             minor:[elem[@"minor"] integerValue]
-                                             identifier:elem[@"identifier"]];
+                                  initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:elem[@"UUID"]]
+                                  major:[elem[@"major"] integerValue]
+                                  minor:[elem[@"minor"] integerValue]
+                                  identifier:elem[@"identifier"]];
         
         // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
         

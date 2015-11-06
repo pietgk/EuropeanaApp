@@ -10,6 +10,7 @@
 #import "IXLocationManager.h"
 #import "IXBeacon.h"
 #import "IXAudioManager.h"
+#import "IXData.h"
 
 typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavingInside} state_t;
 NSString * const stateAsString[] = {
@@ -24,6 +25,7 @@ NSString * const stateAsString[] = {
 @interface IXManager ()
 @property (nonatomic, strong) IXLocationManager *locationManager;
 @property (nonatomic, strong) IXAudioManager *audioManager;
+@property (nonatomic, strong) IXData *data;
 
 @property (nonatomic, assign) state_t state;
 @property (nonatomic, assign) NSTimeInterval filterSeconds;
@@ -45,6 +47,30 @@ NSString * const stateAsString[] = {
         [self triggerSoundReset];
     }
     return self;
+}
+
+- (IXLocationManager *) locationManager
+{
+    if (!_locationManager) {
+        _locationManager = [[IXLocationManager alloc] initWithDelegate:self];
+    }
+    return _locationManager;
+}
+
+- (IXAudioManager *) audioManager
+{
+    if (!_audioManager) {
+        _audioManager = [[IXAudioManager alloc] init];
+    }
+    return _audioManager;
+}
+
+- (IXData *) data
+{
+    if (!_data) {
+        _data = [IXData sharedData];
+    }
+    return _data;
 }
 
 - (void) triggerSoundReset {
@@ -105,22 +131,6 @@ NSString * const stateAsString[] = {
         default:
             break;
     }
-}
-
-- (IXLocationManager *) locationManager
-{
-    if (!_locationManager) {
-        _locationManager = [[IXLocationManager alloc] initWithDelegate:self];
-    }
-    return _locationManager;
-}
-
-- (IXAudioManager *) audioManager
-{
-    if (!_audioManager) {
-        _audioManager = [[IXAudioManager alloc] init];
-    }
-    return _audioManager;
 }
 
 #pragma mark - Location Manager Delegate stuff

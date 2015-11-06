@@ -56,6 +56,21 @@
     return self;
 }
 
++ (nonnull NSString*)beaconKeyForUuid:(nonnull NSString*)uuid major:(int)major minor:(int)minor;
+{
+    return [NSString stringWithFormat:@"%@_%d_%d", uuid, major, minor];
+}
+
+- (nonnull NSString*)key;
+{
+    return [IXBeacon beaconKeyForUuid:self.uuid major:self.major.intValue minor:self.minor.intValue];
+}
+
+- (nonnull NSUUID*) UUID;
+{
+    return [[NSUUID alloc] initWithUUIDString:self.uuid];
+}
+
 - (CGFloat)realDistance
 {
     // New distance's algotrithm

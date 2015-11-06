@@ -1,4 +1,21 @@
  [
+  {
+  "id": 994203,
+  "name": "GB432530301",
+  "remarks": "axle supplied beacon used by piet",
+  "longitude": 4.904265,
+  "latitude": 52.376772,
+  "status": "active",
+  "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
+  "major": 42,
+  "minor": 3,
+  "type": "gb2",
+  "capabilities": "ib",
+  "LORA_address": "",
+  "public_url": "",
+  "groups": "ibm-fixed",
+  "additonal_json": ""
+  },
   { "id": 1000, "name": "Hermitage Bovenaan de trap bij entree 13", "remarks": "Schuttersmaaltijd ter ere van de benoeming van de Amsterdamse burgemeester Jan van de Poll tot kolonel van de schutterij  Johannes Spilberg 1650", "uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":13 },
   { "id": 1001, "name": "Hermitage In tussenzaal 12", "remarks": "De Dam met het Stadhuis in aanbouw  Jacob van der Ulft  1689", "uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":12 },
   { "id": 1002, "name": "Hermitage Grote zaal  17", "remarks": "De overlieden van de Handboogdoelen Bartholomeus van der Helst  1653", "uuid": "19A305C0-52C3-4445-8BEF-3CDF4D970F3D", "major":1, "minor":17 },
