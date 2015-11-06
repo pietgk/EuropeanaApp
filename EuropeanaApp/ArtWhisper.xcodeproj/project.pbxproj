@@ -17,7 +17,7 @@
 		77D3C4C819A903AB001F00EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A419A903AA001F00EC /* Foundation.framework */; };
 		77D3C4C919A903AB001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
 		77D3C4D119A903AB001F00EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77D3C4CF19A903AB001F00EC /* InfoPlist.strings */; };
-		77D3C4D319A903AB001F00EC /* EuropeanaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3C4D219A903AB001F00EC /* EuropeanaAppTests.m */; };
+		77D3C4D319A903AB001F00EC /* ArtWhisperBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3C4D219A903AB001F00EC /* ArtWhisperBeaconTests.m */; };
 		77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C119A910FA0058C62B /* Europeana logo.jpg */; };
 		77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */; };
 		77E3D7C719A916590058C62B /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
@@ -149,11 +149,11 @@
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77D3C4A619A903AA001F00EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		77D3C4A819A903AA001F00EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		77D3C4C519A903AB001F00EC /* EuropeanaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuropeanaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D3C4C519A903AB001F00EC /* ArtWhisperObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtWhisperObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4C619A903AB001F00EC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		77D3C4CE19A903AB001F00EC /* ArtWhisperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArtWhisperTests-Info.plist"; sourceTree = "<group>"; };
+		77D3C4CE19A903AB001F00EC /* ArtWhisperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ArtWhisperTests-Info.plist"; path = "../ArtWhisperObjcTests/ArtWhisperTests-Info.plist"; sourceTree = "<group>"; };
 		77D3C4D019A903AB001F00EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		77D3C4D219A903AB001F00EC /* EuropeanaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EuropeanaAppTests.m; sourceTree = "<group>"; };
+		77D3C4D219A903AB001F00EC /* ArtWhisperBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ArtWhisperBeaconTests.m; path = ../ArtWhisperObjcTests/ArtWhisperBeaconTests.m; sourceTree = "<group>"; };
 		77E3D7C119A910FA0058C62B /* Europeana logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Europeana logo.jpg"; sourceTree = "<group>"; };
 		77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glimworm-ibeacons.png"; sourceTree = "<group>"; };
 		77E3D7C519A916590058C62B /* IXBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXBeacon.h; path = EuropeanaApp/Classes/Model/IXBeacon.h; sourceTree = SOURCE_ROOT; };
@@ -210,9 +210,9 @@
 		9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconMonitorOperation.swift; sourceTree = "<group>"; };
 		9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconRangeOperation.swift; path = Operations/BeaconRangeOperation.swift; sourceTree = "<group>"; };
 		9BDC49B31BEB441F00162557 /* ArtWhisperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtWhisperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BDC49B51BEB441F00162557 /* ArtWhisperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtWhisperTests.swift; sourceTree = "<group>"; };
-		9BDC49B71BEB441F00162557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BDC49BD1BEB449200162557 /* BeaconMonitorOperationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconMonitorOperationTest.swift; sourceTree = "<group>"; };
+		9BDC49B51BEB441F00162557 /* ArtWhisperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtWhisperTests.swift; path = ../ArtWhisperSwiftTests/ArtWhisperTests.swift; sourceTree = "<group>"; };
+		9BDC49B71BEB441F00162557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../ArtWhisperSwiftTests/Info.plist; sourceTree = "<group>"; };
+		9BDC49BD1BEB449200162557 /* BeaconMonitorOperationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconMonitorOperationTest.swift; path = ../ArtWhisperSwiftTests/BeaconMonitorOperationTest.swift; sourceTree = "<group>"; };
 		E597D9F719A90FA700E308A9 /* IXLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXLocationManager.h; sourceTree = "<group>"; };
 		E597D9F819A90FA700E308A9 /* IXLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXLocationManager.m; sourceTree = "<group>"; };
 		E597D9FA19A90FE900E308A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -278,8 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				77D3C4AA19A903AA001F00EC /* EuropeanaApp */,
-				77D3C4CC19A903AB001F00EC /* EuropeanaAppTests */,
-				9BDC49B41BEB441F00162557 /* ArtWhisperTests */,
+				77D3C4CC19A903AB001F00EC /* ArtWhisperObjcTests */,
+				9BDC49B41BEB441F00162557 /* ArtWhisperSwiftTests */,
 				77D3C4A319A903AA001F00EC /* Frameworks */,
 				77D3C4A219A903AA001F00EC /* Products */,
 				42A9367F9E49AAF5408E85F4 /* Pods */,
@@ -290,7 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				77D3C4A119A903AA001F00EC /* EuropeanaApp.app */,
-				77D3C4C519A903AB001F00EC /* EuropeanaAppTests.xctest */,
+				77D3C4C519A903AB001F00EC /* ArtWhisperObjcTests.xctest */,
 				9BDC49B31BEB441F00162557 /* ArtWhisperTests.xctest */,
 			);
 			name = Products;
@@ -330,12 +330,13 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		77D3C4CC19A903AB001F00EC /* EuropeanaAppTests */ = {
+		77D3C4CC19A903AB001F00EC /* ArtWhisperObjcTests */ = {
 			isa = PBXGroup;
 			children = (
-				77D3C4D219A903AB001F00EC /* EuropeanaAppTests.m */,
+				77D3C4D219A903AB001F00EC /* ArtWhisperBeaconTests.m */,
 				77D3C4CD19A903AB001F00EC /* Supporting Files */,
 			);
+			name = ArtWhisperObjcTests;
 			path = EuropeanaAppTests;
 			sourceTree = "<group>";
 		};
@@ -448,13 +449,14 @@
 			name = "Convenience Extensions";
 			sourceTree = "<group>";
 		};
-		9BDC49B41BEB441F00162557 /* ArtWhisperTests */ = {
+		9BDC49B41BEB441F00162557 /* ArtWhisperSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
 				9BDC49B51BEB441F00162557 /* ArtWhisperTests.swift */,
 				9BDC49B71BEB441F00162557 /* Info.plist */,
 				9BDC49BD1BEB449200162557 /* BeaconMonitorOperationTest.swift */,
 			);
+			name = ArtWhisperSwiftTests;
 			path = ArtWhisperTests;
 			sourceTree = "<group>";
 		};
@@ -562,9 +564,9 @@
 			productReference = 77D3C4A119A903AA001F00EC /* EuropeanaApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		77D3C4C419A903AB001F00EC /* EuropeanaAppTests */ = {
+		77D3C4C419A903AB001F00EC /* ArtWhisperObjcTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77D3C4D919A903AB001F00EC /* Build configuration list for PBXNativeTarget "EuropeanaAppTests" */;
+			buildConfigurationList = 77D3C4D919A903AB001F00EC /* Build configuration list for PBXNativeTarget "ArtWhisperObjcTests" */;
 			buildPhases = (
 				77D3C4C119A903AB001F00EC /* Sources */,
 				77D3C4C219A903AB001F00EC /* Frameworks */,
@@ -575,9 +577,9 @@
 			dependencies = (
 				77D3C4CB19A903AB001F00EC /* PBXTargetDependency */,
 			);
-			name = EuropeanaAppTests;
+			name = ArtWhisperObjcTests;
 			productName = EuropeanaAppTests;
-			productReference = 77D3C4C519A903AB001F00EC /* EuropeanaAppTests.xctest */;
+			productReference = 77D3C4C519A903AB001F00EC /* ArtWhisperObjcTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		9BDC49B21BEB441F00162557 /* ArtWhisperTests */ = {
@@ -628,7 +630,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 77D3C49C19A903AA001F00EC /* Build configuration list for PBXProject "EuropeanaApp" */;
+			buildConfigurationList = 77D3C49C19A903AA001F00EC /* Build configuration list for PBXProject "ArtWhisper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -642,7 +644,7 @@
 			projectRoot = "";
 			targets = (
 				77D3C4A019A903AA001F00EC /* EuropeanaApp */,
-				77D3C4C419A903AB001F00EC /* EuropeanaAppTests */,
+				77D3C4C419A903AB001F00EC /* ArtWhisperObjcTests */,
 				9BDC49B21BEB441F00162557 /* ArtWhisperTests */,
 			);
 		};
@@ -827,7 +829,7 @@
 				9BDC497A1BE8F95B00162557 /* OperationErrors.swift in Sources */,
 				9BDC49821BE8F95B00162557 /* PhotosCondition.swift in Sources */,
 				9BDC49741BE8F95B00162557 /* NSOperation+Operations.swift in Sources */,
-				77D3C4D319A903AB001F00EC /* EuropeanaAppTests.m in Sources */,
+				77D3C4D319A903AB001F00EC /* ArtWhisperBeaconTests.m in Sources */,
 				9BDC49A01BEA495800162557 /* BeaconMonitorOperation.swift in Sources */,
 				9BDC49661BE8F95B00162557 /* HealthCondition.swift in Sources */,
 				9BDC498E1BE8F95B00162557 /* URLSessionTaskOperation.swift in Sources */,
@@ -869,6 +871,7 @@
 				77D3C4D019A903AB001F00EC /* en */,
 			);
 			name = InfoPlist.strings;
+			path = ../ArtWhisperObjcTests;
 			sourceTree = "<group>";
 		};
 		E597D9FC19A90FFE00E308A9 /* Main_iPad.storyboard */ = {
@@ -1022,7 +1025,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "EuropeanaAppTests/ArtWhisperTests-Info.plist";
+				INFOPLIST_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1044,7 +1047,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/ArtWhisper-Prefix.pch";
-				INFOPLIST_FILE = "EuropeanaAppTests/EuropeanaAppTests-Info.plist";
+				INFOPLIST_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1061,7 +1064,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = ArtWhisperTests/Info.plist;
+				INFOPLIST_FILE = ArtWhisperSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1082,7 +1085,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = ArtWhisperTests/Info.plist;
+				INFOPLIST_FILE = ArtWhisperSwiftTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1096,7 +1099,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		77D3C49C19A903AA001F00EC /* Build configuration list for PBXProject "EuropeanaApp" */ = {
+		77D3C49C19A903AA001F00EC /* Build configuration list for PBXProject "ArtWhisper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77D3C4D419A903AB001F00EC /* Debug */,
@@ -1114,7 +1117,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77D3C4D919A903AB001F00EC /* Build configuration list for PBXNativeTarget "EuropeanaAppTests" */ = {
+		77D3C4D919A903AB001F00EC /* Build configuration list for PBXNativeTarget "ArtWhisperObjcTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77D3C4DA19A903AB001F00EC /* Debug */,

@@ -26,23 +26,23 @@ class BeaconMonitorOperationTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testOperation() {
-        let exp = expectationWithDescription("testOperation")
-        
-        let queue = OperationQueue()
-        
-        let operation = BeaconMonitorOperation();
-        
-        let observer = BlockObserver { _, errors in
-            exp.fulfill()
-        }
-        
-        operation.addObserver(observer)
-        queue.addOperation(operation)
-        
-        waitForExpectationsWithTimeout(2.0) { error in
-            exp.fulfill()
-        }
-        
-    }
+//    func testOperation() {
+//        let exp = expectationWithDescription("testOperation")
+//        
+//        let queue = OperationQueue()
+//        
+//        let operation = BeaconMonitorOperation();
+//        
+//        let observer = BlockObserver { _, errors in
+//            exp.fulfill()
+//        }
+//        
+//        operation.addObserver(observer)
+//        queue.addOperation(operation)
+//        
+//        waitForExpectationsWithTimeout(2.0) { error in
+//            exp.fulfill()
+//        }
+//        
+//    }
 }
