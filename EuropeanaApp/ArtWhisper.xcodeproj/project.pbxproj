@@ -145,7 +145,7 @@
 		4456DD9919A935A500B5B707 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		531859C7F72D5413B4FEE892 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmmuseum.caf; sourceTree = "<group>"; };
-		77D3C4A119A903AA001F00EC /* EuropeanaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuropeanaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D3C4A119A903AA001F00EC /* ArtWhisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWhisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77D3C4A619A903AA001F00EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		77D3C4A819A903AA001F00EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -289,7 +289,7 @@
 		77D3C4A219A903AA001F00EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				77D3C4A119A903AA001F00EC /* EuropeanaApp.app */,
+				77D3C4A119A903AA001F00EC /* ArtWhisper.app */,
 				77D3C4C519A903AB001F00EC /* ArtWhisperObjcTests.xctest */,
 				9BDC49B31BEB441F00162557 /* ArtWhisperTests.xctest */,
 			);
@@ -544,9 +544,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		77D3C4A019A903AA001F00EC /* EuropeanaApp */ = {
+		77D3C4A019A903AA001F00EC /* ArtWhisper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77D3C4D619A903AB001F00EC /* Build configuration list for PBXNativeTarget "EuropeanaApp" */;
+			buildConfigurationList = 77D3C4D619A903AB001F00EC /* Build configuration list for PBXNativeTarget "ArtWhisper" */;
 			buildPhases = (
 				47A0DC1FC2BE701E1582C5C2 /* Check Pods Manifest.lock */,
 				77D3C49D19A903AA001F00EC /* Sources */,
@@ -559,9 +559,9 @@
 			);
 			dependencies = (
 			);
-			name = EuropeanaApp;
+			name = ArtWhisper;
 			productName = EuropeanaApp;
-			productReference = 77D3C4A119A903AA001F00EC /* EuropeanaApp.app */;
+			productReference = 77D3C4A119A903AA001F00EC /* ArtWhisper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		77D3C4C419A903AB001F00EC /* ArtWhisperObjcTests */ = {
@@ -643,7 +643,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				77D3C4A019A903AA001F00EC /* EuropeanaApp */,
+				77D3C4A019A903AA001F00EC /* ArtWhisper */,
 				77D3C4C419A903AB001F00EC /* ArtWhisperObjcTests */,
 				9BDC49B21BEB441F00162557 /* ArtWhisperTests */,
 			);
@@ -854,12 +854,12 @@
 /* Begin PBXTargetDependency section */
 		77D3C4CB19A903AB001F00EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 77D3C4A019A903AA001F00EC /* EuropeanaApp */;
+			target = 77D3C4A019A903AA001F00EC /* ArtWhisper */;
 			targetProxy = 77D3C4CA19A903AB001F00EC /* PBXContainerItemProxy */;
 		};
 		9BDC49B91BEB441F00162557 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 77D3C4A019A903AA001F00EC /* EuropeanaApp */;
+			target = 77D3C4A019A903AA001F00EC /* ArtWhisper */;
 			targetProxy = 9BDC49B81BEB441F00162557 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1108,7 +1108,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77D3C4D619A903AB001F00EC /* Build configuration list for PBXNativeTarget "EuropeanaApp" */ = {
+		77D3C4D619A903AB001F00EC /* Build configuration list for PBXNativeTarget "ArtWhisper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77D3C4D719A903AB001F00EC /* Debug */,
@@ -1133,6 +1133,7 @@
 				9BDC49BC1BEB441F00162557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
