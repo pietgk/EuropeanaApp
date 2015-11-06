@@ -17,5 +17,3 @@ DerivedData
 .idea/
 Podfile.lock
 Pods
-*.xcworkspace
-Documentation/Generated
