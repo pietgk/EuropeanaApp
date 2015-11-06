@@ -58,7 +58,7 @@
 
 + (nonnull NSString*)beaconKeyForUuid:(nonnull NSString*)uuid major:(int)major minor:(int)minor;
 {
-    return [NSString stringWithFormat:@"%@_%d_%d", uuid, major, minor];
+    return [NSString stringWithFormat:@"%@_%05d_%05d", uuid, major, minor];
 }
 
 - (nonnull NSString*)key;
