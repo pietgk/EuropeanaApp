@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
@@ -111,7 +112,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Active" id="lgH-9d-eAJ"/>
+                    <tabBarItem key="tabBarItem" title="Active" image="Active" selectedImage="ActiveSelected" id="lgH-9d-eAJ"/>
                     <connections>
                         <segue destination="JVy-PJ-dZW" kind="presentation" id="pir-5c-eGt"/>
                         <segue destination="a7c-JG-sh3" kind="presentation" id="skK-vd-RcU"/>
@@ -181,7 +182,7 @@
         <scene sceneID="sNP-c7-X5x">
             <objects>
                 <navigationController title="Suggestions Navi" id="GYr-S2-BT0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Suggestions" id="cPJ-xB-z5E"/>
+                    <tabBarItem key="tabBarItem" title="Suggestions" image="Suggestion" selectedImage="SuggestionSelected" id="cPJ-xB-z5E"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hHb-Tu-5So">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -212,14 +213,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PhoneSuggestClean.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0R-hf-VJt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="PhoneSuggestClean.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0R-hf-VJt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-fc-xO7">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-fc-xO7">
                                 <rect key="frame" x="218" y="158" width="85" height="30"/>
                                 <animations/>
                                 <connections>
@@ -322,10 +323,10 @@
                                 <exclude reference="0Le-AA-PWT"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="UPc-rd-Kzb"/>
                                 <exclude reference="3YL-Bq-jgk"/>
                                 <exclude reference="g5T-qf-fZU"/>
                                 <exclude reference="wLT-QE-Oxx"/>
-                                <exclude reference="UPc-rd-Kzb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -334,10 +335,10 @@
                                 <include reference="0Le-AA-PWT"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="UPc-rd-Kzb"/>
                                 <include reference="3YL-Bq-jgk"/>
                                 <include reference="g5T-qf-fZU"/>
                                 <include reference="wLT-QE-Oxx"/>
-                                <include reference="UPc-rd-Kzb"/>
                             </mask>
                         </variation>
                     </view>
@@ -373,7 +374,7 @@
         <scene sceneID="UTe-3V-cM5">
             <objects>
                 <navigationController title="Downloads Navi" id="mSR-ji-Iua" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Guides" id="p3J-df-Xnx"/>
+                    <tabBarItem key="tabBarItem" title="Guides" image="Download" selectedImage="DownloadSelected" id="p3J-df-Xnx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Way-0x-ezL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -458,7 +459,7 @@
         <scene sceneID="2Mg-VC-HNb">
             <objects>
                 <navigationController title="History Navi" id="dbn-x3-hm8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="hSV-4J-K4M"/>
+                    <tabBarItem key="tabBarItem" title="History" image="History" selectedImage="HistorySelected" id="hSV-4J-K4M"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oAO-Lx-xCx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -474,9 +475,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Active" width="81" height="75"/>
+        <image name="ActiveSelected" width="81" height="75"/>
+        <image name="Download" width="73" height="75"/>
+        <image name="DownloadSelected" width="73" height="75"/>
+        <image name="History" width="25" height="19"/>
+        <image name="HistorySelected" width="25" height="19"/>
         <image name="PhoneActiveClean.png" width="750" height="1334"/>
         <image name="PhoneSuggestClean.png" width="750" height="1334"/>
         <image name="PhoneSuggestDetail.png" width="750" height="1334"/>
+        <image name="Suggestion" width="47" height="50"/>
+        <image name="SuggestionSelected" width="47" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fCw-82-0DI"/>
