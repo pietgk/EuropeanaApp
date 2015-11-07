@@ -75,7 +75,7 @@ NSString * const stateAsString[] = {
 
 - (void) triggerSoundReset {
     self.state = outside;
-    self.filterSeconds = 5.0;
+    self.filterSeconds = 1.0;
     self.firstOutside = [NSDate date];
     self.firstInside = [NSDate date];
 }
@@ -136,7 +136,7 @@ NSString * const stateAsString[] = {
 #pragma mark - Location Manager Delegate stuff
 - (void) ixLocationManager : (IXLocationManager *)ixLocationManager spottedIXBeacon:(IXBeacon *) ixBeacon
 {
-    if (ixBeacon.distance < 5)
+    if (ixBeacon.distance < 4)
     {
         [self weDetectedInside];
     } else {

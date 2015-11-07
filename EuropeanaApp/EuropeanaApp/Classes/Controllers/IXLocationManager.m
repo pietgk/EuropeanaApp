@@ -10,6 +10,7 @@
 #import "IXBeacon.h"
 #import "IXData.h"
 #import "ArtWhisper-Swift.h"
+//#import <CBCentralManager.h>
 
 @import CoreLocation;
 
@@ -18,6 +19,10 @@
 @property (nonatomic, strong) dispatch_queue_t myQueue;
 
 @property (nonatomic) CLLocationManager *locationManager;
+
+//@property (nonatomic, strong) CBCentralManager *btManager;
+//@property (nonatomic, strong) CBPeripheral *peripheral;
+
 
 @property (nonatomic) OperationQueue *operationQueue;
 
@@ -34,6 +39,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedLocationManager = [[self alloc] init];
+//        btManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+
     });
     return sharedLocationManager;
 }
@@ -239,5 +246,10 @@
     // Handle error
     NSLog(@"%@",error);
 }
+
+
+#pragma mark - CoreBluetooth
+
+//[self.manager scanForPeripheralsWithServices:nil options:options];
 
 @end

@@ -32,4 +32,7 @@ class IXSuggestionVC: UIViewController {
     }
     */
 
+    @IBAction func unwindDetail(segue: UIStoryboardSegue) {
+        NSLog("unwinding")
+    }
 }

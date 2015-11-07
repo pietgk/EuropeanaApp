@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <scenes>
         <!--DEMO-->
@@ -77,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3337.5" y="100.35211267605634"/>
+            <point key="canvasLocation" x="-2042" y="156"/>
         </scene>
         <!--Active-->
         <scene sceneID="k3D-l9-pDG">
@@ -91,13 +92,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Active Guide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-9M-FBu">
-                                <rect key="frame" x="208" y="198" width="97" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PhoneActiveClean.png" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-jP-ArE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YN-0d-qtL">
+                                <rect key="frame" x="-102" y="-392" width="804" height="1334"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-102" y="-391" width="804" height="1334"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -110,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuZ-mT-Ngj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-898.125" y="1185.2112676056338"/>
+            <point key="canvasLocation" x="-900" y="1185"/>
         </scene>
         <!--No BeaconVC-->
         <scene sceneID="sv4-Fc-X2v">
@@ -166,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIj-hk-z4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-898.125" y="386.61971830985914"/>
+            <point key="canvasLocation" x="101" y="338"/>
         </scene>
         <!--Suggestions Navi-->
         <scene sceneID="sNP-c7-X5x">
@@ -189,7 +198,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9f6-g7-t1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4411.875" y="2107.394366197183"/>
+            <point key="canvasLocation" x="-4084" y="2291"/>
         </scene>
         <!--Suggestions-->
         <scene sceneID="DHd-aH-evn">
@@ -203,22 +212,140 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nv0-ol-lR8">
-                                <rect key="frame" x="160" y="264" width="95" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PhoneSuggestClean.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0R-hf-VJt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-fc-xO7">
+                                <rect key="frame" x="218" y="158" width="85" height="30"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="S6K-vA-roe" kind="show" action="showDetailViewController:sender:" id="fCw-82-0DI">
+                                        <segue key="commit" inheritsFrom="parent" id="Eyf-u7-cke"/>
+                                        <segue key="preview" inheritsFrom="commit" id="WBP-Dv-4db"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y0R-hf-VJt" secondAttribute="trailing" constant="-20" id="4o2-I1-TbR"/>
+                            <constraint firstItem="I1B-3O-QsQ" firstAttribute="top" secondItem="pFv-fc-xO7" secondAttribute="bottom" constant="231" id="6DH-yu-z9f">
+                                <variation key="heightClass=regular-widthClass=compact" constant="75"/>
+                            </constraint>
+                            <constraint firstItem="pFv-fc-xO7" firstAttribute="top" secondItem="2Nm-4Q-Cqk" secondAttribute="bottom" constant="39" id="7B1-7S-fT1"/>
+                            <constraint firstItem="pFv-fc-xO7" firstAttribute="leading" secondItem="qF4-fR-BHm" secondAttribute="leadingMargin" constant="29" id="Hhl-Ck-BMa">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Y0R-hf-VJt" firstAttribute="leading" secondItem="qF4-fR-BHm" secondAttribute="leadingMargin" constant="-20" id="IOn-8T-pAr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pFv-fc-xO7" secondAttribute="trailing" constant="5" id="XfY-lD-nky"/>
+                            <constraint firstItem="Y0R-hf-VJt" firstAttribute="top" secondItem="2Nm-4Q-Cqk" secondAttribute="bottom" constant="-64" id="mIh-Ct-VBx">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-112"/>
+                            </constraint>
+                            <constraint firstItem="I1B-3O-QsQ" firstAttribute="top" secondItem="Y0R-hf-VJt" secondAttribute="bottom" constant="-49" id="sb7-Dk-8Cc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4o2-I1-TbR"/>
+                                <exclude reference="IOn-8T-pAr"/>
+                                <exclude reference="mIh-Ct-VBx"/>
+                                <exclude reference="7B1-7S-fT1"/>
+                                <exclude reference="Hhl-Ck-BMa"/>
+                                <exclude reference="XfY-lD-nky"/>
+                                <exclude reference="6DH-yu-z9f"/>
+                                <exclude reference="sb7-Dk-8Cc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="4o2-I1-TbR"/>
+                                <include reference="IOn-8T-pAr"/>
+                                <include reference="mIh-Ct-VBx"/>
+                                <include reference="7B1-7S-fT1"/>
+                                <include reference="Hhl-Ck-BMa"/>
+                                <include reference="XfY-lD-nky"/>
+                                <include reference="6DH-yu-z9f"/>
+                                <include reference="sb7-Dk-8Cc"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="oQ1-9S-luo"/>
+                    <navigationItem key="navigationItem" title="Suggestions" id="oQ1-9S-luo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSA-55-wKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Voa-xe-raD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-4404" y="3063"/>
+            <point key="canvasLocation" x="-4077" y="3246.75"/>
+        </scene>
+        <!--Suggestion DetailVC-->
+        <scene sceneID="8WM-Uf-oLH">
+            <objects>
+                <viewController id="S6K-vA-roe" customClass="IXSuggestionDetailVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PLZ-Pl-Obu"/>
+                        <viewControllerLayoutGuide type="bottom" id="L4g-O1-a4q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AQj-cg-drl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbD-r9-bMj">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Le-AA-PWT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Back"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="20" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Voa-xe-raD" kind="unwind" unwindAction="unwindDetail:" id="kbu-2x-HAG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YbD-r9-bMj" firstAttribute="top" secondItem="PLZ-Pl-Obu" secondAttribute="bottom" constant="-64" id="3YL-Bq-jgk"/>
+                            <constraint firstItem="L4g-O1-a4q" firstAttribute="top" secondItem="YbD-r9-bMj" secondAttribute="bottom" constant="-49" id="UPc-rd-Kzb"/>
+                            <constraint firstItem="YbD-r9-bMj" firstAttribute="leading" secondItem="AQj-cg-drl" secondAttribute="leadingMargin" constant="-20" id="g5T-qf-fZU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YbD-r9-bMj" secondAttribute="trailing" constant="-20" id="wLT-QE-Oxx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="YbD-r9-bMj"/>
+                                <exclude reference="0Le-AA-PWT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3YL-Bq-jgk"/>
+                                <exclude reference="g5T-qf-fZU"/>
+                                <exclude reference="wLT-QE-Oxx"/>
+                                <exclude reference="UPc-rd-Kzb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="YbD-r9-bMj"/>
+                                <include reference="0Le-AA-PWT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3YL-Bq-jgk"/>
+                                <include reference="g5T-qf-fZU"/>
+                                <include reference="wLT-QE-Oxx"/>
+                                <include reference="UPc-rd-Kzb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INq-ra-TBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4084.5" y="3983.25"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kbf-tf-fjC">
@@ -240,7 +367,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nb-5g-anK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2688.75" y="1195.7746478873239"/>
+            <point key="canvasLocation" x="-2769" y="1219"/>
         </scene>
         <!--Downloads Navi-->
         <scene sceneID="UTe-3V-cM5">
@@ -264,7 +391,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCB-hC-O4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2145" y="2142.2535211267605"/>
+            <point key="canvasLocation" x="-1481" y="2342"/>
         </scene>
         <!--Guides-->
         <scene sceneID="C52-EO-Hw0">
@@ -277,6 +404,15 @@
                     <view key="view" contentMode="scaleToFill" id="0qa-9f-LbA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Downloads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AK1-Jx-Olx">
+                                <rect key="frame" x="259" y="254" width="85" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -284,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMD-mB-OgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1180" y="2163"/>
+            <point key="canvasLocation" x="-1481" y="3323"/>
         </scene>
         <!--History-->
         <scene sceneID="D1Y-RT-kGl">
@@ -316,7 +452,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRp-zH-aVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1171.875" y="3014.788732394366"/>
+            <point key="canvasLocation" x="-2764" y="3214"/>
         </scene>
         <!--History Navi-->
         <scene sceneID="2Mg-VC-HNb">
@@ -334,7 +470,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFs-cM-JXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2805" y="2952.464788732394"/>
+            <point key="canvasLocation" x="-2757" y="2280"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PhoneActiveClean.png" width="750" height="1334"/>
+        <image name="PhoneSuggestClean.png" width="750" height="1334"/>
+        <image name="PhoneSuggestDetail.png" width="750" height="1334"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fCw-82-0DI"/>
+    </inferredMetricsTieBreakers>
 </document>
