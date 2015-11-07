@@ -10,6 +10,13 @@
 		4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4456DD9819A935A500B5B707 /* background-music-aac.caf */; };
 		4456DD9B19A935A500B5B707 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4456DD9919A935A500B5B707 /* pew-pew-lei.caf */; };
 		7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */; };
+		77906E311BEDFFD000114B0D /* IXHistoryTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */; };
+		77906E331BEE000D00114B0D /* IXDownloadGuidesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */; };
+		77906E351BEE005200114B0D /* IXActiveGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E341BEE005200114B0D /* IXActiveGuideVC.swift */; };
+		77906E371BEE019500114B0D /* IXSuggestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E361BEE019500114B0D /* IXSuggestionVC.swift */; };
+		77906E391BEE01C700114B0D /* IXSuggestionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */; };
+		77906E3B1BEE01F500114B0D /* IXFirstTimeHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */; };
+		77906E3D1BEE020D00114B0D /* IXNoBeaconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */; };
 		77D3C4A519A903AA001F00EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A419A903AA001F00EC /* Foundation.framework */; };
 		77D3C4A719A903AA001F00EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A619A903AA001F00EC /* CoreGraphics.framework */; };
 		77D3C4A919A903AA001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
@@ -145,6 +152,13 @@
 		4456DD9919A935A500B5B707 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		531859C7F72D5413B4FEE892 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmmuseum.caf; sourceTree = "<group>"; };
+		77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXHistoryTableVC.swift; sourceTree = "<group>"; };
+		77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXDownloadGuidesVC.swift; sourceTree = "<group>"; };
+		77906E341BEE005200114B0D /* IXActiveGuideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXActiveGuideVC.swift; sourceTree = "<group>"; };
+		77906E361BEE019500114B0D /* IXSuggestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IXSuggestionVC.swift; path = EuropeanaApp/Classes/ViewControllers/IXSuggestionVC.swift; sourceTree = SOURCE_ROOT; };
+		77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXSuggestionDetailVC.swift; sourceTree = "<group>"; };
+		77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXFirstTimeHelpVC.swift; sourceTree = "<group>"; };
+		77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXNoBeaconVC.swift; sourceTree = "<group>"; };
 		77D3C4A119A903AA001F00EC /* ArtWhisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWhisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77D3C4A619A903AA001F00EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -506,6 +520,13 @@
 		E597D9F019A90EF800E308A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				77906E341BEE005200114B0D /* IXActiveGuideVC.swift */,
+				77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */,
+				77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */,
+				77906E361BEE019500114B0D /* IXSuggestionVC.swift */,
+				77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */,
+				77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */,
+				77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */,
 				E597DA0719A9103E00E308A9 /* IXViewController.h */,
 				E597DA0819A9103E00E308A9 /* IXViewController.m */,
 			);
@@ -742,13 +763,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BDC46741BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */,
+				77906E371BEE019500114B0D /* IXSuggestionVC.swift in Sources */,
 				9BDC49731BE8F95B00162557 /* NSOperation+Operations.swift in Sources */,
 				9BDC466F1BE64C6900162557 /* IXPendingOperations.m in Sources */,
+				77906E331BEE000D00114B0D /* IXDownloadGuidesVC.swift in Sources */,
 				9BDC495F1BE8F95B00162557 /* Dictionary+Operations.swift in Sources */,
 				9BDC496F1BE8F95B00162557 /* NoCancelledDependencies.swift in Sources */,
+				77906E311BEDFFD000114B0D /* IXHistoryTableVC.swift in Sources */,
 				9BDC49871BE8F95B00162557 /* SilentCondition.swift in Sources */,
 				9BDC49831BE8F95B00162557 /* ReachabilityCondition.swift in Sources */,
 				9BDC498B1BE8F95B00162557 /* UIUserNotifications+Operations.swift in Sources */,
+				77906E351BEE005200114B0D /* IXActiveGuideVC.swift in Sources */,
+				77906E3D1BEE020D00114B0D /* IXNoBeaconVC.swift in Sources */,
 				9BDC49891BE8F95B00162557 /* TimeoutObserver.swift in Sources */,
 				E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */,
 				9BDC497F1BE8F95B00162557 /* PassbookCondition.swift in Sources */,
@@ -762,6 +788,7 @@
 				E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */,
 				9BDC49591BE8F95B00162557 /* CKContainer+Operations.swift in Sources */,
 				9BDC499F1BEA495800162557 /* BeaconMonitorOperation.swift in Sources */,
+				77906E391BEE01C700114B0D /* IXSuggestionDetailVC.swift in Sources */,
 				9BDC49571BE8F95B00162557 /* CalendarCondition.swift in Sources */,
 				E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */,
 				9BDC49531BE8F95B00162557 /* BlockObserver.swift in Sources */,
@@ -776,6 +803,7 @@
 				9BDC49811BE8F95B00162557 /* PhotosCondition.swift in Sources */,
 				9BDC49771BE8F95B00162557 /* OperationCondition.swift in Sources */,
 				77E3D7C719A916590058C62B /* IXBeacon.m in Sources */,
+				77906E3B1BEE01F500114B0D /* IXFirstTimeHelpVC.swift in Sources */,
 				9BDC49751BE8F95B00162557 /* Operation.swift in Sources */,
 				9BDC495B1BE8F95B00162557 /* CloudCondition.swift in Sources */,
 				9B15221D1BE14D4700B3A52B /* IXData.m in Sources */,
