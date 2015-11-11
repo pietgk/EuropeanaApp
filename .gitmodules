@@ -1,9 +1,9 @@
-[submodule "BeaconPositioning/HeatMapApp/libs/LFHeatMap"]
+[submodule "BeaconsPositioning/HeatMapApp/libs/LFHeatMap"]
 	path = BeaconPositioning/HeatMapApp/libs/LFHeatMap
 	url = https://github.com/gpolak/LFHeatMap.git
-[submodule "BeaconPositioning/HeatMapApp/libs/SIOSocket"]
+[submodule "BeaconsPositioning/HeatMapApp/libs/SIOSocket"]
 	path = BeaconPositioning/HeatMapApp/libs/SIOSocket
 	url = git@github.com:MegaBits/SIOSocket.git
-[submodule "BeaconPositioning/HeatMapApp/libs/ios-charts"]
+[submodule "BeaconsPositioning/HeatMapApp/libs/ios-charts"]
 	path = BeaconPositioning/HeatMapApp/libs/ios-charts
 	url = git@github.com:danielgindi/ios-charts.git
