@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "72C946D62930400A160E5BDCE69320838F641672",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9025163822AAEA7A2D8AC9210D0874A56F62B462" : 0,
+    "72C946D62930400A160E5BDCE69320838F641672" : 0,
+    "0E77FB9618B0A7E05C2EE27348151B7941044E77" : 0,
+    "0D47F9118801513CFF1019D3260A8450871FFE19" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0CB6EBAF-D08D-45A4-BFB9-07C1FE3608E3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9025163822AAEA7A2D8AC9210D0874A56F62B462" : "EuropeanaApp\/BeaconsPositioning\/HeatMapApp\/libs\/ios-charts\/",
+    "72C946D62930400A160E5BDCE69320838F641672" : "EuropeanaApp\/",
+    "0E77FB9618B0A7E05C2EE27348151B7941044E77" : "EuropeanaApp\/BeaconsPositioning\/HeatMapApp\/libs\/SIOSocket\/",
+    "0D47F9118801513CFF1019D3260A8450871FFE19" : "EuropeanaApp\/BeaconsPositioning\/HeatMapApp\/libs\/LFHeatMap\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BeaconsHeatmap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BeaconsPositioning\/HeatMapApp\/BeaconsHeatmap.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gpolak\/LFHeatMap.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0D47F9118801513CFF1019D3260A8450871FFE19"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MegaBits\/SIOSocket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E77FB9618B0A7E05C2EE27348151B7941044E77"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:pietgk\/EuropeanaApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "72C946D62930400A160E5BDCE69320838F641672"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/danielgindi\/ios-charts.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9025163822AAEA7A2D8AC9210D0874A56F62B462"
+    }
+  ]
+}

@@ -15,5 +15,14 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+*.xccheckout
+*.hmap
+*.ipa
+*.xcuserstate
+*.DS_Store
+
+node_modules/
+
 Podfile.lock
 Pods
