@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7754FDF41BF4B7BA000AA765 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7754FDF31BF4B7BA000AA765 /* libicucore.tbd */; };
 		9BBBF86C1BF13F21002A0C11 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBBF8671BF13EF1002A0C11 /* Charts.framework */; };
 		9BBBF86D1BF13F21002A0C11 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBBF8671BF13EF1002A0C11 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E20B49941A97688600B05D65 /* CBBeaconsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E20B49931A97688600B05D65 /* CBBeaconsHelper.m */; };
@@ -87,7 +88,6 @@
 		FA75B6001A718DE500CA6DA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA75B5FF1A718DE500CA6DA8 /* Images.xcassets */; };
 		FA75B6031A718DE500CA6DA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA75B6011A718DE500CA6DA8 /* LaunchScreen.xib */; };
 		FA75B60F1A718DE500CA6DA8 /* BeaconsHeatmapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA75B60E1A718DE500CA6DA8 /* BeaconsHeatmapTests.m */; };
-		FABF907D1A767F5300255342 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FABF907C1A767F5300255342 /* libicucore.dylib */; };
 		FABF907F1A767F5A00255342 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABF907E1A767F5A00255342 /* CFNetwork.framework */; };
 		FABF90811A767F5F00255342 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABF90801A767F5F00255342 /* Security.framework */; };
 		FABF90831A767F6500255342 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABF90821A767F6500255342 /* Foundation.framework */; };
@@ -147,6 +147,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7754FDF31BF4B7BA000AA765 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		9BBBF8601BF13EF0002A0C11 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "libs/ios-charts/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		E20B49921A97688600B05D65 /* CBBeaconsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBeaconsHelper.h; sourceTree = "<group>"; };
 		E20B49931A97688600B05D65 /* CBBeaconsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBeaconsHelper.m; sourceTree = "<group>"; };
@@ -626,7 +627,6 @@
 		FA75B6081A718DE500CA6DA8 /* BeaconsHeatmapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconsHeatmapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA75B60D1A718DE500CA6DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA75B60E1A718DE500CA6DA8 /* BeaconsHeatmapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconsHeatmapTests.m; sourceTree = "<group>"; };
-		FABF907C1A767F5300255342 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		FABF907E1A767F5A00255342 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FABF90801A767F5F00255342 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FABF90821A767F6500255342 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -640,12 +640,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7754FDF41BF4B7BA000AA765 /* libicucore.tbd in Frameworks */,
 				E2F891981A937DA800C59419 /* CoreLocation.framework in Frameworks */,
 				FABF90831A767F6500255342 /* Foundation.framework in Frameworks */,
 				FABF90811A767F5F00255342 /* Security.framework in Frameworks */,
 				9BBBF86C1BF13F21002A0C11 /* Charts.framework in Frameworks */,
 				FABF907F1A767F5A00255342 /* CFNetwork.framework in Frameworks */,
-				FABF907D1A767F5300255342 /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1721,11 +1721,11 @@
 		FABF90841A767F6700255342 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7754FDF31BF4B7BA000AA765 /* libicucore.tbd */,
 				E2F891971A937DA800C59419 /* CoreLocation.framework */,
 				FABF90821A767F6500255342 /* Foundation.framework */,
 				FABF90801A767F5F00255342 /* Security.framework */,
 				FABF907E1A767F5A00255342 /* CFNetwork.framework */,
-				FABF907C1A767F5300255342 /* libicucore.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1793,7 +1793,7 @@
 				TargetAttributes = {
 					FA75B5EE1A718DE500CA6DA8 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = PKNPK2UYN4;
+						DevelopmentTeam = 8EXZH89K22;
 					};
 					FA75B6071A718DE500CA6DA8 = {
 						CreatedOnToolsVersion = 6.1.1;
