@@ -31,7 +31,10 @@
 
     NSString *uuid = [defaults objectForKey:@"uuid"];
     if (!uuid) {
-        [defaults setObject:@"11E44F09-4EC4-407E-9203-CF57A50FBCE0" forKey:@"uuid"];
+        //        [defaults setObject:@"11E44F09-4EC4-407E-9203-CF57A50FBCE0" forKey:@"uuid"];
+        // value for glimworm iBeacons
+        [defaults setObject:@"74278bda-b644-4520-8f0c-720eaf059935" forKey:@"uuid"];
+        
     }
     
     [defaults synchronize];
