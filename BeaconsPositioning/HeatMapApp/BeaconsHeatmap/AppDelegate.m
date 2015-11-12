@@ -26,7 +26,7 @@
     }
     NSNumber *minor = [defaults objectForKey:@"minor"];
     if (!minor) {
-        [defaults setObject:@6131 forKey:@"minor"];
+        [defaults setObject:@1 forKey:@"minor"];
     }
 
     NSString *uuid = [defaults objectForKey:@"uuid"];
