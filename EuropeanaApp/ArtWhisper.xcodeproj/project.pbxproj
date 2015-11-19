@@ -642,7 +642,7 @@
 				CLASSPREFIX = IX;
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Phluxus;
 				TargetAttributes = {
 					77D3C4A019A903AA001F00EC = {
@@ -973,7 +973,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ArtWhisper;
-				SDKROOT = iphoneos9.1;
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/EuropeanaApp-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1007,7 +1007,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = ArtWhisper;
-				SDKROOT = iphoneos9.1;
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/EuropeanaApp-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
