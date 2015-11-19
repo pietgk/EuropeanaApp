@@ -22,6 +22,8 @@
 @property (nonatomic, assign) CLLocationCoordinate2D location;
 @property (nonatomic, copy, nullable) NSString *beaconType;
 @property (nonatomic, strong, nullable) NSMutableArray *extraInfo;
+@property (nonatomic, assign) double RSSI;
+@property (nonatomic, strong, nullable) NSDate *lastSeen;
 
 + (nonnull instancetype) createWithIdentifier:(nonnull NSString *)identifier major:(NSUInteger)major minor:(NSUInteger)minor distance:(CGFloat) distance;
 + (nonnull instancetype) createWithDictionary:(nonnull NSDictionary *)newDict;

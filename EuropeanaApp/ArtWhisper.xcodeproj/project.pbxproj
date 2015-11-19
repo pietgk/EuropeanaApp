@@ -10,6 +10,7 @@
 		4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4456DD9819A935A500B5B707 /* background-music-aac.caf */; };
 		4456DD9B19A935A500B5B707 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4456DD9919A935A500B5B707 /* pew-pew-lei.caf */; };
 		7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */; };
+		7706F1FC1BFE1C42005B5048 /* IXPositioningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */; };
 		77906E311BEDFFD000114B0D /* IXHistoryTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */; };
 		77906E331BEE000D00114B0D /* IXDownloadGuidesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */; };
 		77906E351BEE005200114B0D /* IXActiveGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E341BEE005200114B0D /* IXActiveGuideVC.swift */; };
@@ -155,6 +156,7 @@
 		4456DD9919A935A500B5B707 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		531859C7F72D5413B4FEE892 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmmuseum.caf; sourceTree = "<group>"; };
+		7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXPositioningManager.swift; sourceTree = "<group>"; };
 		77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXHistoryTableVC.swift; sourceTree = "<group>"; };
 		77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXDownloadGuidesVC.swift; sourceTree = "<group>"; };
 		77906E341BEE005200114B0D /* IXActiveGuideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXActiveGuideVC.swift; sourceTree = "<group>"; };
@@ -506,6 +508,7 @@
 				E597DA0B19A9104C00E308A9 /* IXManager.m */,
 				E597D9F719A90FA700E308A9 /* IXLocationManager.h */,
 				E597D9F819A90FA700E308A9 /* IXLocationManager.m */,
+				7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				77906E371BEE019500114B0D /* IXSuggestionVC.swift in Sources */,
 				9BDC49731BE8F95B00162557 /* NSOperation+Operations.swift in Sources */,
 				9BDC466F1BE64C6900162557 /* IXPendingOperations.m in Sources */,
+				7706F1FC1BFE1C42005B5048 /* IXPositioningManager.swift in Sources */,
 				77906E331BEE000D00114B0D /* IXDownloadGuidesVC.swift in Sources */,
 				9BDC495F1BE8F95B00162557 /* Dictionary+Operations.swift in Sources */,
 				9BDC496F1BE8F95B00162557 /* NoCancelledDependencies.swift in Sources */,

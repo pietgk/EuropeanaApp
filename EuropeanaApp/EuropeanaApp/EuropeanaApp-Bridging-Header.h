@@ -10,5 +10,6 @@
 #define EuropeanaApp_Bridging_Header_h
 
 #import "IXData.h"
+#import "IXBeacon.h"
 
 #endif /* EuropeanaApp_Bridging_Header_h */

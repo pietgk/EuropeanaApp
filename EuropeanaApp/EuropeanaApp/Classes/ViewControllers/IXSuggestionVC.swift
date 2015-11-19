@@ -5,7 +5,9 @@
 //  Created by Axel Roest on 07/11/15.
 //  Copyright © 2015 Phluxus. All rights reserved.
 //
+/* Overview of suggestions
 
+*/
 import UIKit
 
 class IXSuggestionVC: UIViewController {
