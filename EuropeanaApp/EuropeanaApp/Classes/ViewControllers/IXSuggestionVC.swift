@@ -9,12 +9,20 @@
 
 */
 import UIKit
+//import IXData
+import SuggestionViewCell
 
-class IXSuggestionVC: UIViewController {
+let kSuggestionCellIdentifier = "suggestionCell"
 
+class IXSuggestionVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    var data : IXData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        data = IXData.sharedData()
         // Do any additional setup after loading the view.
     }
 
@@ -23,7 +31,6 @@ class IXSuggestionVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -36,5 +43,24 @@ class IXSuggestionVC: UIViewController {
 
     @IBAction func unwindDetail(segue: UIStoryboardSegue) {
         NSLog("unwinding")
+    }
+    
+    func sortedPois() -> Array<IXPoi> {
+        // let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let pois = data.pois.sort({poi1, poi2 in return poi1.name > poi2.name })
+        return pois
+    }
+    // MARK: - UICollectionViewDataSource
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let num = data?.pois?.count ?? 0
+        return num
+    }
+    
+    
+    // MARK: - UICollectionViewDelegate
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kSuggestionCellIdentifier, forIndexPath: indexPath) as SuggestionViewCell
+        cell.poi = self.sortedPois[indexPath.row]
+        
     }
 }
