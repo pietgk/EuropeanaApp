@@ -10,7 +10,7 @@
 */
 import UIKit
 //import IXData
-import SuggestionViewCell
+//import SuggestionViewCell
 
 let kSuggestionCellIdentifier = "suggestionCell"
 
@@ -47,7 +47,7 @@ class IXSuggestionVC: UIViewController, UICollectionViewDataSource, UICollection
     
     func sortedPois() -> Array<IXPoi> {
         // let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        let pois = data.pois.sort({poi1, poi2 in return poi1.name > poi2.name })
+        let pois = data?.pois?.sort({poi1, poi2 in return poi1.name > poi2.name }) ?? Array<IXPoi>()
         return pois
     }
     // MARK: - UICollectionViewDataSource
@@ -59,8 +59,10 @@ class IXSuggestionVC: UIViewController, UICollectionViewDataSource, UICollection
     
     // MARK: - UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kSuggestionCellIdentifier, forIndexPath: indexPath) as SuggestionViewCell
-        cell.poi = self.sortedPois[indexPath.row]
-        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kSuggestionCellIdentifier, forIndexPath: indexPath) as! SuggestionViewCell
+        if (data?.pois?.count > 0) {
+            cell.poi = self.sortedPois[indexPath.row]
+        }
+        return cell
     }
 }

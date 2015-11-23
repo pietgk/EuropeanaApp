@@ -11,5 +11,6 @@
 
 #import "IXData.h"
 #import "IXBeacon.h"
+#import "IXPoi.h"
 
 #endif /* EuropeanaApp_Bridging_Header_h */

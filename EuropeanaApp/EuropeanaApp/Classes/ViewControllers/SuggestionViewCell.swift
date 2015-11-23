@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 //import IXPoi
 
 class SuggestionViewCell : UICollectionViewCell {
@@ -17,19 +18,18 @@ class SuggestionViewCell : UICollectionViewCell {
     @IBOutlet weak var venueLabel: UILabel!
     @IBOutlet weak var waitView: UIView!    // custom
 
-    public var poi : IXPoi?
-    
-    func setPoi(newPoi: IXPoi) {
-        self.poi = newPoi
-        // TODO: add properties to IXPoi
-        if let title = newPoi.name {
-            self.artistLabel = title
-        }
-        if let title = newPoi.name {
-            self.titleLabel = title
-        }
-        if let title = newPoi.name {
-            self.venueLabel = title
+    var poi : IXPoi? {
+        didSet {
+            // TODO: add properties to IXPoi
+            if let title = poi!.name {
+                self.artistLabel.text = title
+            }
+            if let title = poi!.name {
+                self.titleLabel.text = title
+            }
+            if let title = poi!.name {
+                self.venueLabel.text = title
+            }
         }
     }
 }
