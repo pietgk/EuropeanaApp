@@ -12,6 +12,9 @@ import UIKit
 //import IXData
 //import SuggestionViewCell
 
+enum segues: String {
+    case showSuggestionDetail = "showSuggestionDetail"
+}
 
 class IXSuggestionVC: UICollectionViewController {
     
@@ -75,13 +78,13 @@ class IXSuggestionVC: UICollectionViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "showSuggestionDetail") {
+        if (segue.identifier == segues.showSuggestionDetail.rawValue) {
             let cell = sender as! SuggestionViewCell
             let destinationVC = segue.destinationViewController as! IXSuggestionDetailVC
             destinationVC.poi = cell.poi
         }
     }
-    
+
 }
 
 // MARK: - UICollectionViewDataSource

@@ -236,7 +236,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-n9-7Ux">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-n9-7Ux">
                                             <rect key="frame" x="8" y="167" width="139" height="27"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -277,7 +277,7 @@
                                     <outlet property="imageView" destination="vxU-m2-ew9" id="zIs-m2-X2k"/>
                                     <outlet property="titleLabel" destination="Bgf-n9-7Ux" id="fy1-qT-SfC"/>
                                     <outlet property="venueLabel" destination="T3N-2m-4TT" id="mMN-oB-ika"/>
-                                    <segue destination="S6K-vA-roe" kind="show" identifier="showSuggestionDetail" action="showDetailViewController:sender:" id="wLL-Go-zxX"/>
+                                    <segue destination="S6K-vA-roe" kind="show" identifier="showSuggestionDetail" id="H7y-Ez-1UK"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -286,26 +286,19 @@
                             <outlet property="delegate" destination="2YW-6l-XCp" id="vIm-n7-rsj"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Suggesties" id="RO7-gn-bTR">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ex6-w6-KfH">
-                            <connections>
-                                <segue destination="MXz-1M-NZ8" kind="unwind" unwindAction="unwindDetail:" id="xkW-51-Sfr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Suggesties" id="RO7-gn-bTR"/>
                     <connections>
                         <outlet property="collectionView" destination="t3L-Sa-tAa" id="H0Y-fx-okq"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVM-vP-Db7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="MXz-1M-NZ8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-4469" y="3187"/>
         </scene>
         <!--Suggestion Detail-->
         <scene sceneID="8WM-Uf-oLH">
             <objects>
-                <viewController id="S6K-vA-roe" customClass="IXSuggestionDetailVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Suggestion Detail" modalPresentationStyle="currentContext" id="S6K-vA-roe" customClass="IXSuggestionDetailVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PLZ-Pl-Obu"/>
                         <viewControllerLayoutGuide type="bottom" id="L4g-O1-a4q"/>
@@ -325,6 +318,9 @@
                             <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-u5-bfC">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <animations/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="600" height="692"/>
+                                </variation>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -346,8 +342,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="titleLabel" destination="RtB-3l-5l3" id="VGz-GW-i6U"/>
                     </connections>

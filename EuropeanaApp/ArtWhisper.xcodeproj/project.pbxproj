@@ -13,6 +13,8 @@
 		7706F1FC1BFE1C42005B5048 /* IXPositioningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */; };
 		7706F1FE1BFF4895005B5048 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */; };
 		7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E14A1C03642300BC26FF /* UIColor+Extension.swift */; };
+		7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */; };
+		7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */; };
 		77906E311BEDFFD000114B0D /* IXHistoryTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */; };
 		77906E331BEE000D00114B0D /* IXDownloadGuidesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */; };
 		77906E351BEE005200114B0D /* IXActiveGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E341BEE005200114B0D /* IXActiveGuideVC.swift */; };
@@ -162,6 +164,8 @@
 		7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXPositioningManager.swift; sourceTree = "<group>"; };
 		7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
 		7742E14A1C03642300BC26FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		7742E14D1C037EA300BC26FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneLogoClean.png; sourceTree = "<group>"; };
 		77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXHistoryTableVC.swift; sourceTree = "<group>"; };
 		77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXDownloadGuidesVC.swift; sourceTree = "<group>"; };
 		77906E341BEE005200114B0D /* IXActiveGuideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXActiveGuideVC.swift; sourceTree = "<group>"; };
@@ -388,6 +392,7 @@
 		77E3D7C019A910FA0058C62B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */,
 				77C9F0DB1C034F13006E6017 /* kawsrijks.png */,
 				77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */,
 				77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */,
@@ -583,6 +588,7 @@
 				E597D9FC19A90FFE00E308A9 /* Main_iPad.storyboard */,
 				E597D9FE19A90FFE00E308A9 /* Main_iPhone.storyboard */,
 				E597D9FA19A90FE900E308A9 /* Images.xcassets */,
+				7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */,
 				77D3C4AB19A903AA001F00EC /* Supporting Files */,
 				9B15221F1BE14EA700B3A52B /* beacons.json */,
 				9BDC46671BE5152000162557 /* poi.json */,
@@ -707,6 +713,8 @@
 			files = (
 				4456DD9B19A935A500B5B707 /* pew-pew-lei.caf in Resources */,
 				77906E431BEE331B00114B0D /* PhoneSuggestDetail.png in Resources */,
+				7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */,
+				7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */,
 				77906E3F1BEE1E1500114B0D /* PhoneSuggestClean.png in Resources */,
 				E597DA0119A90FFE00E308A9 /* Main_iPhone.storyboard in Resources */,
 				E597DA1719A9D5A900E308A9 /* beacons.plist in Resources */,
@@ -929,6 +937,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7742E14D1C037EA300BC26FF /* Base */,
+			);
+			name = "Launch Screen.storyboard";
+			sourceTree = "<group>";
+		};
 		77D3C4CF19A903AB001F00EC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -961,6 +977,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1004,6 +1021,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1040,7 +1058,6 @@
 			baseConfigurationReference = 531859C7F72D5413B4FEE892 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1059,7 +1076,6 @@
 			baseConfigurationReference = 80894D2A9DCF0FE7CFECBC62 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
