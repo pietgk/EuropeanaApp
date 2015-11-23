@@ -25,6 +25,6 @@
 + (nonnull instancetype) createWithDictionary:(nonnull NSDictionary *)newDict;
 - (nonnull instancetype) initWithDictionary:(nonnull NSDictionary *)newDict;
 
-- (void) getImageWithBlock:(void (^)(UIImage *))block;
+- (void) getImageWithBlock:(void (^)(UIImage _Nullable *))block;
 
 @end

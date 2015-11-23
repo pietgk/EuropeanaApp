@@ -193,17 +193,124 @@
                         <animations/>
                     </toolbar>
                     <connections>
-                        <segue destination="6i0-D2-sL4" kind="relationship" relationship="rootViewController" id="jz6-8R-i6J"/>
+                        <segue destination="2YW-6l-XCp" kind="relationship" relationship="rootViewController" id="Fhn-L3-FKt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9f6-g7-t1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4084" y="2291"/>
         </scene>
+        <!--SuggestionVC-->
+        <scene sceneID="3IJ-DZ-ikI">
+            <objects>
+                <collectionViewController id="2YW-6l-XCp" customClass="IXSuggestionVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="t3L-Sa-tAa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="66v-EU-IBc">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <imageView key="backgroundView" hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestClean.png" id="LNv-Kg-6qf">
+                            <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="320" id="Lk9-Ir-Xhq"/>
+                                <constraint firstAttribute="height" constant="520" id="ke0-qI-2WA"/>
+                            </constraints>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                            </variation>
+                        </imageView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="suggestionCell" reuseIdentifier="suggestionCell" id="XYb-0k-0Mm" customClass="SuggestionViewCell" customModule="ArtWhisper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="155" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="225"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxU-m2-ew9">
+                                            <rect key="frame" x="8" y="8" width="139" height="140"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="140" id="dKG-ST-TqK"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debra Barraud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qek-U4-VL6">
+                                            <rect key="frame" x="8" y="153" width="139" height="12"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-n9-7Ux">
+                                            <rect key="frame" x="8" y="167" width="139" height="27"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3N-2m-4TT">
+                                            <rect key="frame" x="8" y="196" width="139" height="12"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Qek-U4-VL6" firstAttribute="top" secondItem="vxU-m2-ew9" secondAttribute="bottom" constant="5" id="1H0-YY-SDx"/>
+                                    <constraint firstItem="Qek-U4-VL6" firstAttribute="leading" secondItem="Bgf-n9-7Ux" secondAttribute="leading" id="1uW-c7-mhn"/>
+                                    <constraint firstItem="Qek-U4-VL6" firstAttribute="trailing" secondItem="Bgf-n9-7Ux" secondAttribute="trailing" id="4Yz-6q-KpI"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Qek-U4-VL6" secondAttribute="trailing" id="4f6-sg-TWF"/>
+                                    <constraint firstAttribute="topMargin" secondItem="vxU-m2-ew9" secondAttribute="top" id="ImU-pw-e7e"/>
+                                    <constraint firstItem="Qek-U4-VL6" firstAttribute="trailing" secondItem="T3N-2m-4TT" secondAttribute="trailing" id="O2u-2Q-bjb"/>
+                                    <constraint firstItem="T3N-2m-4TT" firstAttribute="top" secondItem="Bgf-n9-7Ux" secondAttribute="bottom" constant="2" id="dP9-lO-0mF"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="vxU-m2-ew9" secondAttribute="leading" id="fwo-3N-u3O"/>
+                                    <constraint firstItem="Qek-U4-VL6" firstAttribute="leading" secondItem="T3N-2m-4TT" secondAttribute="leading" id="ipu-iW-BfU"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="T3N-2m-4TT" secondAttribute="bottom" constant="9" id="maB-Ba-Zml"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="vxU-m2-ew9" secondAttribute="trailing" id="r5R-Jp-CUX"/>
+                                    <constraint firstItem="Qek-U4-VL6" firstAttribute="leading" secondItem="XYb-0k-0Mm" secondAttribute="leadingMargin" id="usw-to-1Tv"/>
+                                    <constraint firstItem="Bgf-n9-7Ux" firstAttribute="top" secondItem="Qek-U4-VL6" secondAttribute="bottom" constant="2" id="yjf-jk-FQ1"/>
+                                </constraints>
+                                <size key="customSize" width="155" height="225"/>
+                                <connections>
+                                    <outlet property="artistLabel" destination="Qek-U4-VL6" id="6Np-Ss-ehY"/>
+                                    <outlet property="imageView" destination="vxU-m2-ew9" id="zIs-m2-X2k"/>
+                                    <outlet property="titleLabel" destination="Bgf-n9-7Ux" id="fy1-qT-SfC"/>
+                                    <outlet property="venueLabel" destination="T3N-2m-4TT" id="mMN-oB-ika"/>
+                                    <segue destination="S6K-vA-roe" kind="showDetail" id="wLL-Go-zxX"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="2YW-6l-XCp" id="931-id-tws"/>
+                            <outlet property="delegate" destination="2YW-6l-XCp" id="vIm-n7-rsj"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="RO7-gn-bTR"/>
+                    <connections>
+                        <outlet property="collectionView" destination="t3L-Sa-tAa" id="H0Y-fx-okq"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lVM-vP-Db7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4469" y="3187"/>
+        </scene>
         <!--Suggestions-->
         <scene sceneID="DHd-aH-evn">
             <objects>
-                <viewController title="Suggestions" id="6i0-D2-sL4" customClass="IXSuggestionVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Suggestions" id="6i0-D2-sL4" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Nm-4Q-Cqk"/>
                         <viewControllerLayoutGuide type="bottom" id="I1B-3O-QsQ"/>
@@ -211,93 +318,8 @@
                     <view key="view" contentMode="scaleToFill" id="qF4-fR-BHm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PhoneSuggestClean.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y0R-hf-VJt">
-                                <rect key="frame" x="0.0" y="25" width="600" height="600"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="520" id="07j-uc-FJE"/>
-                                    <constraint firstAttribute="width" constant="320" id="4OT-uk-9ly"/>
-                                </constraints>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
-                            </imageView>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HpD-XB-On8">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Ni-B4-POC">
-                                    <size key="itemSize" width="155" height="226"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="suggestionCell" reuseIdentifier="suggestionCell" id="Ntz-7J-tJZ" customClass="SuggestionViewCell" customModule="ArtWhisper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="155" height="226"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="155" height="226"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYD-Q9-qyP">
-                                                    <rect key="frame" x="8" y="8" width="140" height="140"/>
-                                                    <animations/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Debra Barraud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I21-uA-Squ">
-                                                    <rect key="frame" x="16" y="147" width="124" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUm-Nq-29X">
-                                                    <rect key="frame" x="16" y="166" width="124" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-zd-oqk">
-                                                    <rect key="frame" x="16" y="187" width="124" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <animations/>
-                                        <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="customSize" width="155" height="226"/>
-                                        <connections>
-                                            <outlet property="artistLabel" destination="I21-uA-Squ" id="CQM-ix-0uX"/>
-                                            <outlet property="imageView" destination="QYD-Q9-qyP" id="ytW-QC-eop"/>
-                                            <outlet property="titleLabel" destination="hUm-Nq-29X" id="vev-IR-aqy"/>
-                                            <outlet property="venueLabel" destination="2mh-zd-oqk" id="ant-Bl-mtz"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="6i0-D2-sL4" id="Wrc-wm-fAE"/>
-                                    <outlet property="delegate" destination="6i0-D2-sL4" id="Shv-q3-FXV"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="I1B-3O-QsQ" firstAttribute="top" secondItem="HpD-XB-On8" secondAttribute="bottom" id="Rjb-T7-byR"/>
-                            <constraint firstItem="HpD-XB-On8" firstAttribute="top" secondItem="2Nm-4Q-Cqk" secondAttribute="bottom" id="Zhf-Qz-ADV"/>
-                            <constraint firstItem="Y0R-hf-VJt" firstAttribute="top" secondItem="2Nm-4Q-Cqk" secondAttribute="bottom" constant="-39" id="dtc-jq-CvG"/>
-                            <constraint firstItem="HpD-XB-On8" firstAttribute="leading" secondItem="qF4-fR-BHm" secondAttribute="leadingMargin" constant="-20" id="kns-A6-0Jl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HpD-XB-On8" secondAttribute="trailing" constant="-20" id="m8Z-gv-c25"/>
-                            <constraint firstItem="Y0R-hf-VJt" firstAttribute="leading" secondItem="qF4-fR-BHm" secondAttribute="leadingMargin" constant="-20" id="tIo-27-XDO"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Suggestions" id="oQ1-9S-luo">
                         <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="wlO-FL-Gli">
@@ -312,13 +334,91 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="HpD-XB-On8" id="1XW-qt-clg"/>
+                        <outlet property="view" destination="HpD-XB-On8" id="pB2-6V-WfJ"/>
+                        <segue destination="Voa-xe-raD" kind="unwind" unwindAction="unwindDetail:" id="xJW-BZ-f2J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSA-55-wKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HpD-XB-On8">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Ni-B4-POC">
+                        <size key="itemSize" width="155" height="226"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestClean.png" id="Y0R-hf-VJt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="520" id="07j-uc-FJE"/>
+                            <constraint firstAttribute="width" constant="320" id="4OT-uk-9ly"/>
+                        </constraints>
+                        <variation key="widthClass=compact" fixedFrame="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        </variation>
+                    </imageView>
+                    <cells>
+                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="suggestionCell" reuseIdentifier="suggestionCell" id="Ntz-7J-tJZ" customClass="SuggestionViewCell" customModule="ArtWhisper" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="155" height="225"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="225"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYD-Q9-qyP">
+                                        <rect key="frame" x="8" y="8" width="140" height="140"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Debra Barraud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I21-uA-Squ">
+                                        <rect key="frame" x="16" y="147" width="124" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUm-Nq-29X">
+                                        <rect key="frame" x="16" y="166" width="124" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-zd-oqk">
+                                        <rect key="frame" x="16" y="187" width="124" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <animations/>
+                            <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <size key="customSize" width="155" height="225"/>
+                            <connections>
+                                <outlet property="artistLabel" destination="I21-uA-Squ" id="CQM-ix-0uX"/>
+                                <outlet property="imageView" destination="QYD-Q9-qyP" id="ytW-QC-eop"/>
+                                <outlet property="titleLabel" destination="hUm-Nq-29X" id="vev-IR-aqy"/>
+                                <outlet property="venueLabel" destination="2mh-zd-oqk" id="ant-Bl-mtz"/>
+                            </connections>
+                        </collectionViewCell>
+                    </cells>
+                    <connections>
+                        <outlet property="dataSource" destination="6i0-D2-sL4" id="Wrc-wm-fAE"/>
+                        <outlet property="delegate" destination="6i0-D2-sL4" id="Shv-q3-FXV"/>
+                    </connections>
+                </collectionView>
                 <exit id="Voa-xe-raD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-4077" y="3246"/>
+            <point key="canvasLocation" x="-3247" y="3097"/>
         </scene>
         <!--Suggestion DetailVC-->
         <scene sceneID="8WM-Uf-oLH">
@@ -476,7 +576,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p52-u2-i9h" id="Le4-8P-xqT">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -509,6 +609,83 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFs-cM-JXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LDn-yA-iPw">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Obj-PH-Lqy">
+                        <size key="itemSize" width="155" height="226"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestClean.png" id="7cj-az-hgN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="520" id="NbV-rB-7Wv"/>
+                            <constraint firstAttribute="width" constant="320" id="t1J-tg-01L"/>
+                        </constraints>
+                        <variation key="widthClass=compact" fixedFrame="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        </variation>
+                    </imageView>
+                    <cells>
+                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="suggestionCell" reuseIdentifier="suggestionCell" id="BrO-RX-ucr" customClass="SuggestionViewCell" customModule="ArtWhisper" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="155" height="225"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="225"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eH-EE-YS3">
+                                        <rect key="frame" x="8" y="8" width="140" height="140"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Debra Barraud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-gi-6a3">
+                                        <rect key="frame" x="16" y="147" width="124" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSN-OS-1yp">
+                                        <rect key="frame" x="16" y="166" width="124" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jb4-jt-2QV">
+                                        <rect key="frame" x="16" y="187" width="124" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <animations/>
+                            <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <size key="customSize" width="155" height="225"/>
+                            <connections>
+                                <outlet property="artistLabel" destination="ecP-gi-6a3" id="u0J-wp-jid"/>
+                                <outlet property="imageView" destination="6eH-EE-YS3" id="U3r-w9-p0v"/>
+                                <outlet property="titleLabel" destination="bSN-OS-1yp" id="VmP-7J-Hv7"/>
+                                <outlet property="venueLabel" destination="jb4-jt-2QV" id="qPx-He-DV7"/>
+                            </connections>
+                        </collectionViewCell>
+                    </cells>
+                    <connections>
+                        <outlet property="dataSource" destination="6i0-D2-sL4" id="OsW-In-I1s"/>
+                        <outlet property="delegate" destination="6i0-D2-sL4" id="xrv-Wu-T8Z"/>
+                    </connections>
+                </collectionView>
             </objects>
             <point key="canvasLocation" x="-2757" y="2280"/>
         </scene>
@@ -526,4 +703,7 @@
         <image name="Suggestion" width="47" height="50"/>
         <image name="SuggestionSelected" width="47" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wLL-Go-zxX"/>
+    </inferredMetricsTieBreakers>
 </document>
