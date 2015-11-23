@@ -24,12 +24,16 @@ class SuggestionViewCell : UICollectionViewCell {
             if let title = poi!.name {
                 self.artistLabel.text = title
             }
-            if let title = poi!.name {
+            if let title = poi!.caption {
                 self.titleLabel.text = title
             }
             if let title = poi!.name {
                 self.venueLabel.text = title
             }
+            self.poi?.getImageWithBlock({ (image) -> Void in
+                self.imageView.image = image;
+            })
+            
         }
     }
 }

@@ -24,6 +24,7 @@ class IXSuggestionVC: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         data = IXData.sharedData()
         // Do any additional setup after loading the view.
+        self.collectionView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,9 +61,8 @@ class IXSuggestionVC: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: - UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kSuggestionCellIdentifier, forIndexPath: indexPath) as! SuggestionViewCell
-        if (data?.pois?.count > 0) {
-            cell.poi = self.sortedPois[indexPath.row]
-        }
+        cell.poi = self.sortedPois()[indexPath.row]
+        
         return cell
     }
 }

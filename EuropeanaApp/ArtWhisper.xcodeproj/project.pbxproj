@@ -22,6 +22,7 @@
 		77906E3F1BEE1E1500114B0D /* PhoneSuggestClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */; };
 		77906E411BEE1E1C00114B0D /* PhoneActiveClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */; };
 		77906E431BEE331B00114B0D /* PhoneSuggestDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */; };
+		77C9F0DC1C034F13006E6017 /* kawsrijks.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C9F0DB1C034F13006E6017 /* kawsrijks.png */; };
 		77D3C4A519A903AA001F00EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A419A903AA001F00EC /* Foundation.framework */; };
 		77D3C4A719A903AA001F00EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A619A903AA001F00EC /* CoreGraphics.framework */; };
 		77D3C4A919A903AA001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
@@ -169,6 +170,7 @@
 		77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneSuggestClean.png; path = Mockups/PhoneSuggestClean.png; sourceTree = "<group>"; };
 		77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneActiveClean.png; path = Mockups/PhoneActiveClean.png; sourceTree = "<group>"; };
 		77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneSuggestDetail.png; path = Mockups/PhoneSuggestDetail.png; sourceTree = "<group>"; };
+		77C9F0DB1C034F13006E6017 /* kawsrijks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kawsrijks.png; path = Mockups/kawsrijks.png; sourceTree = "<group>"; };
 		77D3C4A119A903AA001F00EC /* ArtWhisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWhisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77D3C4A619A903AA001F00EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -376,6 +378,7 @@
 		77E3D7C019A910FA0058C62B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				77C9F0DB1C034F13006E6017 /* kawsrijks.png */,
 				77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */,
 				77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */,
 				77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */,
@@ -700,6 +703,7 @@
 				4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */,
 				E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */,
 				77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */,
+				77C9F0DC1C034F13006E6017 /* kawsrijks.png in Resources */,
 				7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
 				77906E411BEE1E1C00114B0D /* PhoneActiveClean.png in Resources */,
@@ -979,6 +983,7 @@
 				PRODUCT_NAME = ArtWhisper;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/EuropeanaApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
