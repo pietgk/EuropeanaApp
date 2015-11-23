@@ -5,7 +5,10 @@
 //  Created by Axel Roest on 23-08-14.
 //  Copyright (c) 2014 Phluxus. All rights reserved.
 //
-
+/* OLD, should probably be supplanted
+    Currently used for the demo controller
+ 
+ */
 #import <Foundation/Foundation.h>
 #import "IXLocationManager.h"
 

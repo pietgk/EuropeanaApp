@@ -9,7 +9,7 @@
 #import "IXLocationManager.h"
 #import "IXBeacon.h"
 #import "IXData.h"
-#import "ArtWhisper-Swift.h"
+// #import "ArtWhisper-Swift.h"
 //#import <CBCentralManager.h>
 
 @import CoreLocation;
@@ -24,7 +24,7 @@
 //@property (nonatomic, strong) CBPeripheral *peripheral;
 
 
-@property (nonatomic) OperationQueue *operationQueue;
+@property (nonatomic) NSOperationQueue *operationQueue;
 
 @property (nonatomic, strong) NSArray<IXBeacon*> *rangedBeacons;
 @property (nonatomic, strong) IXData *data;
@@ -55,7 +55,7 @@
         _locationManager.delegate = self;
         // start a monitoring operation using the data from beacons.json
         self.rangedBeacons = [self initialBeaconsRangingSetup];
-        _operationQueue = [[OperationQueue alloc] init];
+        _operationQueue = [[NSOperationQueue alloc] init];
     }
     return self;
 }

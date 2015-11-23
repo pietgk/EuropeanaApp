@@ -7,9 +7,12 @@
 //
 /*
     Handles the rudimentary and debug-only user interface to start & stop audio
- 
+
+    OLD, should probably be supplanted
+    Currently used for the demo controller
  
  */
+
 #import <UIKit/UIKit.h>
 
 #include "IXManager.h"

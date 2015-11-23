@@ -58,6 +58,12 @@
     self.beacons = [NSArray arrayWithArray:newBeacons];
 }
 
+- (void) getImageWithBlock:(void (^)(UIImage *))block {
+    // get / download image
+    self.image = [UIImage imageNamed:@"kawsrijks.png"];
+    block(self.image);
+}
+
 -(NSString *)description
 {
 //    return [NSString stringWithFormat:@"<%@: %p> %@ (%@)\n%@",self.class, self, self.name, self.caption, self.beacons];
