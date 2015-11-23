@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) NSMutableSet<NSUUID*> *monitoredBeaconUuidSet;
 
-@property (nonatomic, strong) NSMutableDictionary<NSString*,CLBeaconRegion *> *beaconsRanged; // key is uuid_major_minor
+@property (nonatomic, strong) NSMutableDictionary<NSString*,IXBeacon *> *beaconsRanged; // key is uuid_major_minor
 
 @property (nonatomic, strong) NSArray<IXPoi *> *pois;
 

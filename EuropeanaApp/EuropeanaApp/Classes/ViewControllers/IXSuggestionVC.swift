@@ -74,6 +74,14 @@ class IXSuggestionVC: UICollectionViewController {
         return cell
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showSuggestionDetail") {
+            let cell = sender as! SuggestionViewCell
+            let destinationVC = segue.destinationViewController as! IXSuggestionDetailVC
+            destinationVC.poi = cell.poi
+        }
+    }
+    
 }
 
 // MARK: - UICollectionViewDataSource

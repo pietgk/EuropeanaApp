@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -182,6 +181,7 @@
             <objects>
                 <navigationController title="Suggestions Navi" id="GYr-S2-BT0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Suggestions" image="Suggestion" selectedImage="SuggestionSelected" id="cPJ-xB-z5E"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hHb-Tu-5So">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="-4084" y="2291"/>
         </scene>
-        <!--SuggestionVC-->
+        <!--Suggestions-->
         <scene sceneID="3IJ-DZ-ikI">
             <objects>
-                <collectionViewController id="2YW-6l-XCp" customClass="IXSuggestionVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Suggestions" id="2YW-6l-XCp" customClass="IXSuggestionVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="t3L-Sa-tAa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,18 +214,6 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestClean.png" id="LNv-Kg-6qf">
-                            <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="320" id="Lk9-Ir-Xhq"/>
-                                <constraint firstAttribute="height" constant="520" id="ke0-qI-2WA"/>
-                            </constraints>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                            </variation>
-                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="suggestionCell" reuseIdentifier="suggestionCell" id="XYb-0k-0Mm" customClass="SuggestionViewCell" customModule="ArtWhisper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="155" height="225"/>
@@ -289,7 +277,7 @@
                                     <outlet property="imageView" destination="vxU-m2-ew9" id="zIs-m2-X2k"/>
                                     <outlet property="titleLabel" destination="Bgf-n9-7Ux" id="fy1-qT-SfC"/>
                                     <outlet property="venueLabel" destination="T3N-2m-4TT" id="mMN-oB-ika"/>
-                                    <segue destination="S6K-vA-roe" kind="showDetail" id="wLL-Go-zxX"/>
+                                    <segue destination="S6K-vA-roe" kind="show" identifier="showSuggestionDetail" action="showDetailViewController:sender:" id="wLL-Go-zxX"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -298,129 +286,23 @@
                             <outlet property="delegate" destination="2YW-6l-XCp" id="vIm-n7-rsj"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="RO7-gn-bTR"/>
+                    <navigationItem key="navigationItem" title="Suggesties" id="RO7-gn-bTR">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ex6-w6-KfH">
+                            <connections>
+                                <segue destination="MXz-1M-NZ8" kind="unwind" unwindAction="unwindDetail:" id="xkW-51-Sfr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="t3L-Sa-tAa" id="H0Y-fx-okq"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVM-vP-Db7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MXz-1M-NZ8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-4469" y="3187"/>
         </scene>
-        <!--Suggestions-->
-        <scene sceneID="DHd-aH-evn">
-            <objects>
-                <viewController title="Suggestions" id="6i0-D2-sL4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2Nm-4Q-Cqk"/>
-                        <viewControllerLayoutGuide type="bottom" id="I1B-3O-QsQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qF4-fR-BHm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Suggestions" id="oQ1-9S-luo">
-                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="wlO-FL-Gli">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pFv-fc-xO7">
-                                <rect key="frame" x="20" y="7" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <connections>
-                                    <segue destination="S6K-vA-roe" kind="show" action="showDetailViewController:sender:" id="fCw-82-0DI"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="view" destination="HpD-XB-On8" id="pB2-6V-WfJ"/>
-                        <segue destination="Voa-xe-raD" kind="unwind" unwindAction="unwindDetail:" id="xJW-BZ-f2J"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kSA-55-wKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HpD-XB-On8">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Ni-B4-POC">
-                        <size key="itemSize" width="155" height="226"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                    <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestClean.png" id="Y0R-hf-VJt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="520" id="07j-uc-FJE"/>
-                            <constraint firstAttribute="width" constant="320" id="4OT-uk-9ly"/>
-                        </constraints>
-                        <variation key="widthClass=compact" fixedFrame="YES">
-                            <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                        </variation>
-                    </imageView>
-                    <cells>
-                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="suggestionCell" reuseIdentifier="suggestionCell" id="Ntz-7J-tJZ" customClass="SuggestionViewCell" customModule="ArtWhisper" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="155" height="225"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                <rect key="frame" x="0.0" y="0.0" width="155" height="225"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYD-Q9-qyP">
-                                        <rect key="frame" x="8" y="8" width="140" height="140"/>
-                                        <animations/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Debra Barraud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I21-uA-Squ">
-                                        <rect key="frame" x="16" y="147" width="124" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUm-Nq-29X">
-                                        <rect key="frame" x="16" y="166" width="124" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-zd-oqk">
-                                        <rect key="frame" x="16" y="187" width="124" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <animations/>
-                            <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <size key="customSize" width="155" height="225"/>
-                            <connections>
-                                <outlet property="artistLabel" destination="I21-uA-Squ" id="CQM-ix-0uX"/>
-                                <outlet property="imageView" destination="QYD-Q9-qyP" id="ytW-QC-eop"/>
-                                <outlet property="titleLabel" destination="hUm-Nq-29X" id="vev-IR-aqy"/>
-                                <outlet property="venueLabel" destination="2mh-zd-oqk" id="ant-Bl-mtz"/>
-                            </connections>
-                        </collectionViewCell>
-                    </cells>
-                    <connections>
-                        <outlet property="dataSource" destination="6i0-D2-sL4" id="Wrc-wm-fAE"/>
-                        <outlet property="delegate" destination="6i0-D2-sL4" id="Shv-q3-FXV"/>
-                    </connections>
-                </collectionView>
-                <exit id="Voa-xe-raD" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-3247" y="3097"/>
-        </scene>
-        <!--Suggestion DetailVC-->
+        <!--Suggestion Detail-->
         <scene sceneID="8WM-Uf-oLH">
             <objects>
                 <viewController id="S6K-vA-roe" customClass="IXSuggestionDetailVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
@@ -432,58 +314,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbD-r9-bMj">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waar komt dit uit?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtB-3l-5l3">
+                                <rect key="frame" x="249" y="290" width="138" height="21"/>
+                                <animations/>
+                                <color key="tintColor" red="0.1502729803" green="0.13780766729999999" blue="0.12597541509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneSuggestDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-u5-bfC">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Le-AA-PWT">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Back"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="20" width="34" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="Voa-xe-raD" kind="unwind" unwindAction="unwindDetail:" id="kbu-2x-HAG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YbD-r9-bMj" firstAttribute="top" secondItem="PLZ-Pl-Obu" secondAttribute="bottom" constant="-64" id="3YL-Bq-jgk"/>
-                            <constraint firstItem="L4g-O1-a4q" firstAttribute="top" secondItem="YbD-r9-bMj" secondAttribute="bottom" constant="-49" id="UPc-rd-Kzb"/>
-                            <constraint firstItem="YbD-r9-bMj" firstAttribute="leading" secondItem="AQj-cg-drl" secondAttribute="leadingMargin" constant="-20" id="g5T-qf-fZU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YbD-r9-bMj" secondAttribute="trailing" constant="-20" id="wLT-QE-Oxx"/>
+                            <constraint firstItem="L4g-O1-a4q" firstAttribute="top" secondItem="dBQ-u5-bfC" secondAttribute="bottom" id="CZq-Fx-weE"/>
+                            <constraint firstItem="RtB-3l-5l3" firstAttribute="centerX" secondItem="AQj-cg-drl" secondAttribute="centerX" constant="18" id="XDw-Ia-ZQ0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dBQ-u5-bfC" secondAttribute="trailing" constant="-20" id="b1U-To-4Nb"/>
+                            <constraint firstItem="RtB-3l-5l3" firstAttribute="centerY" secondItem="AQj-cg-drl" secondAttribute="centerY" id="gMw-rv-0Uz"/>
+                            <constraint firstItem="dBQ-u5-bfC" firstAttribute="top" secondItem="PLZ-Pl-Obu" secondAttribute="bottom" id="p1f-O7-qdX"/>
+                            <constraint firstItem="dBQ-u5-bfC" firstAttribute="leading" secondItem="AQj-cg-drl" secondAttribute="leadingMargin" constant="-20" id="sGE-a7-XAW"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="YbD-r9-bMj"/>
-                                <exclude reference="0Le-AA-PWT"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="UPc-rd-Kzb"/>
-                                <exclude reference="3YL-Bq-jgk"/>
-                                <exclude reference="g5T-qf-fZU"/>
-                                <exclude reference="wLT-QE-Oxx"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="YbD-r9-bMj"/>
-                                <include reference="0Le-AA-PWT"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="UPc-rd-Kzb"/>
-                                <include reference="3YL-Bq-jgk"/>
-                                <include reference="g5T-qf-fZU"/>
-                                <include reference="wLT-QE-Oxx"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Suggestion Detail" id="TDi-jZ-zib">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="XDu-WC-tud">
+                            <connections>
+                                <segue destination="6ic-xf-Bgu" kind="unwind" unwindAction="unwindDetail:" id="F0k-Bu-1ni"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="RtB-3l-5l3" id="VGz-GW-i6U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INq-ra-TBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6ic-xf-Bgu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-4154" y="4019"/>
         </scene>
@@ -630,7 +500,7 @@
                             <constraint firstAttribute="width" constant="320" id="t1J-tg-01L"/>
                         </constraints>
                         <variation key="widthClass=compact" fixedFrame="YES">
-                            <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         </variation>
                     </imageView>
                     <cells>
@@ -681,10 +551,6 @@
                             </connections>
                         </collectionViewCell>
                     </cells>
-                    <connections>
-                        <outlet property="dataSource" destination="6i0-D2-sL4" id="OsW-In-I1s"/>
-                        <outlet property="delegate" destination="6i0-D2-sL4" id="xrv-Wu-T8Z"/>
-                    </connections>
                 </collectionView>
             </objects>
             <point key="canvasLocation" x="-2757" y="2280"/>
@@ -703,7 +569,4 @@
         <image name="Suggestion" width="47" height="50"/>
         <image name="SuggestionSelected" width="47" height="50"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="wLL-Go-zxX"/>
-    </inferredMetricsTieBreakers>
 </document>

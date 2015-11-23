@@ -24,7 +24,6 @@
 		77906E411BEE1E1C00114B0D /* PhoneActiveClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */; };
 		77906E431BEE331B00114B0D /* PhoneSuggestDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */; };
 		77C9F0DC1C034F13006E6017 /* kawsrijks.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C9F0DB1C034F13006E6017 /* kawsrijks.png */; };
-		77C9F0DE1C03577A006E6017 /* IXSuggestionVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9F0DD1C03577A006E6017 /* IXSuggestionVC+extension.swift */; };
 		77D3C4A519A903AA001F00EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A419A903AA001F00EC /* Foundation.framework */; };
 		77D3C4A719A903AA001F00EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A619A903AA001F00EC /* CoreGraphics.framework */; };
 		77D3C4A919A903AA001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
@@ -174,7 +173,6 @@
 		77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneActiveClean.png; path = Mockups/PhoneActiveClean.png; sourceTree = "<group>"; };
 		77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneSuggestDetail.png; path = Mockups/PhoneSuggestDetail.png; sourceTree = "<group>"; };
 		77C9F0DB1C034F13006E6017 /* kawsrijks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kawsrijks.png; path = Mockups/kawsrijks.png; sourceTree = "<group>"; };
-		77C9F0DD1C03577A006E6017 /* IXSuggestionVC+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IXSuggestionVC+extension.swift"; sourceTree = "<group>"; };
 		77D3C4A119A903AA001F00EC /* ArtWhisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWhisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77D3C4A619A903AA001F00EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -554,7 +552,6 @@
 				77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */,
 				77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */,
 				77906E361BEE019500114B0D /* IXSuggestionVC.swift */,
-				77C9F0DD1C03577A006E6017 /* IXSuggestionVC+extension.swift */,
 				77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */,
 				77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */,
 				77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */,
@@ -850,7 +847,6 @@
 				9BDC466B1BE646C000162557 /* IXPoiQueue.m in Sources */,
 				9BDC49551BE8F95B00162557 /* BlockOperation.swift in Sources */,
 				9BDC49611BE8F95B00162557 /* ExclusivityController.swift in Sources */,
-				77C9F0DE1C03577A006E6017 /* IXSuggestionVC+extension.swift in Sources */,
 				9BDC49851BE8F95B00162557 /* RemoteNotificationCondition.swift in Sources */,
 				9BDC49791BE8F95B00162557 /* OperationErrors.swift in Sources */,
 				9BDC49671BE8F95B00162557 /* LocationCondition.swift in Sources */,

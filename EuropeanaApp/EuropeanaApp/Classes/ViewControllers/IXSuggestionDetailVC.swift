@@ -9,11 +9,15 @@
 import UIKit
 
 class IXSuggestionDetailVC: UIViewController {
-
+    public var poi : IXPoi?
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.titleLabel.text = poi?.name
     }
 
     override func didReceiveMemoryWarning() {
