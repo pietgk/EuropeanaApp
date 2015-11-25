@@ -10,7 +10,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-
 @interface IXBeacon : NSObject
 @property (nonatomic, copy, nonnull) NSString *uuid;
 @property (nonatomic, strong, nonnull) NSNumber *major;
@@ -22,8 +21,10 @@
 @property (nonatomic, assign) CLLocationCoordinate2D location;
 @property (nonatomic, copy, nullable) NSString *beaconType;
 @property (nonatomic, strong, nullable) NSMutableArray *extraInfo;
-@property (nonatomic, assign) double RSSI;
+@property (nonatomic, assign) double rssi;
 @property (nonatomic, strong, nullable) NSDate *lastSeen;
+@property (nonatomic, assign) CLProximity proximity;
+
 
 + (nonnull instancetype) createWithIdentifier:(nonnull NSString *)identifier major:(NSUInteger)major minor:(NSUInteger)minor distance:(CGFloat) distance;
 + (nonnull instancetype) createWithDictionary:(nonnull NSDictionary *)newDict;
@@ -32,5 +33,11 @@
 + (nonnull NSString*)beaconKeyForUuid:(nonnull NSString*)uuid major:(int)major minor:(int)minor;
 - (nonnull NSString*)key;
 - (nonnull NSUUID*) UUID;
+
+@end
+
+
+@interface IXBeacon (Debugging)
+@property CGPoint position; // pixels
 
 @end

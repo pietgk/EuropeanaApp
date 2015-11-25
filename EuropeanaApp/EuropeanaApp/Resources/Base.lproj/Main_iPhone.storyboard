@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FeJ-4M-Ty1">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -9,7 +8,7 @@
         <!--DEMO-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="IXViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="IXDemoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ffd-ed-VWd"/>
                         <viewControllerLayoutGuide type="bottom" id="FWY-ao-SvU"/>
@@ -71,18 +70,18 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Mdg-ml-DNQ"/>
-                                <exclude reference="Ck9-Lk-tNi"/>
-                                <exclude reference="c8Q-tD-Yw3"/>
                                 <exclude reference="d4d-Va-hPe"/>
+                                <exclude reference="Mdg-ml-DNQ"/>
+                                <exclude reference="c8Q-tD-Yw3"/>
+                                <exclude reference="Ck9-Lk-tNi"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
-                                <include reference="Mdg-ml-DNQ"/>
-                                <include reference="Ck9-Lk-tNi"/>
-                                <include reference="c8Q-tD-Yw3"/>
                                 <include reference="d4d-Va-hPe"/>
+                                <include reference="Mdg-ml-DNQ"/>
+                                <include reference="c8Q-tD-Yw3"/>
+                                <include reference="Ck9-Lk-tNi"/>
                             </mask>
                         </variation>
                     </view>
@@ -328,7 +327,7 @@
                                 <animations/>
                                 <color key="tintColor" red="0.1502729803" green="0.13780766729999999" blue="0.12597541509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PhoneSuggestDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-u5-bfC">

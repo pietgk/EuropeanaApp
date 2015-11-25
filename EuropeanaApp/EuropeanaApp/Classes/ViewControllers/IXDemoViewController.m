@@ -1,18 +1,18 @@
 //
-//  IXViewController.m
+//  IXDemoViewController.m
 //  EuropeanaApp
 //
 //  Created by Axel Roest on 23-08-14.
 //  Copyright (c) 2014 Phluxus. All rights reserved.
 //
 
-#import "IXViewController.h"
+#import "IXDemoViewController.h"
 #import "IXAppDelegate.h"
 #import "IXAudioManager.h"
 #import "IXData.h"
 
 
-@interface IXViewController ()
+@interface IXDemoViewController ()
 - (IBAction)test:(id)sender;
 - (IBAction)speak:(id)sender;
 - (IBAction)stop:(id)sender;

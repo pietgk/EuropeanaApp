@@ -1,5 +1,5 @@
 //
-//  IXViewController.h
+//  IXDemoViewController.h
 //  EuropeanaApp
 //
 //  Created by Axel Roest on 23-08-14.
@@ -17,6 +17,6 @@
 
 #include "IXManager.h"
 
-@interface IXViewController : UIViewController <IXManagerDelegate>
+@interface IXDemoViewController : UIViewController <IXManagerDelegate>
 
 @end

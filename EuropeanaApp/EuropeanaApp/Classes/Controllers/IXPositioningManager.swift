@@ -62,7 +62,7 @@ public class IXPositioningManager : NSObject, CBCentralManagerDelegate{
     
     public func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
         let beacon = IXBeacon(dictionary: advertisementData)
-        beacon.RSSI = RSSI.doubleValue
+        beacon.rssi = RSSI.doubleValue
         beacon.lastSeen = NSDate()
         data.addBeacon(beacon)
     }

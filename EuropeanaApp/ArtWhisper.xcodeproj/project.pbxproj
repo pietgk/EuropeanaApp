@@ -12,6 +12,7 @@
 		7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */; };
 		7706F1FC1BFE1C42005B5048 /* IXPositioningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */; };
 		7706F1FE1BFF4895005B5048 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */; };
+		771550281C0620D10053E607 /* CBBeaconsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 771550271C0620D10053E607 /* CBBeaconsMap.m */; };
 		7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E14A1C03642300BC26FF /* UIColor+Extension.swift */; };
 		7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */; };
 		7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */; };
@@ -131,7 +132,7 @@
 		E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FC19A90FFE00E308A9 /* Main_iPad.storyboard */; };
 		E597DA0119A90FFE00E308A9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FE19A90FFE00E308A9 /* Main_iPhone.storyboard */; };
 		E597DA0619A9100D00E308A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0419A9100D00E308A9 /* main.m */; };
-		E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0819A9103E00E308A9 /* IXViewController.m */; };
+		E597DA0919A9103E00E308A9 /* IXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0819A9103E00E308A9 /* IXDemoViewController.m */; };
 		E597DA0C19A9104C00E308A9 /* IXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0B19A9104C00E308A9 /* IXManager.m */; };
 		E597DA0F19A9105D00E308A9 /* IXAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0E19A9105D00E308A9 /* IXAudioManager.m */; };
 		E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA1119A9106800E308A9 /* IXAppDelegate.m */; };
@@ -163,6 +164,9 @@
 		7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmmuseum.caf; sourceTree = "<group>"; };
 		7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXPositioningManager.swift; sourceTree = "<group>"; };
 		7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
+		771550261C0620D10053E607 /* CBBeaconsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBeaconsMap.h; sourceTree = "<group>"; };
+		771550271C0620D10053E607 /* CBBeaconsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBeaconsMap.m; sourceTree = "<group>"; };
+		771550291C0622090053E607 /* CBEstimationMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBEstimationMethod.h; sourceTree = "<group>"; };
 		7742E14A1C03642300BC26FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7742E14D1C037EA300BC26FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneLogoClean.png; sourceTree = "<group>"; };
@@ -253,8 +257,8 @@
 		E597DA0219A9100D00E308A9 /* ArtWhisper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ArtWhisper-Info.plist"; path = "Resources/ArtWhisper-Info.plist"; sourceTree = "<group>"; };
 		E597DA0319A9100D00E308A9 /* ArtWhisper-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ArtWhisper-Prefix.pch"; path = "Resources/ArtWhisper-Prefix.pch"; sourceTree = "<group>"; };
 		E597DA0419A9100D00E308A9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
-		E597DA0719A9103E00E308A9 /* IXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXViewController.h; sourceTree = "<group>"; };
-		E597DA0819A9103E00E308A9 /* IXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXViewController.m; sourceTree = "<group>"; };
+		E597DA0719A9103E00E308A9 /* IXDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXDemoViewController.h; sourceTree = "<group>"; };
+		E597DA0819A9103E00E308A9 /* IXDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXDemoViewController.m; sourceTree = "<group>"; };
 		E597DA0A19A9104C00E308A9 /* IXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXManager.h; sourceTree = "<group>"; };
 		E597DA0B19A9104C00E308A9 /* IXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXManager.m; sourceTree = "<group>"; };
 		E597DA0D19A9105D00E308A9 /* IXAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXAudioManager.h; sourceTree = "<group>"; };
@@ -306,6 +310,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		771550241C061F830053E607 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				771550291C0622090053E607 /* CBEstimationMethod.h */,
+				771550261C0620D10053E607 /* CBBeaconsMap.h */,
+				771550271C0620D10053E607 /* CBBeaconsMap.m */,
+			);
+			name = Libs;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7742E1491C0363F500BC26FF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6481CF19AB33300028A8EA /* README.md */,
+				771550241C061F830053E607 /* Libs */,
 				E597D9EC19A90EF800E308A9 /* Classes */,
 				E597D9F419A90F3700E308A9 /* Resources */,
 			);
@@ -560,8 +576,8 @@
 				77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */,
 				77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */,
 				77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */,
-				E597DA0719A9103E00E308A9 /* IXViewController.h */,
-				E597DA0819A9103E00E308A9 /* IXViewController.m */,
+				E597DA0719A9103E00E308A9 /* IXDemoViewController.h */,
+				E597DA0819A9103E00E308A9 /* IXDemoViewController.m */,
 				7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */,
 			);
 			path = ViewControllers;
@@ -827,7 +843,7 @@
 				E597DA0C19A9104C00E308A9 /* IXManager.m in Sources */,
 				E597DA0F19A9105D00E308A9 /* IXAudioManager.m in Sources */,
 				E597DA0619A9100D00E308A9 /* main.m in Sources */,
-				E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */,
+				E597DA0919A9103E00E308A9 /* IXDemoViewController.m in Sources */,
 				9BDC49591BE8F95B00162557 /* CKContainer+Operations.swift in Sources */,
 				9BDC499F1BEA495800162557 /* BeaconMonitorOperation.swift in Sources */,
 				77906E391BEE01C700114B0D /* IXSuggestionDetailVC.swift in Sources */,
@@ -852,6 +868,7 @@
 				9BDC495B1BE8F95B00162557 /* CloudCondition.swift in Sources */,
 				9B15221D1BE14D4700B3A52B /* IXData.m in Sources */,
 				9BDC498F1BE8F95B00162557 /* UserNotificationCondition.swift in Sources */,
+				771550281C0620D10053E607 /* CBBeaconsMap.m in Sources */,
 				9BDC466B1BE646C000162557 /* IXPoiQueue.m in Sources */,
 				9BDC49551BE8F95B00162557 /* BlockOperation.swift in Sources */,
 				9BDC49611BE8F95B00162557 /* ExclusivityController.swift in Sources */,
