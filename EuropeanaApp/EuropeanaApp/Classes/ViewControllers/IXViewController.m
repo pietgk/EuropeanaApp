@@ -62,7 +62,16 @@
 
 - (void) ixManager: (IXManager *)ixManager stateChange: (NSString *)newState
 {
+    self.infoLabel.alpha = 1.0;
     self.infoLabel.text = newState;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:1.0 animations:^{
+            self.infoLabel.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            self.infoLabel.text = @"";
+            self.infoLabel.alpha = 1.0;
+        }];
+    });
 }
 
 
@@ -71,10 +80,12 @@
     if (self.playing) {
         [self.audioManager fadeOutBackgroundAudio];
         self.playing = NO;
+        [self ixManager:self.manager stateChange:@"already speaking"];
     } else {
         [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum"];
         [self.audioManager playBackgroundAudio];
         self.playing = YES;
+        [self ixManager:self.manager stateChange:@"speaking"];
     }
 }
 
@@ -84,6 +95,7 @@
     if (self.playing) {
         [self.audioManager fadeOutBackgroundAudio];
         self.playing = NO;
+        [self ixManager:self.manager stateChange:@"stopping"];
     }
 }
 @end
