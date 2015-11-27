@@ -44,7 +44,9 @@
 
         [newDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
             @try {
-                [self setValue:obj forKey:key];
+                //[self setValue:obj forKey:key];
+                [self setValue:obj forKeyPath:key];
+#warning this does not work for keypath position.x :-(
             }
             @catch (NSException *exception) {
             }

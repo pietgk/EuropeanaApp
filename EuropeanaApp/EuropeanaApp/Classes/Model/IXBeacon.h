@@ -24,6 +24,7 @@
 @property (nonatomic, assign) double rssi;
 @property (nonatomic, strong, nullable) NSDate *lastSeen;
 @property (nonatomic, assign) CLProximity proximity;
+@property (nonatomic, assign) CGPoint position;             // necessary for CBBeaconsMap, maybe we can get rid of it later?
 
 
 + (nonnull instancetype) createWithIdentifier:(nonnull NSString *)identifier major:(NSUInteger)major minor:(NSUInteger)minor distance:(CGFloat) distance;
@@ -39,5 +40,6 @@
 
 @interface IXBeacon (Debugging)
 @property CGPoint position; // pixels
+@property (nonatomic, strong, nullable) NSString* name;         // FIXME: could be method with major+minor
 
 @end

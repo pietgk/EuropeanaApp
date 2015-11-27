@@ -10,20 +10,20 @@
 #import "IXBeacon.h"
 #import "IXPoi.h"
 
+
 @interface IXData ()
-//@property (nonatomic, strong) NSArray<IXBeacon *> *beacons;
-@property (nonatomic, strong) NSDictionary<NSString*,IXBeacon *> *beacons; // key is uuid_major_minor
 
 @property (nonatomic, strong) NSMutableSet<NSUUID*> *monitoredBeaconUuidSet;
 
 @property (nonatomic, strong) NSMutableDictionary<NSString*,IXBeacon *> *beaconsRanged; // key is uuid_major_minor
 
+@property (nonatomic, strong, nullable) NSMutableDictionary <NSString*,IXBeacon *> *beacons;
 @property (nonatomic, strong) NSArray<IXPoi *> *pois;
 
 @end
 
 @implementation IXData
-//@synthesize beacons=_beacons, pois=_pois;
+@synthesize beacons=_beacons, pois=_pois;
 
 + (IXData*)sharedData;
 {
@@ -45,12 +45,22 @@
     return self;
 }
 
+
+- (void) setBeaconArray:(NSArray <IXBeacon *>* _Nonnull) newBeacons
+{
+    NSMutableDictionary<NSString*,IXBeacon *>* newBeaconDict = [NSMutableDictionary dictionaryWithCapacity:[newBeacons count]];
+    for (IXBeacon *beacon in newBeacons) {
+        [newBeaconDict addEntriesFromDictionary: @{beacon.key:beacon} ];
+    }
+    _beacons = newBeaconDict;
+}
+
 - (NSDictionary<NSString*,IXBeacon *>*) beacons;
 {
     if (!_beacons) {
         _beacons = [self beaconsFromResourceFile];
     }
-    return _beacons;
+    return [NSDictionary dictionaryWithDictionary:_beacons];
 }
 
 - (NSArray *) pois
@@ -61,7 +71,7 @@
     return _pois;
 }
 
--(NSDictionary<NSString*,IXBeacon *>*)beaconsFromResourceFile;
+-(NSMutableDictionary<NSString*,IXBeacon *>*)beaconsFromResourceFile;
 {
     // Glimworm beacons.json from http://85.17.193.165:1880/beacons/
     // plus Hermitage 2015: tentoonstelling v.h. Amsterdam Museum: Hollanders van de Gouden Eeuw 
@@ -129,10 +139,13 @@
     //    return result;
 }
 
--(void) addBeacon:(IXBeacon *)newBeacon
+// TODO: probably kick of some operation which handles the found beacon(s)
+-(void) addRangedBeacon:(IXBeacon *)newBeacon
 {
     if (newBeacon) {
         self.beaconsRanged[newBeacon.key] = newBeacon;
+        NSNotification *notification = [[NSNotification alloc] initWithName:kRangedBeaconAddedNotification object:newBeacon userInfo:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
     }
 }
 

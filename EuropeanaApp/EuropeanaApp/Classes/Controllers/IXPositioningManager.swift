@@ -10,6 +10,7 @@
 
     Handles corebluetooth manager calls, using nsop queues
 */
+
 import Foundation
 import CoreBluetooth
 //import IXBeacon
@@ -64,12 +65,13 @@ public class IXPositioningManager : NSObject, CBCentralManagerDelegate{
         let beacon = IXBeacon(dictionary: advertisementData)
         beacon.rssi = RSSI.doubleValue
         beacon.lastSeen = NSDate()
-        data.addBeacon(beacon)
+        data.addRangedBeacon(beacon)
     }
     
     // or should this method go to IXData?
     private func purgeBeaconTimerFired(timer: NSTimer) {
         // loop through all stored beacons and purge the ones with a lastSeen stamp > PURGEINTERVAL
         // self.data.
+        
     }
 }

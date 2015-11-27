@@ -7,7 +7,7 @@
 //
 
 #import "CBBeaconsMap.h"
-#import "LocationManager.h"
+//#import "LocationManager.h"
 #import "IXBeacon.h"
 
 const float kDistanceToRecognizeBeaconTouch = 30.0;
@@ -148,14 +148,14 @@ NSMutableArray *_beacons;
 }
 
 - (void)calculateProbabilityPointsLeastLibrary {
-    [LocationManager determine:_beacons success:^(CGPoint location) {
-        [self calculateAndSetEstimatedPosition:location];
-
-        [_delegate beaconMap:self lastMeasuredPoints:_previousEstimatedPositions];
-
-    } failure:^(NSError *error) {
-        NSLog(@"error: %@", error);
-    }];
+//    [LocationManager determine:_beacons success:^(CGPoint location) {
+//        [self calculateAndSetEstimatedPosition:location];
+//
+//        [_delegate beaconMap:self lastMeasuredPoints:_previousEstimatedPositions];
+//
+//    } failure:^(NSError *error) {
+//        NSLog(@"error: %@", error);
+//    }];
 }
 
 - (void)calculateProbabilityPoints {

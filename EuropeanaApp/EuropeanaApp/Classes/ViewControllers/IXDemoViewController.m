@@ -10,21 +10,26 @@
 #import "IXAppDelegate.h"
 #import "IXAudioManager.h"
 #import "IXData.h"
-
+#import "CBBeaconsMap.h"
+#import "ArtWhisper-swift.h"
 
 @interface IXDemoViewController ()
 - (IBAction)test:(id)sender;
 - (IBAction)speak:(id)sender;
 - (IBAction)stop:(id)sender;
 
+@property (weak, nonatomic) IBOutlet CBBeaconsMap *beaconView;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (nonatomic, strong) IXAudioManager *audioManager;
 @property (nonatomic, strong) IXManager *manager;
 @property (nonatomic, assign) BOOL playing;
 @property (nonatomic, strong) IXData *dataManager;
+
+@property (nonatomic, strong) IXPositioningManager *posManager;
+
 @end
 
-@implementation IXViewController
+@implementation IXDemoViewController
 
 - (void)viewDidLoad
 {
@@ -34,7 +39,10 @@
     self.audioManager = APPDelegate.audioManager;
 	// Do any additional setup after loading the view, typically from a nib.
     self.playing = NO;
-    self.dataManager = [[IXData alloc] init];
+    self.dataManager = [IXData sharedData];
+    
+    self.beaconView.physicalSize = CGSizeMake(10.0, 10.0);    // in meters, how do we set this initially?
+    [self setupBeaconScanner];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,5 +105,11 @@
         self.playing = NO;
         [self ixManager:self.manager stateChange:@"stopping"];
     }
+}
+
+#pragma mark - Beaconscanner
+- (void) setupBeaconScanner
+{
+    
 }
 @end

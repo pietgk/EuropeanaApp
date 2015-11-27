@@ -4,13 +4,17 @@
 <array>
 	<dict>
 		<key>identifier</key>
-		<string>Beacon Mile</string>
+		<string>GW Art1</string>
 		<key>UUID</key>
-		<string>74278bda-b644-4520-8f0c-720eaf059939</string>
+		<string>74278bda-b644-4520-8f0c-720eaf059935</string>
 		<key>major</key>
-		<integer>0</integer>
+		<integer>42</integer>
 		<key>minor</key>
-		<integer>0</integer>
+		<integer>1</integer>
+		<key>position.x</key>
+		<integer>5</integer>
+		<key>position.y</key>
+		<integer>4</integer>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -21,16 +25,10 @@
 		<integer>43</integer>
 		<key>minor</key>
 		<integer>2</integer>
-	</dict>
-	<dict>
-		<key>identifier</key>
-		<string>Studio B</string>
-		<key>UUID</key>
-		<string>74278bda-b644-4520-8f0c-720eaf059935</string>
-		<key>major</key>
-		<integer>300</integer>
-		<key>minor</key>
-		<real>3002</real>
+		<key>position.x</key>
+		<real>0.5</real>
+		<key>position.y</key>
+		<integer>4</integer>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -41,6 +39,10 @@
 		<integer>43</integer>
 		<key>minor</key>
 		<integer>4</integer>
+		<key>position.x</key>
+		<real>0.5</real>
+		<key>position.y</key>
+		<real>0.5</real>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -51,6 +53,10 @@
 		<integer>42</integer>
 		<key>minor</key>
 		<integer>3</integer>
+		<key>position.x</key>
+		<real>4.5</real>
+		<key>position.y</key>
+		<real>0.5</real>
 	</dict>
 </array>
 </plist>

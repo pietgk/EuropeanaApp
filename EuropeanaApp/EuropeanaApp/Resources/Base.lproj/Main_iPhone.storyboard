@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FeJ-4M-Ty1">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -18,14 +19,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-SU-fQg">
-                                <rect key="frame" x="20" y="531" width="560" height="0.0"/>
+                                <rect key="frame" x="276" y="491" width="304" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Wek-em-rBd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-7o-Acq">
-                                <rect key="frame" x="326" y="369" width="44" height="30"/>
+                                <rect key="frame" x="276" y="371" width="44" height="30"/>
                                 <animations/>
                                 <state key="normal" title="STOP!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,8 +38,8 @@
                                     <action selector="stop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Vt-rc-HPg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHe-Lc-oJD">
-                                <rect key="frame" x="326" y="448" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHe-Lc-oJD">
+                                <rect key="frame" x="276" y="431" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Human">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,8 +48,13 @@
                                     <action selector="test:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ypz-q2-wjm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJw-Ln-npZ">
-                                <rect key="frame" x="456" y="448" width="96" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNV-pa-TNY" userLabel="beaconView" customClass="CBBeaconsMap">
+                                <rect key="frame" x="20" y="20" width="560" height="321"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJw-Ln-npZ">
+                                <rect key="frame" x="406" y="431" width="134" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Speech Synth">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,35 +67,40 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WJw-Ln-npZ" firstAttribute="leading" secondItem="ZHe-Lc-oJD" secondAttribute="trailing" constant="81" id="0fI-eD-AA9"/>
-                            <constraint firstItem="WJw-Ln-npZ" firstAttribute="trailing" secondItem="BDO-7o-Acq" secondAttribute="trailing" id="Ck9-Lk-tNi"/>
+                            <constraint firstItem="WJw-Ln-npZ" firstAttribute="leading" secondItem="ZHe-Lc-oJD" secondAttribute="trailing" constant="30" id="0fI-eD-AA9"/>
+                            <constraint firstItem="BDO-7o-Acq" firstAttribute="leading" secondItem="ZHe-Lc-oJD" secondAttribute="leading" id="5Vp-PH-rVd"/>
+                            <constraint firstItem="BDO-7o-Acq" firstAttribute="top" secondItem="NNV-pa-TNY" secondAttribute="bottom" constant="30" id="HvM-oj-k4R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c4U-SU-fQg" secondAttribute="trailing" id="IAG-el-QA3"/>
-                            <constraint firstItem="FWY-ao-SvU" firstAttribute="top" secondItem="c4U-SU-fQg" secondAttribute="bottom" constant="40" id="Isq-Bd-Y5U"/>
+                            <constraint firstItem="FWY-ao-SvU" firstAttribute="top" secondItem="c4U-SU-fQg" secondAttribute="bottom" constant="30" id="Isq-Bd-Y5U"/>
                             <constraint firstItem="ZHe-Lc-oJD" firstAttribute="leading" secondItem="c4U-SU-fQg" secondAttribute="leading" id="Mdg-ml-DNQ"/>
-                            <constraint firstItem="FWY-ao-SvU" firstAttribute="top" secondItem="BDO-7o-Acq" secondAttribute="bottom" constant="100" id="c8Q-tD-Yw3"/>
+                            <constraint firstItem="ZHe-Lc-oJD" firstAttribute="top" secondItem="BDO-7o-Acq" secondAttribute="bottom" constant="30" id="Pol-he-z2P"/>
+                            <constraint firstItem="ZHe-Lc-oJD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="T3V-qR-3XO">
+                                <variation key="widthClass=compact" constant="-100"/>
+                            </constraint>
+                            <constraint firstItem="c4U-SU-fQg" firstAttribute="leading" secondItem="ZHe-Lc-oJD" secondAttribute="leading" id="YmC-5l-77U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WJw-Ln-npZ" secondAttribute="trailing" constant="40" id="cnw-Nv-cod"/>
-                            <constraint firstItem="BDO-7o-Acq" firstAttribute="top" secondItem="WJw-Ln-npZ" secondAttribute="bottom" constant="53" id="d4d-Va-hPe"/>
+                            <constraint firstItem="c4U-SU-fQg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="200" id="gPa-RR-HwH"/>
+                            <constraint firstItem="NNV-pa-TNY" firstAttribute="top" secondItem="ffd-ed-VWd" secondAttribute="bottom" id="haW-ki-yrD"/>
                             <constraint firstItem="WJw-Ln-npZ" firstAttribute="bottom" secondItem="ZHe-Lc-oJD" secondAttribute="bottom" id="jtS-vs-0xh"/>
+                            <constraint firstItem="c4U-SU-fQg" firstAttribute="top" secondItem="ZHe-Lc-oJD" secondAttribute="bottom" constant="30" id="mtL-q6-6Up"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NNV-pa-TNY" secondAttribute="trailing" id="oah-Ew-cBh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NNV-pa-TNY" secondAttribute="leading" id="uh6-t1-PA9"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="d4d-Va-hPe"/>
                                 <exclude reference="Mdg-ml-DNQ"/>
-                                <exclude reference="c8Q-tD-Yw3"/>
-                                <exclude reference="Ck9-Lk-tNi"/>
+                                <exclude reference="gPa-RR-HwH"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
-                                <include reference="d4d-Va-hPe"/>
                                 <include reference="Mdg-ml-DNQ"/>
-                                <include reference="c8Q-tD-Yw3"/>
-                                <include reference="Ck9-Lk-tNi"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="DEMO" id="pYc-DJ-B82"/>
                     <connections>
+                        <outlet property="beaconView" destination="NNV-pa-TNY" id="RQ3-13-pzz"/>
                         <outlet property="infoLabel" destination="c4U-SU-fQg" id="ChX-gQ-0B3"/>
                     </connections>
                 </viewController>

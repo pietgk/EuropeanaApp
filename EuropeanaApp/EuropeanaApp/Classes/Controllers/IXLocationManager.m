@@ -54,7 +54,7 @@
         _locationManager = [CLLocationManager new];
         _locationManager.delegate = self;
         // start a monitoring operation using the data from beacons.json
-        self.rangedBeacons = [self initialBeaconsRangingSetup];
+        self.rangedBeacons = [self initialBeaconsRangingSetup];         // beacon range
         _operationQueue = [[NSOperationQueue alloc] init];
     }
     return self;
@@ -109,21 +109,29 @@
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"beacons" ofType:@"plist"];
     NSArray *plistArray = [NSArray arrayWithContentsOfFile:plistPath];
     
-    NSMutableArray *result = [NSMutableArray array];
+    NSMutableArray *regionResult = [NSMutableArray array];
+    NSMutableArray *beaconResult = [NSMutableArray array];
     
     for (NSDictionary *elem in plistArray) {
-        CLBeaconRegion *beacon = [[CLBeaconRegion alloc]
+        // add as region, for now
+        CLBeaconRegion *region = [[CLBeaconRegion alloc]
                                   initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:elem[@"UUID"]]
                                   major:[elem[@"major"] integerValue]
                                   minor:[elem[@"minor"] integerValue]
                                   identifier:elem[@"identifier"]];
         
-        // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
         
-        [result addObject:beacon];
+        // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
+        [regionResult addObject:region];
+        
+        // new: add as beacon, for more precise ranging
+        IXBeacon *beacon = [[IXBeacon alloc] initWithDictionary:elem];
+        [beaconResult addObject:beacon];
     }
-    
-    return result;
+    // but add these to data as well:
+    [[IXData sharedData] setBeaconArray:beaconResult];
+
+    return regionResult;
 }
 
 - (BOOL)startRangingBeacons
