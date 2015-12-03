@@ -2,16 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "SuggestS.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "SuggestEx2.png",
+      "filename" : "SuggestS@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "SuggestEx3.png",
       "scale" : "3x"
     }
   ],

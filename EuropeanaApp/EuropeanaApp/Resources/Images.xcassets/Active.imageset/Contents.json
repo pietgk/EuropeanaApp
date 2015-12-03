@@ -2,16 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Active.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ActiveDx2.png",
+      "filename" : "Active@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ActiveDx3.png",
       "scale" : "3x"
     }
   ],
