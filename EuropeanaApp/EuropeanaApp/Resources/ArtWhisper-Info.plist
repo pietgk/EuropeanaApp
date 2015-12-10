@@ -26,6 +26,10 @@
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>IcoMoon-Free.ttf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

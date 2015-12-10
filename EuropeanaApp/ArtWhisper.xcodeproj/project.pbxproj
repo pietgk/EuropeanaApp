@@ -13,6 +13,9 @@
 		7706F1FC1BFE1C42005B5048 /* IXPositioningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */; };
 		7706F1FE1BFF4895005B5048 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */; };
 		771550281C0620D10053E607 /* CBBeaconsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 771550271C0620D10053E607 /* CBBeaconsMap.m */; };
+		772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */; };
+		772EB1C41C198ACE0088E541 /* IXIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 772EB1C21C198ACE0088E541 /* IXIcons.m */; };
+		772EB1C61C198E9A0088E541 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */; };
 		7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E14A1C03642300BC26FF /* UIColor+Extension.swift */; };
 		7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */; };
 		7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */; };
@@ -167,6 +170,11 @@
 		771550261C0620D10053E607 /* CBBeaconsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBeaconsMap.h; sourceTree = "<group>"; };
 		771550271C0620D10053E607 /* CBBeaconsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBeaconsMap.m; sourceTree = "<group>"; };
 		771550291C0622090053E607 /* CBEstimationMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBEstimationMethod.h; sourceTree = "<group>"; };
+		772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IcoMoon-Free.ttf"; sourceTree = "<group>"; };
+		772EB1BE1C198ACE0088E541 /* IXIconNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXIconNames.h; sourceTree = "<group>"; };
+		772EB1C11C198ACE0088E541 /* IXIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXIcons.h; sourceTree = "<group>"; };
+		772EB1C21C198ACE0088E541 /* IXIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXIcons.m; sourceTree = "<group>"; };
+		772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "Extensions/UIFont+Extension.swift"; sourceTree = "<group>"; };
 		7742E14A1C03642300BC26FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7742E14D1C037EA300BC26FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneLogoClean.png; sourceTree = "<group>"; };
@@ -321,10 +329,21 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		772EB1BD1C198ACE0088E541 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				772EB1BE1C198ACE0088E541 /* IXIconNames.h */,
+				772EB1C11C198ACE0088E541 /* IXIcons.h */,
+				772EB1C21C198ACE0088E541 /* IXIcons.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		7742E1491C0363F500BC26FF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				7742E14A1C03642300BC26FF /* UIColor+Extension.swift */,
+				772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -529,6 +548,7 @@
 				7742E1491C0363F500BC26FF /* Extensions */,
 				E597D9EF19A90EF800E308A9 /* Model */,
 				9BDC49331BE8F95B00162557 /* Operations */,
+				772EB1BD1C198ACE0088E541 /* UI */,
 				E597D9F019A90EF800E308A9 /* ViewControllers */,
 			);
 			path = Classes;
@@ -595,6 +615,7 @@
 		E597D9F419A90F3700E308A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */,
 				9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */,
 				E597DA1619A9D5A900E308A9 /* beacons.plist */,
 				7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */,
@@ -742,6 +763,7 @@
 				7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
 				77906E411BEE1E1C00114B0D /* PhoneActiveClean.png in Resources */,
+				772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */,
 				9B1522201BE14EA700B3A52B /* beacons.json in Resources */,
 				9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */,
 				9BDC46681BE5152000162557 /* poi.json in Resources */,
@@ -836,6 +858,7 @@
 				9BDC49891BE8F95B00162557 /* TimeoutObserver.swift in Sources */,
 				E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */,
 				9BDC497F1BE8F95B00162557 /* PassbookCondition.swift in Sources */,
+				772EB1C61C198E9A0088E541 /* UIFont+Extension.swift in Sources */,
 				9BDC49691BE8F95B00162557 /* LocationOperation.swift in Sources */,
 				9BDC49631BE8F95B00162557 /* GroupOperation.swift in Sources */,
 				9BDC498D1BE8F95B00162557 /* URLSessionTaskOperation.swift in Sources */,
@@ -864,6 +887,7 @@
 				9BDC49771BE8F95B00162557 /* OperationCondition.swift in Sources */,
 				77E3D7C719A916590058C62B /* IXBeacon.m in Sources */,
 				77906E3B1BEE01F500114B0D /* IXFirstTimeHelpVC.swift in Sources */,
+				772EB1C41C198ACE0088E541 /* IXIcons.m in Sources */,
 				9BDC49751BE8F95B00162557 /* Operation.swift in Sources */,
 				9BDC495B1BE8F95B00162557 /* CloudCondition.swift in Sources */,
 				9B15221D1BE14D4700B3A52B /* IXData.m in Sources */,

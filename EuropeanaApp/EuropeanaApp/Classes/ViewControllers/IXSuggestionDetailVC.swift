@@ -9,7 +9,7 @@
 import UIKit
 
 class IXSuggestionDetailVC: UIViewController {
-    public var poi : IXPoi?
+    var poi : IXPoi?
     
     @IBOutlet weak var titleLabel: UILabel!
     
