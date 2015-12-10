@@ -16,6 +16,9 @@
 		772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */; };
 		772EB1C41C198ACE0088E541 /* IXIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 772EB1C21C198ACE0088E541 /* IXIcons.m */; };
 		772EB1C61C198E9A0088E541 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */; };
+		772EB1CA1C19953D0088E541 /* 01iPhone 6 Suggestions.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */; };
+		772EB1CB1C19953D0088E541 /* 02iPhone 6 Active Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */; };
+		772EB1CC1C19953D0088E541 /* 03iPhone 6 Active Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */; };
 		7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E14A1C03642300BC26FF /* UIColor+Extension.swift */; };
 		7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */; };
 		7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */; };
@@ -26,9 +29,6 @@
 		77906E391BEE01C700114B0D /* IXSuggestionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */; };
 		77906E3B1BEE01F500114B0D /* IXFirstTimeHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */; };
 		77906E3D1BEE020D00114B0D /* IXNoBeaconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */; };
-		77906E3F1BEE1E1500114B0D /* PhoneSuggestClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */; };
-		77906E411BEE1E1C00114B0D /* PhoneActiveClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */; };
-		77906E431BEE331B00114B0D /* PhoneSuggestDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */; };
 		77C9F0DC1C034F13006E6017 /* kawsrijks.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C9F0DB1C034F13006E6017 /* kawsrijks.png */; };
 		77D3C4A519A903AA001F00EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A419A903AA001F00EC /* Foundation.framework */; };
 		77D3C4A719A903AA001F00EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A619A903AA001F00EC /* CoreGraphics.framework */; };
@@ -175,6 +175,9 @@
 		772EB1C11C198ACE0088E541 /* IXIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXIcons.h; sourceTree = "<group>"; };
 		772EB1C21C198ACE0088E541 /* IXIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXIcons.m; sourceTree = "<group>"; };
 		772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "Extensions/UIFont+Extension.swift"; sourceTree = "<group>"; };
+		772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01iPhone 6 Suggestions.png"; path = "Mockups/01iPhone 6 Suggestions.png"; sourceTree = "<group>"; };
+		772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "02iPhone 6 Active Portrait.png"; path = "Mockups/02iPhone 6 Active Portrait.png"; sourceTree = "<group>"; };
+		772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "03iPhone 6 Active Landscape.png"; path = "Mockups/03iPhone 6 Active Landscape.png"; sourceTree = "<group>"; };
 		7742E14A1C03642300BC26FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7742E14D1C037EA300BC26FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneLogoClean.png; sourceTree = "<group>"; };
@@ -185,9 +188,6 @@
 		77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXSuggestionDetailVC.swift; sourceTree = "<group>"; };
 		77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXFirstTimeHelpVC.swift; sourceTree = "<group>"; };
 		77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXNoBeaconVC.swift; sourceTree = "<group>"; };
-		77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneSuggestClean.png; path = Mockups/PhoneSuggestClean.png; sourceTree = "<group>"; };
-		77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneActiveClean.png; path = Mockups/PhoneActiveClean.png; sourceTree = "<group>"; };
-		77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneSuggestDetail.png; path = Mockups/PhoneSuggestDetail.png; sourceTree = "<group>"; };
 		77C9F0DB1C034F13006E6017 /* kawsrijks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kawsrijks.png; path = Mockups/kawsrijks.png; sourceTree = "<group>"; };
 		77D3C4A119A903AA001F00EC /* ArtWhisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWhisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -427,11 +427,11 @@
 		77E3D7C019A910FA0058C62B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */,
+				772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */,
+				772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */,
 				7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */,
 				77C9F0DB1C034F13006E6017 /* kawsrijks.png */,
-				77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */,
-				77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */,
-				77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */,
 				77E3D7C119A910FA0058C62B /* Europeana logo.jpg */,
 				77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */,
 			);
@@ -749,20 +749,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4456DD9B19A935A500B5B707 /* pew-pew-lei.caf in Resources */,
-				77906E431BEE331B00114B0D /* PhoneSuggestDetail.png in Resources */,
 				7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */,
+				772EB1CB1C19953D0088E541 /* 02iPhone 6 Active Portrait.png in Resources */,
 				7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */,
-				77906E3F1BEE1E1500114B0D /* PhoneSuggestClean.png in Resources */,
 				E597DA0119A90FFE00E308A9 /* Main_iPhone.storyboard in Resources */,
+				772EB1CA1C19953D0088E541 /* 01iPhone 6 Suggestions.png in Resources */,
 				E597DA1719A9D5A900E308A9 /* beacons.plist in Resources */,
 				77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */,
 				4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */,
+				772EB1CC1C19953D0088E541 /* 03iPhone 6 Active Landscape.png in Resources */,
 				E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */,
 				77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */,
 				77C9F0DC1C034F13006E6017 /* kawsrijks.png in Resources */,
 				7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
-				77906E411BEE1E1C00114B0D /* PhoneActiveClean.png in Resources */,
 				772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */,
 				9B1522201BE14EA700B3A52B /* beacons.json in Resources */,
 				9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */,

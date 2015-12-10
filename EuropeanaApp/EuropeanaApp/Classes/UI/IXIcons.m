@@ -40,6 +40,24 @@
     return [NSString stringWithFormat:@"%C", unicode];
 }
 
++ (NSAttributedString *) attributedIconStringFor:(IXIconNameType) iconName backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor size:(CGFloat) fontSize
+{
+    NSString* textContent = [[self class] iconStringFor:iconName];
+
+    UIFont *font = [UIFont iconFontWithSize:fontSize];  // [UIFont fontWithName:@"icoMoon-Free" size:fontSize];
+    NSDictionary *attributes = @{NSFontAttributeName : font,
+                                 NSForegroundColorAttributeName : iconColor,
+                                 NSBackgroundColorAttributeName : bgColor,
+                                 };
+    
+    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:textContent attributes:attributes];
+    return attrStr;
+}
+
++ (NSAttributedString *) defaultAttributedIconStringFor:(IXIconNameType) iconName size:(CGFloat) fontSize
+{
+    return [self attributedIconStringFor:iconName backgroundColor:[UIColor clearColor] iconColor:[UIColor blackColor] size:fontSize];
+}
 
 /* with some help from UIImage+UIImage_FontAwesome.m */
 + (UIImage*) iconImageFor:(IXIconNameType)iconName backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor fontSize:(int)fontSize

@@ -81,7 +81,9 @@ class IXSuggestionVC: UICollectionViewController {
         if (segue.identifier == segues.showSuggestionDetail.rawValue) {
             let cell = sender as! SuggestionViewCell
             let destinationVC = segue.destinationViewController as! IXSuggestionDetailVC
-            destinationVC.poi = cell.poi
+            // destinationVC.poi = cell.poi
+            destinationVC.poi = IXPoi.mockPoi()
+
         }
     }
 

@@ -21,12 +21,14 @@
 @property (nonatomic, strong, nullable) NSString *caption;                // the initial text spoken
 @property (nonatomic, strong, nullable) NSString *audio;                  // audio file name
 @property (nonatomic, strong, nullable) NSArray *infoSources;             // contains further information URLs
-@property (nonatomic, strong, nullable) NSURL *imageURL;             //
+@property (nonatomic, strong, nullable) NSString *imageURL;             //
 @property (nonatomic, strong, nullable) UIImage *image;             //
 
 + (nonnull instancetype) createWithDictionary:(nonnull NSDictionary *)newDict;
 - (nonnull instancetype) initWithDictionary:(nonnull NSDictionary *)newDict;
 
 - (void) getImageWithBlock:(void (^ _Nonnull)(UIImage * _Nullable))block;
+
++ (IXPoi  * _Nonnull ) mockPoi;
 
 @end

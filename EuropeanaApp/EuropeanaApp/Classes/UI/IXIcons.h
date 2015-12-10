@@ -44,5 +44,11 @@ IcoMoon-Free.ttf.
  **/
 + (UIImage*) iconImageFor:(IXIconNameType)iconName backgroundColor:(UIColor*)bgColor iconColor:(UIColor*) iconColor fontSize:(int)fontSize;
 
+/** return an attributed string for the icon named iconName, with the attributes supplied **/
++ (NSAttributedString *) attributedIconStringFor:(IXIconNameType) iconName backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor size:(CGFloat) fontSize;
+
+/** return an attributed string for the icon named iconName, with the default attributes supplied **/
++ (NSAttributedString *) defaultAttributedIconStringFor:(IXIconNameType) iconName size:(CGFloat) fontSize;
+
 @end
 

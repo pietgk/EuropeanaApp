@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     // self.manager = [[IXManager alloc] init];
     
-//    [UIFont dumpAllFonts];
+    [UIFont dumpAllFonts];
     return YES;
 }
 							
