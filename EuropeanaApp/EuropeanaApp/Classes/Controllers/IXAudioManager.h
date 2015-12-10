@@ -17,5 +17,10 @@
 - (void)playBackgroundAudio;
 - (void)fadeOutBackgroundAudio;
 
+- (void) speak:(NSString *)text;
+- (void) pause;
+- (void) resume;
+- (void) fade;
+
 @end
 

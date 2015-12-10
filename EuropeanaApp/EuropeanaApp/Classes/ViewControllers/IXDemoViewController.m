@@ -90,8 +90,7 @@
         self.playing = NO;
         [self ixManager:self.manager stateChange:@"already speaking"];
     } else {
-        [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum"];
-        [self.audioManager playBackgroundAudio];
+        [self.audioManager speak:@"Skatedoctor by Debra Barraud. Every now and then I have a patient asking me: ’Are you sure you know what you’re doing? Don’t you need to wait until the doctor is here? Then I have to explain them that I am the doctor."];
         self.playing = YES;
         [self ixManager:self.manager stateChange:@"speaking"];
     }
@@ -101,7 +100,7 @@
 - (IBAction)stop:(id)sender
 {
     if (self.playing) {
-        [self.audioManager fadeOutBackgroundAudio];
+        [self.audioManager fade];
         self.playing = NO;
         [self ixManager:self.manager stateChange:@"stopping"];
     }

@@ -430,15 +430,15 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CWV-Mz-1xo">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="updateProgress:" destination="S6K-vA-roe" eventType="valueChanged" id="gLE-dC-Rs5"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHM-5g-0Cq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="IcoMoon-Free" family="IcoMoon-Free" pointSize="20"/>
                                 <state key="normal" title="P"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="39" y="564" width="30" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="playPauseButton:" destination="S6K-vA-roe" eventType="touchUpInside" id="36s-Md-M2H"/>
                                 </connections>
@@ -555,7 +555,6 @@
                         <outlet property="progressSlider" destination="CWV-Mz-1xo" id="C3V-jj-NYV"/>
                         <outlet property="timeLabel" destination="laN-tv-KcO" id="Zxf-P8-9hp"/>
                         <outlet property="titleLabel" destination="ZXo-AI-yWV" id="bMv-oQ-Xij"/>
-                        <outlet property="updateProgress" destination="CWV-Mz-1xo" id="GaF-Us-bHu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INq-ra-TBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
