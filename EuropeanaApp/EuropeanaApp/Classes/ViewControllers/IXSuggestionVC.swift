@@ -20,7 +20,7 @@ class IXSuggestionVC: UICollectionViewController {
     
     private let kSuggestionCellIdentifier = "suggestionCell"
     // @IBOutlet weak var collectionView: UICollectionView!
-    private let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+    private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
 
     var data : IXData?
     
@@ -107,7 +107,7 @@ extension IXSuggestionVC : UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             
-            return CGSizeMake(145, 225)
+            return CGSizeMake(164, 266)
     }
     
     func collectionView(collectionView: UICollectionView,

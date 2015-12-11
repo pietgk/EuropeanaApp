@@ -7,6 +7,9 @@
 //
 
 /* We should probably split up the audiomanager and speech synthesizer part, but if it stays small, it can stay here */
+/* might be helpful later:
+ http://stackoverflow.com/questions/20403331/avaudiosession-mixing-with-avspeechutterance
+ */
 
 #import "IXAudioManager.h"
 
@@ -31,6 +34,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 @property (strong, nonatomic) AVAudioPlayer *backgroundMusicPlayer;
 @property (strong, nonatomic) AVSpeechSynthesizer *speechSynth;
 @property (strong, nonatomic) AVSpeechUtterance *currentUtterance;
+@property (assign) NSUInteger speechTextLength;
 
 @property (assign) BOOL backgroundMusicInterrupted;
 @property (assign) SystemSoundID pewPewSound;
@@ -384,6 +388,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
         utterance.rate = 0.4;
         [self.speechSynth speakUtterance:utterance];
         self.currentUtterance = utterance;
+        self.speechTextLength = text.length;
         self.audioState = speechPlaying;
     }
 }
@@ -442,6 +447,15 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didPauseSpeechUtterance:(AVSpeechUtterance *)utterance
 {
     self.audioState = speechPaused;
+}
+
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer willSpeakRangeOfSpeechString:(NSRange)characterRange utterance:(AVSpeechUtterance *)utterance
+{
+    NSUInteger current = characterRange.location;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(audioManager:speakingRange:totalLength:)]) {
+        [self.delegate audioManager:self speakingRange:characterRange totalLength:self.speechTextLength];
+    }
+    // call back delegate function to update stuff on screen.
 }
 
 
