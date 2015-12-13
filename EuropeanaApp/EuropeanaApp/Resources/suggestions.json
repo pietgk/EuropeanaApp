@@ -1,0 +1,54 @@
+ [
+ {
+  "beacons":[
+        {"uuid": "9999", "major":1, "minor":12, "signal": 50}
+    ],
+    "poi": {
+      { "name": "Humans of Amsterdam", 
+        "artist": "Debra Barraud",
+        "venue" : "Amsterdam public library",
+        "caption": "Sinds drie jaar struint Barraud de straten van Amsterdam af om voorbijgangers op de foto te zetten. In een kort interview probeert ze daarbij iets specifieks over de geportretteerde te achterhalen. Foto en verhaal vormen een integraal portret dat Barraud via Facebook, Instagram, Twitter en Tumblr verspreidt.",
+        "imageURL" : "HumansAMS.png"
+        } 
+ },
+ { "poi": {
+      { "name": "This Progress", 
+        "artist": "Tino Sehgal",
+        "venue" : "Stedelijk Museum",
+        "caption": "",
+        "imageURL" : "Tino.png"
+        } 
+ },
+ { "poi": {
+      { "name": "New Arrivals", 
+        "artist": "Bruno Zhu",
+        "venue" : "Foam Photography Museum",
+        "caption": "",
+        "imageURL" : "Bruno.png"
+        } 
+ },
+ { "poi": {
+      { "name": "Art Zuid", 
+        "artist": "Amsterdam",
+        "venue" : "International sculpture route",
+        "caption": "",
+        "imageURL" : "ArtZuid.png"
+        } 
+ },
+ { "poi": {
+      { "name": "Colourful Clay", 
+        "artist": "Amsterdam",
+        "venue" : "Amsterdam public library",
+        "caption": "",
+        "imageURL" : "colorClay.png"
+        } 
+ },
+ { "poi": {
+      { "name": "Amsterdam Light Festival", 
+        "artist": "Amsterdam",
+        "venue" : "Multiple locations Amsterdam",
+        "caption": "",
+        "imageURL" : "LightFestival.png"
+        } 
+ }
+]
