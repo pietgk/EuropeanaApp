@@ -37,7 +37,10 @@ class IXSuggestionDetailVC: UIViewController , UITableViewDataSource, UITableVie
         poi?.getImageWithBlock({ (image) -> Void in
             self.imageView.image = image;
         });
-        
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.title = poi?.name
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,7 +82,7 @@ class IXSuggestionDetailVC: UIViewController , UITableViewDataSource, UITableVie
         case .Address:
             cell.textLabel?.text = "venue address"
         case .URL:
-            cell.textLabel?.text = "http://www.google.com"
+            cell.textLabel?.text = self.poi?.venue
             
         }
         

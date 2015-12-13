@@ -535,7 +535,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Active Guide" image="Active" selectedImage="ActiveSelected" id="eY7-th-VhM"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Suggestion Detail" id="TDi-jZ-zib">
+                    <navigationItem key="navigationItem" title="Active Guide" id="TDi-jZ-zib">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="XDu-WC-tud">
                             <connections>
                                 <segue destination="6ic-xf-Bgu" kind="unwind" unwindAction="unwindDetail:" id="F0k-Bu-1ni"/>
@@ -633,7 +633,7 @@
                             <constraint firstItem="AK1-Jx-Olx" firstAttribute="centerY" secondItem="0qa-9f-LbA" secondAttribute="centerY" id="JBx-YC-FgU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7Co-O7-YgB"/>
+                    <navigationItem key="navigationItem" title="Guides" id="7Co-O7-YgB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMD-mB-OgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -675,7 +675,7 @@
                             <outlet property="delegate" destination="eYk-N2-B2k" id="Bgq-9n-UwU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="mkV-Xx-fRa"/>
+                    <navigationItem key="navigationItem" title="History" id="mkV-Xx-fRa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRp-zH-aVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
