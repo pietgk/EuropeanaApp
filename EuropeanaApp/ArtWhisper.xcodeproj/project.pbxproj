@@ -46,6 +46,7 @@
 		77DA0DC71C1E001B00826BC2 /* MerryGoRound.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC41C1E001B00826BC2 /* MerryGoRound.png */; };
 		77DA0DCA1C1E008E00826BC2 /* suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC91C1E008E00826BC2 /* suggestions.json */; };
 		77DA0DCC1C1E00D900826BC2 /* Tino.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCB1C1E00D900826BC2 /* Tino.png */; };
+		77DA0DCE1C1E176200826BC2 /* iPhone 6 SuggestDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */; };
 		77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C119A910FA0058C62B /* Europeana logo.jpg */; };
 		77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */; };
 		77E3D7C719A916590058C62B /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
@@ -214,6 +215,7 @@
 		77DA0DC41C1E001B00826BC2 /* MerryGoRound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MerryGoRound.png; path = Mockups/MerryGoRound.png; sourceTree = "<group>"; };
 		77DA0DC91C1E008E00826BC2 /* suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suggestions.json; sourceTree = "<group>"; };
 		77DA0DCB1C1E00D900826BC2 /* Tino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tino.png; path = Mockups/Tino.png; sourceTree = "<group>"; };
+		77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone 6 SuggestDetail.png"; path = "../../../../../Documents/Google Drive/ArtWhisper/Art Whisper Screens/iPhone6/iPhone 6 SuggestDetail.png"; sourceTree = "<group>"; };
 		77E3D7C119A910FA0058C62B /* Europeana logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Europeana logo.jpg"; sourceTree = "<group>"; };
 		77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glimworm-ibeacons.png"; sourceTree = "<group>"; };
 		77E3D7C519A916590058C62B /* IXBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXBeacon.h; path = EuropeanaApp/Classes/Model/IXBeacon.h; sourceTree = SOURCE_ROOT; };
@@ -470,6 +472,7 @@
 				772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */,
 				772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */,
 				772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */,
+				77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */,
 				7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */,
 				77E3D7C119A910FA0058C62B /* Europeana logo.jpg */,
 				77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */,
@@ -791,6 +794,7 @@
 				77DA0DCC1C1E00D900826BC2 /* Tino.png in Resources */,
 				77DA0DBF1C1DFF9700826BC2 /* HumansAMS.png in Resources */,
 				4456DD9B19A935A500B5B707 /* pew-pew-lei.caf in Resources */,
+				77DA0DCE1C1E176200826BC2 /* iPhone 6 SuggestDetail.png in Resources */,
 				7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */,
 				772EB1CB1C19953D0088E541 /* 02iPhone 6 Active Portrait.png in Resources */,
 				77DA0DC51C1E001B00826BC2 /* LightFestival.png in Resources */,

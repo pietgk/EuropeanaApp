@@ -61,8 +61,15 @@
 - (void) getImageWithBlock:(void (^ _Nonnull)(UIImage * _Nullable))block {
     // get / download image
     if (self.imageURL) {
+        NSURL *url = [NSURL URLWithString:self.imageURL];
+        if (![url scheme]) {            // it is a lone filename, not a URL
+            NSString *fileName = [self.imageURL stringByDeletingPathExtension];
+            NSString *extension = [self.imageURL pathExtension];
+            url = [[NSBundle mainBundle] URLForResource:fileName withExtension:extension];
+//            url = [NSURL fileURLWithPath:self.imageURL];
+        }
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0), ^{
-            NSData *data = [NSData dataWithContentsOfURL : [NSURL URLWithString:self.imageURL]];
+            NSData *data = [NSData dataWithContentsOfURL : url];
             self.image = data ? [UIImage imageWithData: data] : nil;
             dispatch_async(dispatch_get_main_queue(), ^{
                 block(self.image);

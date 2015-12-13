@@ -19,6 +19,7 @@
 @property (nonatomic, strong, nullable) NSString *name;                   // the name of the place
 @property (nonatomic, strong, nullable) NSString *artist;                   // the name of the place
 @property (nonatomic, strong, nullable) NSString *caption;                // the initial text spoken
+@property (nonatomic, strong, nullable) NSString *venue;                // the venue of the exhibition
 @property (nonatomic, strong, nullable) NSString *audio;                  // audio file name
 @property (nonatomic, strong, nullable) NSArray *infoSources;             // contains further information URLs
 @property (nonatomic, strong, nullable) NSString *imageURL;             //

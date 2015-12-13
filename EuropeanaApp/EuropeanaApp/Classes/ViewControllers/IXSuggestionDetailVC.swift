@@ -8,35 +8,36 @@
 
 import UIKit
 
-class IXSuggestionDetailVC: UIViewController {
+enum SuggestionDetailCellType: Int {
+    case Caption = 0
+    case Date = 1
+    case OpeningHours = 2
+    case Address = 3
+    case URL = 4
+    
+    static let count: Int = {
+        var max: Int = 0
+        while let _ = SuggestionDetailCellType(rawValue: ++max) {}
+        return max
+    }()
+    
+}
+
+class IXSuggestionDetailVC: UIViewController , UITableViewDataSource, UITableViewDelegate {
     var poi : IXPoi?
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var captionLabel: UILabel!
-    
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var progressSlider: UISlider!
-    @IBOutlet weak var timeLabel: UILabel!
-    
-    var playing : Bool = false
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
         createLabels()
         // Do any additional setup after loading the view.
-        self.titleLabel.text = poi?.name
-        self.artistLabel.text = poi?.artist
-        self.captionLabel.text = poi?.caption
-        self.imageView.backgroundColor = UIColor.darkGrayColor()
-        self.imageView.image = nil
         poi?.getImageWithBlock({ (image) -> Void in
             self.imageView.image = image;
         });
         
-        self.timeLabel.text = "00:00"
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,38 +46,90 @@ class IXSuggestionDetailVC: UIViewController {
     }
     
     func createLabels() {
-        self.titleLabel.font = UIFont.awFontWithSize(13)
-        self.artistLabel.font = UIFont.awBoldFontWithSize(12)
-        self.captionLabel.font = UIFont.awItalicFontWithSize(11)
-     
-        togglePlayButton(true)
     }
     
-    func togglePlayButton(play: Bool) {
-        if play {
-            self.playButton.setAttributedTitle(IXIcons.defaultAttributedIconStringFor(IXIconNameType.icon_play3, size: 24), forState: .Normal)
-            self.playing = true
-        } else {
-            self.playButton.setAttributedTitle(IXIcons.defaultAttributedIconStringFor(IXIconNameType.icon_pause2, size: 24), forState: .Normal)
-            self.playing = false
-        }
+    // MARK: UITableViewDataSource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
     
-    @IBAction func playPauseButton(sender: AnyObject) {
-        if self.playing {
-            togglePlayButton(false)
-            // stop playing
-            // change button
-            // stop timer 
-        } else {
-            togglePlayButton(true)
-        }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return SuggestionDetailCellType.count
     }
-
-    // if the user interacts with the slider
-    @IBAction func updateProgress(sender: UISlider) {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("suggestionDetailCell", forIndexPath: indexPath)
+    
+    // Configure the cell...
+        configureCell(cell, forRow: indexPath.row)
+        return cell
+    }
+    
+    func configureCell(cell : UITableViewCell, forRow row: Int) {
+        let niceRow = SuggestionDetailCellType(rawValue: row)!
+        switch (niceRow) {
+        case .Caption :
+                cell.textLabel?.text = poi?.caption
+        case .Date :
+                cell.textLabel?.text = "nu"
+        case .OpeningHours:
+                cell.textLabel?.text = "de hele dag"
+        case .Address:
+            cell.textLabel?.text = "venue address"
+        case .URL:
+            cell.textLabel?.text = "http://www.google.com"
+            
+        }
         
     }
+    
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    // Return false if you do not want the specified item to be editable.
+    return true
+    }
+    */
+    
+    /*
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    if editingStyle == .Delete {
+    // Delete the row from the data source
+    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+    } else if editingStyle == .Insert {
+    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+    }
+    */
+    
+    /*
+    // Override to support rearranging the table view.
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    
+    }
+    */
+    
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    // Return false if you do not want the item to be re-orderable.
+    return true
+    }
+    */
+    
+    /*
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
+    }
+    */
+
     /*
     // MARK: - Navigation
 

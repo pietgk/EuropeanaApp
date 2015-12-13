@@ -26,6 +26,7 @@ class IXActiveGuideVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.poi = IXPoi.mockPoi()
         createLabels()
         // Do any additional setup after loading the view.
         self.titleLabel.text = poi?.name

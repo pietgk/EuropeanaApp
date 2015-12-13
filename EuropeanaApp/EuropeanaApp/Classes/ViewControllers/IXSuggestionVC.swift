@@ -97,7 +97,7 @@ extension IXSuggestionVC {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let num = data?.pois?.count ?? 0
+        let num = data?.suggestions?.count ?? 0
         return num
     }
 
