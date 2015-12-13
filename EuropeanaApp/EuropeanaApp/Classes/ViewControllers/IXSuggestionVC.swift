@@ -64,7 +64,8 @@ class IXSuggestionVC: UICollectionViewController {
     
     func sortedPois() -> Array<IXPoi> {
         // let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        let pois = data?.pois?.sort({poi1, poi2 in return poi1.name > poi2.name }) ?? Array<IXPoi>()
+//        let pois = data?.pois?.sort({poi1, poi2 in return poi1.name > poi2.name }) ?? Array<IXPoi>()
+        let pois = data?.suggestions ?? Array<IXPoi>()
         return pois
     }
     
@@ -81,8 +82,8 @@ class IXSuggestionVC: UICollectionViewController {
         if (segue.identifier == segues.showSuggestionDetail.rawValue) {
             let cell = sender as! SuggestionViewCell
             let destinationVC = segue.destinationViewController as! IXSuggestionDetailVC
-            // destinationVC.poi = cell.poi
-            destinationVC.poi = IXPoi.mockPoi()
+            destinationVC.poi = cell.poi
+//            destinationVC.poi = IXPoi.mockPoi()
 
         }
     }

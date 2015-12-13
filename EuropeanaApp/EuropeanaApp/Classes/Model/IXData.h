@@ -18,6 +18,7 @@
 @property (nonatomic, readonly, nullable) NSMutableDictionary <NSString*,IXBeacon *> *beacons; // key is uuid_major_minor
 
 @property (nonatomic, readonly, nullable) NSArray<IXPoi *> *pois;
+@property (nonatomic, readonly, nullable) NSArray<IXPoi *> *suggestions;
 
 - (void) setBeaconArray:(NSArray <IXBeacon *>* _Nonnull) newBeacons;
 

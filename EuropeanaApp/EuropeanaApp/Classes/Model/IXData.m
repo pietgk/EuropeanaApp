@@ -19,11 +19,12 @@
 
 @property (nonatomic, strong, nullable) NSMutableDictionary <NSString*,IXBeacon *> *beacons;
 @property (nonatomic, strong) NSArray<IXPoi *> *pois;
+@property (nonatomic, strong) NSArray<IXPoi *> *suggestions;
 
 @end
 
 @implementation IXData
-@synthesize beacons=_beacons, pois=_pois;
+@synthesize beacons=_beacons, pois=_pois, suggestions = _suggestions;
 
 + (IXData*)sharedData;
 {
@@ -45,30 +46,21 @@
     return self;
 }
 
-
-- (void) setBeaconArray:(NSArray <IXBeacon *>* _Nonnull) newBeacons
-{
-    NSMutableDictionary<NSString*,IXBeacon *>* newBeaconDict = [NSMutableDictionary dictionaryWithCapacity:[newBeacons count]];
-    for (IXBeacon *beacon in newBeacons) {
-        [newBeaconDict addEntriesFromDictionary: @{beacon.key:beacon} ];
-    }
-    _beacons = newBeaconDict;
-}
-
-- (NSDictionary<NSString*,IXBeacon *>*) beacons;
-{
-    if (!_beacons) {
-        _beacons = [self beaconsFromResourceFile];
-    }
-    return [NSDictionary dictionaryWithDictionary:_beacons];
-}
-
+// MARK: Mock data
 - (NSArray *) pois
 {
     if (!_pois) {
         _pois = [self poisFromResourceFile];
     }
     return _pois;
+}
+
+- (NSArray *) suggestions
+{
+    if (!_suggestions) {
+        _suggestions = [self suggestionsFromResourceFile];
+    }
+    return _suggestions;
 }
 
 -(NSMutableDictionary<NSString*,IXBeacon *>*)beaconsFromResourceFile;
@@ -110,6 +102,44 @@
     }
 
     return newPois;
+}
+
+-(NSArray*)suggestionsFromResourceFile;
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"suggestions" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    NSMutableArray *newPois = [NSMutableArray arrayWithCapacity:[jsonArray count]];
+    for (NSDictionary *b in jsonArray) {
+        IXPoi *newPee = [IXPoi createWithDictionary:b];
+        if (newPee) {
+            [newPois addObject:newPee];
+        } else {
+            NSLog(@"Could not add beacon with dict: %@",b);
+        }
+    }
+    
+    return newPois;
+}
+
+// MARK: Beacons
+
+- (void) setBeaconArray:(NSArray <IXBeacon *>* _Nonnull) newBeacons
+{
+    NSMutableDictionary<NSString*,IXBeacon *>* newBeaconDict = [NSMutableDictionary dictionaryWithCapacity:[newBeacons count]];
+    for (IXBeacon *beacon in newBeacons) {
+        [newBeaconDict addEntriesFromDictionary: @{beacon.key:beacon} ];
+    }
+    _beacons = newBeaconDict;
+}
+
+- (NSDictionary<NSString*,IXBeacon *>*) beacons;
+{
+    if (!_beacons) {
+        _beacons = [self beaconsFromResourceFile];
+    }
+    return [NSDictionary dictionaryWithDictionary:_beacons];
 }
 
 - (NSSet<NSUUID*> *)monitoredBeaconUuidSet;

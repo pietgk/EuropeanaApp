@@ -633,11 +633,11 @@
 				77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */,
 				77906E361BEE019500114B0D /* IXSuggestionVC.swift */,
 				77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */,
+				7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */,
 				77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */,
 				77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */,
 				E597DA0719A9103E00E308A9 /* IXDemoViewController.h */,
 				E597DA0819A9103E00E308A9 /* IXDemoViewController.m */,
-				7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
