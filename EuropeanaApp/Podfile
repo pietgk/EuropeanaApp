@@ -3,5 +3,8 @@ use_frameworks!
 # pod "MeshbluBeaconKit"
 
 pod "KCSIBeacon"
+pod 'Fabric'
+pod 'Crashlytics'
+
 # pod "AprilSDK"
 # https://beacons.fosbury.co/docs/integration#download
