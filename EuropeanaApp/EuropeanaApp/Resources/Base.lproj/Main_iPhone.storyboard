@@ -125,44 +125,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 6 SuggestDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-jP-ArE">
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 6 SuggestDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-jP-ArE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3xU-UG-r31">
-                                <rect key="frame" x="0.0" y="64" width="375" height="226"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3xU-UG-r31">
+                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="226" id="f5K-yJ-R3f"/>
+                                    <constraint firstAttribute="height" constant="250" id="f5K-yJ-R3f"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="96v-7H-rTD">
-                                <rect key="frame" x="-4" y="290" width="383" height="328"/>
+                                <rect key="frame" x="-4" y="322" width="383" height="296"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="suggestionDetailCell" textLabel="HH3-5s-vxu" style="IBUITableViewCellStyleDefault" id="I33-Yl-SAk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="suggestionDetailCell" textLabel="HH3-5s-vxu" imageView="BEE-gr-lhQ" rowHeight="44" style="IBUITableViewCellStyleDefault" id="I33-Yl-SAk">
                                         <rect key="frame" x="0.0" y="28" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I33-Yl-SAk" id="7NZ-vt-Bdr">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HH3-5s-vxu">
-                                                    <rect key="frame" x="15" y="0.0" width="353" height="43.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" id="HH3-5s-vxu">
+                                                    <rect key="frame" x="55" y="0.0" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Active" id="BEE-gr-lhQ">
+                                                    <rect key="frame" x="15" y="10" width="25" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <inset key="separatorInset" minX="22" minY="0.0" maxX="22" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -175,7 +181,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="96v-7H-rTD" secondAttribute="trailing" constant="-20" id="5y5-CX-br6"/>
-                            <constraint firstItem="96v-7H-rTD" firstAttribute="top" secondItem="3xU-UG-r31" secondAttribute="bottom" id="8SK-MB-qf2"/>
+                            <constraint firstItem="96v-7H-rTD" firstAttribute="top" secondItem="3xU-UG-r31" secondAttribute="bottom" constant="8" id="8SK-MB-qf2"/>
                             <constraint firstItem="3xU-UG-r31" firstAttribute="leading" secondItem="2my-Vm-gAK" secondAttribute="leading" id="Bpq-C2-KxP"/>
                             <constraint firstItem="ndo-jP-ArE" firstAttribute="centerX" secondItem="2my-Vm-gAK" secondAttribute="centerX" id="Drh-Of-Iuy"/>
                             <constraint firstItem="P46-W5-U1Z" firstAttribute="top" secondItem="96v-7H-rTD" secondAttribute="bottom" id="FIA-9S-67G"/>
@@ -186,9 +192,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Suggestion Detail" image="Suggestion" selectedImage="ActiveSelected" id="lgH-9d-eAJ"/>
+                    <navigationItem key="navigationItem" title="Detail" id="Gu0-pd-WNw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="3xU-UG-r31" id="n3M-le-uTB"/>
+                        <outlet property="navigationTitleItem" destination="Gu0-pd-WNw" id="rGI-w3-ThR"/>
                         <outlet property="tableView" destination="96v-7H-rTD" id="DXd-Xl-j7J"/>
                     </connections>
                 </viewController>

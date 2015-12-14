@@ -25,9 +25,13 @@ enum SuggestionDetailCellType: Int {
 
 class IXSuggestionDetailVC: UIViewController , UITableViewDataSource, UITableViewDelegate {
     var poi : IXPoi?
+    let kDefaultRowHeight : CGFloat  = 44
+    let kMaxHeight : CGFloat = 600
+    let kCellMargin : CGFloat = 15
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var navigationTitleItem: UINavigationItem!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +41,11 @@ class IXSuggestionDetailVC: UIViewController , UITableViewDataSource, UITableVie
         poi?.getImageWithBlock({ (image) -> Void in
             self.imageView.image = image;
         });
+        self.navigationTitleItem.title = poi?.name
     }
-
-    override func viewDidAppear(animated: Bool) {
-        self.navigationController?.title = poi?.name
-    }
+//
+//    override func viewDidAppear(animated: Bool) {
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -62,6 +66,29 @@ class IXSuggestionDetailVC: UIViewController , UITableViewDataSource, UITableVie
         return SuggestionDetailCellType.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let niceRow = SuggestionDetailCellType(rawValue: indexPath.row)!
+        var height: CGFloat
+        if (.Caption == niceRow) {
+//            (poi?.caption != nil)
+            let font = UIFont.systemFontOfSize(13.0)
+            let attr = [NSFontAttributeName : font]
+            let text = NSAttributedString(string: (poi?.caption)!, attributes: attr)
+            let boundSize = CGSizeMake(self.tableView.frame.size.width - kCellMargin, kMaxHeight)
+//            let options : NSStringDrawingOptions = [.UsesLineFragmentOrigin | .UsesFontLeading]
+            let options = unsafeBitCast(NSStringDrawingOptions.UsesLineFragmentOrigin.rawValue |
+                NSStringDrawingOptions.UsesFontLeading.rawValue,
+                NSStringDrawingOptions.self)
+            let rect : CGRect = text.boundingRectWithSize(boundSize, options: options, context: nil)
+//            height + additionalHeightBuffer;
+            height = rect.size.height + kCellMargin;
+            
+         } else {
+            height = kDefaultRowHeight
+        }
+        return height
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("suggestionDetailCell", forIndexPath: indexPath)
     
@@ -74,15 +101,21 @@ class IXSuggestionDetailVC: UIViewController , UITableViewDataSource, UITableVie
         let niceRow = SuggestionDetailCellType(rawValue: row)!
         switch (niceRow) {
         case .Caption :
-                cell.textLabel?.text = poi?.caption
+            cell.imageView?.image = nil
+            cell.textLabel?.font = UIFont.systemFontOfSize(13.0)
+            cell.textLabel?.text = poi?.caption
         case .Date :
-                cell.textLabel?.text = "nu"
+            cell.imageView?.image = IXIcons.iconImageFor(IXIconNameType.icon_calendar, backgroundColor: nil, iconColor: UIColor.blackColor(), fontSize: 24)
+            cell.textLabel?.text = "nu"
         case .OpeningHours:
-                cell.textLabel?.text = "de hele dag"
+            cell.imageView?.image = IXIcons.iconImageFor(IXIconNameType.icon_clock, backgroundColor: nil, iconColor: UIColor.blackColor(), fontSize: 24)
+            cell.textLabel?.text = "de hele dag"
         case .Address:
+            cell.imageView?.image = IXIcons.iconImageFor(IXIconNameType.icon_map2, backgroundColor: nil, iconColor: UIColor.blackColor(), fontSize: 24)
             cell.textLabel?.text = "venue address"
         case .URL:
-            cell.textLabel?.text = self.poi?.venue
+            cell.imageView?.image = IXIcons.iconImageFor(IXIconNameType.icon_link, backgroundColor: nil, iconColor: UIColor.blackColor(), fontSize: 24)
+           cell.textLabel?.text = self.poi?.venue
             
         }
         
