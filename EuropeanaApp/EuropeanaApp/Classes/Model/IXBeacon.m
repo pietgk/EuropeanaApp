@@ -21,6 +21,7 @@
     
     if (self) {
         self.extraInfo = [NSMutableArray array];
+        self.uuid = identifier;
         self.identifier = identifier;
         self.major = [NSNumber numberWithInteger:major];
         self.minor = [NSNumber numberWithInteger:minor];
@@ -42,17 +43,20 @@
     if (self) {
         self.extraInfo = [NSMutableArray array];
 
-        [newDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+//        [newDict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {        cannot use background enumeration, as we expect an object back!
+        for (NSString *key in newDict.allKeys) {
             @try {
-                //[self setValue:obj forKey:key];
-                [self setValue:obj forKeyPath:key];
+                id thingy = newDict[key];
+                if (thingy != nil) {
+                    [self setValue:thingy forKeyPath:key];
 #warning this does not work for keypath position.x :-(
+                }
             }
             @catch (NSException *exception) {
             }
             @finally {
             }
-        }];
+        }
         
     }
     return self;

@@ -27,6 +27,7 @@
 @property (nonatomic) NSOperationQueue *operationQueue;
 
 @property (nonatomic, strong) NSArray<IXBeacon*> *rangedBeacons;
+@property (nonatomic, strong) NSArray<CLBeaconRegion*> *localRegions;
 @property (nonatomic, strong) IXData *data;
 
 @end
@@ -54,7 +55,7 @@
         _locationManager = [CLLocationManager new];
         _locationManager.delegate = self;
         // start a monitoring operation using the data from beacons.json
-        self.rangedBeacons = [self initialBeaconsRangingSetup];         // beacon range
+        self.localRegions = [self initialBeaconsRangingSetup];         // beacon range
         _operationQueue = [[NSOperationQueue alloc] init];
     }
     return self;
@@ -106,33 +107,55 @@
 - (NSArray *)initialBeaconsRangingSetup
 {
     // For now we retrieve all the beacons' asset from a convenience PLIST
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"beacons" ofType:@"plist"];
-    NSArray *plistArray = [NSArray arrayWithContentsOfFile:plistPath];
-    
-    NSMutableArray *regionResult = [NSMutableArray array];
-    NSMutableArray *beaconResult = [NSMutableArray array];
-    
-    for (NSDictionary *elem in plistArray) {
-        // add as region, for now
-        CLBeaconRegion *region = [[CLBeaconRegion alloc]
-                                  initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:elem[@"UUID"]]
-                                  major:[elem[@"major"] integerValue]
-                                  minor:[elem[@"minor"] integerValue]
-                                  identifier:elem[@"identifier"]];
-        
-        
-        // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
-        [regionResult addObject:region];
-        
-        // new: add as beacon, for more precise ranging
-        IXBeacon *beacon = [[IXBeacon alloc] initWithDictionary:elem];
-        [beaconResult addObject:beacon];
-    }
-    // but add these to data as well:
-    [[IXData sharedData] setBeaconArray:beaconResult];
+//    NSArray *localRegions = [[IXData sharedData] localRegions];
 
-    return regionResult;
+//    for (CLBeaconRegion *region in localRegions) {
+//        
+//        
+//        // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
+//        [regionResult addObject:region];
+//        
+//        // new: add as beacon, for more precise ranging
+////        IXBeacon *beacon = [[IXBeacon alloc] initWithDictionary:elem];
+////        [beaconResult addObject:beacon];
+//    }
+    // but add these to data as well:
+//    [[IXData sharedData] setBeaconArray:beaconResult];
+    
+    return [[IXData sharedData] localRegions];
 }
+
+
+//- (NSArray *)initialBeaconsRangingSetupPlist
+//{
+//    // For now we retrieve all the beacons' asset from a convenience PLIST
+//    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"beacons" ofType:@"plist"];
+//    NSArray *plistArray = [NSArray arrayWithContentsOfFile:plistPath];
+//    
+//    NSMutableArray *regionResult = [NSMutableArray array];
+//    NSMutableArray *beaconResult = [NSMutableArray array];
+//    
+//    for (NSDictionary *elem in plistArray) {
+//        // add as region, for now
+//        CLBeaconRegion *region = [[CLBeaconRegion alloc]
+//                                  initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:elem[@"UUID"]]
+//                                  major:[elem[@"major"] integerValue]
+//                                  minor:[elem[@"minor"] integerValue]
+//                                  identifier:elem[@"identifier"]];
+//        
+//        
+//        // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
+//        [regionResult addObject:region];
+//        
+//        // new: add as beacon, for more precise ranging
+//        IXBeacon *beacon = [[IXBeacon alloc] initWithDictionary:elem];
+//        [beaconResult addObject:beacon];
+//    }
+//    // but add these to data as well:
+//    [[IXData sharedData] setBeaconArray:beaconResult];
+//
+//    return regionResult;
+//}
 
 - (BOOL)startRangingBeacons
 {
@@ -141,23 +164,22 @@
         // TO DISCUSS
         NSLog(@"This device doesn't support beacons' monitoring");
         return NO;
-    }
-    else {
-        for (CLBeaconRegion *beacon in self.rangedBeacons) {
-            [self startRangingBeacon:beacon];
+    } else {
+        for (CLBeaconRegion *region in self.localRegions) {
+            [self startRangingRegion:region];
         }
         
         return YES;
     }
 }
 
-- (void)startRangingBeacon:(CLBeaconRegion *)beacon
+- (void)startRangingRegion:(CLBeaconRegion *)region
 {
     // Start monitoring.
     // To get the best accuracy and responsiveness we schedule monitoring and ranging in the same and keep it up for the all app's lifecycle.
-    [self.locationManager startMonitoringForRegion:beacon];
-    [self.locationManager startRangingBeaconsInRegion:beacon];
-    NSLog(@"Monitoring turned on for %@.", beacon.identifier);
+    [self.locationManager startMonitoringForRegion:region];
+    [self.locationManager startRangingBeaconsInRegion:region];
+    NSLog(@"Monitoring turned on for %@.", region.identifier);
 }
 
 #pragma mark - Location manager delegate
@@ -239,7 +261,7 @@
 
 - (void) tellDelegateBeaconIsSpotted:(IXBeacon*)beacon
 {
-    NSLog(@"Beacon major: %@ minor %lu ", beacon.major, (unsigned long)beacon.minor);
+    NSLog(@"Beacon major: %@ minor %@ ", beacon.major, beacon.minor);
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:spottedIXBeacon:)]) {
             [self.delegate ixLocationManager:self spottedIXBeacon:beacon];

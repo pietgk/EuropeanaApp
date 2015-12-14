@@ -22,6 +22,7 @@ class IXActiveGuideVC: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     var playing : Bool = false
+    var demoParent : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,5 +89,13 @@ class IXActiveGuideVC: UIViewController {
     // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func back(sender:AnyObject) {
+        if demoParent {
+            self.performSegueWithIdentifier("unwindActiveDemoSegue", sender: self)
+        } else {
+            self.performSegueWithIdentifier("unwindDetailSegue", sender: self)
+        }
+    }
     
 }

@@ -68,7 +68,7 @@
     
 }
 
-- (void) ixManager: (IXManager *)ixManager stateChange: (NSString *)newState
+- (void) ixManager: (IXManager *)ixManager stateChange: (NSString *)newState 
 {
     self.infoLabel.alpha = 1.0;
     self.infoLabel.text = newState;
@@ -80,6 +80,11 @@
             self.infoLabel.alpha = 1.0;
         }];
     });
+}
+
+- (void) ixManager: (IXManager *)ixManager poiFound: (IXPoi *)poi
+{
+    self.infoLabel.text = poi.name;
 }
 
 
@@ -111,4 +116,10 @@
 {
     
 }
+
+#pragma mark - Segues
+- (IBAction) unwindActiveDemo:(UIStoryboardSegue *) segue {
+    NSLog(@"unwinding Active Demo");
+}
+
 @end

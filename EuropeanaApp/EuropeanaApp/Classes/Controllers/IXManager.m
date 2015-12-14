@@ -33,6 +33,8 @@ NSString * const stateAsString[] = {
 @property (nonatomic, strong) NSDate* firstOutside;
 @property (nonatomic, strong) NSDate* firstInside;
 
+@property (nonatomic, strong) IXPoi* currentPoi;
+
 @end
 
 @implementation IXManager
@@ -154,5 +156,15 @@ NSString * const stateAsString[] = {
     if (self.delegate && [self.delegate respondsToSelector:@selector(ixManager:stateChange:)]) {
         [self.delegate ixManager:self stateChange:stateAsString[self.state]];
     }
+    
+    // search for poi near beacon
+    IXPoi *newPoi = [[IXData sharedData] poiClosestToBeacons:@[ixBeacon]];
+    if (newPoi != self.currentPoi) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(ixManager:poiFound:)]) {
+            [self.delegate ixManager:self poiFound:newPoi];
+        }
+        self.currentPoi = newPoi;
+    }
+    
 }
 @end

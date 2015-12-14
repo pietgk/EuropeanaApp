@@ -20,6 +20,7 @@
 @property (nonatomic, strong, nullable) NSMutableDictionary <NSString*,IXBeacon *> *beacons;
 @property (nonatomic, strong) NSArray<IXPoi *> *pois;
 @property (nonatomic, strong) NSArray<IXPoi *> *suggestions;
+@property (nonatomic, strong) NSArray<CLBeaconRegion *> *localRegions;
 
 @end
 
@@ -123,6 +124,22 @@
     return newPois;
 }
 
+/** returns an array of local (...) regions, calculated and mapped from the beacons list and cached */
+- (NSArray *) localRegions
+{
+    if (!_localRegions) {
+        NSMutableDictionary *newRegions = [NSMutableDictionary new];
+        for (NSString *key in self.beacons) {
+            IXBeacon *beacon = self.beacons[key];
+            CLBeaconRegion *region = [[CLBeaconRegion alloc]
+                              initWithProximityUUID:beacon.UUID
+                              identifier:beacon.uuid];
+            newRegions[beacon.uuid] = region;           // either uuid or key, depending on what works
+        }
+        _localRegions = [newRegions allValues];
+    }
+    return _localRegions;
+}
 // MARK: Beacons
 
 - (void) setBeaconArray:(NSArray <IXBeacon *>* _Nonnull) newBeacons
@@ -179,20 +196,22 @@
     }
 }
 
--(BOOL)isPoi:(NSDictionary*)poi closerToBeacons:(NSArray*)beacons thanPreviousClosestPoi:(NSDictionary*)previousClosestPoi;
+-(BOOL)isPoi:(IXPoi*)poi closerToBeacons:(NSArray*)beacons thanPreviousClosestPoi:(IXPoi*)previousClosestPoi;
 {
+    // check beacons of poi and previouspoi, determine if there is an overlap with beacons
     return true;
 }
 
+// this can probably be highly optimised, no?
 -(IXPoi*)poiClosestToBeacons:(NSArray<IXBeacon*>*)currentBeacons;
 {
-    NSDictionary* result = nil;
-    for (NSDictionary* p in self.pois) {
+    IXPoi* result = nil;
+    for (IXPoi* p in self.pois) {
         if ([self isPoi:p closerToBeacons:currentBeacons thanPreviousClosestPoi:result]) {
             result = p;
         }
     }
-    return result[@"art"];
+    return result;
 }
 
 // entered beacons go into the queue to be added to

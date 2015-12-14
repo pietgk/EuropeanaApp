@@ -19,6 +19,7 @@
 
 @property (nonatomic, readonly, nullable) NSArray<IXPoi *> *pois;
 @property (nonatomic, readonly, nullable) NSArray<IXPoi *> *suggestions;
+@property (nonatomic, readonly, nullable) NSArray<CLBeaconRegion *> *localRegions;
 
 - (void) setBeaconArray:(NSArray <IXBeacon *>* _Nonnull) newBeacons;
 

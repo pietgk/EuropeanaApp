@@ -65,8 +65,8 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 
 - (void) debugDeviceSpecs
 {
-    NSArray *voices = [AVSpeechSynthesisVoice speechVoices];
-    NSLog(@"voices: %@",voices);
+//    NSArray *voices = [AVSpeechSynthesisVoice speechVoices];
+//    NSLog(@"voices: %@",voices);
 
     NSLog(@"Speech rates between min:%f < (%f) < %f", AVSpeechUtteranceMinimumSpeechRate, AVSpeechUtteranceDefaultSpeechRate, AVSpeechUtteranceMaximumSpeechRate);
 }
