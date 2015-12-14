@@ -1,21 +1,29 @@
  [
- {  "poi":
+  { "beacons":[{
+  
+               "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
+               "major": 42,
+               "minor": 1,
+               "signal": 50
+  }],
+   "poi":
       { "name": "Merry Go Round Europe", 
 	"artist": "Stephan Schagen, Ward Kreykamp & Karel de Boer",
 	"caption": "The whirligig that, just for a moment, lifts you out of your earthly existence and, once you're back on firm ground, gives you a fresh outlook on the world around you. That's the theme of Merry Go Round, the contribution of the Dutch artists Karel de Boer, Ward Kreykamp, Ivo Hulskamp and Stephan Schagen. It is a work of art everybody can identify with, just as everyone whirled around in an amusement park or a fair. The artists themselves want the work to be a message to Europe. According to them it's very healthy to float away from reality from time to time, to leave things as they are and then go on with your life.",
 	"imageURL":"MerryGoRound.png" 
-}
+  }
  },
- {  "poi":
+  {  "beacons":[{
+                  
+                  "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
+                  "major": 42,
+                  "minor": 3,
+                  "signal": 50
+                  }],
+  "poi":
       { "name": "Light Wave", 
 	"artist": "Anita Doornhein",
-	"caption": "Lightwave by Anita Doornhein, is an object which seems to have its origins in a dreamland. It's a transparent, deep blue, undulating space floating on the water.
-
-At nightfall the work changes into a fluorescent jewel, says artist Anita Doornhein. The works dimensions are quite huge: 20 by 11 meters, needed to enable boats to pass trough this transparent wave. 
-
-When a boat sails through the piece, sensors are activated, changing the colours of the Lightwave. Visitors see dynamically flowing hues in oxygenated blues, turquoises and silver. Images of water and air bubbles give you the feeling of sailing under water, or underneath an iceberg.' The artist hopes visitors will experience her work as opulent, luxuriant and enchanting. 
-
-At this point in time Lightwave is the crown on her work, because for the last ten years Doornhein has been occupied with the designs that, combined, form Lightwave: working with transparent materials, studying waves and currents and the play of light and reflection.",
+	"caption": "Lightwave by Anita Doornhein, is an object which seems to have its origins in a dreamland. It is a transparent, deep blue, undulating space floating on the water.\nAt nightfall the work changes into a fluorescent jewel, says artist Anita Doornhein. The works dimensions are quite huge: 20 by 11 meters, needed to enable boats to pass trough this transparent wave.\nWhen a boat sails through the piece, sensors are activated, changing the colours of the Lightwave. Visitors see dynamically flowing hues in oxygenated blues, turquoises and silver. Images of water and air bubbles give you the feeling of sailing under water, or underneath an iceberg.' The artist hopes visitors will experience her work as opulent, luxuriant and enchanting.\nAt this point in time Lightwave is the crown on her work, because for the last ten years Doornhein has been occupied with the designs that, combined, form Lightwave: working with transparent materials, studying waves and currents and the play of light and reflection.",
 	"imageURL": "LightWave.png" 
 }
 
