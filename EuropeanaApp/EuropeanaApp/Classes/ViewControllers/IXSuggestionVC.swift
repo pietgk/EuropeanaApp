@@ -12,18 +12,26 @@ import UIKit
 //import IXData
 //import SuggestionViewCell
 
+
 enum segues: String {
     case showSuggestionDetail = "showSuggestionDetail"
 }
 
 class IXSuggestionVC: UICollectionViewController {
-    
+    static let kCellMargin = 6.0
     private let kSuggestionCellIdentifier = "suggestionCell"
     // @IBOutlet weak var collectionView: UICollectionView!
     private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
 
     var data : IXData?
-    
+
+    lazy var cellSizeForThisDevice : CGSize = {
+        let screenSize = UIScreen.mainScreen().bounds.size
+        let width = CGFloat(floor( (Double(screenSize.width) - 3.0 * kCellMargin) / 2.0))
+        let height = CGFloat(floor(width * 1.622))
+        return CGSizeMake(width, height)
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.backgroundColor = UIColor.navigationBackground()
@@ -104,11 +112,12 @@ extension IXSuggestionVC {
 }
 
 extension IXSuggestionVC : UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-            
-            return CGSizeMake(164, 266)
+            return cellSizeForThisDevice
+//            return CGSizeMake(140, 266)
+//            return CGSizeMake(164, 266)
     }
     
     func collectionView(collectionView: UICollectionView,

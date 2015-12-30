@@ -71,10 +71,11 @@
 
 - (void) start;
 {
-    [self startRangingBeacons]; // old
+//    [self startRangingBeacons]; // old
+//    [self askForLocation];
     
-//new    BeaconMonitorOperation* beaconMonitorOperation = [[BeaconMonitorOperation alloc] init];
-//new    [_operationQueue addOperation:beaconMonitorOperation];
+    BeaconMonitorOperation* beaconMonitorOperation = [[BeaconMonitorOperation alloc] init];
+    [self.operationQueue addOperation:beaconMonitorOperation];
 }
 
 //[self startRangingBeacons];
@@ -275,6 +276,26 @@
 {
     // Handle error
     NSLog(@"%@",error);
+}
+
+
+/*
+ We can use a `LocationOperation` to retrieve the user's current location.
+ Once we have the location, we can compute how far they currently are
+ from the epicenter of the earthquake.
+ 
+ If this operation fails (ie, we are denied access to their location),
+ then the text in the `UILabel` will remain as what it is defined to
+ be in the storyboard.
+ */
+- (void) askForLocation
+{
+    LocationOperation *locationOperation = [[LocationOperation alloc] initWithAccuracy:kCLLocationAccuracyBestForNavigation locationHandler:^(CLLocation * _Nonnull location) {
+        if (location != nil) {
+        }
+    }];
+    
+    [self.operationQueue addOperation:locationOperation];
 }
 
 

@@ -20,8 +20,8 @@ public class BeaconMonitorOperation : Operation, CLLocationManagerDelegate {
         self.accuracy =  kCLLocationAccuracyHundredMeters;
         self.operationQueue = OperationQueue()
         super.init()
-        addCondition(LocationCondition(usage: .WhenInUse))
-        addCondition(MutuallyExclusive<BeaconMonitorOperation>())
+//        addCondition(LocationCondition(usage: .WhenInUse))
+//        addCondition(MutuallyExclusive<BeaconMonitorOperation>())
     }
 
     override func execute() {
@@ -70,6 +70,7 @@ public class BeaconMonitorOperation : Operation, CLLocationManagerDelegate {
 
     public func locationManager(manager: CLLocationManager, didDetermineState state: CLRegionState, forRegion region: CLRegion) {
         // TODO: self.operationQueue.addOperation(BeaconRangeOperation())
+        print("BeaconMonitorOperation didDetermineState \(state) for region \(region)")
     }
     
     public func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -77,6 +78,7 @@ public class BeaconMonitorOperation : Operation, CLLocationManagerDelegate {
             return
         }
         // TODO: update monitored set based on gps location and the gps location of the known beacons
+        print("BeaconMonitorOperation didUpdateLocation \(location)")
     }
     
     public func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {

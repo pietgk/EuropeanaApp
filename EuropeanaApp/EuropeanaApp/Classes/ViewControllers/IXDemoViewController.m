@@ -24,8 +24,9 @@
 @property (nonatomic, strong) IXManager *manager;
 @property (nonatomic, assign) BOOL playing;
 @property (nonatomic, strong) IXData *dataManager;
-
 @property (nonatomic, strong) IXPositioningManager *posManager;
+
+//@property (nonatomic, strong) OperationQueue *queue;
 
 @end
 
