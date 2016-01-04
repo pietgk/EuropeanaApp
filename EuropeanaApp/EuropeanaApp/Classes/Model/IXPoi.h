@@ -31,5 +31,6 @@
 - (void) getImageWithBlock:(void (^ _Nonnull)(UIImage * _Nullable))block;
 
 + (IXPoi  * _Nonnull ) mockPoi;
+- (BOOL) containsBeacon:(IXBeacon*)aBeacon;
 
 @end

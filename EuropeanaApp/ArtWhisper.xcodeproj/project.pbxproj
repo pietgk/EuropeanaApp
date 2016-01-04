@@ -12,6 +12,12 @@
 		7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */; };
 		7706F1FC1BFE1C42005B5048 /* IXPositioningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */; };
 		7706F1FE1BFF4895005B5048 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */; };
+		770966791C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770966781C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift */; };
+		7709667B1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667A1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift */; };
+		770966801C3B165D003CB2E9 /* AlertOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667D1C3B165D003CB2E9 /* AlertOperation.swift */; };
+		770966811C3B165D003CB2E9 /* BackgroundObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667E1C3B165D003CB2E9 /* BackgroundObserver.swift */; };
+		770966821C3B165D003CB2E9 /* NetworkObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667F1C3B165D003CB2E9 /* NetworkObserver.swift */; };
+		770966841C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770966831C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift */; };
 		771550281C0620D10053E607 /* CBBeaconsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 771550271C0620D10053E607 /* CBBeaconsMap.m */; };
 		772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */; };
 		772EB1C41C198ACE0088E541 /* IXIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 772EB1C21C198ACE0088E541 /* IXIcons.m */; };
@@ -63,8 +69,6 @@
 		9BDC466C1BE646C000162557 /* IXPoiQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC466A1BE646C000162557 /* IXPoiQueue.m */; };
 		9BDC466F1BE64C6900162557 /* IXPendingOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC466E1BE64C6900162557 /* IXPendingOperations.m */; };
 		9BDC46701BE64C6900162557 /* IXPendingOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC466E1BE64C6900162557 /* IXPendingOperations.m */; };
-		9BDC46741BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC46731BE75BFC00162557 /* IXEnteringBeaconRegion.m */; };
-		9BDC46751BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC46731BE75BFC00162557 /* IXEnteringBeaconRegion.m */; };
 		9BDC49531BE8F95B00162557 /* BlockObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49341BE8F95B00162557 /* BlockObserver.swift */; };
 		9BDC49541BE8F95B00162557 /* BlockObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49341BE8F95B00162557 /* BlockObserver.swift */; };
 		9BDC49551BE8F95B00162557 /* BlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49351BE8F95B00162557 /* BlockOperation.swift */; };
@@ -127,12 +131,8 @@
 		9BDC498E1BE8F95B00162557 /* URLSessionTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49511BE8F95B00162557 /* URLSessionTaskOperation.swift */; };
 		9BDC498F1BE8F95B00162557 /* UserNotificationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49521BE8F95B00162557 /* UserNotificationCondition.swift */; };
 		9BDC49901BE8F95B00162557 /* UserNotificationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49521BE8F95B00162557 /* UserNotificationCondition.swift */; };
-		9BDC49971BE8FCDF00162557 /* EnterBeaconRangeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49961BE8FCDF00162557 /* EnterBeaconRangeOperation.swift */; };
-		9BDC49981BE8FCDF00162557 /* EnterBeaconRangeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49961BE8FCDF00162557 /* EnterBeaconRangeOperation.swift */; };
 		9BDC499F1BEA495800162557 /* BeaconMonitorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */; };
 		9BDC49A01BEA495800162557 /* BeaconMonitorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */; };
-		9BDC49A21BEAA6AE00162557 /* BeaconRangeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */; };
-		9BDC49A31BEAA6AE00162557 /* BeaconRangeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */; };
 		9BDC49AA1BEAC28700162557 /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
 		9BDC49AB1BEAC28B00162557 /* IXAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0E19A9105D00E308A9 /* IXAudioManager.m */; };
 		9BDC49AC1BEAC29100162557 /* IXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0B19A9104C00E308A9 /* IXManager.m */; };
@@ -176,6 +176,12 @@
 		7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmmuseum.caf; sourceTree = "<group>"; };
 		7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXPositioningManager.swift; sourceTree = "<group>"; };
 		7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
+		770966781C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HandleRangedBeaconOperation.swift; path = Operations/HandleRangedBeaconOperation.swift; sourceTree = "<group>"; };
+		7709667A1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPOIsOfBeaconOperation.swift; path = Operations/GetPOIsOfBeaconOperation.swift; sourceTree = "<group>"; };
+		7709667D1C3B165D003CB2E9 /* AlertOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertOperation.swift; path = EuropeanaApp/Classes/AppOperations/AlertOperation.swift; sourceTree = SOURCE_ROOT; };
+		7709667E1C3B165D003CB2E9 /* BackgroundObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundObserver.swift; path = EuropeanaApp/Classes/AppOperations/BackgroundObserver.swift; sourceTree = SOURCE_ROOT; };
+		7709667F1C3B165D003CB2E9 /* NetworkObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkObserver.swift; path = EuropeanaApp/Classes/AppOperations/NetworkObserver.swift; sourceTree = SOURCE_ROOT; };
+		770966831C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindPOIofBeaconOperation.swift; path = Operations/FindPOIofBeaconOperation.swift; sourceTree = "<group>"; };
 		771550261C0620D10053E607 /* CBBeaconsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBeaconsMap.h; sourceTree = "<group>"; };
 		771550271C0620D10053E607 /* CBBeaconsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBeaconsMap.m; sourceTree = "<group>"; };
 		771550291C0622090053E607 /* CBEstimationMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBEstimationMethod.h; sourceTree = "<group>"; };
@@ -267,10 +273,8 @@
 		9BDC49501BE8F95B00162557 /* UIUserNotifications+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIUserNotifications+Operations.swift"; sourceTree = "<group>"; };
 		9BDC49511BE8F95B00162557 /* URLSessionTaskOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionTaskOperation.swift; sourceTree = "<group>"; };
 		9BDC49521BE8F95B00162557 /* UserNotificationCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationCondition.swift; sourceTree = "<group>"; };
-		9BDC49961BE8FCDF00162557 /* EnterBeaconRangeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterBeaconRangeOperation.swift; path = Operations/EnterBeaconRangeOperation.swift; sourceTree = "<group>"; };
 		9BDC49991BEA3C3B00162557 /* EuropeanaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EuropeanaApp-Bridging-Header.h"; path = "EuropeanaApp/EuropeanaApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconMonitorOperation.swift; sourceTree = "<group>"; };
-		9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconRangeOperation.swift; path = Operations/BeaconRangeOperation.swift; sourceTree = "<group>"; };
 		9BDC49B31BEB441F00162557 /* ArtWhisperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtWhisperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDC49B51BEB441F00162557 /* ArtWhisperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtWhisperTests.swift; path = ../ArtWhisperSwiftTests/ArtWhisperTests.swift; sourceTree = "<group>"; };
 		9BDC49B71BEB441F00162557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../ArtWhisperSwiftTests/Info.plist; sourceTree = "<group>"; };
@@ -334,6 +338,16 @@
 				80894D2A9DCF0FE7CFECBC62 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7709667C1C3B15E1003CB2E9 /* App Operations */ = {
+			isa = PBXGroup;
+			children = (
+				7709667D1C3B165D003CB2E9 /* AlertOperation.swift */,
+				7709667E1C3B165D003CB2E9 /* BackgroundObserver.swift */,
+				7709667F1C3B165D003CB2E9 /* NetworkObserver.swift */,
+			);
+			name = "App Operations";
 			sourceTree = "<group>";
 		};
 		771550241C061F830053E607 /* Libs */ = {
@@ -486,9 +500,10 @@
 			children = (
 				9BDC46721BE75BFC00162557 /* IXEnteringBeaconRegion.h */,
 				9BDC46731BE75BFC00162557 /* IXEnteringBeaconRegion.m */,
-				9BDC49961BE8FCDF00162557 /* EnterBeaconRangeOperation.swift */,
+				770966781C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift */,
+				770966831C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift */,
+				7709667A1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift */,
 				9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */,
-				9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -496,6 +511,7 @@
 		9BDC49331BE8F95B00162557 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				7709667C1C3B15E1003CB2E9 /* App Operations */,
 				9BDC49911BE8F9A200162557 /* Operation Queue */,
 				9BDC49921BE8F9CD00162557 /* Operations */,
 				9BDC49931BE8FA2400162557 /* Observers */,
@@ -907,7 +923,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDC46741BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */,
 				77906E371BEE019500114B0D /* IXSuggestionVC.swift in Sources */,
 				9BDC49731BE8F95B00162557 /* NSOperation+Operations.swift in Sources */,
 				9BDC466F1BE64C6900162557 /* IXPendingOperations.m in Sources */,
@@ -915,6 +930,7 @@
 				77906E331BEE000D00114B0D /* IXDownloadGuidesVC.swift in Sources */,
 				9BDC495F1BE8F95B00162557 /* Dictionary+Operations.swift in Sources */,
 				9BDC496F1BE8F95B00162557 /* NoCancelledDependencies.swift in Sources */,
+				770966801C3B165D003CB2E9 /* AlertOperation.swift in Sources */,
 				77906E311BEDFFD000114B0D /* IXHistoryTableVC.swift in Sources */,
 				9BDC49871BE8F95B00162557 /* SilentCondition.swift in Sources */,
 				9BDC49831BE8F95B00162557 /* ReachabilityCondition.swift in Sources */,
@@ -935,6 +951,7 @@
 				E597DA0919A9103E00E308A9 /* IXDemoViewController.m in Sources */,
 				9BDC49591BE8F95B00162557 /* CKContainer+Operations.swift in Sources */,
 				9BDC499F1BEA495800162557 /* BeaconMonitorOperation.swift in Sources */,
+				7709667B1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift in Sources */,
 				77906E391BEE01C700114B0D /* IXSuggestionDetailVC.swift in Sources */,
 				9BDC49571BE8F95B00162557 /* CalendarCondition.swift in Sources */,
 				E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */,
@@ -942,15 +959,17 @@
 				9BDC497D1BE8F95B00162557 /* OperationQueue.swift in Sources */,
 				9BDC496B1BE8F95B00162557 /* MutuallyExclusive.swift in Sources */,
 				9BDC495D1BE8F95B00162557 /* DelayOperation.swift in Sources */,
-				9BDC49971BE8FCDF00162557 /* EnterBeaconRangeOperation.swift in Sources */,
 				9BDC46651BE4C17F00162557 /* IXPoi.m in Sources */,
-				9BDC49A21BEAA6AE00162557 /* BeaconRangeOperation.swift in Sources */,
 				9BDC49711BE8F95B00162557 /* NSLock+Operations.swift in Sources */,
 				7706F1FE1BFF4895005B5048 /* SuggestionViewCell.swift in Sources */,
 				7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */,
 				9BDC496D1BE8F95B00162557 /* NegatedCondition.swift in Sources */,
+				770966791C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift in Sources */,
 				9BDC49811BE8F95B00162557 /* PhotosCondition.swift in Sources */,
+				770966811C3B165D003CB2E9 /* BackgroundObserver.swift in Sources */,
+				770966841C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift in Sources */,
 				9BDC49771BE8F95B00162557 /* OperationCondition.swift in Sources */,
+				770966821C3B165D003CB2E9 /* NetworkObserver.swift in Sources */,
 				77E3D7C719A916590058C62B /* IXBeacon.m in Sources */,
 				77906E3B1BEE01F500114B0D /* IXFirstTimeHelpVC.swift in Sources */,
 				772EB1C41C198ACE0088E541 /* IXIcons.m in Sources */,
@@ -973,7 +992,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDC46751BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */,
 				9BDC49681BE8F95B00162557 /* LocationCondition.swift in Sources */,
 				9BDC49861BE8F95B00162557 /* RemoteNotificationCondition.swift in Sources */,
 				9BDC496C1BE8F95B00162557 /* MutuallyExclusive.swift in Sources */,
@@ -994,7 +1012,6 @@
 				9BDC49761BE8F95B00162557 /* Operation.swift in Sources */,
 				9BDC49601BE8F95B00162557 /* Dictionary+Operations.swift in Sources */,
 				9BDC49AB1BEAC28B00162557 /* IXAudioManager.m in Sources */,
-				9BDC49981BE8FCDF00162557 /* EnterBeaconRangeOperation.swift in Sources */,
 				9BDC498C1BE8F95B00162557 /* UIUserNotifications+Operations.swift in Sources */,
 				9BDC46701BE64C6900162557 /* IXPendingOperations.m in Sources */,
 				9BDC466C1BE646C000162557 /* IXPoiQueue.m in Sources */,
@@ -1003,7 +1020,6 @@
 				9BDC495A1BE8F95B00162557 /* CKContainer+Operations.swift in Sources */,
 				9B15221E1BE14D4700B3A52B /* IXData.m in Sources */,
 				9BDC497C1BE8F95B00162557 /* OperationObserver.swift in Sources */,
-				9BDC49A31BEAA6AE00162557 /* BeaconRangeOperation.swift in Sources */,
 				9BDC497E1BE8F95B00162557 /* OperationQueue.swift in Sources */,
 				9BDC497A1BE8F95B00162557 /* OperationErrors.swift in Sources */,
 				9BDC49821BE8F95B00162557 /* PhotosCondition.swift in Sources */,

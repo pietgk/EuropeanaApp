@@ -53,6 +53,8 @@
 
 @property (nonatomic, weak) id<IXLocationManagerDelegate> delegate;
 
+@property (nonatomic, strong) OperationQueue *poiQueue;           // declared in manager
+
 // Trigger location manager beacons' ranging
 - (void) start;
 

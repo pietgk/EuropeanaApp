@@ -35,6 +35,8 @@
 - (nonnull NSString*)key;
 - (nonnull NSUUID*) UUID;
 
+-(BOOL) isEqualToBeacon:(nonnull IXBeacon *)anotherBeacon;
+
 @end
 
 

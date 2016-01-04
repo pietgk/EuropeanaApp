@@ -11,6 +11,7 @@
 #import <Crashlytics/Crashlytics.h>
 
 @interface IXAppDelegate ()
+@property (weak, nonatomic) IBOutlet UITabBarController *tabBarController;
 
 @end
 @implementation IXAppDelegate

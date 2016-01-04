@@ -214,6 +214,20 @@
     return result;
 }
 
+-(NSArray <IXPoi*>*)poisOfBeacon:(IXBeacon *)aBeacon;
+{
+    NSMutableArray<IXPoi*> *result = [[NSMutableArray alloc] init];
+    
+    for (IXPoi* p in self.pois) {
+        if ([p containsBeacon:aBeacon]) {
+            [result addObject:p];
+        }
+    }
+    
+    return [NSArray arrayWithArray:result];
+}
+
+
 // entered beacons go into the queue to be added to
 /*
  - get beacons on didEnterRegion  -> listOfCurrentBeacons WITHOUT signal strength (purged every 5 sec using timestamp)

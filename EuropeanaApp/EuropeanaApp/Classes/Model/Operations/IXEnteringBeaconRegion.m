@@ -8,7 +8,7 @@
 
 #import "IXEnteringBeaconRegion.h"
 
-@interface IXEnteringBeaconRegion ()
+@interface handleRangedBeacon ()
 @property (nonatomic, readwrite, strong) IXBeacon *beacon;
 @end
 

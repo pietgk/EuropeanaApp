@@ -88,4 +88,9 @@
     return [NSString stringWithFormat:@"<%@: %p> uuid:%@ (%@,%@)",self.class, self, self.uuid, self.major, self.minor];
 }
 
+-(BOOL) isEqualToBeacon:(nonnull IXBeacon *)anotherBeacon
+{
+    return ([self.key isEqualToString:anotherBeacon.key]);
+}
+
 @end

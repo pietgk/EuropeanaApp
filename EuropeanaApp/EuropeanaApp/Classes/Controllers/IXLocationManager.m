@@ -74,8 +74,6 @@
 //    [self startRangingBeacons]; // old
 //    [self askForLocation];
     
-    BeaconMonitorOperation* beaconMonitorOperation = [[BeaconMonitorOperation alloc] init];
-    [self.operationQueue addOperation:beaconMonitorOperation];
 }
 
 //[self startRangingBeacons];
@@ -247,15 +245,19 @@
         for (CLBeacon *currentBeacon in validBeacons) {
             
             NSLog(@"Beacons identifier: %@ major: %@ minor %@ distance: %@",region.identifier, currentBeacon.major, currentBeacon.minor, @(currentBeacon.accuracy));
+            IXBeacon *ixBeacon = [IXBeacon createWithIdentifier:region.identifier major:[currentBeacon.major integerValue] minor:[currentBeacon.minor integerValue] distance:currentBeacon.accuracy];
             if (self.delegate && [self.delegate respondsToSelector:@selector(ixLocationManager:spottedIXBeacon:)]) {
 
-                // 2015: we probably need to add beacons to a queue and have a bg task determine where we are in the position of artworks
                 
                 //if (currentBeacon.accuracy < 4) { // hard coded 4m for hackaton
-                    IXBeacon *ixBeacon = [IXBeacon createWithIdentifier:region.identifier major:[currentBeacon.major integerValue] minor:[currentBeacon.minor integerValue] distance:currentBeacon.accuracy];
-                        [self tellDelegateBeaconIsSpotted:ixBeacon];
-                //}
+               [self tellDelegateBeaconIsSpotted:ixBeacon];
+                 //}
             }
+            // 2015: we probably need to add beacons to a queue and have a bg task determine where we are in the position of artworks
+            // NEW:
+            // Add the beacon to the operationQueue as a HandleRangedBeaconOperation
+            HandleRangedBeaconOperation *op = [[HandleRangedBeaconOperation alloc] initWithBeacon:ixBeacon];
+            [self.operationQueue addOperation:op];
         }
     }
 }

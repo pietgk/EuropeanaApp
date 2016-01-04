@@ -58,6 +58,16 @@
     self.beacons = [NSArray arrayWithArray:newBeacons];
 }
 
+- (BOOL) containsBeacon:(IXBeacon*)aBeacon
+{
+    for (IXBeacon *beacon in self.beacons) {
+        if ([aBeacon isEqualToBeacon:beacon]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 - (void) getImageWithBlock:(void (^ _Nonnull)(UIImage * _Nullable))block {
     // get / download image
     if (self.imageURL) {

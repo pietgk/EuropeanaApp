@@ -12,6 +12,7 @@
 #import "IXAudioManager.h"
 #import "IXData.h"
 
+// A way to have string enums in Obj-C
 typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavingInside} state_t;
 NSString * const stateAsString[] = {
     [outside] = @"outside",
@@ -35,6 +36,8 @@ NSString * const stateAsString[] = {
 
 @property (nonatomic, strong) IXPoi* currentPoi;
 
+@property (nonatomic, strong) OperationQueue *poiQueue;
+
 @end
 
 @implementation IXManager
@@ -45,7 +48,9 @@ NSString * const stateAsString[] = {
     if (self) {
         self.delegate = aDelegate;
 
+        self.poiQueue = [[OperationQueue alloc] init];
         [self.locationManager start];
+        self.locationManager.poiQueue = self.poiQueue;
         [self triggerSoundReset];
     }
     return self;

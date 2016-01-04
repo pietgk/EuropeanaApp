@@ -33,6 +33,7 @@
 - (void) addRangedBeacon:( IXBeacon * _Nonnull )newBeacon;
 
 - (nullable IXPoi*)poiClosestToBeacons:(nonnull NSArray<IXBeacon*> *)currentBeacons;
+- (nonnull NSArray <IXPoi*>  *) poisOfBeacon:(nonnull IXBeacon *)aBeacon;
 
 
 @end
