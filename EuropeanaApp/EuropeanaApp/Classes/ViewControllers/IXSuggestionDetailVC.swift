@@ -106,10 +106,10 @@ class IXSuggestionDetailVC: UIViewController , UITableViewDataSource, UITableVie
             cell.textLabel?.text = poi?.caption
         case .Date :
             cell.imageView?.image = IXIcons.iconImageFor(IXIconNameType.icon_calendar, backgroundColor: nil, iconColor: UIColor.blackColor(), fontSize: 24)
-            cell.textLabel?.text = "nu"
+            cell.textLabel?.text = "Nov. 28, 2015 - Jan. 17, 2016"
         case .OpeningHours:
             cell.imageView?.image = IXIcons.iconImageFor(IXIconNameType.icon_clock, backgroundColor: nil, iconColor: UIColor.blackColor(), fontSize: 24)
-            cell.textLabel?.text = "de hele dag"
+            cell.textLabel?.text = "daily"
         case .Address:
             cell.imageView?.image = IXIcons.iconImageFor(IXIconNameType.icon_map2, backgroundColor: nil, iconColor: UIColor.blackColor(), fontSize: 24)
             cell.textLabel?.text = "venue address"

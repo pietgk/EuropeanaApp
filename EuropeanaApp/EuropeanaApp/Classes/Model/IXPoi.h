@@ -24,6 +24,7 @@
 @property (nonatomic, strong, nullable) NSArray *infoSources;             // contains further information URLs
 @property (nonatomic, strong, nullable) NSString *imageURL;             //
 @property (nonatomic, strong, nullable) UIImage *image;             //
+@property (nonatomic, strong, nullable) NSString *websiteURL;             //
 
 + (nonnull instancetype) createWithDictionary:(nonnull NSDictionary *)newDict;
 - (nonnull instancetype) initWithDictionary:(nonnull NSDictionary *)newDict;
@@ -31,6 +32,6 @@
 - (void) getImageWithBlock:(void (^ _Nonnull)(UIImage * _Nullable))block;
 
 + (IXPoi  * _Nonnull ) mockPoi;
-- (BOOL) containsBeacon:(IXBeacon*)aBeacon;
+- (BOOL) containsBeacon:(nonnull IXBeacon*)aBeacon;
 
 @end
