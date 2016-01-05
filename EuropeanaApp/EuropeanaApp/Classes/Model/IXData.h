@@ -35,5 +35,7 @@
 - (nullable IXPoi*)poiClosestToBeacons:(nonnull NSArray<IXBeacon*> *)currentBeacons;
 - (nonnull NSArray <IXPoi*>  *) poisOfBeacon:(nonnull IXBeacon *)aBeacon;
 
+- (IXPoi  * _Nonnull) mockPoi;
+- (IXPoi  * _Nonnull) previousMockPoi;
 
 @end

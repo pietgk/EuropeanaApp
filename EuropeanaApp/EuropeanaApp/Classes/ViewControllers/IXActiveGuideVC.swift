@@ -10,7 +10,13 @@ import UIKit
 
 class IXActiveGuideVC: UIViewController {
     
-    var poi : IXPoi?
+    var poi : IXPoi? {
+        didSet {
+            if let p = poi {
+                self.fillLabels(p)
+            }
+        }
+    }
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -27,18 +33,9 @@ class IXActiveGuideVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.poi = IXPoi.mockPoi()
+        self.poi = IXData.sharedData().mockPoi()
         createLabels()
-        // Do any additional setup after loading the view.
-        self.titleLabel.text = poi?.name
-        self.artistLabel.text = poi?.artist
-        self.captionLabel.text = poi?.caption
-        self.imageView.backgroundColor = UIColor.darkGrayColor()
-        self.imageView.image = nil
-        poi?.getImageWithBlock({ (image) -> Void in
-            self.imageView.image = image;
-        });
-        
+//        self.fillLabels(self.poi)
         self.timeLabel.text = "00:00"
     }
     
@@ -55,6 +52,19 @@ class IXActiveGuideVC: UIViewController {
         togglePlayButton(true)
     }
     
+    func fillLabels(poi: IXPoi) {
+        // Do any additional setup after loading the view.
+        self.titleLabel.text = poi.name
+        self.artistLabel.text = poi.artist
+        self.captionLabel.text = poi.caption
+        self.imageView.backgroundColor = UIColor.darkGrayColor()
+        self.imageView.image = nil
+        poi.getImageWithBlock({ (image) -> Void in
+            self.imageView.image = image;
+        });
+        
+        
+    }
     func togglePlayButton(play: Bool) {
         if play {
             self.playButton.setAttributedTitle(IXIcons.defaultAttributedIconStringFor(IXIconNameType.icon_play3, size: 24), forState: .Normal)
@@ -98,4 +108,12 @@ class IXActiveGuideVC: UIViewController {
         }
     }
     
+    @IBAction func nextMocker(sender: AnyObject) {
+        self.poi = IXData.sharedData().mockPoi()        // get new value
+    }
+
+    @IBAction func previousMocker(sender: AnyObject) {
+        self.poi = IXData.sharedData().previousMockPoi()        // get new value
+    }
+
 }

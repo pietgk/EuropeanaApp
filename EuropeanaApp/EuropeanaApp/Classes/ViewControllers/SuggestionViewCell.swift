@@ -84,7 +84,7 @@ class SuggestionViewCell : UICollectionViewCell {
         timeString = IXIcons.iconStringFor(.icon_stopwatch)
         let manStr = IXIcons.iconStringFor(.icon_man)
         let man : Character = manStr.characters[manStr.startIndex]
-        let men = String(count: Int(arc4random_uniform(5) + 1), repeatedValue: man)
+        let men = String(count: Int(arc4random_uniform(1) + 1), repeatedValue: man)
         timeLabel.font = UIFont.iconFontWithSize(20)
         timeLabel.text = timeString + " " + men
         

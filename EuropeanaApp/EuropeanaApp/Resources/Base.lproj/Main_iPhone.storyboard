@@ -379,7 +379,7 @@
                             <outlet property="delegate" destination="2YW-6l-XCp" id="vIm-n7-rsj"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Suggesties" id="RO7-gn-bTR"/>
+                    <navigationItem key="navigationItem" title="Suggestions" id="RO7-gn-bTR"/>
                     <connections>
                         <outlet property="collectionView" destination="t3L-Sa-tAa" id="H0Y-fx-okq"/>
                     </connections>
@@ -409,22 +409,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TYZ-Rt-NOi">
-                                <rect key="frame" x="180" y="96" width="240" height="356"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TYZ-Rt-NOi">
+                                <rect key="frame" x="180" y="76" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="356" id="8bE-Sa-DqB"/>
+                                    <constraint firstAttribute="width" secondItem="TYZ-Rt-NOi" secondAttribute="height" multiplier="1:1" id="Pix-bU-dbR"/>
                                     <constraint firstAttribute="width" constant="240" id="wci-yw-EeT"/>
                                 </constraints>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="68" y="141" width="240" height="356"/>
                                     <mask key="constraints">
-                                        <include reference="8bE-Sa-DqB"/>
                                         <include reference="wci-yw-EeT"/>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-xo-RYY">
-                                <rect key="frame" x="180" y="456" width="240" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-xo-RYY">
+                                <rect key="frame" x="180" y="320" width="240" height="15"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -432,8 +431,8 @@
                                     <rect key="frame" x="68" y="501" width="240" height="15"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7I-jb-Hje">
-                                <rect key="frame" x="180" y="470" width="240" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7I-jb-Hje">
+                                <rect key="frame" x="180" y="335" width="240" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -441,8 +440,8 @@
                                     <rect key="frame" x="68" y="516" width="240" height="14"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000298023224" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Re-hP-4nu">
-                                <rect key="frame" x="178" y="519" width="244" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000298023224" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Re-hP-4nu">
+                                <rect key="frame" x="178" y="417" width="244" height="31"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="66" y="564" width="244" height="31"/>
                                 </variation>
@@ -450,8 +449,8 @@
                                     <action selector="updateProgress:" destination="S6K-vA-roe" eventType="valueChanged" id="g4C-qM-2ox"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMS-ww-ota">
-                                <rect key="frame" x="151" y="518" width="30" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMS-ww-ota">
+                                <rect key="frame" x="151" y="416" width="30" height="32"/>
                                 <fontDescription key="fontDescription" name="IcoMoon-Free" family="IcoMoon-Free" pointSize="20"/>
                                 <state key="normal" title="P"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -462,7 +461,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="33:33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHY-k8-4vN">
-                                <rect key="frame" x="418" y="527" width="33" height="15"/>
+                                <rect key="frame" x="418" y="416" width="33" height="14"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -470,8 +469,8 @@
                                     <rect key="frame" x="306" y="572" width="33" height="15"/>
                                 </variation>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-MW-Pws" userLabel="white View">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-MW-Pws" userLabel="white View">
+                                <rect key="frame" x="0.0" y="8" width="600" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiS-5i-uGH">
                                         <rect key="frame" x="24" y="14" width="552" height="16"/>
@@ -502,10 +501,13 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="qHY-k8-4vN" firstAttribute="leading" secondItem="6Re-hP-4nu" secondAttribute="trailing" constant="-2" id="4O7-wF-ZxF"/>
+                            <constraint firstItem="qHY-k8-4vN" firstAttribute="leading" secondItem="6Re-hP-4nu" secondAttribute="trailing" constant="2" id="4O7-wF-ZxF"/>
+                            <constraint firstItem="L4g-O1-a4q" firstAttribute="top" secondItem="6Re-hP-4nu" secondAttribute="bottom" constant="40" id="4gE-dS-LhH"/>
                             <constraint firstItem="6Re-hP-4nu" firstAttribute="centerY" secondItem="qHY-k8-4vN" secondAttribute="centerY" id="BwQ-Wu-yhX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AZe-MW-Pws" secondAttribute="trailing" constant="-20" id="Hge-DP-Ua3"/>
+                            <constraint firstItem="6Re-hP-4nu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="e7I-jb-Hje" secondAttribute="bottom" constant="23" id="MzA-wn-KxZ"/>
                             <constraint firstItem="e7I-jb-Hje" firstAttribute="top" secondItem="5d4-xo-RYY" secondAttribute="bottom" id="SJ9-P2-qaa"/>
                             <constraint firstItem="TYZ-Rt-NOi" firstAttribute="leading" secondItem="e7I-jb-Hje" secondAttribute="leading" id="TDa-5z-EDo"/>
                             <constraint firstItem="5d4-xo-RYY" firstAttribute="top" secondItem="TYZ-Rt-NOi" secondAttribute="bottom" constant="4" id="Ta7-0b-Yj3"/>
@@ -522,6 +524,15 @@
                             <constraint firstItem="TYZ-Rt-NOi" firstAttribute="leading" secondItem="6Re-hP-4nu" secondAttribute="leading" id="noc-R0-Zdw"/>
                             <constraint firstItem="TYZ-Rt-NOi" firstAttribute="trailing" secondItem="e7I-jb-Hje" secondAttribute="trailing" id="y1S-Mw-3up"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jXY-sj-oFZ"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="REm-sq-eDV" appends="YES" id="uaW-tj-1Ny"/>
+                            <outletCollection property="gestureRecognizers" destination="ybp-07-GJj" appends="YES" id="tVq-og-fad"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Active Guide" image="Active" selectedImage="ActiveSelected" id="eY7-th-VhM"/>
                     <toolbarItems/>
@@ -547,6 +558,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INq-ra-TBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="REm-sq-eDV">
+                    <connections>
+                        <action selector="nextMocker:" destination="S6K-vA-roe" id="Tht-zk-c1C"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="ybp-07-GJj">
+                    <connections>
+                        <action selector="previousMocker:" destination="S6K-vA-roe" id="cMH-gW-PKF"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-769" y="1024"/>
         </scene>

@@ -19,11 +19,9 @@
 		770966821C3B165D003CB2E9 /* NetworkObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667F1C3B165D003CB2E9 /* NetworkObserver.swift */; };
 		770966841C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770966831C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift */; };
 		7709668B1C3C6652003CB2E9 /* Lightwave.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966851C3C6652003CB2E9 /* Lightwave.png */; };
-		7709668C1C3C6652003CB2E9 /* Lightwave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966861C3C6652003CB2E9 /* Lightwave@2x.png */; };
 		7709668D1C3C6652003CB2E9 /* NorthernLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966871C3C6652003CB2E9 /* NorthernLight.png */; };
-		7709668E1C3C6652003CB2E9 /* NorthernLight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966881C3C6652003CB2E9 /* NorthernLight@2x.png */; };
 		7709668F1C3C6652003CB2E9 /* RunBeyond.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966891C3C6652003CB2E9 /* RunBeyond.png */; };
-		770966901C3C6652003CB2E9 /* RunBeyond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7709668A1C3C6652003CB2E9 /* RunBeyond@2x.png */; };
+		770966941C3C6713003CB2E9 /* LightWave2.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966931C3C6713003CB2E9 /* LightWave2.png */; };
 		771550281C0620D10053E607 /* CBBeaconsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 771550271C0620D10053E607 /* CBBeaconsMap.m */; };
 		772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */; };
 		772EB1C41C198ACE0088E541 /* IXIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 772EB1C21C198ACE0088E541 /* IXIcons.m */; };
@@ -54,7 +52,6 @@
 		77DA0DBF1C1DFF9700826BC2 /* HumansAMS.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DBB1C1DFF9700826BC2 /* HumansAMS.png */; };
 		77DA0DC11C1DFFEF00826BC2 /* ArtZuid.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC01C1DFFEF00826BC2 /* ArtZuid.png */; };
 		77DA0DC51C1E001B00826BC2 /* LightFestival.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC21C1E001B00826BC2 /* LightFestival.png */; };
-		77DA0DC61C1E001B00826BC2 /* LightWave.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC31C1E001B00826BC2 /* LightWave.png */; };
 		77DA0DC71C1E001B00826BC2 /* MerryGoRound.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC41C1E001B00826BC2 /* MerryGoRound.png */; };
 		77DA0DCA1C1E008E00826BC2 /* suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC91C1E008E00826BC2 /* suggestions.json */; };
 		77DA0DCC1C1E00D900826BC2 /* Tino.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCB1C1E00D900826BC2 /* Tino.png */; };
@@ -189,11 +186,9 @@
 		7709667F1C3B165D003CB2E9 /* NetworkObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkObserver.swift; path = EuropeanaApp/Classes/AppOperations/NetworkObserver.swift; sourceTree = SOURCE_ROOT; };
 		770966831C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindPOIofBeaconOperation.swift; path = Operations/FindPOIofBeaconOperation.swift; sourceTree = "<group>"; };
 		770966851C3C6652003CB2E9 /* Lightwave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lightwave.png; path = Mockups/Lightwave.png; sourceTree = "<group>"; };
-		770966861C3C6652003CB2E9 /* Lightwave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Lightwave@2x.png"; path = "Mockups/Lightwave@2x.png"; sourceTree = "<group>"; };
 		770966871C3C6652003CB2E9 /* NorthernLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NorthernLight.png; path = Mockups/NorthernLight.png; sourceTree = "<group>"; };
-		770966881C3C6652003CB2E9 /* NorthernLight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NorthernLight@2x.png"; path = "Mockups/NorthernLight@2x.png"; sourceTree = "<group>"; };
 		770966891C3C6652003CB2E9 /* RunBeyond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RunBeyond.png; path = Mockups/RunBeyond.png; sourceTree = "<group>"; };
-		7709668A1C3C6652003CB2E9 /* RunBeyond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RunBeyond@2x.png"; path = "Mockups/RunBeyond@2x.png"; sourceTree = "<group>"; };
+		770966931C3C6713003CB2E9 /* LightWave2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LightWave2.png; path = Mockups/LightWave2.png; sourceTree = "<group>"; };
 		771550261C0620D10053E607 /* CBBeaconsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBeaconsMap.h; sourceTree = "<group>"; };
 		771550271C0620D10053E607 /* CBBeaconsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBeaconsMap.m; sourceTree = "<group>"; };
 		771550291C0622090053E607 /* CBEstimationMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBEstimationMethod.h; sourceTree = "<group>"; };
@@ -229,7 +224,6 @@
 		77DA0DBB1C1DFF9700826BC2 /* HumansAMS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HumansAMS.png; path = Mockups/HumansAMS.png; sourceTree = "<group>"; };
 		77DA0DC01C1DFFEF00826BC2 /* ArtZuid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ArtZuid.png; path = Mockups/ArtZuid.png; sourceTree = "<group>"; };
 		77DA0DC21C1E001B00826BC2 /* LightFestival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LightFestival.png; path = Mockups/LightFestival.png; sourceTree = "<group>"; };
-		77DA0DC31C1E001B00826BC2 /* LightWave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LightWave.png; path = Mockups/LightWave.png; sourceTree = "<group>"; };
 		77DA0DC41C1E001B00826BC2 /* MerryGoRound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MerryGoRound.png; path = Mockups/MerryGoRound.png; sourceTree = "<group>"; };
 		77DA0DC91C1E008E00826BC2 /* suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suggestions.json; sourceTree = "<group>"; };
 		77DA0DCB1C1E00D900826BC2 /* Tino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tino.png; path = Mockups/Tino.png; sourceTree = "<group>"; };
@@ -484,14 +478,11 @@
 			isa = PBXGroup;
 			children = (
 				77DA0DC21C1E001B00826BC2 /* LightFestival.png */,
-				77DA0DC31C1E001B00826BC2 /* LightWave.png */,
+				770966931C3C6713003CB2E9 /* LightWave2.png */,
 				77DA0DC41C1E001B00826BC2 /* MerryGoRound.png */,
 				770966851C3C6652003CB2E9 /* Lightwave.png */,
-				770966861C3C6652003CB2E9 /* Lightwave@2x.png */,
 				770966871C3C6652003CB2E9 /* NorthernLight.png */,
-				770966881C3C6652003CB2E9 /* NorthernLight@2x.png */,
 				770966891C3C6652003CB2E9 /* RunBeyond.png */,
-				7709668A1C3C6652003CB2E9 /* RunBeyond@2x.png */,
 			);
 			name = alf;
 			sourceTree = "<group>";
@@ -833,15 +824,12 @@
 				7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */,
 				772EB1CB1C19953D0088E541 /* 02iPhone 6 Active Portrait.png in Resources */,
 				77DA0DC51C1E001B00826BC2 /* LightFestival.png in Resources */,
-				770966901C3C6652003CB2E9 /* RunBeyond@2x.png in Resources */,
 				7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */,
 				E597DA0119A90FFE00E308A9 /* Main_iPhone.storyboard in Resources */,
 				772EB1CA1C19953D0088E541 /* 01iPhone 6 Suggestions.png in Resources */,
-				7709668C1C3C6652003CB2E9 /* Lightwave@2x.png in Resources */,
 				77DA0DBE1C1DFF9700826BC2 /* colorClay.png in Resources */,
 				E597DA1719A9D5A900E308A9 /* beacons.plist in Resources */,
 				77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */,
-				77DA0DC61C1E001B00826BC2 /* LightWave.png in Resources */,
 				4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */,
 				772EB1CC1C19953D0088E541 /* 03iPhone 6 Active Landscape.png in Resources */,
 				E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */,
@@ -853,11 +841,11 @@
 				77DA0DBD1C1DFF9700826BC2 /* Bruno.png in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
 				772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */,
-				7709668E1C3C6652003CB2E9 /* NorthernLight@2x.png in Resources */,
 				9B1522201BE14EA700B3A52B /* beacons.json in Resources */,
 				77DA0DC71C1E001B00826BC2 /* MerryGoRound.png in Resources */,
 				7709668B1C3C6652003CB2E9 /* Lightwave.png in Resources */,
 				7709668D1C3C6652003CB2E9 /* NorthernLight.png in Resources */,
+				770966941C3C6713003CB2E9 /* LightWave2.png in Resources */,
 				9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */,
 				9BDC46681BE5152000162557 /* poi.json in Resources */,
 			);

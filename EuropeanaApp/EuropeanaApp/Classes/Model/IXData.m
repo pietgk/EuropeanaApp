@@ -48,6 +48,31 @@
 }
 
 // MARK: Mock data
+- (IXPoi  * _Nonnull) internalMockPoi:(BOOL)nextValue
+{
+    static int index = -1;
+    if (nextValue) {
+        if (++index >= self.pois.count) {
+            index = 0;
+        }
+    } else {    // previous version
+        if (--index < 0) {
+            index = (int)self.pois.count - 1;
+        }
+    }
+    IXPoi *newPoi = self.pois[index];
+    return newPoi;
+}
+
+- (IXPoi  * _Nonnull) mockPoi
+{
+    return [self internalMockPoi:YES];
+}
+- (IXPoi  * _Nonnull) previousMockPoi
+{
+    return [self internalMockPoi:NO];
+}
+
 - (NSArray *) pois
 {
     if (!_pois) {
@@ -86,12 +111,18 @@
 
 -(NSArray*)poisFromResourceFile;
 {
+    NSError *error;
+    
     // Glimworm beacons.json from http://85.17.193.165:1880/beacons/
     // plus Hermitage 2015: tentoonstelling v.h. Amsterdam Museum: Hollanders van de Gouden Eeuw
     NSString *path = [[NSBundle mainBundle] pathForResource:@"poi" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
-    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 
+    if (error) {
+        NSLog(@"Error parsing poi.json: %@", error);
+        return nil;
+    }
     NSMutableArray *newPois = [NSMutableArray arrayWithCapacity:[jsonArray count]];
     for (NSDictionary *b in jsonArray) {
         IXPoi *newPee = [IXPoi createWithDictionary:b];
