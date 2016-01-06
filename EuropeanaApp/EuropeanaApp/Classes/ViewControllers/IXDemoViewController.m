@@ -11,7 +11,7 @@
 #import "IXAudioManager.h"
 #import "IXData.h"
 #import "CBBeaconsMap.h"
-#import "ArtWhisper-swift.h"
+#import "ArtWhisper-Swift.h"
 
 @interface IXDemoViewController ()
 - (IBAction)test:(id)sender;

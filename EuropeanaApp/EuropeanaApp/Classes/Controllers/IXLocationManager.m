@@ -9,7 +9,7 @@
 #import "IXLocationManager.h"
 #import "IXBeacon.h"
 #import "IXData.h"
-// #import "ArtWhisper-Swift.h"
+#import "ArtWhisper-Swift.h"
 //#import <CBCentralManager.h>
 
 @import CoreLocation;

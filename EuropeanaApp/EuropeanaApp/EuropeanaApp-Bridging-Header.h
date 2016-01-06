@@ -14,5 +14,6 @@
 #import "IXPoi.h"
 #import "IXIconNames.h"
 #import "IXIcons.h"
+#import "IXAppDelegate.h"
 
 #endif /* EuropeanaApp_Bridging_Header_h */

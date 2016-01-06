@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IXManager *manager;
 @property (strong, nonatomic) IXAudioManager *audioManager;
 
+- (void) showActiveGuideWithPoi:(IXPoi *)poi;
 
 @end

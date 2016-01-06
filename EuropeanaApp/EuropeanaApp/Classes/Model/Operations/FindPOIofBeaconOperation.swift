@@ -29,8 +29,8 @@ class FindPOIofBeaconOperation : Operation {
         let pois = dataManager.poisOfBeacon(self.beacon)
         if (pois.count == 1) {          // we can only do this dirty trick when a beacon is uniquely connected to ONE poi
             // Add the poi to the handlePOI OperationQueue
-            let delegate = UIApplication.sharedApplication().delegate
-            
+            let delegate = UIApplication.sharedApplication().delegate as! IXAppDelegate
+            delegate.showActiveGuideWithPoi(pois[0])
         }
     }
 

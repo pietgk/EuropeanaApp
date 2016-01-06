@@ -574,7 +574,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="kbf-tf-fjC">
             <objects>
-                <tabBarController id="FeJ-4M-Ty1" sceneMemberID="viewController">
+                <tabBarController id="FeJ-4M-Ty1" customClass="IXTabBarController" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="KIj-3A-H1W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -589,11 +589,6 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nb-5g-anK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="sxl-aT-yQN" customClass="IXAppDelegate">
-                    <connections>
-                        <outlet property="tabBarController" destination="FeJ-4M-Ty1" id="WOn-Th-7OB"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="-2769" y="1219"/>
         </scene>

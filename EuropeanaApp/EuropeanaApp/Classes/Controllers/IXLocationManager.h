@@ -9,6 +9,7 @@
 #import "IXBeacon.h"
 
 @class IXLocationManager, IXBeacon, CLBeaconRegion;
+@class OperationQueue;
 
 @protocol IXLocationManagerDelegate <NSObject>
 

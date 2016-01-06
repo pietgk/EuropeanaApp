@@ -11,6 +11,7 @@
 #import "IXBeacon.h"
 #import "IXAudioManager.h"
 #import "IXData.h"
+#import "ArtWhisper-Swift.h"
 
 // A way to have string enums in Obj-C
 typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavingInside} state_t;

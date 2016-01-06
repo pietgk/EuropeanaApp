@@ -56,6 +56,7 @@
 		77DA0DCA1C1E008E00826BC2 /* suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC91C1E008E00826BC2 /* suggestions.json */; };
 		77DA0DCC1C1E00D900826BC2 /* Tino.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCB1C1E00D900826BC2 /* Tino.png */; };
 		77DA0DCE1C1E176200826BC2 /* iPhone 6 SuggestDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */; };
+		77DDB6C51C3D241E0095FF0E /* IXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB6C41C3D241E0095FF0E /* IXTabBarController.swift */; };
 		77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C119A910FA0058C62B /* Europeana logo.jpg */; };
 		77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */; };
 		77E3D7C719A916590058C62B /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
@@ -228,6 +229,7 @@
 		77DA0DC91C1E008E00826BC2 /* suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suggestions.json; sourceTree = "<group>"; };
 		77DA0DCB1C1E00D900826BC2 /* Tino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tino.png; path = Mockups/Tino.png; sourceTree = "<group>"; };
 		77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone 6 SuggestDetail.png"; path = "../../../../../Documents/Google Drive/ArtWhisper/Art Whisper Screens/iPhone6/iPhone 6 SuggestDetail.png"; sourceTree = "<group>"; };
+		77DDB6C41C3D241E0095FF0E /* IXTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXTabBarController.swift; sourceTree = "<group>"; };
 		77E3D7C119A910FA0058C62B /* Europeana logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Europeana logo.jpg"; sourceTree = "<group>"; };
 		77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glimworm-ibeacons.png"; sourceTree = "<group>"; };
 		77E3D7C519A916590058C62B /* IXBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXBeacon.h; path = EuropeanaApp/Classes/Model/IXBeacon.h; sourceTree = SOURCE_ROOT; };
@@ -675,6 +677,7 @@
 			children = (
 				E597DA1019A9106800E308A9 /* IXAppDelegate.h */,
 				E597DA1119A9106800E308A9 /* IXAppDelegate.m */,
+				77DDB6C41C3D241E0095FF0E /* IXTabBarController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -962,6 +965,7 @@
 				E597DA0619A9100D00E308A9 /* main.m in Sources */,
 				E597DA0919A9103E00E308A9 /* IXDemoViewController.m in Sources */,
 				9BDC49591BE8F95B00162557 /* CKContainer+Operations.swift in Sources */,
+				77DDB6C51C3D241E0095FF0E /* IXTabBarController.swift in Sources */,
 				9BDC499F1BEA495800162557 /* BeaconMonitorOperation.swift in Sources */,
 				7709667B1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift in Sources */,
 				77906E391BEE01C700114B0D /* IXSuggestionDetailVC.swift in Sources */,
@@ -1127,6 +1131,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1171,6 +1176,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

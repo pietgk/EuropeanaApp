@@ -9,9 +9,10 @@
 #import "IXAppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import "ArtWhisper-Swift.h"
 
 @interface IXAppDelegate ()
-@property (weak, nonatomic) IBOutlet UITabBarController *tabBarController;
+@property (weak, nonatomic) IBOutlet IXTabBarController *tabBarController;
 
 @end
 @implementation IXAppDelegate
@@ -28,6 +29,11 @@
     // TODO: Move this to where you establish a user session
     [self logUser];
 
+    if ([[self.window rootViewController] isKindOfClass:[IXTabBarController class]]) {
+        self.tabBarController = (IXTabBarController *)[self.window rootViewController];
+    } else {
+        NSAssert(true, @"Rootview is not tabbar");
+    }
 //    [UIFont dumpAllFonts];
     return YES;
 }
@@ -82,6 +88,23 @@
         _audioManager = [[IXAudioManager alloc] init];
     }
     return _audioManager;
+}
+
+#pragma mark delegate protocol
+- (void) showActiveGuideWithPoi:(IXPoi *)poi
+{
+    if ([self.tabBarController selectedIndex] != 3) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            id vc = [self.tabBarController showActiveGuide];
+        #warning protocolize!
+            if ([[vc class] isSubclassOfClass:[IXActiveGuideVC class]] ) {
+                IXActiveGuideVC *ag = (IXActiveGuideVC *)vc;
+                ag.poi = poi;
+            }
+                           });
+    } else {
+//         NSLog(@"already selected activeguide");
+    }
 }
 
 @end
