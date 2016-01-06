@@ -18,8 +18,10 @@
 
 @interface IXAudioManager : NSObject
 @property (nonatomic, weak) id <IXAudioManagerDelegate> delegate;
+@property (nonatomic, readonly) NSTimeInterval duration;
 
-- (instancetype)init;
+- (instancetype)init NS_UNAVAILABLE;
++ (IXAudioManager*)sharedAudio;
 - (void)tryPlayMusic;
 - (void)playSystemSound;
 - (void)prepareBackgroundPlayerWithFile:(NSString *)audioFile;

@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "IXManager.h"
-#import "IXAudioManager.h"
+//#import "IXAudioManager.h"
 
 @interface IXAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) IXManager *manager;
-@property (strong, nonatomic) IXAudioManager *audioManager;
+//@property (strong, nonatomic) IXAudioManager *audioManager;
 
 - (void) showActiveGuideWithPoi:(IXPoi *)poi;
 

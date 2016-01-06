@@ -15,5 +15,6 @@
 #import "IXIconNames.h"
 #import "IXIcons.h"
 #import "IXAppDelegate.h"
+#import "IXAudioManager.h"
 
 #endif /* EuropeanaApp_Bridging_Header_h */

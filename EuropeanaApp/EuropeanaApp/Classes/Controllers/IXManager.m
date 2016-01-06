@@ -49,6 +49,7 @@ NSString * const stateAsString[] = {
     if (self) {
         self.poiQueue = [[OperationQueue alloc] init];
         self.delegate = aDelegate;
+        self.audioManager = [IXAudioManager sharedAudio];
         [self.locationManager start];
         [self triggerSoundReset];
     }
@@ -72,13 +73,13 @@ NSString * const stateAsString[] = {
     return _locationManager;
 }
 
-- (IXAudioManager *) audioManager
-{
-    if (!_audioManager) {
-        _audioManager = [[IXAudioManager alloc] init];
-    }
-    return _audioManager;
-}
+//- (IXAudioManager *) audioManager
+//{
+//    if (!_audioManager) {
+//        _audioManager = [[IXAudioManager alloc] init];
+//    }
+//    return _audioManager;
+//}
 
 - (IXData *) data
 {

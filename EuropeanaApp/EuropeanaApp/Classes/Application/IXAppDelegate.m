@@ -82,15 +82,16 @@
     return _manager;
 }
 
-- (IXAudioManager *) audioManager
-{
-    if (!_audioManager) {
-        _audioManager = [[IXAudioManager alloc] init];
-    }
-    return _audioManager;
-}
+//- (IXAudioManager *) audioManager
+//{
+//    if (!_audioManager) {
+//        _audioManager = [[IXAudioManager alloc] init];
+//    }
+//    return _audioManager;
+//}
 
 #pragma mark delegate protocol
+// this should be done through the IXManager, no?
 - (void) showActiveGuideWithPoi:(IXPoi *)poi
 {
     if ([self.tabBarController selectedIndex] != 3) {
@@ -99,7 +100,10 @@
         #warning protocolize!
             if ([[vc class] isSubclassOfClass:[IXActiveGuideVC class]] ) {
                 IXActiveGuideVC *ag = (IXActiveGuideVC *)vc;
-                ag.poi = poi;
+                if (! ag.playing && ag.poi != poi) {
+                    ag.poi = poi;
+                    [ag startPlaying];
+                } // else discard
             }
                            });
     } else {

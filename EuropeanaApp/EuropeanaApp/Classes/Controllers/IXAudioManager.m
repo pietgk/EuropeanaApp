@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 
 @interface IXAudioManager () <AVAudioPlayerDelegate, AVSpeechSynthesizerDelegate> {
     double fading;
+
 }
 
 @property (strong, nonatomic) AVAudioSession *audioSession;
@@ -39,6 +40,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 @property (assign) BOOL backgroundMusicInterrupted;
 @property (assign) SystemSoundID pewPewSound;
 @property (nonatomic, strong) NSTimer *fadeTimer;
+@property (nonatomic, assign) NSTimeInterval duration;
 
 - (void) fadeDecrement:(NSTimer *)aTimer;
 @property (assign) AudioState audioState;
@@ -48,8 +50,17 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 @implementation IXAudioManager
 
 #pragma mark - Public
++ (IXAudioManager*)sharedAudio;
+{
+    static IXAudioManager *myAudio = nil;
+    static dispatch_once_t onceAudioToken;
+    dispatch_once(&onceAudioToken, ^{
+        myAudio = [[self alloc] initPrivate];
+    });
+    return myAudio;
+}
 
-- (instancetype)init
+- (instancetype)initPrivate
 {
     self = [super init];
     if (self) {
@@ -115,7 +126,8 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 - (void)prepareBackgroundPlayerWithFile:(NSString *)audioFile
 {
     // Create audio player with background music
-    NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:audioFile ofType:@"caf"];
+//    NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:audioFile ofType:@"caf"];
+    NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:audioFile ofType:nil];
     NSLog(@"Will play audio file: %@",audioFile);
     NSURL *backgroundMusicURL = [NSURL fileURLWithPath:backgroundMusicPath];
     if (backgroundMusicURL) {
@@ -123,6 +135,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
         self.backgroundMusicPlayer.delegate = self;  // We need this so we can restart after interruptions
         self.backgroundMusicPlayer.numberOfLoops = -1;	// Negative number means loop forever
         self.backgroundMusicPlayer.volume = 1.0;
+        self.duration = self.backgroundMusicPlayer.duration;
     }
 }
 

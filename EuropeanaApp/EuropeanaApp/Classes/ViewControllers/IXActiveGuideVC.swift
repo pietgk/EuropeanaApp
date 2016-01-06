@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IXActiveGuideVC: UIViewController {
+class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     
     var poi : IXPoi? {
         didSet {
@@ -17,6 +17,8 @@ class IXActiveGuideVC: UIViewController {
             }
         }
     }
+    
+    let audioManager = IXAudioManager.sharedAudio()
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -37,6 +39,7 @@ class IXActiveGuideVC: UIViewController {
         createLabels()
 //        self.fillLabels(self.poi)
         self.timeLabel.text = "00:00"
+        self.audioManager.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,27 +65,37 @@ class IXActiveGuideVC: UIViewController {
         poi.getImageWithBlock({ (image) -> Void in
             self.imageView.image = image;
         });
-        
+    }
+    
+    func startPlaying() {
+        if self.playing {
+            self.audioManager.fadeOutBackgroundAudio()
+            self.playing = false
+        }
+        self.audioManager.prepareBackgroundPlayerWithFile(poi?.audioURL)
+        self.audioManager.playBackgroundAudio()
+        togglePlayButton(true)
         
     }
+        
     func togglePlayButton(play: Bool) {
         if play {
             self.playButton.setAttributedTitle(IXIcons.defaultAttributedIconStringFor(IXIconNameType.icon_play3, size: 24), forState: .Normal)
-            self.playing = true
+            self.playing = false
         } else {
             self.playButton.setAttributedTitle(IXIcons.defaultAttributedIconStringFor(IXIconNameType.icon_pause2, size: 24), forState: .Normal)
-            self.playing = false
+            self.playing = true
         }
     }
     
     @IBAction func playPauseButton(sender: AnyObject) {
         if self.playing {
-            togglePlayButton(false)
+            togglePlayButton(true)
             // stop playing
             // change button
             // stop timer
         } else {
-            togglePlayButton(true)
+            togglePlayButton(false)
         }
     }
     
