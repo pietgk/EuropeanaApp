@@ -46,20 +46,27 @@ NSString * const stateAsString[] = {
 {
     self = [super init];
     if (self) {
-        self.delegate = aDelegate;
-
         self.poiQueue = [[OperationQueue alloc] init];
+        self.delegate = aDelegate;
         [self.locationManager start];
-        self.locationManager.poiQueue = self.poiQueue;
         [self triggerSoundReset];
     }
+
     return self;
 }
+
+- (instancetype) init
+{
+    return [self initWithDelegate:nil];
+}
+
 
 - (IXLocationManager *) locationManager
 {
     if (!_locationManager) {
         _locationManager = [[IXLocationManager alloc] initWithDelegate:self];
+        NSAssert(self.poiQueue != nil, @"poiQueue not initialized in %s",__PRETTY_FUNCTION__);
+        _locationManager.poiQueue = self.poiQueue;
     }
     return _locationManager;
 }

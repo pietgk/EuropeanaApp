@@ -71,8 +71,8 @@
 
 - (void) start;
 {
-//    [self startRangingBeacons]; // old
-//    [self askForLocation];
+    [self startRangingBeacons];
+    [self askForLocation];
     
 }
 
@@ -106,18 +106,18 @@
 - (NSArray *)initialBeaconsRangingSetup
 {
     // For now we retrieve all the beacons' asset from a convenience PLIST
-//    NSArray *localRegions = [[IXData sharedData] localRegions];
+    NSArray *localRegions = [[IXData sharedData] localRegions];
 
-//    for (CLBeaconRegion *region in localRegions) {
-//        
-//        
-//        // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
+    for (CLBeaconRegion *region in localRegions) {
+        
+        
+        // The identifier is a value used to identify this region inside the application. For now we are retrieving it form the plist but maybe we can have a unique identifier to identify all the assets by set a string = major *append* minor
 //        [regionResult addObject:region];
-//        
-//        // new: add as beacon, for more precise ranging
-////        IXBeacon *beacon = [[IXBeacon alloc] initWithDictionary:elem];
-////        [beaconResult addObject:beacon];
-//    }
+        
+        // new: add as beacon, for more precise ranging
+//        IXBeacon *beacon = [[IXBeacon alloc] initWithDictionary:elem];
+//        [beaconResult addObject:beacon];
+    }
     // but add these to data as well:
 //    [[IXData sharedData] setBeaconArray:beaconResult];
     
@@ -250,7 +250,8 @@
 
                 
                 //if (currentBeacon.accuracy < 4) { // hard coded 4m for hackaton
-               [self tellDelegateBeaconIsSpotted:ixBeacon];
+                // 20150106 temp disable delegating info to the manager, as we are switching to queues
+               // [self tellDelegateBeaconIsSpotted:ixBeacon];
                  //}
             }
             // 2015: we probably need to add beacons to a queue and have a bg task determine where we are in the position of artworks

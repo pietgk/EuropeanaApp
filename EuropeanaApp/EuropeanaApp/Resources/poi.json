@@ -28,7 +28,7 @@
   {  "beacons":[{
                 "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
                 "major": 42,
-                "minor": 4,
+                "minor": 2,
                 "signal": 50
                 }],
   "poi":

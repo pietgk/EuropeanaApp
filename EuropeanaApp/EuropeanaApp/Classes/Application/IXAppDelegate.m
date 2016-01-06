@@ -21,7 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    // self.manager = [[IXManager alloc] init];
+    
+    // the manager takes care of location and ibeacon queues.
+    self.manager = [[IXManager alloc] init];
     [Fabric with:@[[Crashlytics class]]];
     // TODO: Move this to where you establish a user session
     [self logUser];
