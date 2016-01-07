@@ -17,14 +17,6 @@
 @import AVFoundation;
 
 
-typedef NS_ENUM(NSUInteger, AudioState) {
-    silent,
-    audioPlaying,
-    audioPaused,
-    speechPlaying,
-    speechPaused,
-};
-
 const float kVolumeDecrementDuration=2.0;
 const float kFadeInterval=0.2;
 const float kUpdateInterval=0.1;
@@ -342,6 +334,24 @@ const float kUpdateInterval=0.1;
     }
     [self stopUpdateTimer];
 }
+
+- (void) stop
+{
+    switch (self.audioState) {
+        case audioPlaying:
+            [self.backgroundMusicPlayer stop];
+            self.audioState = silent;
+            break;
+        case speechPlaying:
+            [self.speechSynth stopSpeakingAtBoundary:AVSpeechBoundaryWord];
+            self.audioState = silent;
+            break;
+        default:
+            break;
+    }
+    [self stopUpdateTimer];
+}
+
 
 - (void) resume
 {

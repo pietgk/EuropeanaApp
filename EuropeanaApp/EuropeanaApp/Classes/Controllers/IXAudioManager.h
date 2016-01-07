@@ -10,6 +10,14 @@
 //@protocol IXAudioManagerDelegate;
 
 
+typedef NS_ENUM(NSUInteger, AudioState) {
+    silent,
+    audioPlaying,
+    audioPaused,
+    speechPlaying,
+    speechPaused,
+};
+
 @protocol IXAudioManagerDelegate <NSObject>
 
 @optional
@@ -38,6 +46,8 @@
 @property (nonatomic, weak) id <IXAudioManagerDelegate> delegate;
 @property (nonatomic, readonly) NSTimeInterval duration;
 
+@property (readonly) AudioState audioState;
+
 - (instancetype)init NS_UNAVAILABLE;
 + (IXAudioManager*)sharedAudio;
 - (void)tryPlayMusic;
@@ -47,6 +57,7 @@
 
 - (void) speak:(NSString *)text;
 - (void) pause;
+- (void) stop;
 - (void) resume;
 - (void) fade;
 

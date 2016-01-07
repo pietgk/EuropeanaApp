@@ -15,6 +15,9 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
         didSet {
             if let p = poi {
                 self.fillLabels(p)
+                self.playing = false
+                self.progressSlider.value = 0
+                self.timeLabel.text = "00:00"
             }
         }
     }
@@ -41,7 +44,7 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
         createLabels()
 //        self.fillLabels(self.poi)
         self.timeLabel.text = "00:00"
-         self.audioManager.delegate = self
+        self.audioManager.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,11 +72,15 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
         });
     }
     
-    func startPlaying() {
+    func fadeout() {
         if self.playing {
             self.audioManager.fadeOutBackgroundAudio()
             self.playing = false
         }
+    }
+    
+    func startPlaying() {
+        fadeout()
         self.audioManager.prepareBackgroundPlayerWithFile(poi?.audioURL)
         self.audioManager.tryPlayMusic()
         togglePlayButton(false)
@@ -98,8 +105,12 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
             // stop timer
         } else {
             togglePlayButton(false)
+            if (self.audioManager.audioState == AudioState.audioPaused) {
             // cannot use startPlaying here
-            self.audioManager.resume()        // continues
+                self.audioManager.resume()        // continues
+            } else {
+                self.startPlaying()
+            }
         }
     }
     
@@ -144,10 +155,14 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     }
     
     @IBAction func nextMocker(sender: AnyObject) {
+        self.audioManager.stop()
+        togglePlayButton(true)
         self.poi = IXData.sharedData().mockPoi()        // get new value
     }
 
     @IBAction func previousMocker(sender: AnyObject) {
+        self.audioManager.stop()
+        togglePlayButton(true)
         self.poi = IXData.sharedData().previousMockPoi()        // get new value
     }
 

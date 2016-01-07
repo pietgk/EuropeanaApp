@@ -18,9 +18,12 @@ class DateUtilities {
     
     class func durationInMinutesAndSeconds(duration: NSTimeInterval) -> String {
         let absdur = abs(duration)
-        let minutes = Int(floor(absdur / 60))
-        let seconds = Int(floor(absdur - Double(minutes) * 60))
-        let timeStr = duration < 0 ? String(format: "–%02d:%02d", minutes, seconds) : String(format: "%02d:%02d", minutes, seconds)
+        var timeStr = "00:00"
+        if (!absdur.isNaN) {
+            let minutes = Int(floor(absdur / 60))
+            let seconds = Int(floor(absdur - Double(minutes) * 60))
+            timeStr = duration < 0 ? String(format: "–%02d:%02d", minutes, seconds) : String(format: "%02d:%02d", minutes, seconds)
+        }
         return timeStr
     }
 }
