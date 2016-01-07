@@ -100,7 +100,7 @@
         #warning protocolize!
             if ([[vc class] isSubclassOfClass:[IXActiveGuideVC class]] ) {
                 IXActiveGuideVC *ag = (IXActiveGuideVC *)vc;
-                if (! ag.playing && ag.poi != poi) {
+                if (![ag playing] && ag.poi != poi) {
                     ag.poi = poi;
                     [ag startPlaying];
                 } // else discard

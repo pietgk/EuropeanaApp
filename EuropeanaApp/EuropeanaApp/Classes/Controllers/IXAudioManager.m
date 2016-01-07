@@ -126,7 +126,7 @@ const float kUpdateInterval=0.1;
     }
 }
 
-- (void)prepareBackgroundPlayerWithFile:(NSString *)audioFile
+- (BOOL)prepareBackgroundPlayerWithFile:(NSString *)audioFile
 {
     // Create audio player with background music
 //    NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:audioFile ofType:@"caf"];
@@ -139,6 +139,9 @@ const float kUpdateInterval=0.1;
         self.backgroundMusicPlayer.numberOfLoops = -1;	// Negative number means loop forever
         self.backgroundMusicPlayer.volume = 1.0;
         self.duration = self.backgroundMusicPlayer.duration;
+        return YES;
+    } else {
+        return NO;
     }
 }
 
@@ -154,6 +157,25 @@ const float kUpdateInterval=0.1;
     [self.backgroundMusicPlayer play];
     self.audioState = audioPlaying;
     [self startUpdateTimer];
+}
+
+/* Important: 
+ playBackgroundAudioAtTime takes the absolute time in the duration, but the 
+ AVAudioPlayer takes a *relative* time to the currentTime!
+ */
+
+- (void)setAudioCurrentTime:(NSTimeInterval)timeIndex;
+{
+//    if (audioPlaying == self.audioState || !self.backgroundMusicPlayer) {
+//        return;
+//    }
+    
+    // Play background music if no other music is playing and we aren't playing already
+    //Note: prepareToPlay preloads the music file and can help avoid latency. If you don't
+    self.backgroundMusicPlayer.currentTime = timeIndex;
+//    [self.backgroundMusicPlayer playAtTime:timeIndex];
+//    self.audioState = audioPlaying;
+//    [self startUpdateTimer];
 }
 
 - (void)stopBackgroundAudio

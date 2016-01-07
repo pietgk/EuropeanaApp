@@ -400,15 +400,14 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="02iPhone 6 Active Portrait.png" translatesAutoresizingMaskIntoConstraints="NO" id="TN3-yG-YpC">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                </variation>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hd2-dh-dRr" userLabel="gestureView">
+                                <rect key="frame" x="20" y="0.0" width="560" height="392"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="REm-sq-eDV" appends="YES" id="7Ej-cV-SNb"/>
+                                    <outletCollection property="gestureRecognizers" destination="ybp-07-GJj" appends="YES" id="Dme-jN-vaM"/>
+                                </connections>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TYZ-Rt-NOi">
                                 <rect key="frame" x="180" y="76" width="240" height="240"/>
                                 <constraints>
@@ -431,8 +430,8 @@
                                     <rect key="frame" x="68" y="501" width="240" height="15"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7I-jb-Hje">
-                                <rect key="frame" x="180" y="335" width="240" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7I-jb-Hje">
+                                <rect key="frame" x="180" y="335" width="240" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -440,7 +439,7 @@
                                     <rect key="frame" x="68" y="516" width="240" height="14"/>
                                 </variation>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000298023224" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Re-hP-4nu">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000298023224" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Re-hP-4nu">
                                 <rect key="frame" x="178" y="417" width="244" height="31"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="66" y="564" width="244" height="31"/>
@@ -460,8 +459,8 @@
                                     <action selector="playPauseButton:" destination="S6K-vA-roe" eventType="touchUpInside" id="IJc-Ii-WzD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="33:33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHY-k8-4vN">
-                                <rect key="frame" x="418" y="416" width="33" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33:33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHY-k8-4vN">
+                                <rect key="frame" x="422" y="425" width="33" height="15"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -505,8 +504,11 @@
                         <constraints>
                             <constraint firstItem="qHY-k8-4vN" firstAttribute="leading" secondItem="6Re-hP-4nu" secondAttribute="trailing" constant="2" id="4O7-wF-ZxF"/>
                             <constraint firstItem="L4g-O1-a4q" firstAttribute="top" secondItem="6Re-hP-4nu" secondAttribute="bottom" constant="40" id="4gE-dS-LhH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hd2-dh-dRr" secondAttribute="trailing" id="7An-bS-0yt"/>
                             <constraint firstItem="6Re-hP-4nu" firstAttribute="centerY" secondItem="qHY-k8-4vN" secondAttribute="centerY" id="BwQ-Wu-yhX"/>
+                            <constraint firstItem="6Re-hP-4nu" firstAttribute="top" secondItem="hd2-dh-dRr" secondAttribute="bottom" constant="25" id="ET6-BX-O4k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AZe-MW-Pws" secondAttribute="trailing" constant="-20" id="Hge-DP-Ua3"/>
+                            <constraint firstItem="hd2-dh-dRr" firstAttribute="top" secondItem="PLZ-Pl-Obu" secondAttribute="bottom" id="MLU-Lv-ymt"/>
                             <constraint firstItem="6Re-hP-4nu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="e7I-jb-Hje" secondAttribute="bottom" constant="23" id="MzA-wn-KxZ"/>
                             <constraint firstItem="e7I-jb-Hje" firstAttribute="top" secondItem="5d4-xo-RYY" secondAttribute="bottom" id="SJ9-P2-qaa"/>
                             <constraint firstItem="TYZ-Rt-NOi" firstAttribute="leading" secondItem="e7I-jb-Hje" secondAttribute="leading" id="TDa-5z-EDo"/>
@@ -520,19 +522,16 @@
                             <constraint firstItem="6Re-hP-4nu" firstAttribute="leading" secondItem="QMS-ww-ota" secondAttribute="trailing" constant="-1" id="cZO-0Y-EfT"/>
                             <constraint firstItem="TYZ-Rt-NOi" firstAttribute="trailing" secondItem="5d4-xo-RYY" secondAttribute="trailing" id="jAt-9p-opf"/>
                             <constraint firstItem="TYZ-Rt-NOi" firstAttribute="trailing" secondItem="6Re-hP-4nu" secondAttribute="trailing" id="jT3-RJ-oUj"/>
-                            <constraint firstItem="6Re-hP-4nu" firstAttribute="top" secondItem="TYZ-Rt-NOi" secondAttribute="bottom" constant="67" id="jXY-sj-oFZ"/>
+                            <constraint firstItem="hd2-dh-dRr" firstAttribute="bottom" secondItem="e7I-jb-Hje" secondAttribute="bottom" id="kQx-gx-O60"/>
                             <constraint firstItem="TYZ-Rt-NOi" firstAttribute="leading" secondItem="6Re-hP-4nu" secondAttribute="leading" id="noc-R0-Zdw"/>
                             <constraint firstItem="TYZ-Rt-NOi" firstAttribute="trailing" secondItem="e7I-jb-Hje" secondAttribute="trailing" id="y1S-Mw-3up"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hd2-dh-dRr" secondAttribute="leading" id="yn2-vE-lXm"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="jXY-sj-oFZ"/>
+                                <exclude reference="kQx-gx-O60"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="REm-sq-eDV" appends="YES" id="uaW-tj-1Ny"/>
-                            <outletCollection property="gestureRecognizers" destination="ybp-07-GJj" appends="YES" id="tVq-og-fad"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Active Guide" image="Active" selectedImage="ActiveSelected" id="eY7-th-VhM"/>
                     <toolbarItems/>
@@ -784,7 +783,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="02iPhone 6 Active Portrait.png" width="375" height="667"/>
         <image name="Active" width="25" height="23"/>
         <image name="ActiveSelected" width="25" height="23"/>
         <image name="Download" width="26" height="26"/>

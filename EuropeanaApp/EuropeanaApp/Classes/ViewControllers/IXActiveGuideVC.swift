@@ -15,7 +15,6 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
         didSet {
             if let p = poi {
                 self.fillLabels(p)
-                self.playing = false
                 self.progressSlider.value = 0
                 self.timeLabel.text = "00:00"
             }
@@ -33,7 +32,6 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     @IBOutlet weak var progressSlider: UISlider!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var playing : Bool = false
     var demoParent : Bool = false
     var audioDuration : NSTimeInterval = 0
     
@@ -71,52 +69,73 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
             self.imageView.image = image;
         });
     }
-    
+    // MARK: - AudioManager
     func fadeout() {
-        if self.playing {
+        if self.audioManager.audioState == AudioState.audioPlaying {
             self.audioManager.fadeOutBackgroundAudio()
-            self.playing = false
+        }
+        if self.audioManager.audioState == AudioState.speechPlaying {               // there is no fading of speech yet
+            self.audioManager.stop()
         }
     }
     
     func startPlaying() {
         fadeout()
-        self.audioManager.prepareBackgroundPlayerWithFile(poi?.audioURL)
-        self.audioManager.tryPlayMusic()
-        togglePlayButton(false)
-        
+        var succeeded = false
+        if let url = poi?.audioURL {
+            if self.audioManager.prepareBackgroundPlayerWithFile(url) {
+                self.audioManager.tryPlayMusic()
+                togglePlayButton(false)
+                succeeded = true
+            }
+        }
+        if !succeeded {     // no audio URL
+            if let caption = poi?.caption {
+                self.audioManager.speak(caption)
+                togglePlayButton(false)
+            }
+            succeeded = true
+        }
+        if !succeeded {
+            self.audioManager.playSystemSound()
+        }
     }
         
     func togglePlayButton(play: Bool) {
         if play {
             self.playButton.setAttributedTitle(IXIcons.defaultAttributedIconStringFor(IXIconNameType.icon_play3, size: 24), forState: .Normal)
-            self.playing = false
         } else {
             self.playButton.setAttributedTitle(IXIcons.defaultAttributedIconStringFor(IXIconNameType.icon_pause2, size: 24), forState: .Normal)
-            self.playing = true
         }
     }
     
     @IBAction func playPauseButton(sender: AnyObject) {
-        if self.playing {
+        switch self.audioManager.audioState {
+        case .audioPlaying , .speechPlaying:
             togglePlayButton(true)
             audioManager.pause()        // stop playing
             // change button
             // stop timer
-        } else {
+        case .audioPaused, .speechPaused:
             togglePlayButton(false)
-            if (self.audioManager.audioState == AudioState.audioPaused) {
-            // cannot use startPlaying here
-                self.audioManager.resume()        // continues
-            } else {
-                self.startPlaying()
-            }
+            self.audioManager.resume()        // continues
+        case .silent:
+            self.startPlaying()
         }
+    }
+    
+    func playing() -> Bool {
+        return self.audioManager.audioState == AudioState.audioPlaying || self.audioManager.audioState == AudioState.speechPlaying
     }
     
     // if the user interacts with the slider
     @IBAction func updateProgress(sender: UISlider) {
         // update audio player accordingly (if possible)
+        // TODO: we need to maybe store the index locally, in case the audio is stopped while we're sliding. Then when we hit play we should check if the user set the starting point
+        if (self.audioManager.audioState == .audioPlaying) {
+            let timeIndex = Double(sender.value) * self.audioDuration
+            self.audioManager.setAudioCurrentTime(timeIndex)
+        }
     }
     
     // MARK: - IXAudioManagerDelegate

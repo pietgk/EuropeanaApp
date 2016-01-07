@@ -51,8 +51,11 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 - (instancetype)init NS_UNAVAILABLE;
 + (IXAudioManager*)sharedAudio;
 - (void)tryPlayMusic;
+- (void)setAudioCurrentTime:(NSTimeInterval)timeIndex;
 - (void)playSystemSound;
-- (void)prepareBackgroundPlayerWithFile:(NSString *)audioFile;
+
+// returns YES if a soundfile was found, NO otherwise
+- (BOOL)prepareBackgroundPlayerWithFile:(NSString *)audioFile;
 - (void)fadeOutBackgroundAudio;
 
 - (void) speak:(NSString *)text;
