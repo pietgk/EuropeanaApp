@@ -19,9 +19,11 @@
 
 @property (nonatomic, strong, nullable) NSMutableDictionary <NSString*,IXBeacon *> *beacons;
 @property (nonatomic, strong) NSArray<IXPoi *> *pois;
+@property (nonatomic, strong) NSMutableArray<IXHistoricPoi *> *historicPois;
 @property (nonatomic, strong) NSArray<IXPoi *> *suggestions;
 @property (nonatomic, strong) NSArray<CLBeaconRegion *> *localRegions;
-
+// history should be related to a list of venues, but we do not have that yet.
+@property (nonatomic, strong) NSArray<IXPoi *> *poiHistory;
 @end
 
 @implementation IXData
@@ -215,6 +217,20 @@
     //        }
     //    }
     //    return result;
+}
+
+// MARK: - History of POIs and venues
+- (NSArray *) historicPois
+{
+    if (!_historicPois) {
+        _historicPois = [[NSMutableArray alloc] init];
+    }
+    return _historicPois;
+}
+
+- (void) addHistoricPoi:(IXHistoricPoi  * _Nonnull ) hPoi
+{
+    [self.historicPois addObject:hPoi];
 }
 
 // TODO: probably kick of some operation which handles the found beacon(s)

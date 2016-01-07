@@ -9,12 +9,29 @@
 #import "IXPoi.h"
 #import "IXBeacon.h"
 
-@implementation IXPoi
+@implementation IXPoi 
 
 
 + (instancetype) createWithDictionary:(nonnull NSDictionary *)newDict
 {
     return [[self alloc] initWithDictionary:newDict];
+}
+
+#warning untested
+-(id)copyWithZone:(NSZone *)zone
+{
+    // We'll ignore the zone for now
+    IXPoi *newPoi = [[IXPoi alloc] init];
+    newPoi.name = [_name copyWithZone:zone];
+    newPoi.artist = [_artist copyWithZone:zone];
+    newPoi.caption = [_caption copyWithZone:zone];
+    newPoi.venue = [_venue copyWithZone:zone];
+    newPoi.audio = [_audio copyWithZone:zone];
+    newPoi.imageURL = [_imageURL copyWithZone:zone];
+    newPoi.websiteURL = [_websiteURL copyWithZone:zone];
+    newPoi.audioURL = [_audioURL copyWithZone:zone];
+    
+    return newPoi;
 }
 
 - (instancetype) initWithDictionary:(nonnull NSDictionary *)newDict

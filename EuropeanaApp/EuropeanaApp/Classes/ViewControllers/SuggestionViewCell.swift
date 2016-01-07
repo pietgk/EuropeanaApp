@@ -23,9 +23,6 @@ class SuggestionViewCell : UICollectionViewCell {
         super.init(coder: aDecoder)
     }
 
-    override func drawRect(rect: CGRect) {
-        setupLabels()
-    }
 //    == HelveticaNeue-Italic
 //    == HelveticaNeue-Bold
 //    == HelveticaNeue-UltraLight
@@ -48,6 +45,7 @@ class SuggestionViewCell : UICollectionViewCell {
     }
     
     override func prepareForReuse() {
+        setupLabels()
         self.imageView.image = nil
     }
     

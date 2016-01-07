@@ -14,9 +14,11 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     var poi : IXPoi? {
         didSet {
             if let p = poi {
+                archivePoi()
                 self.fillLabels(p)
                 self.progressSlider.value = 0
                 self.timeLabel.text = "00:00"
+                self.watchStartTime = NSDate()
             }
         }
     }
@@ -34,6 +36,7 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     
     var demoParent : Bool = false
     var audioDuration : NSTimeInterval = 0
+    var watchStartTime : NSDate?         // when was the poi set?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +48,24 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
         self.audioManager.delegate = self
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        archivePoi()
+        super.viewWillDisappear(animated)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func archivePoi() {
+        if self.watchStartTime != nil {
+            if let p = self.poi {
+                let duration = -((self.watchStartTime?.timeIntervalSinceNow)!)
+                let hPoi = IXHistoricPoi(poi:p, date: NSDate(), duration: duration)
+                IXData.sharedData().addHistoricPoi(hPoi)
+            }
+        }
     }
     
     func createLabels() {
@@ -152,7 +170,7 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     }
     
     func updateTimeLabel(progress : Float) {
-        let timeStr = DateUtilities.durationInMinutesAndSeconds(( NSTimeInterval(progress) - 1) * self.audioDuration)
+        let timeStr = NSDate.durationInMinutesAndSeconds(( NSTimeInterval(progress) - 1) * self.audioDuration)
         self.timeLabel.text = timeStr
     }
     /*

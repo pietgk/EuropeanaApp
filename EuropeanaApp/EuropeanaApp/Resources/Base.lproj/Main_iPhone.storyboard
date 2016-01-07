@@ -648,27 +648,70 @@
         <scene sceneID="D1Y-RT-kGl">
             <objects>
                 <tableViewController title="History" id="eYk-N2-B2k" customClass="IXHistoryTableVC" customModule="ArtWhisper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TnV-Xv-2bm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="TnV-Xv-2bm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="yMO-mn-tRj" style="IBUITableViewCellStyleDefault" id="p52-u2-i9h">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCellIdentifier" rowHeight="120" id="f7T-5U-IjL" customClass="HistoryTableCellCollectionView" customModule="ArtWhisper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p52-u2-i9h" id="Le4-8P-xqT">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f7T-5U-IjL" id="QVR-xL-Nas">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yMO-mn-tRj">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvU-og-4X2" userLabel="venueLabel">
+                                            <rect key="frame" x="8" y="12" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r1T-fY-dHP">
+                                            <rect key="frame" x="8" y="41" width="584" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="70" id="giZ-3P-WQE"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D06-W6-Vvl">
+                                                <size key="itemSize" width="70" height="70"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="o8w-nf-cvM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uC-uo-t2z" userLabel="dateLabel">
+                                            <rect key="frame" x="550" y="12" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="leadingMargin" secondItem="VvU-og-4X2" secondAttribute="leading" id="RRu-4L-qLx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2uC-uo-t2z" secondAttribute="trailing" id="UUV-yH-3q7"/>
+                                        <constraint firstItem="2uC-uo-t2z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VvU-og-4X2" secondAttribute="trailing" constant="13" id="a2d-4g-6ef"/>
+                                        <constraint firstItem="2uC-uo-t2z" firstAttribute="top" secondItem="QVR-xL-Nas" secondAttribute="topMargin" constant="4" id="bb5-ab-kXx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="r1T-fY-dHP" secondAttribute="trailing" id="eh5-fb-sqV"/>
+                                        <constraint firstItem="VvU-og-4X2" firstAttribute="top" secondItem="QVR-xL-Nas" secondAttribute="topMargin" constant="4" id="ncb-N0-PTP"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="r1T-fY-dHP" secondAttribute="leading" id="p5V-Eq-etH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="r1T-fY-dHP" secondAttribute="bottom" id="zXG-4d-at3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="r1T-fY-dHP" id="eeF-8K-zEJ"/>
+                                    <outlet property="dateLabel" destination="2uC-uo-t2z" id="CgP-ip-RY0"/>
+                                    <outlet property="venueLabel" destination="VvU-og-4X2" id="LTe-rp-lM7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

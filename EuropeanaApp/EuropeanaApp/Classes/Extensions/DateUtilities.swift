@@ -14,7 +14,7 @@ import Foundation
 //    return [NSString stringWithFormat:@"%d:%02d:%02d",hours,minutes,seconds];
 //}
 
-class DateUtilities {
+extension NSDate {
     
     class func durationInMinutesAndSeconds(duration: NSTimeInterval) -> String {
         let absdur = abs(duration)
@@ -26,4 +26,14 @@ class DateUtilities {
         }
         return timeStr
     }
+    
+    func dateOnly() -> String {
+        // unfortunately no static vars :(
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .ShortStyle
+        dateFormatter.timeStyle = .NoStyle
+
+        return dateFormatter.stringFromDate(self)
+    }
+
 }

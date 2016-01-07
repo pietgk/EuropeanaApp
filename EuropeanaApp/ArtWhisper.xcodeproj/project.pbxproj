@@ -30,6 +30,8 @@
 		772EB1CB1C19953D0088E541 /* 02iPhone 6 Active Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */; };
 		772EB1CC1C19953D0088E541 /* 03iPhone 6 Active Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */; };
 		773D389A1C3E8757004EA82C /* DateUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D38991C3E8757004EA82C /* DateUtilities.swift */; };
+		773D389C1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D389B1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift */; };
+		773D389E1C3F050E004EA82C /* IXHistoricPoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D389D1C3F050E004EA82C /* IXHistoricPoi.swift */; };
 		7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E14A1C03642300BC26FF /* UIColor+Extension.swift */; };
 		7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */; };
 		7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */; };
@@ -208,6 +210,8 @@
 		772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "02iPhone 6 Active Portrait.png"; path = "Mockups/02iPhone 6 Active Portrait.png"; sourceTree = "<group>"; };
 		772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "03iPhone 6 Active Landscape.png"; path = "Mockups/03iPhone 6 Active Landscape.png"; sourceTree = "<group>"; };
 		773D38991C3E8757004EA82C /* DateUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateUtilities.swift; path = Extensions/DateUtilities.swift; sourceTree = "<group>"; };
+		773D389B1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableCellCollectionView.swift; sourceTree = "<group>"; };
+		773D389D1C3F050E004EA82C /* IXHistoricPoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXHistoricPoi.swift; sourceTree = "<group>"; };
 		7742E14A1C03642300BC26FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7742E14D1C037EA300BC26FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneLogoClean.png; sourceTree = "<group>"; };
@@ -667,6 +671,7 @@
 				9BDC46711BE75B5A00162557 /* Operations */,
 				9BDC46631BE4C17F00162557 /* IXPoi.h */,
 				9BDC46641BE4C17F00162557 /* IXPoi.m */,
+				773D389D1C3F050E004EA82C /* IXHistoricPoi.swift */,
 				77E3D7C519A916590058C62B /* IXBeacon.h */,
 				77E3D7C619A916590058C62B /* IXBeacon.m */,
 				9B15221B1BE14D4700B3A52B /* IXData.h */,
@@ -685,6 +690,7 @@
 				77906E341BEE005200114B0D /* IXActiveGuideVC.swift */,
 				77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */,
 				77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */,
+				773D389B1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift */,
 				77906E361BEE019500114B0D /* IXSuggestionVC.swift */,
 				77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */,
 				7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */,
@@ -985,6 +991,7 @@
 				E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */,
 				9BDC497F1BE8F95B00162557 /* PassbookCondition.swift in Sources */,
 				772EB1C61C198E9A0088E541 /* UIFont+Extension.swift in Sources */,
+				773D389E1C3F050E004EA82C /* IXHistoricPoi.swift in Sources */,
 				9BDC49691BE8F95B00162557 /* LocationOperation.swift in Sources */,
 				9BDC49631BE8F95B00162557 /* GroupOperation.swift in Sources */,
 				9BDC498D1BE8F95B00162557 /* URLSessionTaskOperation.swift in Sources */,
@@ -1028,6 +1035,7 @@
 				9BDC49551BE8F95B00162557 /* BlockOperation.swift in Sources */,
 				9BDC49611BE8F95B00162557 /* ExclusivityController.swift in Sources */,
 				9BDC49851BE8F95B00162557 /* RemoteNotificationCondition.swift in Sources */,
+				773D389C1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift in Sources */,
 				9BDC49791BE8F95B00162557 /* OperationErrors.swift in Sources */,
 				9BDC49671BE8F95B00162557 /* LocationCondition.swift in Sources */,
 				9BDC497B1BE8F95B00162557 /* OperationObserver.swift in Sources */,
