@@ -13,7 +13,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import "EuropeanaApp-Bridging-Header.h"
+    #import "ArtWhisper-Bridging-Header.h"
 //    #import "ArtWhisper-Swift.h"          // cannot use generated swift header in header files!
 #endif
 

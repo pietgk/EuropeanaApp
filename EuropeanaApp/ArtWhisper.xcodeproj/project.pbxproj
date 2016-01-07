@@ -61,6 +61,7 @@
 		77DDB6CD1C3D4B180095FF0E /* NorthernLight_Serena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6C81C3D4B180095FF0E /* NorthernLight_Serena.m4a */; };
 		77DDB6CE1C3D4B180095FF0E /* RunBeyond_Fiona.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6C91C3D4B180095FF0E /* RunBeyond_Fiona.m4a */; };
 		77DDB6D01C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6CB1C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a */; };
+		77DDB6D11C3E73A90095FF0E /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
 		77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C119A910FA0058C62B /* Europeana logo.jpg */; };
 		77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */; };
 		77E3D7C719A916590058C62B /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
@@ -289,7 +290,7 @@
 		9BDC49501BE8F95B00162557 /* UIUserNotifications+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIUserNotifications+Operations.swift"; sourceTree = "<group>"; };
 		9BDC49511BE8F95B00162557 /* URLSessionTaskOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionTaskOperation.swift; sourceTree = "<group>"; };
 		9BDC49521BE8F95B00162557 /* UserNotificationCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationCondition.swift; sourceTree = "<group>"; };
-		9BDC49991BEA3C3B00162557 /* EuropeanaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EuropeanaApp-Bridging-Header.h"; path = "EuropeanaApp/EuropeanaApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		9BDC49991BEA3C3B00162557 /* ArtWhisper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ArtWhisper-Bridging-Header.h"; path = "EuropeanaApp/ArtWhisper-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconMonitorOperation.swift; sourceTree = "<group>"; };
 		9BDC49B31BEB441F00162557 /* ArtWhisperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtWhisperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDC49B51BEB441F00162557 /* ArtWhisperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtWhisperTests.swift; path = ../ArtWhisperSwiftTests/ArtWhisperTests.swift; sourceTree = "<group>"; };
@@ -721,7 +722,7 @@
 				77DA0DC91C1E008E00826BC2 /* suggestions.json */,
 				9B15221F1BE14EA700B3A52B /* beacons.json */,
 				9BDC46671BE5152000162557 /* poi.json */,
-				9BDC49991BEA3C3B00162557 /* EuropeanaApp-Bridging-Header.h */,
+				9BDC49991BEA3C3B00162557 /* ArtWhisper-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1065,6 +1066,7 @@
 				9BDC497A1BE8F95B00162557 /* OperationErrors.swift in Sources */,
 				9BDC49821BE8F95B00162557 /* PhotosCondition.swift in Sources */,
 				9BDC49741BE8F95B00162557 /* NSOperation+Operations.swift in Sources */,
+				77DDB6D11C3E73A90095FF0E /* IXLocationManager.m in Sources */,
 				77D3C4D319A903AB001F00EC /* ArtWhisperBeaconTests.m in Sources */,
 				9BDC49A01BEA495800162557 /* BeaconMonitorOperation.swift in Sources */,
 				9BDC49661BE8F95B00162557 /* HealthCondition.swift in Sources */,
@@ -1176,7 +1178,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ArtWhisper;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/EuropeanaApp-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1213,7 +1216,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = ArtWhisper;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/EuropeanaApp-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1233,6 +1237,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/ArtWhisper-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1252,6 +1258,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/ArtWhisper-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1278,6 +1286,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1300,6 +1309,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

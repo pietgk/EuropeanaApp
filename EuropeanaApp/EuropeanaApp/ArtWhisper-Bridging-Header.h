@@ -1,13 +1,13 @@
 //
-//  EuropeanaApp-Bridging-Header.h
-//  EuropeanaApp
+//  ArtWhisper-Bridging-Header.h
+//  ArtWhisper
 //
 //  Created by W.J. Groot Kormelink on 04/11/15.
 //  Copyright © 2015 Phluxus. All rights reserved.
 //
 
-#ifndef EuropeanaApp_Bridging_Header_h
-#define EuropeanaApp_Bridging_Header_h
+#ifndef ArtWhisper_Bridging_Header_h
+#define ArtWhisper_Bridging_Header_h
 
 #import "IXData.h"
 #import "IXBeacon.h"
@@ -16,5 +16,6 @@
 #import "IXIcons.h"
 #import "IXAppDelegate.h"
 #import "IXAudioManager.h"
+//@protocol IXAudioManagerDelegate;
 
-#endif /* EuropeanaApp_Bridging_Header_h */
+#endif /* ArtWhisper_Bridging_Header_h */

@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Phluxus. All rights reserved.
 //
 
-#import "IXBeacon.h"
-
 @class IXLocationManager, IXBeacon, CLBeaconRegion;
 @class OperationQueue;
 

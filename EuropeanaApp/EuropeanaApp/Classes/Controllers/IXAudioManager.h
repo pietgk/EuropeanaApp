@@ -6,15 +6,10 @@
 //  Copyright (c) 2014 Phluxus. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @class IXAudioManager;
-@protocol IXAudioManagerDelegate <NSObject>
+@protocol IXAudioManagerDelegate;
 
-@optional
-- (void) audioManager:(IXAudioManager *)audioManager speakingRange:(NSRange)range totalLength:(NSUInteger) length;
-
-@end
+//#import <Foundation/Foundation.h>
 
 @interface IXAudioManager : NSObject
 @property (nonatomic, weak) id <IXAudioManagerDelegate> delegate;

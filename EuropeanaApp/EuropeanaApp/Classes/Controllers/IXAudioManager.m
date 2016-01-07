@@ -11,6 +11,14 @@
  http://stackoverflow.com/questions/20403331/avaudiosession-mixing-with-avspeechutterance
  */
 
+
+@protocol IXAudioManagerDelegate <NSObject>
+
+@optional
+- (void) audioManager:(IXAudioManager *)audioManager speakingRange:(NSRange)range totalLength:(NSUInteger)length;
+
+@end
+
 #import "IXAudioManager.h"
 
 @import AVFoundation;
