@@ -7,7 +7,18 @@
 //
 
 @class IXAudioManager;
-@protocol IXAudioManagerDelegate;
+//@protocol IXAudioManagerDelegate;
+
+
+@protocol IXAudioManagerDelegate <NSObject>
+
+@optional
+- (void) audioManager:(IXAudioManager *)audioManager speakingRange:(NSRange)range totalLength:(NSUInteger)length;
+
+@end
+
+// #import "ArtWhisper-Bridging-Header.h"           // this is / was necessary to get swift to accept the IXAudioManagerDelegate ??? (seems Xcode bug)
+
 
 //#import <Foundation/Foundation.h>
 

@@ -9,7 +9,7 @@
 import UIKit
 //@objc protocol IXAudioManagerDelegate
 
-class IXActiveGuideVC: UIViewController {       // , IXAudioManagerDelegate {
+class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     
     var poi : IXPoi? {
         didSet {
@@ -40,7 +40,7 @@ class IXActiveGuideVC: UIViewController {       // , IXAudioManagerDelegate {
         createLabels()
 //        self.fillLabels(self.poi)
         self.timeLabel.text = "00:00"
-//         self.audioManager.delegate = self
+         self.audioManager.delegate = self
     }
     
     override func didReceiveMemoryWarning() {

@@ -12,13 +12,6 @@
  */
 
 
-@protocol IXAudioManagerDelegate <NSObject>
-
-@optional
-- (void) audioManager:(IXAudioManager *)audioManager speakingRange:(NSRange)range totalLength:(NSUInteger)length;
-
-@end
-
 #import "IXAudioManager.h"
 
 @import AVFoundation;
