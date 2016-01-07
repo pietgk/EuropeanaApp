@@ -164,7 +164,7 @@ NSString * const stateAsString[] = {
     }
     if (self.state == startPlaying) {
         [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum human"]; // "background-music-aac"];
-        [self.audioManager playBackgroundAudio];
+        [self.audioManager tryPlayMusic];
         self.state = inside;
     }
     if (self.delegate && [self.delegate respondsToSelector:@selector(ixManager:stateChange:)]) {

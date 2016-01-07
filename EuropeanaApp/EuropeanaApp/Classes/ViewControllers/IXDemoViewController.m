@@ -62,7 +62,7 @@
         self.playing = NO;          // should set this upon finishing the audio, but hey: it's a hack!
     } else {
         [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum human"];
-        [self.audioManager playBackgroundAudio];
+        [self.audioManager tryPlayMusic];
         self.playing = YES;
         [self ixManager:self.manager stateChange:@"playing"];
     }

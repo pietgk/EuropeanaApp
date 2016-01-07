@@ -16,8 +16,6 @@
 
 @import AVFoundation;
 
-#define VOLUMEDECREMENTDURATION 2.0
-#define INTERVAL 0.2
 
 typedef NS_ENUM(NSUInteger, AudioState) {
     silent,
@@ -26,6 +24,10 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     speechPlaying,
     speechPaused,
 };
+
+const float kVolumeDecrementDuration=2.0;
+const float kFadeInterval=0.2;
+const float kUpdateInterval=0.1;
 
 @interface IXAudioManager () <AVAudioPlayerDelegate, AVSpeechSynthesizerDelegate> {
     double fading;
@@ -40,6 +42,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 
 @property (assign) BOOL backgroundMusicInterrupted;
 @property (assign) SystemSoundID pewPewSound;
+@property (nonatomic, strong) NSTimer *updateTimer;
 @property (nonatomic, strong) NSTimer *fadeTimer;
 @property (nonatomic, assign) NSTimeInterval duration;
 
@@ -97,7 +100,14 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     //delay when playing a sound later on.
     [self.backgroundMusicPlayer prepareToPlay];
     [self.backgroundMusicPlayer play];
+    [self startUpdateTimer];
     self.audioState = audioPlaying;
+
+    // update delegate duration
+    if (self.delegate && [self.delegate respondsToSelector:@selector(audioManager:totalDuration:)]) {
+        [self.delegate audioManager:self totalDuration:self.backgroundMusicPlayer.duration];
+    }
+
 }
 
 
@@ -140,6 +150,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     }
 }
 
+// obsolete
 - (void)playBackgroundAudio;
 {
     if (audioPlaying == self.audioState || !self.backgroundMusicPlayer) {
@@ -150,6 +161,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     //Note: prepareToPlay preloads the music file and can help avoid latency. If you don't
     [self.backgroundMusicPlayer play];
     self.audioState = audioPlaying;
+    [self startUpdateTimer];
 }
 
 - (void)stopBackgroundAudio
@@ -157,6 +169,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     if (audioPlaying == self.audioState) {
         [self.backgroundMusicPlayer stop];
         self.audioState = silent;
+        [self stopUpdateTimer];
     }
 }
 
@@ -170,6 +183,31 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     self.backgroundMusicPlayer.numberOfLoops = -1;	// Negative number means loop forever
 }
 
+#pragma mark - Timers
+- (void)startUpdateTimer
+{
+    [self stopUpdateTimer];
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:kUpdateInterval target:self selector:@selector(updateTimer:) userInfo:nil repeats:YES];
+}
+
+- (void)stopUpdateTimer
+{
+    if (self.updateTimer) {
+        [self.updateTimer invalidate];
+        self.updateTimer = nil;
+    }
+}
+
+// update progress bar in delegate
+- (void) updateTimer:(NSTimer *)aTimer
+{
+    // calculation depends on speech vs audio
+    float progress = (float)(self.backgroundMusicPlayer.currentTime / self.backgroundMusicPlayer.duration);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(audioManager:progress:)]) {
+        [self.delegate audioManager:self progress:progress];
+    }
+}
+
 - (void)fadeOutBackgroundAudio
 {
     if (self.backgroundMusicPlayer.volume <= 0.0) {
@@ -179,8 +217,8 @@ typedef NS_ENUM(NSUInteger, AudioState) {
             [self.fadeTimer invalidate];
             self.fadeTimer = nil;
         }
-        fading = self.backgroundMusicPlayer.volume / (VOLUMEDECREMENTDURATION / INTERVAL);
-        self.fadeTimer = [NSTimer scheduledTimerWithTimeInterval:INTERVAL target:self selector:@selector(fadeDecrement:) userInfo:nil repeats:YES];
+        fading = self.backgroundMusicPlayer.volume / (kVolumeDecrementDuration / kFadeInterval);
+        self.fadeTimer = [NSTimer scheduledTimerWithTimeInterval:kFadeInterval target:self selector:@selector(fadeDecrement:) userInfo:nil repeats:YES];
     }
     
 }
@@ -201,9 +239,8 @@ typedef NS_ENUM(NSUInteger, AudioState) {
         if (0.0 == volume) {
             [self.fadeTimer invalidate];
             self.fadeTimer = nil;
-            [self.backgroundMusicPlayer stop];
+            [self stopBackgroundAudio];
             self.backgroundMusicPlayer = nil;
-            self.audioState = silent;
             NSLog(@"finished fading out audio");
         }
     }
@@ -265,6 +302,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
     
     self.backgroundMusicInterrupted = YES;
     self.audioState = silent;
+    [self stopUpdateTimer];
 }
 
 - (void) audioPlayerEndInterruption: (AVAudioPlayer *) player withOptions:(NSUInteger) flags{
@@ -277,6 +315,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
     self.audioState = silent;
+    [self stopUpdateTimer];
 }
 
 - (void) audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error
@@ -301,6 +340,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
         default:
             break;
     }
+    [self stopUpdateTimer];
 }
 
 - (void) resume
@@ -317,6 +357,7 @@ typedef NS_ENUM(NSUInteger, AudioState) {
         default:
             break;
     }
+    [self startUpdateTimer];
 }
 
 - (void) fade
@@ -416,8 +457,8 @@ typedef NS_ENUM(NSUInteger, AudioState) {
             [self.fadeTimer invalidate];
             self.fadeTimer = nil;
         }
-        fading = 1.0 / (VOLUMEDECREMENTDURATION / INTERVAL);
-        self.fadeTimer = [NSTimer scheduledTimerWithTimeInterval:INTERVAL target:self selector:@selector(fadeDecrementSpeech:) userInfo:nil repeats:YES];
+        fading = 1.0 / (kVolumeDecrementDuration / kFadeInterval);
+        self.fadeTimer = [NSTimer scheduledTimerWithTimeInterval:kFadeInterval target:self selector:@selector(fadeDecrementSpeech:) userInfo:nil repeats:YES];
     }
     
 }
@@ -465,6 +506,8 @@ typedef NS_ENUM(NSUInteger, AudioState) {
 
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer willSpeakRangeOfSpeechString:(NSRange)characterRange utterance:(AVSpeechUtterance *)utterance
 {
+#warning start using - (void) audioManager:(IXAudioManager *)audioManager progress:(float)progress totalLength:(float)totalLength;
+
     NSUInteger current = characterRange.location;
     if (self.delegate && [self.delegate respondsToSelector:@selector(audioManager:speakingRange:totalLength:)]) {
         [self.delegate audioManager:self speakingRange:characterRange totalLength:self.speechTextLength];

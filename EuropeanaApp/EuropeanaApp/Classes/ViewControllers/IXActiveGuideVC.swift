@@ -32,6 +32,7 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     
     var playing : Bool = false
     var demoParent : Bool = false
+    var audioDuration : NSTimeInterval = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,8 +75,8 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
             self.playing = false
         }
         self.audioManager.prepareBackgroundPlayerWithFile(poi?.audioURL)
-        self.audioManager.playBackgroundAudio()
-        togglePlayButton(true)
+        self.audioManager.tryPlayMusic()
+        togglePlayButton(false)
         
     }
         
@@ -92,17 +93,37 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     @IBAction func playPauseButton(sender: AnyObject) {
         if self.playing {
             togglePlayButton(true)
-            // stop playing
+            audioManager.pause()        // stop playing
             // change button
             // stop timer
         } else {
             togglePlayButton(false)
+            // cannot use startPlaying here
+            self.audioManager.resume()        // continues
         }
     }
     
     // if the user interacts with the slider
     @IBAction func updateProgress(sender: UISlider) {
-        
+        // update audio player accordingly (if possible)
+    }
+    
+    // MARK: - IXAudioManagerDelegate
+    func audioManager(audioManager: IXAudioManager!, progress: Float)
+    {
+        self.progressSlider.setValue(progress, animated: true)
+        // update label
+        updateTimeLabel(progress)
+    }
+
+    func audioManager(audioManager: IXAudioManager!, totalDuration: NSTimeInterval) {
+        self.audioDuration = totalDuration
+        updateTimeLabel(0)
+    }
+    
+    func updateTimeLabel(progress : Float) {
+        let timeStr = DateUtilities.durationInMinutesAndSeconds(( NSTimeInterval(progress) - 1) * self.audioDuration)
+        self.timeLabel.text = timeStr
     }
     /*
     // MARK: - Navigation

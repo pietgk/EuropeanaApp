@@ -29,6 +29,7 @@
 		772EB1CA1C19953D0088E541 /* 01iPhone 6 Suggestions.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */; };
 		772EB1CB1C19953D0088E541 /* 02iPhone 6 Active Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */; };
 		772EB1CC1C19953D0088E541 /* 03iPhone 6 Active Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */; };
+		773D389A1C3E8757004EA82C /* DateUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D38991C3E8757004EA82C /* DateUtilities.swift */; };
 		7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E14A1C03642300BC26FF /* UIColor+Extension.swift */; };
 		7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */; };
 		7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */; };
@@ -206,6 +207,7 @@
 		772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01iPhone 6 Suggestions.png"; path = "Mockups/01iPhone 6 Suggestions.png"; sourceTree = "<group>"; };
 		772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "02iPhone 6 Active Portrait.png"; path = "Mockups/02iPhone 6 Active Portrait.png"; sourceTree = "<group>"; };
 		772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "03iPhone 6 Active Landscape.png"; path = "Mockups/03iPhone 6 Active Landscape.png"; sourceTree = "<group>"; };
+		773D38991C3E8757004EA82C /* DateUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateUtilities.swift; path = Extensions/DateUtilities.swift; sourceTree = "<group>"; };
 		7742E14A1C03642300BC26FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7742E14D1C037EA300BC26FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneLogoClean.png; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				7742E14A1C03642300BC26FF /* UIColor+Extension.swift */,
+				773D38991C3E8757004EA82C /* DateUtilities.swift */,
 				772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */,
 			);
 			name = Extensions;
@@ -1004,6 +1007,7 @@
 				9BDC46651BE4C17F00162557 /* IXPoi.m in Sources */,
 				9BDC49711BE8F95B00162557 /* NSLock+Operations.swift in Sources */,
 				7706F1FE1BFF4895005B5048 /* SuggestionViewCell.swift in Sources */,
+				773D389A1C3E8757004EA82C /* DateUtilities.swift in Sources */,
 				7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */,
 				9BDC496D1BE8F95B00162557 /* NegatedCondition.swift in Sources */,
 				770966791C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift in Sources */,
