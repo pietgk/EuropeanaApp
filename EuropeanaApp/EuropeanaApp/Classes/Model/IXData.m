@@ -10,20 +10,24 @@
 #import "IXBeacon.h"
 #import "IXPoi.h"
 
+
 @interface IXData ()
-//@property (nonatomic, strong) NSArray<IXBeacon *> *beacons;
-@property (nonatomic, strong) NSDictionary<NSString*,IXBeacon *> *beacons; // key is uuid_major_minor
 
 @property (nonatomic, strong) NSMutableSet<NSUUID*> *monitoredBeaconUuidSet;
 
 @property (nonatomic, strong) NSMutableDictionary<NSString*,IXBeacon *> *beaconsRanged; // key is uuid_major_minor
 
+@property (nonatomic, strong, nullable) NSMutableDictionary <NSString*,IXBeacon *> *beacons;
 @property (nonatomic, strong) NSArray<IXPoi *> *pois;
-
+@property (nonatomic, strong) NSMutableArray<IXHistoricPoi *> *historicPois;
+@property (nonatomic, strong) NSArray<IXPoi *> *suggestions;
+@property (nonatomic, strong) NSArray<CLBeaconRegion *> *localRegions;
+// history should be related to a list of venues, but we do not have that yet.
+@property (nonatomic, strong) NSArray<IXPoi *> *poiHistory;
 @end
 
 @implementation IXData
-//@synthesize beacons=_beacons, pois=_pois;
+@synthesize beacons=_beacons, pois=_pois, suggestions = _suggestions;
 
 + (IXData*)sharedData;
 {
@@ -45,12 +49,30 @@
     return self;
 }
 
-- (NSDictionary<NSString*,IXBeacon *>*) beacons;
+// MARK: Mock data
+- (IXPoi  * _Nonnull) internalMockPoi:(BOOL)nextValue
 {
-    if (!_beacons) {
-        _beacons = [self beaconsFromResourceFile];
+    static int index = -1;
+    if (nextValue) {
+        if (++index >= self.pois.count) {
+            index = 0;
+        }
+    } else {    // previous version
+        if (--index < 0) {
+            index = (int)self.pois.count - 1;
+        }
     }
-    return _beacons;
+    IXPoi *newPoi = self.pois[index];
+    return newPoi;
+}
+
+- (IXPoi  * _Nonnull) mockPoi
+{
+    return [self internalMockPoi:YES];
+}
+- (IXPoi  * _Nonnull) previousMockPoi
+{
+    return [self internalMockPoi:NO];
 }
 
 - (NSArray *) pois
@@ -61,7 +83,15 @@
     return _pois;
 }
 
--(NSDictionary<NSString*,IXBeacon *>*)beaconsFromResourceFile;
+- (NSArray *) suggestions
+{
+    if (!_suggestions) {
+        _suggestions = [self suggestionsFromResourceFile];
+    }
+    return _suggestions;
+}
+
+-(NSMutableDictionary<NSString*,IXBeacon *>*)beaconsFromResourceFile;
 {
     // Glimworm beacons.json from http://85.17.193.165:1880/beacons/
     // plus Hermitage 2015: tentoonstelling v.h. Amsterdam Museum: Hollanders van de Gouden Eeuw 
@@ -83,12 +113,18 @@
 
 -(NSArray*)poisFromResourceFile;
 {
+    NSError *error;
+    
     // Glimworm beacons.json from http://85.17.193.165:1880/beacons/
     // plus Hermitage 2015: tentoonstelling v.h. Amsterdam Museum: Hollanders van de Gouden Eeuw
     NSString *path = [[NSBundle mainBundle] pathForResource:@"poi" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
-    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 
+    if (error) {
+        NSLog(@"Error parsing poi.json: %@", error);
+        return nil;
+    }
     NSMutableArray *newPois = [NSMutableArray arrayWithCapacity:[jsonArray count]];
     for (NSDictionary *b in jsonArray) {
         IXPoi *newPee = [IXPoi createWithDictionary:b];
@@ -100,6 +136,60 @@
     }
 
     return newPois;
+}
+
+-(NSArray*)suggestionsFromResourceFile;
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"suggestions" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    NSMutableArray *newPois = [NSMutableArray arrayWithCapacity:[jsonArray count]];
+    for (NSDictionary *b in jsonArray) {
+        IXPoi *newPee = [IXPoi createWithDictionary:b];
+        if (newPee) {
+            [newPois addObject:newPee];
+        } else {
+            NSLog(@"Could not add beacon with dict: %@",b);
+        }
+    }
+    
+    return newPois;
+}
+
+/** returns an array of local (...) regions, calculated and mapped from the beacons list and cached */
+- (NSArray *) localRegions
+{
+    if (!_localRegions) {
+        NSMutableDictionary *newRegions = [NSMutableDictionary new];
+        for (NSString *key in self.beacons) {
+            IXBeacon *beacon = self.beacons[key];
+            CLBeaconRegion *region = [[CLBeaconRegion alloc]
+                              initWithProximityUUID:beacon.UUID
+                              identifier:beacon.uuid];
+            newRegions[beacon.uuid] = region;           // either uuid or key, depending on what works
+        }
+        _localRegions = [newRegions allValues];
+    }
+    return _localRegions;
+}
+// MARK: Beacons
+
+- (void) setBeaconArray:(NSArray <IXBeacon *>* _Nonnull) newBeacons
+{
+    NSMutableDictionary<NSString*,IXBeacon *>* newBeaconDict = [NSMutableDictionary dictionaryWithCapacity:[newBeacons count]];
+    for (IXBeacon *beacon in newBeacons) {
+        [newBeaconDict addEntriesFromDictionary: @{beacon.key:beacon} ];
+    }
+    _beacons = newBeaconDict;
+}
+
+- (NSDictionary<NSString*,IXBeacon *>*) beacons;
+{
+    if (!_beacons) {
+        _beacons = [self beaconsFromResourceFile];
+    }
+    return [NSDictionary dictionaryWithDictionary:_beacons];
 }
 
 - (NSSet<NSUUID*> *)monitoredBeaconUuidSet;
@@ -129,28 +219,61 @@
     //    return result;
 }
 
--(void) addBeacon:(IXBeacon *)newBeacon
+// MARK: - History of POIs and venues
+- (NSArray *) historicPois
+{
+    if (!_historicPois) {
+        _historicPois = [[NSMutableArray alloc] init];
+    }
+    return _historicPois;
+}
+
+- (void) addHistoricPoi:(IXHistoricPoi  * _Nonnull ) hPoi
+{
+    [self.historicPois addObject:hPoi];
+}
+
+// TODO: probably kick of some operation which handles the found beacon(s)
+-(void) addRangedBeacon:(IXBeacon *)newBeacon
 {
     if (newBeacon) {
         self.beaconsRanged[newBeacon.key] = newBeacon;
+        NSNotification *notification = [[NSNotification alloc] initWithName:kRangedBeaconAddedNotification object:newBeacon userInfo:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
     }
 }
 
--(BOOL)isPoi:(NSDictionary*)poi closerToBeacons:(NSArray*)beacons thanPreviousClosestPoi:(NSDictionary*)previousClosestPoi;
+-(BOOL)isPoi:(IXPoi*)poi closerToBeacons:(NSArray*)beacons thanPreviousClosestPoi:(IXPoi*)previousClosestPoi;
 {
+    // check beacons of poi and previouspoi, determine if there is an overlap with beacons
     return true;
 }
 
+// this can probably be highly optimised, no?
 -(IXPoi*)poiClosestToBeacons:(NSArray<IXBeacon*>*)currentBeacons;
 {
-    NSDictionary* result = nil;
-    for (NSDictionary* p in self.pois) {
+    IXPoi* result = nil;
+    for (IXPoi* p in self.pois) {
         if ([self isPoi:p closerToBeacons:currentBeacons thanPreviousClosestPoi:result]) {
             result = p;
         }
     }
-    return result[@"art"];
+    return result;
 }
+
+-(NSArray <IXPoi*>*)poisOfBeacon:(IXBeacon *)aBeacon;
+{
+    NSMutableArray<IXPoi*> *result = [[NSMutableArray alloc] init];
+    
+    for (IXPoi* p in self.pois) {
+        if ([p containsBeacon:aBeacon]) {
+            [result addObject:p];
+        }
+    }
+    
+    return [NSArray arrayWithArray:result];
+}
+
 
 // entered beacons go into the queue to be added to
 /*

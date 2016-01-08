@@ -10,11 +10,18 @@ import UIKit
 
 class IXHistoryTableVC: UITableViewController {
 
+    enum HistoryReuseIds : String {
+        case reuseIdentifier = "HistoryCellIdentifier"
+    }
+    
+    var data : IXData?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        data = IXData.sharedData()
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
@@ -29,23 +36,29 @@ class IXHistoryTableVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1    // IXData.sharedData().historicPois?.count ?? 0
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier(HistoryReuseIds.reuseIdentifier.rawValue, forIndexPath: indexPath)
+        let hCell = cell as! HistoryTableCellCollectionView
         // Configure the cell...
+        hCell.venueLabel.text = "Amsterdam Light Festival"
+        hCell.dateLabel.text = NSDate().dateOnly()
+//        if let hPoi = IXData.sharedData().historicPois?[indexPath.row] {
+//            let hPoi2 = hPoi as! IXHistoricPoi
+//            hCell.configureWithHistoricPoi(hPoi2)
+//        }
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

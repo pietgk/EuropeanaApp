@@ -17,14 +17,12 @@ class SuggestionViewCell : UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var venueLabel: UILabel!
     @IBOutlet weak var waitView: UIView!    // custom
+    @IBOutlet weak var timeLabel: UILabel!
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
-    override func drawRect(rect: CGRect) {
-        setupLabels()
-    }
 //    == HelveticaNeue-Italic
 //    == HelveticaNeue-Bold
 //    == HelveticaNeue-UltraLight
@@ -47,23 +45,24 @@ class SuggestionViewCell : UICollectionViewCell {
     }
     
     override func prepareForReuse() {
+        setupLabels()
         self.imageView.image = nil
     }
     
     var poi : IXPoi? {
         didSet {
             // TODO: add properties to IXPoi
-            if let title = poi!.name {
+            if let title = poi!.artist {
                 self.artistLabel.text = title
             } else {
                 self.artistLabel.text = ""
             }
-            if let title = poi!.caption {
+            if let title = poi!.name {
                 self.titleLabel.text = title
             } else {
                 self.titleLabel.text = ""
             }
-            if let title = poi!.name {
+            if let title = poi!.venue {
                 self.venueLabel.text = title
             } else {
                 self.venueLabel.text = ""
@@ -73,6 +72,19 @@ class SuggestionViewCell : UICollectionViewCell {
                 self.imageView.image = image;
             })
             
+            loadTimeLabel()
         }
+    }
+    
+    // set the time label, will be a custom view later
+    func loadTimeLabel() {
+        var timeString : String
+        timeString = IXIcons.iconStringFor(.icon_stopwatch)
+        let manStr = IXIcons.iconStringFor(.icon_man)
+        let man : Character = manStr.characters[manStr.startIndex]
+        let men = String(count: Int(arc4random_uniform(4) + 1), repeatedValue: man)
+        timeLabel.font = UIFont.iconFontWithSize(20)
+        timeLabel.text = timeString + " " + men
+        
     }
 }

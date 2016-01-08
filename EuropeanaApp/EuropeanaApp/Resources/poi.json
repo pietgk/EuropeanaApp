@@ -1,4 +1,61 @@
  [
+  { "beacons":[{
+               "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
+               "major": 42,
+               "minor": 1,
+               "signal": 50
+  }],
+  "poi":
+   { "name": "Merry Go Round Europe",
+	"artist":"Stephan Schagen, Ward Kreykamp & Karel de Boer",
+	"caption": "The whirligig that, just for a moment, lifts you out of your earthly existence and, once you're back on firm ground, gives you a fresh outlook on the world around you. That's the theme of Merry Go Round, the contribution of the Dutch artists Karel de Boer, Ward Kreykamp, Ivo Hulskamp and Stephan Schagen. It is a work of art everybody can identify with, just as everyone whirled around in an amusement park or a fair. The artists themselves want the work to be a message to Europe. According to them it's very healthy to float away from reality from time to time, to leave things as they are and then go on with your life.",
+	"imageURL":"MerryGoRound.png"
+  }
+ },
+  {  "beacons":[{
+                  "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
+                  "major": 42,
+                  "minor": 3,
+                  "signal": 50
+                  }],
+ "poi":
+   { "name": "Light Wave",
+	"artist":"Anita Doornhein",
+	"caption": "Lightwave by Anita Doornhein, is an object which seems to have its origins in a dreamland. It is a transparent, deep blue, undulating space floating on the water.\nAt nightfall the work changes into a fluorescent jewel, says artist Anita Doornhein. The works dimensions are quite huge: 20 by 11 meters, needed to enable boats to pass trough this transparent wave.\nWhen a boat sails through the piece, sensors are activated, changing the colours of the Lightwave. Visitors see dynamically flowing hues in oxygenated blues, turquoises and silver. Images of water and air bubbles give you the feeling of sailing under water, or underneath an iceberg.' The artist hopes visitors will experience her work as opulent, luxuriant and enchanting.\nAt this point in time Lightwave is the crown on her work, because for the last ten years Doornhein has been occupied with the designs that, combined, form Lightwave: working with transparent materials, studying waves and currents and the play of light and reflection.",
+	"imageURL": "LightWave2.png",
+  "audioURL": "Lightwave_Kateslow.m4a"
+  }
+  },
+  {  "beacons":[{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
+                "major": 42,
+                "minor": 2,
+                "signal": 50
+                }],
+  "poi":
+     { "name": "Run Beyond",
+      "artist":"Angelo Bonello for KitonB",
+      "caption": "Quiz question: What is the world record long jump? Run Beyond, created by Angelo Bonello, provokes that question, because the jump the man in this work takes, seems impossibly far. The keyword here is ‘seems’, because, according to Bonello, nothing is impossible if only you want it badly enough. Run Beyond is a work about the jump we all have to take in our lives: the jump to freedom. Bonello does not tell us what kind of freedom, the spectator has to make up his own mind about that.\nBonello says: ‘To me this work is about the power of imagination, a power so strong that it makes individuals conquer their fears and limitations and causes them to open up to other cultures, new friendships and unknown worlds.’ In Dutch we have the saying: ‘If someone jumps into the ditch, do you go after him?’, intended as a caution not to just follow everybody and everything. In this case we would like to give you the opposite advise: please do jump after this enlightened man.",
+      "imageURL": "RunBeyond.png",
+  "audioURL": "RunBeyond_Serenaslow.m4a"
+      }
+  },
+  {  "beacons":[{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
+                "major": 42,
+                "minor": 5,
+                "signal": 50
+                }],
+  "poi":
+     { "name": "Northern Lights",
+      "artist":"Aleksandra Stratimirovic",
+      "caption": "The northern light, aurora borealis, is the most spectacular and poetic light phenomenon of the Northern Hemisphere. It’s a phenomenon that has been astonishing people for thousands of years and inspired tribes who witnessed it to mythical stories. If you want to see it with your own eyes, you had best travel to the northernmost point of Sweden (like the Aurora Sky Station in Abisko national parc) or Norway. It may take patience though, because the northern light does not always show itself.\nIn Amsterdam we can now enjoy the northern light during the entire period of the festival, be it in the form of the work of art created by the Swedish light artist Alesksandra Stratimirovic. To this pioneer of light art (and author of the book You say Light I Think Shadow) the phenomenon of the northern light symbolizes friendship. By installing the already existing work in Amsterdam she hopes to convey this idea to the public. The breathtaking work extents itself across the canal and is programmed in such a way that an unpredictable curtain of light is created. Just like the real northern light this work will give you a magical experience.",
+      "imageURL": "NorthernLight.png",
+   "audioURL": "NorthernLight_Serena.m4a"
+      }
+
+
+  },
   {
     "beacons":[{
                 "uuid": "74278bda-b644-4520-8f0c-720eaf059939",

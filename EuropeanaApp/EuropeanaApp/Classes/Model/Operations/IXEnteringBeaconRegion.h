@@ -6,12 +6,20 @@
 //  Copyright © 2015 Phluxus. All rights reserved.
 //
 
+/* Purpose
+    When a beacon is found by the Location Manager ranging mechanism, this operation 
+    can be called.
+    This in turn starts three other operations
+    a) Find a POI uniquely represented by this beacon
+    b) Get other POIs around this beacon
+    c) Get nearby beacons
+ */
 #import <Foundation/Foundation.h>
 #import "IXBeacon.h"
 
 @protocol BeaconDelegate;
 
-@interface IXEnteringBeaconRegion : NSOperation
+@interface IXEnteringBeaconRegion : GroupOperation
 
 @property (nonatomic, readonly, strong, nonnull) IXBeacon *beacon;
 @property (nonatomic, assign, nonnull) id<BeaconDelegate> delegate;

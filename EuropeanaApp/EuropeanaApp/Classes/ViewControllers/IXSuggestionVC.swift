@@ -12,18 +12,26 @@ import UIKit
 //import IXData
 //import SuggestionViewCell
 
+
 enum segues: String {
     case showSuggestionDetail = "showSuggestionDetail"
 }
 
 class IXSuggestionVC: UICollectionViewController {
-    
+    static let kCellMargin = 6.0
     private let kSuggestionCellIdentifier = "suggestionCell"
     // @IBOutlet weak var collectionView: UICollectionView!
-    private let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+    private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
 
     var data : IXData?
-    
+
+    lazy var cellSizeForThisDevice : CGSize = {
+        let screenSize = UIScreen.mainScreen().bounds.size
+        let width = CGFloat(floor( (Double(screenSize.width) - 3.0 * kCellMargin) / 2.0))
+        let height = CGFloat(floor(width * 1.622))
+        return CGSizeMake(width, height)
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.backgroundColor = UIColor.navigationBackground()
@@ -64,7 +72,8 @@ class IXSuggestionVC: UICollectionViewController {
     
     func sortedPois() -> Array<IXPoi> {
         // let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        let pois = data?.pois?.sort({poi1, poi2 in return poi1.name > poi2.name }) ?? Array<IXPoi>()
+//        let pois = data?.pois?.sort({poi1, poi2 in return poi1.name > poi2.name }) ?? Array<IXPoi>()
+        let pois = data?.suggestions ?? Array<IXPoi>()
         return pois
     }
     
@@ -82,6 +91,8 @@ class IXSuggestionVC: UICollectionViewController {
             let cell = sender as! SuggestionViewCell
             let destinationVC = segue.destinationViewController as! IXSuggestionDetailVC
             destinationVC.poi = cell.poi
+//            destinationVC.poi = IXPoi.mockPoi()
+
         }
     }
 
@@ -94,18 +105,19 @@ extension IXSuggestionVC {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let num = data?.pois?.count ?? 0
+        let num = data?.suggestions?.count ?? 0
         return num
     }
 
 }
 
 extension IXSuggestionVC : UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-            
-            return CGSizeMake(145, 225)
+            return cellSizeForThisDevice
+//            return CGSizeMake(140, 266)
+//            return CGSizeMake(164, 266)
     }
     
     func collectionView(collectionView: UICollectionView,

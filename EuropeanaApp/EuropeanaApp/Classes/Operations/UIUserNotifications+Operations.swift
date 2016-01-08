@@ -10,6 +10,7 @@ A convenient extension to UIKit.UIUserNotificationSettings.
 
 import UIKit
 
+@available(iOS 8.0, *)
 extension UIUserNotificationSettings {
     /// Check to see if one Settings object is a superset of another Settings object.
     func contains(settings: UIUserNotificationSettings) -> Bool {

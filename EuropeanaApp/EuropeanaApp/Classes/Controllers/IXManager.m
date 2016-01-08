@@ -11,7 +11,9 @@
 #import "IXBeacon.h"
 #import "IXAudioManager.h"
 #import "IXData.h"
+#import "ArtWhisper-Swift.h"
 
+// A way to have string enums in Obj-C
 typedef enum {outside, leavingOutside, stopPlaying, startPlaying, inside, leavingInside} state_t;
 NSString * const stateAsString[] = {
     [outside] = @"outside",
@@ -33,6 +35,10 @@ NSString * const stateAsString[] = {
 @property (nonatomic, strong) NSDate* firstOutside;
 @property (nonatomic, strong) NSDate* firstInside;
 
+@property (nonatomic, strong) IXPoi* currentPoi;
+
+@property (nonatomic, strong) OperationQueue *poiQueue;
+
 @end
 
 @implementation IXManager
@@ -41,29 +47,39 @@ NSString * const stateAsString[] = {
 {
     self = [super init];
     if (self) {
+        self.poiQueue = [[OperationQueue alloc] init];
         self.delegate = aDelegate;
-
+        self.audioManager = [IXAudioManager sharedAudio];
         [self.locationManager start];
         [self triggerSoundReset];
     }
+
     return self;
 }
+
+- (instancetype) init
+{
+    return [self initWithDelegate:nil];
+}
+
 
 - (IXLocationManager *) locationManager
 {
     if (!_locationManager) {
         _locationManager = [[IXLocationManager alloc] initWithDelegate:self];
+        NSAssert(self.poiQueue != nil, @"poiQueue not initialized in %s",__PRETTY_FUNCTION__);
+        _locationManager.poiQueue = self.poiQueue;
     }
     return _locationManager;
 }
 
-- (IXAudioManager *) audioManager
-{
-    if (!_audioManager) {
-        _audioManager = [[IXAudioManager alloc] init];
-    }
-    return _audioManager;
-}
+//- (IXAudioManager *) audioManager
+//{
+//    if (!_audioManager) {
+//        _audioManager = [[IXAudioManager alloc] init];
+//    }
+//    return _audioManager;
+//}
 
 - (IXData *) data
 {
@@ -148,11 +164,21 @@ NSString * const stateAsString[] = {
     }
     if (self.state == startPlaying) {
         [self.audioManager prepareBackgroundPlayerWithFile:@"filmmuseum human"]; // "background-music-aac"];
-        [self.audioManager playBackgroundAudio];
+        [self.audioManager tryPlayMusic];
         self.state = inside;
     }
     if (self.delegate && [self.delegate respondsToSelector:@selector(ixManager:stateChange:)]) {
         [self.delegate ixManager:self stateChange:stateAsString[self.state]];
     }
+    
+    // search for poi near beacon
+    IXPoi *newPoi = [[IXData sharedData] poiClosestToBeacons:@[ixBeacon]];
+    if (newPoi != self.currentPoi) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(ixManager:poiFound:)]) {
+            [self.delegate ixManager:self poiFound:newPoi];
+        }
+        self.currentPoi = newPoi;
+    }
+    
 }
 @end

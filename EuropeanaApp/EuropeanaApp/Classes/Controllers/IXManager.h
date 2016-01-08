@@ -11,11 +11,13 @@
  */
 #import <Foundation/Foundation.h>
 #import "IXLocationManager.h"
+#import "IXPoi.h"
 
 @class IXManager;
 
 @protocol IXManagerDelegate <NSObject>
 - (void) ixManager: (IXManager *)ixManager stateChange: (NSString *)newState;
+- (void) ixManager: (IXManager *)ixManager poiFound: (IXPoi *)poi;
 @end
 
 @interface IXManager : NSObject  <IXLocationManagerDelegate>

@@ -7,8 +7,12 @@
 //
 
 #import "IXAppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import "ArtWhisper-Swift.h"
 
 @interface IXAppDelegate ()
+@property (weak, nonatomic) IBOutlet IXTabBarController *tabBarController;
 
 @end
 @implementation IXAppDelegate
@@ -18,11 +22,30 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    // self.manager = [[IXManager alloc] init];
     
+    // the manager takes care of location and ibeacon queues.
+    self.manager = [[IXManager alloc] init];
+    [Fabric with:@[[Crashlytics class]]];
+    // TODO: Move this to where you establish a user session
+    [self logUser];
+
+    if ([[self.window rootViewController] isKindOfClass:[IXTabBarController class]]) {
+        self.tabBarController = (IXTabBarController *)[self.window rootViewController];
+    } else {
+        NSAssert(true, @"Rootview is not tabbar");
+    }
+//    [UIFont dumpAllFonts];
     return YES;
 }
-							
+
+- (void) logUser {
+    // TODO: Use the current user's information
+    // You can call any combination of these three methods
+    [CrashlyticsKit setUserIdentifier:@"12345"];
+    [CrashlyticsKit setUserEmail:@"user@fabric.io"];
+    [CrashlyticsKit setUserName:@"Test User"];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -59,12 +82,33 @@
     return _manager;
 }
 
-- (IXAudioManager *) audioManager
+//- (IXAudioManager *) audioManager
+//{
+//    if (!_audioManager) {
+//        _audioManager = [[IXAudioManager alloc] init];
+//    }
+//    return _audioManager;
+//}
+
+#pragma mark delegate protocol
+// this should be done through the IXManager, no?
+- (void) showActiveGuideWithPoi:(IXPoi *)poi
 {
-    if (!_audioManager) {
-        _audioManager = [[IXAudioManager alloc] init];
+    if ([self.tabBarController selectedIndex] != 3) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            id vc = [self.tabBarController showActiveGuide];
+        #warning protocolize!
+            if ([[vc class] isSubclassOfClass:[IXActiveGuideVC class]] ) {
+                IXActiveGuideVC *ag = (IXActiveGuideVC *)vc;
+                if (![ag playing] && ag.poi != poi) {
+                    ag.poi = poi;
+                    [ag startPlaying];
+                } // else discard
+            }
+                           });
+    } else {
+//         NSLog(@"already selected activeguide");
     }
-    return _audioManager;
 }
 
 @end

@@ -6,9 +6,8 @@
 //  Copyright (c) 2014 Phluxus. All rights reserved.
 //
 
-#import "IXBeacon.h"
-
 @class IXLocationManager, IXBeacon, CLBeaconRegion;
+@class OperationQueue;
 
 @protocol IXLocationManagerDelegate <NSObject>
 
@@ -52,6 +51,8 @@
 - (instancetype)initWithDelegate: (id<IXLocationManagerDelegate>) aDelegate;
 
 @property (nonatomic, weak) id<IXLocationManagerDelegate> delegate;
+
+@property (nonatomic, strong) OperationQueue *poiQueue;           // declared in manager
 
 // Trigger location manager beacons' ranging
 - (void) start;

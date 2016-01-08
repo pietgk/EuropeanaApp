@@ -12,6 +12,26 @@
 		7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */; };
 		7706F1FC1BFE1C42005B5048 /* IXPositioningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */; };
 		7706F1FE1BFF4895005B5048 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */; };
+		770966791C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770966781C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift */; };
+		7709667B1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667A1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift */; };
+		770966801C3B165D003CB2E9 /* AlertOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667D1C3B165D003CB2E9 /* AlertOperation.swift */; };
+		770966811C3B165D003CB2E9 /* BackgroundObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667E1C3B165D003CB2E9 /* BackgroundObserver.swift */; };
+		770966821C3B165D003CB2E9 /* NetworkObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709667F1C3B165D003CB2E9 /* NetworkObserver.swift */; };
+		770966841C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770966831C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift */; };
+		7709668B1C3C6652003CB2E9 /* Lightwave.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966851C3C6652003CB2E9 /* Lightwave.png */; };
+		7709668D1C3C6652003CB2E9 /* NorthernLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966871C3C6652003CB2E9 /* NorthernLight.png */; };
+		7709668F1C3C6652003CB2E9 /* RunBeyond.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966891C3C6652003CB2E9 /* RunBeyond.png */; };
+		770966941C3C6713003CB2E9 /* LightWave2.png in Resources */ = {isa = PBXBuildFile; fileRef = 770966931C3C6713003CB2E9 /* LightWave2.png */; };
+		771550281C0620D10053E607 /* CBBeaconsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 771550271C0620D10053E607 /* CBBeaconsMap.m */; };
+		772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */; };
+		772EB1C41C198ACE0088E541 /* IXIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 772EB1C21C198ACE0088E541 /* IXIcons.m */; };
+		772EB1C61C198E9A0088E541 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */; };
+		772EB1CA1C19953D0088E541 /* 01iPhone 6 Suggestions.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */; };
+		772EB1CB1C19953D0088E541 /* 02iPhone 6 Active Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */; };
+		772EB1CC1C19953D0088E541 /* 03iPhone 6 Active Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */; };
+		773D389A1C3E8757004EA82C /* DateUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D38991C3E8757004EA82C /* DateUtilities.swift */; };
+		773D389C1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D389B1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift */; };
+		773D389E1C3F050E004EA82C /* IXHistoricPoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D389D1C3F050E004EA82C /* IXHistoricPoi.swift */; };
 		7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E14A1C03642300BC26FF /* UIColor+Extension.swift */; };
 		7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */; };
 		7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */; };
@@ -22,10 +42,6 @@
 		77906E391BEE01C700114B0D /* IXSuggestionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */; };
 		77906E3B1BEE01F500114B0D /* IXFirstTimeHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */; };
 		77906E3D1BEE020D00114B0D /* IXNoBeaconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */; };
-		77906E3F1BEE1E1500114B0D /* PhoneSuggestClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */; };
-		77906E411BEE1E1C00114B0D /* PhoneActiveClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */; };
-		77906E431BEE331B00114B0D /* PhoneSuggestDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */; };
-		77C9F0DC1C034F13006E6017 /* kawsrijks.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C9F0DB1C034F13006E6017 /* kawsrijks.png */; };
 		77D3C4A519A903AA001F00EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A419A903AA001F00EC /* Foundation.framework */; };
 		77D3C4A719A903AA001F00EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A619A903AA001F00EC /* CoreGraphics.framework */; };
 		77D3C4A919A903AA001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
@@ -34,6 +50,21 @@
 		77D3C4C919A903AB001F00EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3C4A819A903AA001F00EC /* UIKit.framework */; };
 		77D3C4D119A903AB001F00EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77D3C4CF19A903AB001F00EC /* InfoPlist.strings */; };
 		77D3C4D319A903AB001F00EC /* ArtWhisperBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3C4D219A903AB001F00EC /* ArtWhisperBeaconTests.m */; };
+		77DA0DBD1C1DFF9700826BC2 /* Bruno.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DB91C1DFF9700826BC2 /* Bruno.png */; };
+		77DA0DBE1C1DFF9700826BC2 /* colorClay.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DBA1C1DFF9700826BC2 /* colorClay.png */; };
+		77DA0DBF1C1DFF9700826BC2 /* HumansAMS.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DBB1C1DFF9700826BC2 /* HumansAMS.png */; };
+		77DA0DC11C1DFFEF00826BC2 /* ArtZuid.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC01C1DFFEF00826BC2 /* ArtZuid.png */; };
+		77DA0DC51C1E001B00826BC2 /* LightFestival.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC21C1E001B00826BC2 /* LightFestival.png */; };
+		77DA0DC71C1E001B00826BC2 /* MerryGoRound.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC41C1E001B00826BC2 /* MerryGoRound.png */; };
+		77DA0DCA1C1E008E00826BC2 /* suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC91C1E008E00826BC2 /* suggestions.json */; };
+		77DA0DCC1C1E00D900826BC2 /* Tino.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCB1C1E00D900826BC2 /* Tino.png */; };
+		77DA0DCE1C1E176200826BC2 /* iPhone 6 SuggestDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */; };
+		77DDB6C51C3D241E0095FF0E /* IXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB6C41C3D241E0095FF0E /* IXTabBarController.swift */; };
+		77DDB6CC1C3D4B180095FF0E /* Lightwave_Kateslow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6C71C3D4B180095FF0E /* Lightwave_Kateslow.m4a */; };
+		77DDB6CD1C3D4B180095FF0E /* NorthernLight_Serena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6C81C3D4B180095FF0E /* NorthernLight_Serena.m4a */; };
+		77DDB6CE1C3D4B180095FF0E /* RunBeyond_Fiona.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6C91C3D4B180095FF0E /* RunBeyond_Fiona.m4a */; };
+		77DDB6D01C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6CB1C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a */; };
+		77DDB6D11C3E73A90095FF0E /* IXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597D9F819A90FA700E308A9 /* IXLocationManager.m */; };
 		77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C119A910FA0058C62B /* Europeana logo.jpg */; };
 		77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */; };
 		77E3D7C719A916590058C62B /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
@@ -50,8 +81,6 @@
 		9BDC466C1BE646C000162557 /* IXPoiQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC466A1BE646C000162557 /* IXPoiQueue.m */; };
 		9BDC466F1BE64C6900162557 /* IXPendingOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC466E1BE64C6900162557 /* IXPendingOperations.m */; };
 		9BDC46701BE64C6900162557 /* IXPendingOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC466E1BE64C6900162557 /* IXPendingOperations.m */; };
-		9BDC46741BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC46731BE75BFC00162557 /* IXEnteringBeaconRegion.m */; };
-		9BDC46751BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC46731BE75BFC00162557 /* IXEnteringBeaconRegion.m */; };
 		9BDC49531BE8F95B00162557 /* BlockObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49341BE8F95B00162557 /* BlockObserver.swift */; };
 		9BDC49541BE8F95B00162557 /* BlockObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49341BE8F95B00162557 /* BlockObserver.swift */; };
 		9BDC49551BE8F95B00162557 /* BlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49351BE8F95B00162557 /* BlockOperation.swift */; };
@@ -114,12 +143,8 @@
 		9BDC498E1BE8F95B00162557 /* URLSessionTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49511BE8F95B00162557 /* URLSessionTaskOperation.swift */; };
 		9BDC498F1BE8F95B00162557 /* UserNotificationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49521BE8F95B00162557 /* UserNotificationCondition.swift */; };
 		9BDC49901BE8F95B00162557 /* UserNotificationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49521BE8F95B00162557 /* UserNotificationCondition.swift */; };
-		9BDC49971BE8FCDF00162557 /* EnterBeaconRangeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49961BE8FCDF00162557 /* EnterBeaconRangeOperation.swift */; };
-		9BDC49981BE8FCDF00162557 /* EnterBeaconRangeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49961BE8FCDF00162557 /* EnterBeaconRangeOperation.swift */; };
 		9BDC499F1BEA495800162557 /* BeaconMonitorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */; };
 		9BDC49A01BEA495800162557 /* BeaconMonitorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */; };
-		9BDC49A21BEAA6AE00162557 /* BeaconRangeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */; };
-		9BDC49A31BEAA6AE00162557 /* BeaconRangeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */; };
 		9BDC49AA1BEAC28700162557 /* IXBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3D7C619A916590058C62B /* IXBeacon.m */; };
 		9BDC49AB1BEAC28B00162557 /* IXAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0E19A9105D00E308A9 /* IXAudioManager.m */; };
 		9BDC49AC1BEAC29100162557 /* IXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0B19A9104C00E308A9 /* IXManager.m */; };
@@ -131,7 +156,7 @@
 		E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FC19A90FFE00E308A9 /* Main_iPad.storyboard */; };
 		E597DA0119A90FFE00E308A9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E597D9FE19A90FFE00E308A9 /* Main_iPhone.storyboard */; };
 		E597DA0619A9100D00E308A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0419A9100D00E308A9 /* main.m */; };
-		E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0819A9103E00E308A9 /* IXViewController.m */; };
+		E597DA0919A9103E00E308A9 /* IXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0819A9103E00E308A9 /* IXDemoViewController.m */; };
 		E597DA0C19A9104C00E308A9 /* IXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0B19A9104C00E308A9 /* IXManager.m */; };
 		E597DA0F19A9105D00E308A9 /* IXAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA0E19A9105D00E308A9 /* IXAudioManager.m */; };
 		E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E597DA1119A9106800E308A9 /* IXAppDelegate.m */; };
@@ -163,6 +188,30 @@
 		7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmmuseum.caf; sourceTree = "<group>"; };
 		7706F1FB1BFE1C42005B5048 /* IXPositioningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXPositioningManager.swift; sourceTree = "<group>"; };
 		7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
+		770966781C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HandleRangedBeaconOperation.swift; path = Operations/HandleRangedBeaconOperation.swift; sourceTree = "<group>"; };
+		7709667A1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPOIsOfBeaconOperation.swift; path = Operations/GetPOIsOfBeaconOperation.swift; sourceTree = "<group>"; };
+		7709667D1C3B165D003CB2E9 /* AlertOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertOperation.swift; path = EuropeanaApp/Classes/AppOperations/AlertOperation.swift; sourceTree = SOURCE_ROOT; };
+		7709667E1C3B165D003CB2E9 /* BackgroundObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundObserver.swift; path = EuropeanaApp/Classes/AppOperations/BackgroundObserver.swift; sourceTree = SOURCE_ROOT; };
+		7709667F1C3B165D003CB2E9 /* NetworkObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkObserver.swift; path = EuropeanaApp/Classes/AppOperations/NetworkObserver.swift; sourceTree = SOURCE_ROOT; };
+		770966831C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindPOIofBeaconOperation.swift; path = Operations/FindPOIofBeaconOperation.swift; sourceTree = "<group>"; };
+		770966851C3C6652003CB2E9 /* Lightwave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lightwave.png; path = Mockups/Lightwave.png; sourceTree = "<group>"; };
+		770966871C3C6652003CB2E9 /* NorthernLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NorthernLight.png; path = Mockups/NorthernLight.png; sourceTree = "<group>"; };
+		770966891C3C6652003CB2E9 /* RunBeyond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RunBeyond.png; path = Mockups/RunBeyond.png; sourceTree = "<group>"; };
+		770966931C3C6713003CB2E9 /* LightWave2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LightWave2.png; path = Mockups/LightWave2.png; sourceTree = "<group>"; };
+		771550261C0620D10053E607 /* CBBeaconsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBeaconsMap.h; sourceTree = "<group>"; };
+		771550271C0620D10053E607 /* CBBeaconsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBeaconsMap.m; sourceTree = "<group>"; };
+		771550291C0622090053E607 /* CBEstimationMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBEstimationMethod.h; sourceTree = "<group>"; };
+		772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IcoMoon-Free.ttf"; sourceTree = "<group>"; };
+		772EB1BE1C198ACE0088E541 /* IXIconNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXIconNames.h; sourceTree = "<group>"; };
+		772EB1C11C198ACE0088E541 /* IXIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXIcons.h; sourceTree = "<group>"; };
+		772EB1C21C198ACE0088E541 /* IXIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXIcons.m; sourceTree = "<group>"; };
+		772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "Extensions/UIFont+Extension.swift"; sourceTree = "<group>"; };
+		772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01iPhone 6 Suggestions.png"; path = "Mockups/01iPhone 6 Suggestions.png"; sourceTree = "<group>"; };
+		772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "02iPhone 6 Active Portrait.png"; path = "Mockups/02iPhone 6 Active Portrait.png"; sourceTree = "<group>"; };
+		772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "03iPhone 6 Active Landscape.png"; path = "Mockups/03iPhone 6 Active Landscape.png"; sourceTree = "<group>"; };
+		773D38991C3E8757004EA82C /* DateUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateUtilities.swift; path = Extensions/DateUtilities.swift; sourceTree = "<group>"; };
+		773D389B1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableCellCollectionView.swift; sourceTree = "<group>"; };
+		773D389D1C3F050E004EA82C /* IXHistoricPoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXHistoricPoi.swift; sourceTree = "<group>"; };
 		7742E14A1C03642300BC26FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7742E14D1C037EA300BC26FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneLogoClean.png; sourceTree = "<group>"; };
@@ -173,10 +222,6 @@
 		77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXSuggestionDetailVC.swift; sourceTree = "<group>"; };
 		77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXFirstTimeHelpVC.swift; sourceTree = "<group>"; };
 		77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXNoBeaconVC.swift; sourceTree = "<group>"; };
-		77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneSuggestClean.png; path = Mockups/PhoneSuggestClean.png; sourceTree = "<group>"; };
-		77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneActiveClean.png; path = Mockups/PhoneActiveClean.png; sourceTree = "<group>"; };
-		77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneSuggestDetail.png; path = Mockups/PhoneSuggestDetail.png; sourceTree = "<group>"; };
-		77C9F0DB1C034F13006E6017 /* kawsrijks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kawsrijks.png; path = Mockups/kawsrijks.png; sourceTree = "<group>"; };
 		77D3C4A119A903AA001F00EC /* ArtWhisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtWhisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D3C4A419A903AA001F00EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77D3C4A619A903AA001F00EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +231,20 @@
 		77D3C4CE19A903AB001F00EC /* ArtWhisperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ArtWhisperTests-Info.plist"; path = "../ArtWhisperObjcTests/ArtWhisperTests-Info.plist"; sourceTree = "<group>"; };
 		77D3C4D019A903AB001F00EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77D3C4D219A903AB001F00EC /* ArtWhisperBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ArtWhisperBeaconTests.m; path = ../ArtWhisperObjcTests/ArtWhisperBeaconTests.m; sourceTree = "<group>"; };
+		77DA0DB91C1DFF9700826BC2 /* Bruno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bruno.png; path = Mockups/Bruno.png; sourceTree = "<group>"; };
+		77DA0DBA1C1DFF9700826BC2 /* colorClay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = colorClay.png; path = Mockups/colorClay.png; sourceTree = "<group>"; };
+		77DA0DBB1C1DFF9700826BC2 /* HumansAMS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HumansAMS.png; path = Mockups/HumansAMS.png; sourceTree = "<group>"; };
+		77DA0DC01C1DFFEF00826BC2 /* ArtZuid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ArtZuid.png; path = Mockups/ArtZuid.png; sourceTree = "<group>"; };
+		77DA0DC21C1E001B00826BC2 /* LightFestival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LightFestival.png; path = Mockups/LightFestival.png; sourceTree = "<group>"; };
+		77DA0DC41C1E001B00826BC2 /* MerryGoRound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MerryGoRound.png; path = Mockups/MerryGoRound.png; sourceTree = "<group>"; };
+		77DA0DC91C1E008E00826BC2 /* suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suggestions.json; sourceTree = "<group>"; };
+		77DA0DCB1C1E00D900826BC2 /* Tino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tino.png; path = Mockups/Tino.png; sourceTree = "<group>"; };
+		77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone 6 SuggestDetail.png"; path = "../../../../../Documents/Google Drive/ArtWhisper/Art Whisper Screens/iPhone6/iPhone 6 SuggestDetail.png"; sourceTree = "<group>"; };
+		77DDB6C41C3D241E0095FF0E /* IXTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXTabBarController.swift; sourceTree = "<group>"; };
+		77DDB6C71C3D4B180095FF0E /* Lightwave_Kateslow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lightwave_Kateslow.m4a; sourceTree = "<group>"; };
+		77DDB6C81C3D4B180095FF0E /* NorthernLight_Serena.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = NorthernLight_Serena.m4a; sourceTree = "<group>"; };
+		77DDB6C91C3D4B180095FF0E /* RunBeyond_Fiona.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = RunBeyond_Fiona.m4a; sourceTree = "<group>"; };
+		77DDB6CB1C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = RunBeyond_Serenaslow.m4a; sourceTree = "<group>"; };
 		77E3D7C119A910FA0058C62B /* Europeana logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Europeana logo.jpg"; sourceTree = "<group>"; };
 		77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glimworm-ibeacons.png"; sourceTree = "<group>"; };
 		77E3D7C519A916590058C62B /* IXBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IXBeacon.h; path = EuropeanaApp/Classes/Model/IXBeacon.h; sourceTree = SOURCE_ROOT; };
@@ -237,10 +296,8 @@
 		9BDC49501BE8F95B00162557 /* UIUserNotifications+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIUserNotifications+Operations.swift"; sourceTree = "<group>"; };
 		9BDC49511BE8F95B00162557 /* URLSessionTaskOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionTaskOperation.swift; sourceTree = "<group>"; };
 		9BDC49521BE8F95B00162557 /* UserNotificationCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationCondition.swift; sourceTree = "<group>"; };
-		9BDC49961BE8FCDF00162557 /* EnterBeaconRangeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterBeaconRangeOperation.swift; path = Operations/EnterBeaconRangeOperation.swift; sourceTree = "<group>"; };
-		9BDC49991BEA3C3B00162557 /* EuropeanaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EuropeanaApp-Bridging-Header.h"; path = "EuropeanaApp/EuropeanaApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		9BDC49991BEA3C3B00162557 /* ArtWhisper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ArtWhisper-Bridging-Header.h"; path = "EuropeanaApp/ArtWhisper-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconMonitorOperation.swift; sourceTree = "<group>"; };
-		9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconRangeOperation.swift; path = Operations/BeaconRangeOperation.swift; sourceTree = "<group>"; };
 		9BDC49B31BEB441F00162557 /* ArtWhisperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtWhisperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDC49B51BEB441F00162557 /* ArtWhisperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtWhisperTests.swift; path = ../ArtWhisperSwiftTests/ArtWhisperTests.swift; sourceTree = "<group>"; };
 		9BDC49B71BEB441F00162557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../ArtWhisperSwiftTests/Info.plist; sourceTree = "<group>"; };
@@ -253,8 +310,8 @@
 		E597DA0219A9100D00E308A9 /* ArtWhisper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ArtWhisper-Info.plist"; path = "Resources/ArtWhisper-Info.plist"; sourceTree = "<group>"; };
 		E597DA0319A9100D00E308A9 /* ArtWhisper-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ArtWhisper-Prefix.pch"; path = "Resources/ArtWhisper-Prefix.pch"; sourceTree = "<group>"; };
 		E597DA0419A9100D00E308A9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
-		E597DA0719A9103E00E308A9 /* IXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXViewController.h; sourceTree = "<group>"; };
-		E597DA0819A9103E00E308A9 /* IXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXViewController.m; sourceTree = "<group>"; };
+		E597DA0719A9103E00E308A9 /* IXDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXDemoViewController.h; sourceTree = "<group>"; };
+		E597DA0819A9103E00E308A9 /* IXDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXDemoViewController.m; sourceTree = "<group>"; };
 		E597DA0A19A9104C00E308A9 /* IXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXManager.h; sourceTree = "<group>"; };
 		E597DA0B19A9104C00E308A9 /* IXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IXManager.m; sourceTree = "<group>"; };
 		E597DA0D19A9105D00E308A9 /* IXAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXAudioManager.h; sourceTree = "<group>"; };
@@ -306,10 +363,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7709667C1C3B15E1003CB2E9 /* App Operations */ = {
+			isa = PBXGroup;
+			children = (
+				7709667D1C3B165D003CB2E9 /* AlertOperation.swift */,
+				7709667E1C3B165D003CB2E9 /* BackgroundObserver.swift */,
+				7709667F1C3B165D003CB2E9 /* NetworkObserver.swift */,
+			);
+			name = "App Operations";
+			sourceTree = "<group>";
+		};
+		771550241C061F830053E607 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				771550291C0622090053E607 /* CBEstimationMethod.h */,
+				771550261C0620D10053E607 /* CBBeaconsMap.h */,
+				771550271C0620D10053E607 /* CBBeaconsMap.m */,
+			);
+			name = Libs;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		772EB1BD1C198ACE0088E541 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				772EB1BE1C198ACE0088E541 /* IXIconNames.h */,
+				772EB1C11C198ACE0088E541 /* IXIcons.h */,
+				772EB1C21C198ACE0088E541 /* IXIcons.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		7742E1491C0363F500BC26FF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				7742E14A1C03642300BC26FF /* UIColor+Extension.swift */,
+				773D38991C3E8757004EA82C /* DateUtilities.swift */,
+				772EB1C51C198E9A0088E541 /* UIFont+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6481CF19AB33300028A8EA /* README.md */,
+				771550241C061F830053E607 /* Libs */,
 				E597D9EC19A90EF800E308A9 /* Classes */,
 				E597D9F419A90F3700E308A9 /* Resources */,
 			);
@@ -389,14 +480,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		77DA0DB71C1DFF7E00826BC2 /* suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				77DA0DCB1C1E00D900826BC2 /* Tino.png */,
+				77DA0DC01C1DFFEF00826BC2 /* ArtZuid.png */,
+				77DA0DB91C1DFF9700826BC2 /* Bruno.png */,
+				77DA0DBA1C1DFF9700826BC2 /* colorClay.png */,
+				77DA0DBB1C1DFF9700826BC2 /* HumansAMS.png */,
+			);
+			name = suggestions;
+			sourceTree = "<group>";
+		};
+		77DA0DC81C1E002000826BC2 /* alf */ = {
+			isa = PBXGroup;
+			children = (
+				77DA0DC21C1E001B00826BC2 /* LightFestival.png */,
+				770966931C3C6713003CB2E9 /* LightWave2.png */,
+				77DA0DC41C1E001B00826BC2 /* MerryGoRound.png */,
+				770966851C3C6652003CB2E9 /* Lightwave.png */,
+				770966871C3C6652003CB2E9 /* NorthernLight.png */,
+				770966891C3C6652003CB2E9 /* RunBeyond.png */,
+			);
+			name = alf;
+			sourceTree = "<group>";
+		};
+		77DDB6C61C3D4B180095FF0E /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				77DDB6C71C3D4B180095FF0E /* Lightwave_Kateslow.m4a */,
+				77DDB6C81C3D4B180095FF0E /* NorthernLight_Serena.m4a */,
+				77DDB6C91C3D4B180095FF0E /* RunBeyond_Fiona.m4a */,
+				77DDB6CB1C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a */,
+			);
+			name = Audio;
+			path = EuropeanaApp/images/Mockups/Audio;
+			sourceTree = SOURCE_ROOT;
+		};
 		77E3D7C019A910FA0058C62B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				77DA0DC81C1E002000826BC2 /* alf */,
+				77DA0DB71C1DFF7E00826BC2 /* suggestions */,
+				772EB1C71C19953D0088E541 /* 01iPhone 6 Suggestions.png */,
+				772EB1C81C19953D0088E541 /* 02iPhone 6 Active Portrait.png */,
+				772EB1C91C19953D0088E541 /* 03iPhone 6 Active Landscape.png */,
+				77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */,
 				7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */,
-				77C9F0DB1C034F13006E6017 /* kawsrijks.png */,
-				77906E421BEE331B00114B0D /* PhoneSuggestDetail.png */,
-				77906E401BEE1E1C00114B0D /* PhoneActiveClean.png */,
-				77906E3E1BEE1E1500114B0D /* PhoneSuggestClean.png */,
 				77E3D7C119A910FA0058C62B /* Europeana logo.jpg */,
 				77E3D7C219A910FA0058C62B /* glimworm-ibeacons.png */,
 			);
@@ -409,9 +539,10 @@
 			children = (
 				9BDC46721BE75BFC00162557 /* IXEnteringBeaconRegion.h */,
 				9BDC46731BE75BFC00162557 /* IXEnteringBeaconRegion.m */,
-				9BDC49961BE8FCDF00162557 /* EnterBeaconRangeOperation.swift */,
+				770966781C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift */,
+				770966831C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift */,
+				7709667A1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift */,
 				9BDC499E1BEA495800162557 /* BeaconMonitorOperation.swift */,
-				9BDC49A11BEAA6AE00162557 /* BeaconRangeOperation.swift */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -419,6 +550,7 @@
 		9BDC49331BE8F95B00162557 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				7709667C1C3B15E1003CB2E9 /* App Operations */,
 				9BDC49911BE8F9A200162557 /* Operation Queue */,
 				9BDC49921BE8F9CD00162557 /* Operations */,
 				9BDC49931BE8FA2400162557 /* Observers */,
@@ -513,6 +645,7 @@
 				7742E1491C0363F500BC26FF /* Extensions */,
 				E597D9EF19A90EF800E308A9 /* Model */,
 				9BDC49331BE8F95B00162557 /* Operations */,
+				772EB1BD1C198ACE0088E541 /* UI */,
 				E597D9F019A90EF800E308A9 /* ViewControllers */,
 			);
 			path = Classes;
@@ -523,8 +656,6 @@
 			children = (
 				E597DA0D19A9105D00E308A9 /* IXAudioManager.h */,
 				E597DA0E19A9105D00E308A9 /* IXAudioManager.m */,
-				77E3D7C519A916590058C62B /* IXBeacon.h */,
-				77E3D7C619A916590058C62B /* IXBeacon.m */,
 				E597DA0A19A9104C00E308A9 /* IXManager.h */,
 				E597DA0B19A9104C00E308A9 /* IXManager.m */,
 				E597D9F719A90FA700E308A9 /* IXLocationManager.h */,
@@ -540,6 +671,9 @@
 				9BDC46711BE75B5A00162557 /* Operations */,
 				9BDC46631BE4C17F00162557 /* IXPoi.h */,
 				9BDC46641BE4C17F00162557 /* IXPoi.m */,
+				773D389D1C3F050E004EA82C /* IXHistoricPoi.swift */,
+				77E3D7C519A916590058C62B /* IXBeacon.h */,
+				77E3D7C619A916590058C62B /* IXBeacon.m */,
 				9B15221B1BE14D4700B3A52B /* IXData.h */,
 				9B15221C1BE14D4700B3A52B /* IXData.m */,
 				9BDC46691BE646C000162557 /* IXPoiQueue.h */,
@@ -556,13 +690,14 @@
 				77906E341BEE005200114B0D /* IXActiveGuideVC.swift */,
 				77906E321BEE000D00114B0D /* IXDownloadGuidesVC.swift */,
 				77906E301BEDFFD000114B0D /* IXHistoryTableVC.swift */,
+				773D389B1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift */,
 				77906E361BEE019500114B0D /* IXSuggestionVC.swift */,
 				77906E381BEE01C700114B0D /* IXSuggestionDetailVC.swift */,
+				7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */,
 				77906E3A1BEE01F500114B0D /* IXFirstTimeHelpVC.swift */,
 				77906E3C1BEE020D00114B0D /* IXNoBeaconVC.swift */,
-				E597DA0719A9103E00E308A9 /* IXViewController.h */,
-				E597DA0819A9103E00E308A9 /* IXViewController.m */,
-				7706F1FD1BFF4895005B5048 /* SuggestionViewCell.swift */,
+				E597DA0719A9103E00E308A9 /* IXDemoViewController.h */,
+				E597DA0819A9103E00E308A9 /* IXDemoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -572,6 +707,7 @@
 			children = (
 				E597DA1019A9106800E308A9 /* IXAppDelegate.h */,
 				E597DA1119A9106800E308A9 /* IXAppDelegate.m */,
+				77DDB6C41C3D241E0095FF0E /* IXTabBarController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -579,6 +715,8 @@
 		E597D9F419A90F3700E308A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				77DDB6C61C3D4B180095FF0E /* Audio */,
+				772EB1BB1C19896D0088E541 /* IcoMoon-Free.ttf */,
 				9BC4050319AA2CBE00EEA392 /* filmmuseum human.caf */,
 				E597DA1619A9D5A900E308A9 /* beacons.plist */,
 				7701272A19A9F0DB003AC3E5 /* filmmuseum.caf */,
@@ -590,9 +728,10 @@
 				E597D9FA19A90FE900E308A9 /* Images.xcassets */,
 				7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */,
 				77D3C4AB19A903AA001F00EC /* Supporting Files */,
+				77DA0DC91C1E008E00826BC2 /* suggestions.json */,
 				9B15221F1BE14EA700B3A52B /* beacons.json */,
 				9BDC46671BE5152000162557 /* poi.json */,
-				9BDC49991BEA3C3B00162557 /* EuropeanaApp-Bridging-Header.h */,
+				9BDC49991BEA3C3B00162557 /* ArtWhisper-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -610,6 +749,7 @@
 				77D3C49F19A903AA001F00EC /* Resources */,
 				CBF77020C601B80F31C288B1 /* Embed Pods Frameworks */,
 				A71E1A9DE333FB3649ACF3F6 /* Copy Pods Resources */,
+				77DA0DCF1C1E387300826BC2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -711,22 +851,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DA0DCC1C1E00D900826BC2 /* Tino.png in Resources */,
+				77DA0DBF1C1DFF9700826BC2 /* HumansAMS.png in Resources */,
 				4456DD9B19A935A500B5B707 /* pew-pew-lei.caf in Resources */,
-				77906E431BEE331B00114B0D /* PhoneSuggestDetail.png in Resources */,
+				77DA0DCE1C1E176200826BC2 /* iPhone 6 SuggestDetail.png in Resources */,
 				7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */,
+				772EB1CB1C19953D0088E541 /* 02iPhone 6 Active Portrait.png in Resources */,
+				77DA0DC51C1E001B00826BC2 /* LightFestival.png in Resources */,
 				7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */,
-				77906E3F1BEE1E1500114B0D /* PhoneSuggestClean.png in Resources */,
 				E597DA0119A90FFE00E308A9 /* Main_iPhone.storyboard in Resources */,
+				772EB1CA1C19953D0088E541 /* 01iPhone 6 Suggestions.png in Resources */,
+				77DA0DBE1C1DFF9700826BC2 /* colorClay.png in Resources */,
 				E597DA1719A9D5A900E308A9 /* beacons.plist in Resources */,
 				77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */,
 				4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */,
+				772EB1CC1C19953D0088E541 /* 03iPhone 6 Active Landscape.png in Resources */,
 				E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */,
+				77DDB6D01C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a in Resources */,
+				77DDB6CD1C3D4B180095FF0E /* NorthernLight_Serena.m4a in Resources */,
+				77DA0DC11C1DFFEF00826BC2 /* ArtZuid.png in Resources */,
+				7709668F1C3C6652003CB2E9 /* RunBeyond.png in Resources */,
 				77E3D7C419A910FA0058C62B /* glimworm-ibeacons.png in Resources */,
-				77C9F0DC1C034F13006E6017 /* kawsrijks.png in Resources */,
+				77DA0DCA1C1E008E00826BC2 /* suggestions.json in Resources */,
 				7701272B19A9F0DB003AC3E5 /* filmmuseum.caf in Resources */,
+				77DA0DBD1C1DFF9700826BC2 /* Bruno.png in Resources */,
+				77DDB6CE1C3D4B180095FF0E /* RunBeyond_Fiona.m4a in Resources */,
 				E597D9FB19A90FE900E308A9 /* Images.xcassets in Resources */,
-				77906E411BEE1E1C00114B0D /* PhoneActiveClean.png in Resources */,
+				772EB1BC1C19896D0088E541 /* IcoMoon-Free.ttf in Resources */,
 				9B1522201BE14EA700B3A52B /* beacons.json in Resources */,
+				77DA0DC71C1E001B00826BC2 /* MerryGoRound.png in Resources */,
+				77DDB6CC1C3D4B180095FF0E /* Lightwave_Kateslow.m4a in Resources */,
+				7709668B1C3C6652003CB2E9 /* Lightwave.png in Resources */,
+				7709668D1C3C6652003CB2E9 /* NorthernLight.png in Resources */,
+				770966941C3C6713003CB2E9 /* LightWave2.png in Resources */,
 				9BC4050419AA2CBE00EEA392 /* filmmuseum human.caf in Resources */,
 				9BDC46681BE5152000162557 /* poi.json in Resources */,
 			);
@@ -766,6 +923,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		77DA0DCF1C1E387300826BC2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 198e75abf02120e3e52cb34a6671144fba915110 8b35f66aa6ffe1173554907d26fc5266511070a29f499decd0f024c8578ac7d2";
+		};
 		A71E1A9DE333FB3649ACF3F6 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -803,7 +973,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDC46741BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */,
 				77906E371BEE019500114B0D /* IXSuggestionVC.swift in Sources */,
 				9BDC49731BE8F95B00162557 /* NSOperation+Operations.swift in Sources */,
 				9BDC466F1BE64C6900162557 /* IXPendingOperations.m in Sources */,
@@ -811,6 +980,7 @@
 				77906E331BEE000D00114B0D /* IXDownloadGuidesVC.swift in Sources */,
 				9BDC495F1BE8F95B00162557 /* Dictionary+Operations.swift in Sources */,
 				9BDC496F1BE8F95B00162557 /* NoCancelledDependencies.swift in Sources */,
+				770966801C3B165D003CB2E9 /* AlertOperation.swift in Sources */,
 				77906E311BEDFFD000114B0D /* IXHistoryTableVC.swift in Sources */,
 				9BDC49871BE8F95B00162557 /* SilentCondition.swift in Sources */,
 				9BDC49831BE8F95B00162557 /* ReachabilityCondition.swift in Sources */,
@@ -820,6 +990,8 @@
 				9BDC49891BE8F95B00162557 /* TimeoutObserver.swift in Sources */,
 				E597D9F919A90FA700E308A9 /* IXLocationManager.m in Sources */,
 				9BDC497F1BE8F95B00162557 /* PassbookCondition.swift in Sources */,
+				772EB1C61C198E9A0088E541 /* UIFont+Extension.swift in Sources */,
+				773D389E1C3F050E004EA82C /* IXHistoricPoi.swift in Sources */,
 				9BDC49691BE8F95B00162557 /* LocationOperation.swift in Sources */,
 				9BDC49631BE8F95B00162557 /* GroupOperation.swift in Sources */,
 				9BDC498D1BE8F95B00162557 /* URLSessionTaskOperation.swift in Sources */,
@@ -827,9 +999,11 @@
 				E597DA0C19A9104C00E308A9 /* IXManager.m in Sources */,
 				E597DA0F19A9105D00E308A9 /* IXAudioManager.m in Sources */,
 				E597DA0619A9100D00E308A9 /* main.m in Sources */,
-				E597DA0919A9103E00E308A9 /* IXViewController.m in Sources */,
+				E597DA0919A9103E00E308A9 /* IXDemoViewController.m in Sources */,
 				9BDC49591BE8F95B00162557 /* CKContainer+Operations.swift in Sources */,
+				77DDB6C51C3D241E0095FF0E /* IXTabBarController.swift in Sources */,
 				9BDC499F1BEA495800162557 /* BeaconMonitorOperation.swift in Sources */,
+				7709667B1C3B138F003CB2E9 /* GetPOIsOfBeaconOperation.swift in Sources */,
 				77906E391BEE01C700114B0D /* IXSuggestionDetailVC.swift in Sources */,
 				9BDC49571BE8F95B00162557 /* CalendarCondition.swift in Sources */,
 				E597DA1219A9106800E308A9 /* IXAppDelegate.m in Sources */,
@@ -837,25 +1011,31 @@
 				9BDC497D1BE8F95B00162557 /* OperationQueue.swift in Sources */,
 				9BDC496B1BE8F95B00162557 /* MutuallyExclusive.swift in Sources */,
 				9BDC495D1BE8F95B00162557 /* DelayOperation.swift in Sources */,
-				9BDC49971BE8FCDF00162557 /* EnterBeaconRangeOperation.swift in Sources */,
 				9BDC46651BE4C17F00162557 /* IXPoi.m in Sources */,
-				9BDC49A21BEAA6AE00162557 /* BeaconRangeOperation.swift in Sources */,
 				9BDC49711BE8F95B00162557 /* NSLock+Operations.swift in Sources */,
 				7706F1FE1BFF4895005B5048 /* SuggestionViewCell.swift in Sources */,
+				773D389A1C3E8757004EA82C /* DateUtilities.swift in Sources */,
 				7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */,
 				9BDC496D1BE8F95B00162557 /* NegatedCondition.swift in Sources */,
+				770966791C3B11E7003CB2E9 /* HandleRangedBeaconOperation.swift in Sources */,
 				9BDC49811BE8F95B00162557 /* PhotosCondition.swift in Sources */,
+				770966811C3B165D003CB2E9 /* BackgroundObserver.swift in Sources */,
+				770966841C3B18CD003CB2E9 /* FindPOIofBeaconOperation.swift in Sources */,
 				9BDC49771BE8F95B00162557 /* OperationCondition.swift in Sources */,
+				770966821C3B165D003CB2E9 /* NetworkObserver.swift in Sources */,
 				77E3D7C719A916590058C62B /* IXBeacon.m in Sources */,
 				77906E3B1BEE01F500114B0D /* IXFirstTimeHelpVC.swift in Sources */,
+				772EB1C41C198ACE0088E541 /* IXIcons.m in Sources */,
 				9BDC49751BE8F95B00162557 /* Operation.swift in Sources */,
 				9BDC495B1BE8F95B00162557 /* CloudCondition.swift in Sources */,
 				9B15221D1BE14D4700B3A52B /* IXData.m in Sources */,
 				9BDC498F1BE8F95B00162557 /* UserNotificationCondition.swift in Sources */,
+				771550281C0620D10053E607 /* CBBeaconsMap.m in Sources */,
 				9BDC466B1BE646C000162557 /* IXPoiQueue.m in Sources */,
 				9BDC49551BE8F95B00162557 /* BlockOperation.swift in Sources */,
 				9BDC49611BE8F95B00162557 /* ExclusivityController.swift in Sources */,
 				9BDC49851BE8F95B00162557 /* RemoteNotificationCondition.swift in Sources */,
+				773D389C1C3EC16C004EA82C /* HistoryTableCellCollectionView.swift in Sources */,
 				9BDC49791BE8F95B00162557 /* OperationErrors.swift in Sources */,
 				9BDC49671BE8F95B00162557 /* LocationCondition.swift in Sources */,
 				9BDC497B1BE8F95B00162557 /* OperationObserver.swift in Sources */,
@@ -866,7 +1046,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDC46751BE75BFC00162557 /* IXEnteringBeaconRegion.m in Sources */,
 				9BDC49681BE8F95B00162557 /* LocationCondition.swift in Sources */,
 				9BDC49861BE8F95B00162557 /* RemoteNotificationCondition.swift in Sources */,
 				9BDC496C1BE8F95B00162557 /* MutuallyExclusive.swift in Sources */,
@@ -887,7 +1066,6 @@
 				9BDC49761BE8F95B00162557 /* Operation.swift in Sources */,
 				9BDC49601BE8F95B00162557 /* Dictionary+Operations.swift in Sources */,
 				9BDC49AB1BEAC28B00162557 /* IXAudioManager.m in Sources */,
-				9BDC49981BE8FCDF00162557 /* EnterBeaconRangeOperation.swift in Sources */,
 				9BDC498C1BE8F95B00162557 /* UIUserNotifications+Operations.swift in Sources */,
 				9BDC46701BE64C6900162557 /* IXPendingOperations.m in Sources */,
 				9BDC466C1BE646C000162557 /* IXPoiQueue.m in Sources */,
@@ -896,11 +1074,11 @@
 				9BDC495A1BE8F95B00162557 /* CKContainer+Operations.swift in Sources */,
 				9B15221E1BE14D4700B3A52B /* IXData.m in Sources */,
 				9BDC497C1BE8F95B00162557 /* OperationObserver.swift in Sources */,
-				9BDC49A31BEAA6AE00162557 /* BeaconRangeOperation.swift in Sources */,
 				9BDC497E1BE8F95B00162557 /* OperationQueue.swift in Sources */,
 				9BDC497A1BE8F95B00162557 /* OperationErrors.swift in Sources */,
 				9BDC49821BE8F95B00162557 /* PhotosCondition.swift in Sources */,
 				9BDC49741BE8F95B00162557 /* NSOperation+Operations.swift in Sources */,
+				77DDB6D11C3E73A90095FF0E /* IXLocationManager.m in Sources */,
 				77D3C4D319A903AB001F00EC /* ArtWhisperBeaconTests.m in Sources */,
 				9BDC49A01BEA495800162557 /* BeaconMonitorOperation.swift in Sources */,
 				9BDC49661BE8F95B00162557 /* HealthCondition.swift in Sources */,
@@ -992,6 +1170,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1011,7 +1190,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ArtWhisper;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/EuropeanaApp-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1034,8 +1214,9 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1047,7 +1228,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = ArtWhisper;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/EuropeanaApp-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1067,6 +1249,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/ArtWhisper-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1077,7 +1262,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EuropeanaApp/Resources/ArtWhisper-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/EuropeanaApp/Resources/ArtWhisper-Info.plist";
@@ -1085,6 +1270,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EuropeanaApp/ArtWhisper-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1110,6 +1298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1132,6 +1321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "us.phlux.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
