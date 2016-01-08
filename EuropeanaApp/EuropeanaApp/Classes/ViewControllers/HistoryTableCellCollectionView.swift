@@ -11,8 +11,9 @@
 
 import Foundation
 
-class  HistoryTableCellCollectionView : UITableViewCell {
-    
+class  HistoryTableCellCollectionView : UITableViewCell , UICollectionViewDataSource, UICollectionViewDelegate {
+    private let kHistoryCellIdentifier = "historyCell"
+
     @IBOutlet weak var venueLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -41,3 +42,65 @@ class  HistoryTableCellCollectionView : UITableViewCell {
         
     }
 }
+
+// MARK: - UICollectionViewDataSource
+extension HistoryTableCellCollectionView {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let num = IXData.sharedData().historicPois?.count ?? 0
+        return num
+    }
+    
+}
+
+// MARK: - UICollectionViewDelegate
+extension HistoryTableCellCollectionView {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kHistoryCellIdentifier, forIndexPath: indexPath)
+        if let hPoi = IXData.sharedData().historicPois?[indexPath.row] {
+            // let hPoi2 = hPoi as! IXHistoricPoi
+            if let poi = hPoi.poi {
+                if let image = poi!.image {
+                    let imageView = UIImageView.init(image: image)
+                    imageView.frame = cell.contentView.bounds
+                    imageView.contentMode = .ScaleAspectFill
+                    cell.contentView.addSubview(imageView)
+                }
+            }
+        }
+        cell.backgroundColor = UIColor.yellowColor()
+        return cell
+    }
+
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == segues.showSuggestionDetail.rawValue) {
+            let cell = sender as! SuggestionViewCell
+            let destinationVC = segue.destinationViewController as! IXSuggestionDetailVC
+            destinationVC.poi = cell.poi
+            //            destinationVC.poi = IXPoi.mockPoi()
+            
+        }
+    }
+
+}
+
+//extension IXSuggestionVC : UICollectionViewDelegateFlowLayout {
+//    
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+//        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//            return cellSizeForThisDevice
+//            //            return CGSizeMake(140, 266)
+//            //            return CGSizeMake(164, 266)
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView,
+//        layout collectionViewLayout: UICollectionViewLayout,
+//        insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+//            return sectionInsets
+//    }
+//    
+//}
+
