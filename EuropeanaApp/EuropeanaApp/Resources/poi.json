@@ -33,7 +33,7 @@
                 "signal": 50
                 }],
   "poi":
-     { "name": "Run Beyond",
+     { "name": "Run Beyond Demo",
       "artist":"Angelo Bonello for KitonB",
       "caption": "Quiz question: What is the world record long jump? Run Beyond, created by Angelo Bonello, provokes that question, because the jump the man in this work takes, seems impossibly far. The keyword here is ‘seems’, because, according to Bonello, nothing is impossible if only you want it badly enough. Run Beyond is a work about the jump we all have to take in our lives: the jump to freedom. Bonello does not tell us what kind of freedom, the spectator has to make up his own mind about that.\nBonello says: ‘To me this work is about the power of imagination, a power so strong that it makes individuals conquer their fears and limitations and causes them to open up to other cultures, new friendships and unknown worlds.’ In Dutch we have the saying: ‘If someone jumps into the ditch, do you go after him?’, intended as a caution not to just follow everybody and everything. In this case we would like to give you the opposite advise: please do jump after this enlightened man.",
       "imageURL": "RunBeyond.png",
@@ -41,9 +41,69 @@
       }
   },
   {  "beacons":[{
-                "uuid": "74278bda-b644-4520-8f0c-720eaf059935",
-                "major": 42,
-                "minor": 5,
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 25866,
+                "minor": 101,
+                "signal": 50
+                }],
+  "poi":
+      { "name": "Run Beyond",
+      "artist":"Angelo Bonello for KitonB",
+      "caption": "Quiz question: What is the world record long jump? Run Beyond, created by Angelo Bonello, provokes that question, because the jump the man in this work takes, seems impossibly far. The keyword here is ‘seems’, because, according to Bonello, nothing is impossible if only you want it badly enough. Run Beyond is a work about the jump we all have to take in our lives: the jump to freedom. Bonello does not tell us what kind of freedom, the spectator has to make up his own mind about that.\nBonello says: ‘To me this work is about the power of imagination, a power so strong that it makes individuals conquer their fears and limitations and causes them to open up to other cultures, new friendships and unknown worlds.’ In Dutch we have the saying: ‘If someone jumps into the ditch, do you go after him?’, intended as a caution not to just follow everybody and everything. In this case we would like to give you the opposite advise: please do jump after this enlightened man.",
+      "imageURL": "RunBeyond.png",
+      "audioURL": "RunBeyond_Serenaslow.m4a"
+      }
+  },
+  {  "beacons":[{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 25866,
+                "minor": 102,
+                "signal": 50
+                }],
+  "poi":
+  { "name": "Run Beyond",
+  "artist":"Angelo Bonello for KitonB",
+  "caption": "Quiz question: What is the world record long jump? Run Beyond, created by Angelo Bonello, provokes that question, because the jump the man in this work takes, seems impossibly far. The keyword here is ‘seems’, because, according to Bonello, nothing is impossible if only you want it badly enough. Run Beyond is a work about the jump we all have to take in our lives: the jump to freedom. Bonello does not tell us what kind of freedom, the spectator has to make up his own mind about that.\nBonello says: ‘To me this work is about the power of imagination, a power so strong that it makes individuals conquer their fears and limitations and causes them to open up to other cultures, new friendships and unknown worlds.’ In Dutch we have the saying: ‘If someone jumps into the ditch, do you go after him?’, intended as a caution not to just follow everybody and everything. In this case we would like to give you the opposite advise: please do jump after this enlightened man.",
+  "imageURL": "RunBeyond.png",
+  "audioURL": "RunBeyond_Serenaslow.m4a"
+  }
+  },
+  
+  
+  {  "beacons":[{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 25866,
+                "minor": 103,
+                "signal": 50
+                }],
+  "poi":
+  { "name": "Talking Heads",
+  "artist":"Viktor Vicsek",
+  "caption": "As human beings we are capable of numerous facial expressions by the use of several dozens of muscles. It enables us to show all kinds of emotions to someone else, hoping that the other will understand us and react adequately. When you look sad, I am inclined to comfort you. When I laugh I invite you to join me in laughing. Communicating without using words. The two spectacular heads created by the Hungarian light artist Viktor Vicsek also show countless emotions and react to each other. Unlike people these Talking Heads don’t do it by means of muscles, but through all the possibibilities of light. Per head some 4000 individually controlable LEDs provide different facial expressions in various colours. As they are connected by Wi-Fi, they react to each other, but also to the interference of visitors. They conduct conversations by means of light. Only when a new boat passes, these talks are cut short, whereupon a new conversation between the heads commences. What is it exactly they’re saying to each other and to the visitors?  A word is enough to the wise, as the saying goes. We are curious what your facial expression will be watching this extraordinary project.",
+  "imageURL": "TalkingHeads.png",
+  "audioURL": "TalkingHeads_Serena.m4a"
+  }
+  },
+  {  "beacons":[{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 25866,
+                "minor": 104,
+                "signal": 50
+                }],
+  "poi":
+  { "name": "Talking Heads",
+  "artist":"Viktor Vicsek",
+  "caption": "As human beings we are capable of numerous facial expressions by the use of several dozens of muscles. It enables us to show all kinds of emotions to someone else, hoping that the other will understand us and react adequately. When you look sad, I am inclined to comfort you. When I laugh I invite you to join me in laughing. Communicating without using words. The two spectacular heads created by the Hungarian light artist Viktor Vicsek also show countless emotions and react to each other. Unlike people these Talking Heads don’t do it by means of muscles, but through all the possibibilities of light. Per head some 4000 individually controlable LEDs provide different facial expressions in various colours. As they are connected by Wi-Fi, they react to each other, but also to the interference of visitors. They conduct conversations by means of light. Only when a new boat passes, these talks are cut short, whereupon a new conversation between the heads commences. What is it exactly they’re saying to each other and to the visitors?  A word is enough to the wise, as the saying goes. We are curious what your facial expression will be watching this extraordinary project.",
+  "imageURL": "TalkingHeads.png",
+  "audioURL": "TalkingHeads_Serena.m4a"
+  }
+  },
+  
+  
+ {  "beacons":[{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 25866,
+                "minor": 104,
                 "signal": 50
                 }],
   "poi":

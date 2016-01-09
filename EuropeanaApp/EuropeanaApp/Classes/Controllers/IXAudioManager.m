@@ -361,10 +361,12 @@ const float kUpdateInterval=0.1;
 {
     switch (self.audioState) {
         case audioPlaying:
+        case audioPaused:
             [self.backgroundMusicPlayer stop];
             self.audioState = silent;
             break;
         case speechPlaying:
+        case speechPaused:
             [self.speechSynth stopSpeakingAtBoundary:AVSpeechBoundaryWord];
             self.audioState = silent;
             break;

@@ -59,6 +59,8 @@
 		77DA0DCA1C1E008E00826BC2 /* suggestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DC91C1E008E00826BC2 /* suggestions.json */; };
 		77DA0DCC1C1E00D900826BC2 /* Tino.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCB1C1E00D900826BC2 /* Tino.png */; };
 		77DA0DCE1C1E176200826BC2 /* iPhone 6 SuggestDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */; };
+		77DCD03C1C4138FA00380536 /* TalkingHeads_Serena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DCD03B1C4138FA00380536 /* TalkingHeads_Serena.m4a */; };
+		77DCD03E1C4139E800380536 /* TalkingHeads.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCD03D1C4139E800380536 /* TalkingHeads.png */; };
 		77DDB6C51C3D241E0095FF0E /* IXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB6C41C3D241E0095FF0E /* IXTabBarController.swift */; };
 		77DDB6CC1C3D4B180095FF0E /* Lightwave_Kateslow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6C71C3D4B180095FF0E /* Lightwave_Kateslow.m4a */; };
 		77DDB6CD1C3D4B180095FF0E /* NorthernLight_Serena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB6C81C3D4B180095FF0E /* NorthernLight_Serena.m4a */; };
@@ -240,6 +242,8 @@
 		77DA0DC91C1E008E00826BC2 /* suggestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suggestions.json; sourceTree = "<group>"; };
 		77DA0DCB1C1E00D900826BC2 /* Tino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tino.png; path = Mockups/Tino.png; sourceTree = "<group>"; };
 		77DA0DCD1C1E176200826BC2 /* iPhone 6 SuggestDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone 6 SuggestDetail.png"; path = "../../../../../Documents/Google Drive/ArtWhisper/Art Whisper Screens/iPhone6/iPhone 6 SuggestDetail.png"; sourceTree = "<group>"; };
+		77DCD03B1C4138FA00380536 /* TalkingHeads_Serena.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TalkingHeads_Serena.m4a; sourceTree = "<group>"; };
+		77DCD03D1C4139E800380536 /* TalkingHeads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TalkingHeads.png; path = Mockups/TalkingHeads.png; sourceTree = "<group>"; };
 		77DDB6C41C3D241E0095FF0E /* IXTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXTabBarController.swift; sourceTree = "<group>"; };
 		77DDB6C71C3D4B180095FF0E /* Lightwave_Kateslow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lightwave_Kateslow.m4a; sourceTree = "<group>"; };
 		77DDB6C81C3D4B180095FF0E /* NorthernLight_Serena.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = NorthernLight_Serena.m4a; sourceTree = "<group>"; };
@@ -501,6 +505,7 @@
 				770966851C3C6652003CB2E9 /* Lightwave.png */,
 				770966871C3C6652003CB2E9 /* NorthernLight.png */,
 				770966891C3C6652003CB2E9 /* RunBeyond.png */,
+				77DCD03D1C4139E800380536 /* TalkingHeads.png */,
 			);
 			name = alf;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				77DDB6C81C3D4B180095FF0E /* NorthernLight_Serena.m4a */,
 				77DDB6C91C3D4B180095FF0E /* RunBeyond_Fiona.m4a */,
 				77DDB6CB1C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a */,
+				77DCD03B1C4138FA00380536 /* TalkingHeads_Serena.m4a */,
 			);
 			name = Audio;
 			path = EuropeanaApp/images/Mockups/Audio;
@@ -863,9 +869,11 @@
 				772EB1CA1C19953D0088E541 /* 01iPhone 6 Suggestions.png in Resources */,
 				77DA0DBE1C1DFF9700826BC2 /* colorClay.png in Resources */,
 				E597DA1719A9D5A900E308A9 /* beacons.plist in Resources */,
+				77DCD03E1C4139E800380536 /* TalkingHeads.png in Resources */,
 				77E3D7C319A910FA0058C62B /* Europeana logo.jpg in Resources */,
 				4456DD9A19A935A500B5B707 /* background-music-aac.caf in Resources */,
 				772EB1CC1C19953D0088E541 /* 03iPhone 6 Active Landscape.png in Resources */,
+				77DCD03C1C4138FA00380536 /* TalkingHeads_Serena.m4a in Resources */,
 				E597DA0019A90FFE00E308A9 /* Main_iPad.storyboard in Resources */,
 				77DDB6D01C3D4B180095FF0E /* RunBeyond_Serenaslow.m4a in Resources */,
 				77DDB6CD1C3D4B180095FF0E /* NorthernLight_Serena.m4a in Resources */,
