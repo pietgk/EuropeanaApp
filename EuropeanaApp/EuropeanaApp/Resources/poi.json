@@ -17,7 +17,23 @@
                   "major": 42,
                   "minor": 3,
                   "signal": 50
-                  }],
+                },{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 100,
+                "minor": 4,
+                "signal": 50
+                },{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 100,
+                "minor": 2,
+                "signal": 50
+                },{
+                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
+                "major": 100,
+                "minor": 5,
+                "signal": 50
+                }
+                ],
  "poi":
    { "name": "Light Wave",
 	"artist":"Anita Doornhein",
@@ -55,25 +71,6 @@
       }
 
 
-  },
-  {
-    "beacons":[{
-                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
-                "major": 100,
-                "minor": 1,
-                "signal": 50
-                },
-                {
-                "uuid": "74278bda-b644-4520-8f0c-720eaf059939",
-                "major": 100,
-                "minor": 2,
-                "signal": 10
-                }
-    ],
-    "poi": {
-        "caption":"nice painting of Rembrandt",
-        "audio":"filmmuseum human"
-    }
   },
   
   { "beacons":[
