@@ -9,7 +9,7 @@
 #import "IXData.h"
 #import "IXBeacon.h"
 #import "IXPoi.h"
-
+#import "ArtWhisper-Swift.h"
 
 @interface IXData ()
 
@@ -233,6 +233,16 @@
     [self.historicPois addObject:hPoi];
 }
 
+- (BOOL) poiIsHistoricPoi:(IXPoi * _Nonnull) poi
+{
+    for (IXHistoricPoi* hp in self.historicPois) {
+#warning IXPoi does not have a unique ID yet
+        if (hp.poi == poi) {
+            return YES;
+        }
+    }
+    return NO;
+}
 // TODO: probably kick of some operation which handles the found beacon(s)
 -(void) addRangedBeacon:(IXBeacon *)newBeacon
 {

@@ -532,6 +532,9 @@
                                 <exclude reference="kQx-gx-O60"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1pc-qc-6gn" appends="YES" id="Eln-nm-6vK"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Active Guide" image="Active" selectedImage="ActiveSelected" id="eY7-th-VhM"/>
                     <toolbarItems/>
@@ -567,6 +570,11 @@
                         <action selector="previousMocker:" destination="S6K-vA-roe" id="cMH-gW-PKF"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="1pc-qc-6gn">
+                    <connections>
+                        <action selector="playPauseButton:" destination="S6K-vA-roe" id="KcX-TP-EkG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-769" y="1024"/>
         </scene>

@@ -14,7 +14,8 @@
 #define kBeaconsKey @"beacons"
 #define kPoiKey @"poi"
 
-@interface IXPoi : NSObject <NSCopying> 
+@interface IXPoi : NSObject <NSCopying>
+// currently beacons contains actual IXBeacons, but in the end it should be references to the known beacons object
 @property (nonatomic, strong, nonnull) NSArray *beacons;                 // which beacons are associated with this artpiece?
 @property (nonatomic, strong, nullable) NSString *name;                   // the name of the place
 @property (nonatomic, strong, nullable) NSString *artist;                   // the name of the artist

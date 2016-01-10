@@ -16,6 +16,7 @@
 #import "IXIcons.h"
 #import "IXAppDelegate.h"
 #import "IXAudioManager.h"
+
 //@protocol IXAudioManagerDelegate;
 
 #endif /* ArtWhisper_Bridging_Header_h */

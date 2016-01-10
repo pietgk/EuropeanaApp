@@ -9,6 +9,7 @@
 #import "IXAppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import "IXData.h"
 #import "ArtWhisper-Swift.h"
 
 @interface IXAppDelegate ()
@@ -92,22 +93,31 @@
 
 #pragma mark delegate protocol
 // this should be done through the IXManager, no?
+- (void) playActiveGuideInVC:(UIViewController *)vc withPoi:(IXPoi *)poi
+{
+    if ([[vc class] isSubclassOfClass:[IXActiveGuideVC class]] ) {
+        IXActiveGuideVC *ag = (IXActiveGuideVC *)vc;
+        // check historic play
+        if (![[IXData sharedData] poiIsHistoricPoi:poi]) {
+            if (![ag playing] && ag.poi != poi) {
+                ag.poi = poi;
+                [ag startPlaying];
+            } // else discard            
+        }
+    }
+}
 - (void) showActiveGuideWithPoi:(IXPoi *)poi
 {
     if ([self.tabBarController selectedIndex] != 3) {
         dispatch_async(dispatch_get_main_queue(), ^{
             id vc = [self.tabBarController showActiveGuide];
         #warning protocolize!
-            if ([[vc class] isSubclassOfClass:[IXActiveGuideVC class]] ) {
-                IXActiveGuideVC *ag = (IXActiveGuideVC *)vc;
-                if (![ag playing] && ag.poi != poi) {
-                    ag.poi = poi;
-                    [ag startPlaying];
-                } // else discard
-            }
-                           });
+            [self playActiveGuideInVC:vc withPoi:poi];
+        });
     } else {
 //         NSLog(@"already selected activeguide");
+        id vc = [self.tabBarController showActiveGuide];
+        [self playActiveGuideInVC:vc withPoi:poi];
     }
 }
 

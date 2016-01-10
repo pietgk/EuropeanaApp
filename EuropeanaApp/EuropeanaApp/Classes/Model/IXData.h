@@ -42,5 +42,6 @@
 - (IXPoi  * _Nonnull) previousMockPoi;
 
 - (void) addHistoricPoi:(IXHistoricPoi * _Nonnull) hPoi;
+- (BOOL) poiIsHistoricPoi:(IXPoi * _Nonnull) poi;
 
 @end
