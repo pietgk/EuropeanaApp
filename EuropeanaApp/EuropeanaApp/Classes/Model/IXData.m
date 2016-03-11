@@ -6,6 +6,13 @@
 //  Copyright © 2015 Phluxus. All rights reserved.
 //
 
+/* 
+ Refactor into swift, then use extensions to add items to the local datastores.
+ Should we not use something like Realm instead of some simple data structures?
+ 
+ 
+ */
+
 #import "IXData.h"
 #import "IXBeacon.h"
 #import "IXPoi.h"
@@ -18,10 +25,11 @@
 @property (nonatomic, strong) NSMutableDictionary<NSString*,IXBeacon *> *beaconsRanged; // key is uuid_major_minor
 
 @property (nonatomic, strong, nullable) NSMutableDictionary <NSString*,IXBeacon *> *beacons;
-@property (nonatomic, strong) NSArray<IXPoi *> *pois;
+@property (nonatomic, strong) NSMutableArray<IXPoi *> *pois;            // external interface should be Array
 @property (nonatomic, strong) NSMutableArray<IXHistoricPoi *> *historicPois;
 @property (nonatomic, strong) NSArray<IXPoi *> *suggestions;
 @property (nonatomic, strong) NSArray<CLBeaconRegion *> *localRegions;
+
 // history should be related to a list of venues, but we do not have that yet.
 @property (nonatomic, strong) NSArray<IXPoi *> *poiHistory;
 @end
@@ -78,9 +86,14 @@
 - (NSArray *) pois
 {
     if (!_pois) {
-        _pois = [self poisFromResourceFile];
+        _pois = [NSMutableArray arrayWithArray:[self poisFromResourceFile]];
     }
     return _pois;
+}
+
+- (void) addPoi:(IXPoi *)newPoi
+{
+    [self.pois addObject:newPoi];
 }
 
 - (NSArray *) suggestions
@@ -228,8 +241,16 @@
     return _historicPois;
 }
 
+// used mostly for debugging purposes
+- (void) clearHistoricPois
+{
+    self.historicPois = nil;
+}
 - (void) addHistoricPoi:(IXHistoricPoi  * _Nonnull ) hPoi
 {
+//    if ([self poiIsHistoricPoi:hPoi.poi]) {         // this, or use an NSSet or NSDict
+//        [self.historicPois removeObject:hPoi];
+//    }
     [self.historicPois addObject:hPoi];
 }
 
@@ -347,7 +368,23 @@
 //    NSLog(@"Monitoring turned on for %@.", beacon.identifier);
 }
 
+#pragma mark - json export
+- (void) beaconExport:(NSDictionary<NSString*,IXBeacon *>*) beacons
+{
+    NSError *error;
+    NSString *path = @"~/awbeacons.json";
+    NSString *fullPath = [path stringByExpandingTildeInPath];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:beacons options:NSJSONWritingPrettyPrinted error:&error];
+    [data writeToFile:fullPath atomically:YES];
+}
 
-
+- (void) poiExport:(NSMutableArray<IXPoi *>*) pois
+{
+    NSError *error;
+    NSString *path = @"~/awpois.json";
+    NSString *fullPath = [path stringByExpandingTildeInPath];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:pois options:NSJSONWritingPrettyPrinted error:&error];
+    [data writeToFile:fullPath atomically:YES];
+}
 
 @end

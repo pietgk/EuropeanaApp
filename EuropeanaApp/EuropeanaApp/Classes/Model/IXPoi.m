@@ -85,6 +85,11 @@
     return NO;
 }
 
+- (BOOL) isSingularBeacon
+{
+    return (self.beacons && self.beacons.count == 1);
+}
+
 - (void) getImageWithBlock:(void (^ _Nonnull)(UIImage * _Nullable))block {
     // get / download image
     if (self.imageURL) {

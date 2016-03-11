@@ -19,7 +19,7 @@
 //@property (nonatomic, strong) NSArray<IXBeacon *> *beacons;
 @property (nonatomic, readonly, nullable) NSMutableDictionary <NSString*,IXBeacon *> *beacons; // key is uuid_major_minor
 
-@property (nonatomic, readonly, nullable) NSArray<IXPoi *> *pois;
+@property (nonatomic, readonly, nullable) NSMutableArray<IXPoi *> *pois;
 @property (nonatomic, readonly, nullable) NSMutableArray<IXHistoricPoi *> *historicPois;
 @property (nonatomic, readonly, nullable) NSArray<IXPoi *> *suggestions;
 @property (nonatomic, readonly, nullable) NSArray<CLBeaconRegion *> *localRegions;
@@ -41,7 +41,10 @@
 - (IXPoi  * _Nonnull) mockPoi;
 - (IXPoi  * _Nonnull) previousMockPoi;
 
+- (void) addPoi:(IXPoi * _Nonnull)newPoi;
+
 - (void) addHistoricPoi:(IXHistoricPoi * _Nonnull) hPoi;
 - (BOOL) poiIsHistoricPoi:(IXPoi * _Nonnull) poi;
+- (void) clearHistoricPois;
 
 @end

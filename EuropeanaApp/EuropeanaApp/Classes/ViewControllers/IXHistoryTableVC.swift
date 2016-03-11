@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class IXHistoryTableVC: UITableViewController {
 
@@ -51,6 +52,7 @@ class IXHistoryTableVC: UITableViewController {
         // Configure the cell...
         hCell.venueLabel.text = "Amsterdam Light Festival"
         hCell.dateLabel.text = NSDate().dateOnly()
+        hCell.prepareForReuse()
 //        if let hPoi = IXData.sharedData().historicPois?[indexPath.row] {
 //            let hPoi2 = hPoi as! IXHistoricPoi
 //            hCell.configureWithHistoricPoi(hPoi2)
@@ -105,4 +107,10 @@ class IXHistoryTableVC: UITableViewController {
     }
     */
 
+    // when holding with two fingers for 1 second, clear the history
+    @IBAction func longPressClear(sender: AnyObject) {
+        IXData.sharedData().clearHistoricPois()
+        AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+        self.tableView.reloadData()
+    }
 }

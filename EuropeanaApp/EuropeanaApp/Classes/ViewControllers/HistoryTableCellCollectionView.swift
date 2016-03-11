@@ -25,6 +25,8 @@ class  HistoryTableCellCollectionView : UITableViewCell , UICollectionViewDataSo
     override func prepareForReuse() {
         setupLabels()
         venueLabel.text = "Amsterdam Lite Festival"
+        self.collectionView.reloadData()
+        super.prepareForReuse()
     }
 
     func setupLabels() {
@@ -76,13 +78,13 @@ extension HistoryTableCellCollectionView {
     }
 
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == segues.showSuggestionDetail.rawValue) {
-            let cell = sender as! SuggestionViewCell
-            let destinationVC = segue.destinationViewController as! IXSuggestionDetailVC
-            destinationVC.poi = cell.poi
-            //            destinationVC.poi = IXPoi.mockPoi()
-            
-        }
+//        if (segue.identifier == segues.showSuggestionDetail.rawValue) {
+//            let cell = sender as! SuggestionViewCell
+//            let destinationVC = segue.destinationViewController as! IXSuggestionDetailVC
+//            destinationVC.poi = cell.poi
+//            //            destinationVC.poi = IXPoi.mockPoi()
+//            
+//        }
     }
 
 }

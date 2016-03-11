@@ -16,15 +16,15 @@
 
 @interface IXPoi : NSObject <NSCopying>
 // currently beacons contains actual IXBeacons, but in the end it should be references to the known beacons object
-@property (nonatomic, strong, nonnull) NSArray *beacons;                 // which beacons are associated with this artpiece?
+@property (nonatomic, strong, nonnull) NSArray   *beacons;                 // which beacons are associated with this artpiece?
 @property (nonatomic, strong, nullable) NSString *name;                   // the name of the place
 @property (nonatomic, strong, nullable) NSString *artist;                   // the name of the artist
 @property (nonatomic, strong, nullable) NSString *caption;                // the initial text spoken
 @property (nonatomic, strong, nullable) NSString *venue;                // the venue of the exhibition
 @property (nonatomic, strong, nullable) NSString *audio;                  // audio file name
-@property (nonatomic, strong, nullable) NSArray *infoSources;             // contains further information URLs
+@property (nonatomic, strong, nullable) NSArray  *infoSources;             // contains further information URLs
 @property (nonatomic, strong, nullable) NSString *imageURL;             //
-@property (nonatomic, strong, nullable) UIImage *image;             //
+@property (nonatomic, strong, nullable) UIImage  *image;             //
 @property (nonatomic, strong, nullable) NSString *websiteURL;             // to link through
 @property (nonatomic, strong, nullable) NSString *audioURL;             // url of audio file
 
@@ -34,6 +34,11 @@
 - (void) getImageWithBlock:(void (^ _Nonnull)(UIImage * _Nullable))block;
 
 + (IXPoi  * _Nonnull ) mockPoi;
+
+// Returns true if this poi contains the beacon
 - (BOOL) containsBeacon:(nonnull IXBeacon*)aBeacon;
+
+// Returns true if only one beacon is needed to activate this poi
+- (BOOL) isSingularBeacon;
 
 @end
