@@ -49,7 +49,7 @@ class IXActiveGuideVC: UIViewController , IXAudioManagerDelegate {
     }
     
     override func viewWillDisappear(animated: Bool) {
-        archivePoi()
+//        archivePoi()
         super.viewWillDisappear(animated)
     }
     
