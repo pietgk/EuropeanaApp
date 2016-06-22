@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     self.manager = [[IXManager alloc] initWithDelegate:self];
-
+    
     self.audioManager = [IXAudioManager sharedAudio];
 	// Do any additional setup after loading the view, typically from a nib.
     self.playing = NO;

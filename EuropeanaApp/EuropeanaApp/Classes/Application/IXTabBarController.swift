@@ -9,14 +9,17 @@
 import Foundation
 
 class IXTabBarController : UITabBarController {
+    let DEMOMODE = false
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        // remove reference to demo controller
-        var tabbarViewControllers = self.viewControllers
-        tabbarViewControllers?.removeAtIndex(4)
-        self.viewControllers = tabbarViewControllers
+        if DEMOMODE {
+            // remove reference to demo controller
+            var tabbarViewControllers = self.viewControllers
+            tabbarViewControllers?.removeAtIndex(4)
+            self.viewControllers = tabbarViewControllers
+        }
     }
     
     // UIViewController should be a IXActiveGuideVCprotocol

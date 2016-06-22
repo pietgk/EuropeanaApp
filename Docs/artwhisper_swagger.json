@@ -1,0 +1,205 @@
+{
+    "swagger" : "2.0",
+    "info" : { 
+        "title" : "Art Whisper v1 API",
+        "contact" : {
+            "name": "API Support",
+            "email": "api@artwhisper.net"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version" : "1.0"
+    },
+    "host" : "https://api.artwhisper.net",
+    "basePath" : "/v1",
+    "paths" : {
+        "/pois" : {
+            "get" : {
+                "summary" : "Returns all points-of-interest",
+                "description" : "Returns all points-of-interest",
+                "produces" : [
+                    "application/json"
+                ],
+                "parameters" : {
+                    "$ref" : "#/parameters/beacon"
+                },
+                "responses" : {
+                    "200" : {
+                        "description" : "A list of pois",
+                        "schema" : {
+                            "type" : "array", 
+                            "items" : {
+                                "$ref" : "#/definitions/poi"
+                            }
+                        }
+                    },
+                    "405" : {
+                        "description" : "Pois not found"
+                    }
+                }
+            }
+        }
+    },
+    
+    "definitions" : {
+        "poi" : {
+            "type": "object",
+            "description" : "A Point of Interest is an abstract class, containing the data necessary to pinpoint the poi using beacons, display and speak information. Also contains the descriptive properties used by Pois and Venues.",
+            "required" : [ "id" ],
+            "properties": {
+                "id":           { "type": "string" },
+                "name":         { "type": "string" },
+                "caption":      { "type": "string" },
+                "imageURL" :    { "type": "string" },
+                "websiteURL" :  { "type": "string" },
+                "audioURL" :    { "type": "string" },
+                "locale" :      { "type": "string" },
+                "infoSources" : { "type": "array",
+                                    "items" : { 
+                                        "type" : "infoSource"
+                                    }
+                                },
+                "tags" : { "type" : "array",
+                                    "items" : { 
+                                        "type" : "string"
+                                        }
+                        }
+    
+          }
+        },
+        
+        "opoi" : {
+            "type" : "object",
+            "description" : "An OPoi is an observable poi, subclass of Poi, e.g. an art installation or specific object. An Opoi refers to one Venue, but can be referred to by multiple Venues. E.g. The Nachtwacht refers to the Rijksmuseum, but in addition can also be referred to by various Artwalks which visit multiple museums.",
+            "required" : [ "id" ],
+            "properties": {
+                "id":           { "type": "string" },
+                "poi":          { "type": "poi" },
+                "artist":       { "type": "string" },
+                "location":      { "type": "poiLocation" },
+                "observerPoints":      { "type": "array" ,
+                                         "items" : {
+                                            "type": "observerpoint"
+                                         }
+                                        }
+            }
+        },
+        
+        "venue" : {
+            "type" : "object",
+            "description" : "A venue is an exhibition containing multiple other venues or pois. It’s a subclass of Poi. For example, the Rijksmuseum is a Venue, with several pois inside. Or: Amsterdam is a Venue, with several venues and pois inside.",
+            "required" : [ "id" ],
+            "properties": {
+                "id":           { "type": "string" },
+                "poi":          { "type": "poi" },
+                "pois":         { "type": "array" ,
+                                         "items" : {
+                                             "type" : "poi"
+                                         }
+                                }
+            }
+        },
+
+        "observation" : {
+            "type" : "object",
+            "description" : "An observation contains a Poi and the timestamp you looked at it. Observations are grouped under a Venue.",
+            "required" : [ "id" ],
+            "properties": {
+                "id":           { "type": "string" },
+                "opoi":         { "type": "opoi" },
+                "venue":        { "type": "venue" },
+                "timestamp":    { "type": "dateTime" }
+                        }
+        },
+
+        "observerpoint" : {
+            "type" : "object",
+            "description" : "Contains a Location for observation and bearing (yaw, pitch roll) (need to define these).",
+            "required" : [ "location" ],
+            "properties": {
+                "location":       { "type": "location" },
+                "bearing":        { "type": "bearing" }
+            }
+        },
+
+        "location" : {
+            "type" : "object",
+            "description" : "A facade class to indicate the location of an object, agnostic as to how we get to this location.",
+            "properties": {
+                "longitude":        { "type": "double" },
+                "latitude":         { "type": "double" },
+                "beaconfootprints": { "type": "array",
+                                             "items" : {
+                                                "type": "beaconfootprint"
+                                             }
+                                    }
+            }
+        },
+
+        "bearing" : {
+            "type" : "object",
+            "description" : "A not properly defined yet bearing.",
+            "properties": {
+                "heading":      { "type": "double" },
+                "yaw":          { "type": "double" },
+                "pitch":        { "type": "double" },
+                "roll":         { "type": "double" }
+            }
+        },
+        
+        "beacon" : {
+            "type" : "object",
+            "description" : "A beacon is the physical device information.",
+            "required" : [ "uuid", "major", "minor" ],
+            "properties": {
+                "uuid":         { "type": "string" },
+                "major":        { "type": "integer" },
+                "minor":        { "type": "integer" },
+                "txPower":      { "type": "float" },
+                "description":  { "type": "string" },
+                "location":     { "type": "location" },
+                "beaconType":   { "type": "string" }
+            }
+        },
+
+        "beaconfootprint" : {
+            "type" : "object",
+            "description" : "A beaconFootprint is the combination of a beacon with signal attenuation value, used for positioning.",
+            "required" : [ "uuid", "major", "minor" ],
+            "properties": {
+                "uuid":         { "type": "string" },
+                "major":        { "type": "integer" },
+                "minor":        { "type": "integer" },
+                "attenuation":  { "type": "float" }
+            }
+        },
+
+        "beaconsighting" : {
+            "type" : "object",
+            "description" : "This is the beacon object that is sampled by the app. Mostly used for multi-beacon positioning.",
+            "required" : [ "uuid", "major", "minor" ],
+            "properties": {
+                "uuid":         { "type": "string" },
+                "major":        { "type": "integer" },
+                "minor":        { "type": "integer" },
+                "timestamp":    { "type": "dateTime" },
+                "rssi":         { "type": "float" }
+            }
+        },
+
+        "info" : {
+        }
+    },
+    "parameters" : {
+        "beacon" : {
+            "name" : "beaconid",
+            "in" : "query",
+            "description" : "The combined UDID+major+minor of the iBeacon queried",
+            "required" : false
+        }
+    },
+    "responses" : {
+    }
+}

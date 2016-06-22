@@ -23,6 +23,7 @@
 
 @property (nonatomic, readonly, strong, nonnull) IXBeacon *beacon;
 @property (nonatomic, assign, nonnull) id<BeaconDelegate> delegate;
+var delegate: BeaconDelegate
 
 - (nonnull instancetype)initWithBeacon:(nonnull IXBeacon *)beacon delegate:(nullable id<BeaconDelegate>) theDelegate;
 

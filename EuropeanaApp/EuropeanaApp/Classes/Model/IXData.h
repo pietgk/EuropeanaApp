@@ -47,4 +47,6 @@
 - (BOOL) poiIsHistoricPoi:(IXPoi * _Nonnull) poi;
 - (void) clearHistoricPois;
 
+- (void) saveHistoricPois;
+
 @end

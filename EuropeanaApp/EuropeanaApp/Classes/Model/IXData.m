@@ -233,10 +233,13 @@
 }
 
 // MARK: - History of POIs and venues
-- (NSArray *) historicPois
+- (NSMutableArray *) historicPois
 {
     if (!_historicPois) {
-        _historicPois = [[NSMutableArray alloc] init];
+        _historicPois = [self loadHistoricPois];
+        if (!_historicPois) {
+            _historicPois = [[NSMutableArray alloc] init];
+        }
     }
     return _historicPois;
 }
@@ -264,6 +267,49 @@
     }
     return NO;
 }
+
+- (NSMutableArray *) loadHistoricPois
+{
+    NSString *path = @"~/awhistoricpois.plist";
+    NSString *fullPath = [path stringByExpandingTildeInPath];
+    if ([[NSFileManager defaultManager] isReadableFileAtPath:fullPath]) {
+        NSData *data = [NSData dataWithContentsOfFile:fullPath];
+        if (data) {
+            NSError *error;
+//            NSObject *blob = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+            NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+            NSObject *blob = [unarchiver decodeTopLevelObjectAndReturnError:&error];
+            if ([[blob class] isSubclassOfClass:[NSArray class]]) {
+                NSMutableArray *hisPois = [[NSMutableArray alloc] initWithArray:blob];
+                return hisPois;
+            }
+            [unarchiver finishDecoding];
+            unarchiver = nil;
+        }
+    }
+    return nil;
+}
+
+- (void) saveHistoricPois
+{
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
+        NSError *error;
+        NSString *path = @"~/awhistoricpois.plist";
+        NSString *fullPath = [path stringByExpandingTildeInPath];
+        NSData *data = [NSMutableData data];
+        NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+        [archiver encodeRootObject:self.historicPois];
+        [archiver finishEncoding];
+        BOOL result = [data writeToFile:fullPath atomically:YES];
+//        NSData *data = [NSJSONSerialization dataWithJSONObject:self.historicPois options:NSJSONWritingPrettyPrinted error:&error];
+        if (!result) {
+            NSLog(@"error during writing of historic pois");
+        }
+        archiver = nil;
+        [data writeToFile:fullPath atomically:YES];
+    });
+}
+
 // TODO: probably kick of some operation which handles the found beacon(s)
 -(void) addRangedBeacon:(IXBeacon *)newBeacon
 {
