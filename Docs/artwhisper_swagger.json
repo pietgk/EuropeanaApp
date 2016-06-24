@@ -22,9 +22,30 @@
                 "produces": [
                     "application/json"
                 ],
-                "parameters": {
-                    "$ref": "#/parameters/beacon"
-                },
+                "parameters": 
+                	[
+                  {
+                        "name": "beaconradius",
+                        "in": "body",
+                        "description": "The combined UDID+major+minor of the iBeacon queried",
+                    	"required" : true,
+                      "schema": {
+                        "type": "object",
+                        "properties" : {
+                                    "beaconid": {
+                                      "type": "string",
+                                      "description": "The combined UDID+major+minor of the iBeacon queried"
+                                    },
+                                    "radius": {
+                                      "type": "number",
+                                      "format": "float",
+                                      "description": "return results within the radius of meter"
+                                    }
+                        }
+                          }
+                  
+                  }
+                ],
                 "responses": {
                     "200": {
                         "description": "A list of pois",
@@ -74,7 +95,7 @@
                 "infoSources": {
                     "type": "array",
                     "items": {
-                        "type": "infosource"
+                        "$ref": "#/definitions/infosource"
                     }
                 },
                 "tags": {
@@ -96,18 +117,18 @@
                     "type": "string"
                 },
                 "poi": {
-                    "type": "poi"
+                    "$ref": "#/definitions/poi"
                 },
                 "artist": {
                     "type": "string"
                 },
                 "location": {
-                    "type": "poiLocation"
+                    "$ref": "#/definitions/location"
                 },
                 "observerPoints": {
                     "type": "array",
                     "items": {
-                        "type": "observerpoint"
+                        "$ref": "#/definitions/observerpoint"
                     }
                 }
             }
@@ -123,12 +144,12 @@
                     "type": "string"
                 },
                 "poi": {
-                    "type": "poi"
+                    "$ref": "#/definitions/poi"
                 },
                 "pois": {
                     "type": "array",
                     "items": {
-                        "type": "poi"
+                        "$ref": "#/definitions/poi"
                     }
                 }
             }
@@ -144,13 +165,14 @@
                     "type": "string"
                 },
                 "opoi": {
-                    "type": "opoi"
+                    "$ref": "#/definitions/opoi"
                 },
                 "venue": {
-                    "type": "venue"
+                    "$ref": "#/definitions/venue"
                 },
                 "timestamp": {
-                    "type": "dateTime"
+                    "type": "string",
+                    "format": "date-time"
                 }
             }
         },
@@ -162,10 +184,10 @@
             ],
             "properties": {
                 "location": {
-                    "type": "location"
+                    "$ref": "#/definitions/location"
                 },
                 "bearing": {
-                    "type": "bearing"
+                    "$ref": "#/definitions/bearing"
                 }
             }
         },
@@ -174,15 +196,17 @@
             "description": "A facade class to indicate the location of an object, agnostic as to how we get to this location.",
             "properties": {
                 "longitude": {
-                    "type": "double"
+                    "type": "number",
+                    "format": "double"
                 },
                 "latitude": {
-                    "type": "double"
+                    "type": "number",
+                    "format": "double"
                 },
                 "beaconfootprints": {
                     "type": "array",
                     "items": {
-                        "type": "beaconfootprint"
+                        "$ref": "#/definitions/beaconfootprint"
                     }
                 }
             }
@@ -192,16 +216,20 @@
             "description": "A not properly defined yet bearing.",
             "properties": {
                 "heading": {
-                    "type": "double"
+                    "type": "number",
+                    "format": "double"
                 },
                 "yaw": {
-                    "type": "double"
+                    "type": "number",
+                    "format": "double"
                 },
                 "pitch": {
-                    "type": "double"
+                    "type": "number",
+                    "format": "double"
                 },
                 "roll": {
-                    "type": "double"
+                    "type": "number",
+                    "format": "double"
                 }
             }
         },
@@ -218,19 +246,22 @@
                     "type": "string"
                 },
                 "major": {
-                    "type": "integer"
+                    "type": "integer",
+                    "format": "int32"
                 },
                 "minor": {
-                    "type": "integer"
+                    "type": "integer",
+                    "format": "int32"
                 },
                 "txPower": {
-                    "type": "float"
+                    "type": "number",
+                    "format": "float"
                 },
                 "description": {
                     "type": "string"
                 },
                 "location": {
-                    "type": "location"
+                    "$ref": "#/definitions/location"
                 },
                 "beaconType": {
                     "type": "string"
@@ -256,7 +287,8 @@
                     "type": "integer"
                 },
                 "attenuation": {
-                    "type": "float"
+                    "type": "number",
+                    "format": "float"
                 }
             }
         },
@@ -279,10 +311,12 @@
                     "type": "integer"
                 },
                 "timestamp": {
-                    "type": "dateTime"
+                    "type": "string",
+                    "format": "date-time"
                 },
                 "rssi": {
-                    "type": "float"
+                    "type": "number",
+                    "format": "float"
                 }
             }
         },
@@ -294,10 +328,18 @@
     "parameters": {
         "beacon": {
             "name": "beaconid",
+            "type": "string",
             "in": "query",
             "description": "The combined UDID+major+minor of the iBeacon queried",
             "required": false
+        },
+        "poi": {
+            "name": "poiid",
+            "type": "string",
+            "in": "query",
+            "description": "The poi queried",
+            "required": true
         }
     },
     "responses": {}
-}
+} 
