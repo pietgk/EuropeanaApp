@@ -15,10 +15,10 @@
     "host": "api.artwhisper.net",
     "basePath": "/v1",
     "paths": {
-        "/pois": {
-            "get": {
-                "summary": "Returns all points-of-interest",
-                "description": "Returns all points-of-interest",
+        "/getpoisbybeacon": {
+            "post": {
+                "summary": "Returns points-of-interest",
+                "description": "Returns all points-of-interest within a radius meters near beacon",
                 "produces": [
                     "application/json"
                 ],
@@ -61,7 +61,170 @@
                     }
                 }
             }
-        }
+        } ,
+        "/getpoisbylocation": {
+            "post": {
+                "summary": "Returns points-of-interest",
+                "description": "Returns all points-of-interest within a radius in meters at the location",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": 
+                	[
+                  {
+                      "name": "location",
+                      "in": "body",
+                      "description": "show pois around location",
+                    	"required" : true,
+                      "schema": {
+                        "type": "object",
+                        "properties" : {
+                                    "longitude": {
+                                      "type": "number",
+                                      "format" : "double",
+                                      "description": "The longitude"
+                                    },
+                                    "latitude": {
+                                      "type": "number",
+                                      "format" : "double",
+                                      "description": "The latitude"
+                                    },
+                                    "radius": {
+                                      "type": "number",
+                                      "format": "float",
+                                      "description": "return results within the radius of meter"
+                                    }
+                        }
+                          
+                      }
+                  
+                  },
+                 
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of pois",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/poi"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Pois not found"
+                    }
+                }
+            }
+        },
+        "/getbeaconsbylocation": {
+            "post": {
+                "summary": "Returns beacons",
+                "description": "Returns all beacons within a radius in meters at the location",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": 
+                	[
+                  {
+                      "name": "location",
+                      "in": "body",
+                      "description": "show beacons around location",
+                    	"required" : true,
+                      "schema": {
+                        "type": "object",
+                        "properties" : {
+                                    "longitude": {
+                                      "type": "number",
+                                      "format" : "double",
+                                      "description": "The longitude"
+                                    },
+                                    "latitude": {
+                                      "type": "number",
+                                      "format" : "double",
+                                      "description": "The latitude"
+                                    },
+                                    "radius": {
+                                      "type": "number",
+                                      "format": "float",
+                                      "description": "return results within the radius of meter"
+                                    }
+                        }
+                          
+                      }
+                  
+                  },
+                 
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of beacons",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/beacon"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Beacons not found"
+                    }
+                }
+            }
+        },
+        "/savepoiwithbeacon": {
+            "post": {
+                "summary": "Save a point-of-interest with a beacon list",
+                "description": "Save a point-of-interest with a beacon list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": 
+                	[
+                  {
+                      "name": "poibeacons",
+                      "in": "body",
+                      "description": "a point of interest id with surrounding beacons",
+                    	"required" : true,
+                      "schema": {
+                        "type": "object",
+                        "properties" : {
+                                    "poiid": {
+                                      "type": "string",
+                                      "description": "a point of interest id"
+                                    },
+                                    "beacons": {
+                                      "type": "array",
+                                      "items" : {
+                                          "type": "string",
+                                          "description": "The combined UDID+major+minor of the iBeacon queried"
+                                      },
+                                      "description": "The beacon list"
+                                    }
+                        }
+                          
+                      }
+                  
+                  },
+                 
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of pois",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/poi"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Could not save poi or beacons"
+                    }
+                }
+            }
+        },
+        
     },
     "definitions": {
         "poi": {
