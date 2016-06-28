@@ -20,3 +20,10 @@ Here is the link to our promotional video for the Museum Night Hackathon:
 It starts in the Passenger Terminal Amsterdam (PTA), and then continues along the water to the exhibition in the OBA (Public Library Amsterdam)
 
 Some elements from this demo video are not realistic, but others are already working.
+
+***20160628**
+
+Repository moved to private repo at 
+	https://github.com/AppAcademyNL/ArtWhisper
+
+Please contact Axel
