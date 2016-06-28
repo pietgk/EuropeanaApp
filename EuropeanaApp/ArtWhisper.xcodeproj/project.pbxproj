@@ -35,6 +35,7 @@
 		7742E14B1C03642300BC26FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E14A1C03642300BC26FF /* UIColor+Extension.swift */; };
 		7742E14E1C037EA300BC26FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14C1C037EA300BC26FF /* Launch Screen.storyboard */; };
 		7742E1501C037FB400BC26FF /* PhoneLogoClean.png in Resources */ = {isa = PBXBuildFile; fileRef = 7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */; };
+		777AAD2D1CEF09CE00ECE448 /* IXData+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777AAD2C1CEF09CE00ECE448 /* IXData+API.swift */; };
 		777CEB201C5D1C5700501930 /* GetLocalBeaconsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777CEB1F1C5D1C5700501930 /* GetLocalBeaconsOperation.swift */; };
 		777CEB221C5D209800501930 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777CEB211C5D209800501930 /* DownloadOperation.swift */; };
 		777CEB241C5D20AC00501930 /* ParseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777CEB231C5D20AC00501930 /* ParseOperation.swift */; };
@@ -219,6 +220,7 @@
 		7742E14A1C03642300BC26FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7742E14D1C037EA300BC26FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7742E14F1C037FB400BC26FF /* PhoneLogoClean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhoneLogoClean.png; sourceTree = "<group>"; };
+		777AAD2C1CEF09CE00ECE448 /* IXData+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IXData+API.swift"; sourceTree = "<group>"; };
 		777CEB1F1C5D1C5700501930 /* GetLocalBeaconsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetLocalBeaconsOperation.swift; path = Operations/GetLocalBeaconsOperation.swift; sourceTree = "<group>"; };
 		777CEB211C5D209800501930 /* DownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadOperation.swift; path = Operations/DownloadOperation.swift; sourceTree = "<group>"; };
 		777CEB231C5D20AC00501930 /* ParseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseOperation.swift; path = Operations/ParseOperation.swift; sourceTree = "<group>"; };
@@ -688,6 +690,7 @@
 				77E3D7C619A916590058C62B /* IXBeacon.m */,
 				9B15221B1BE14D4700B3A52B /* IXData.h */,
 				9B15221C1BE14D4700B3A52B /* IXData.m */,
+				777AAD2C1CEF09CE00ECE448 /* IXData+API.swift */,
 				9BDC46691BE646C000162557 /* IXPoiQueue.h */,
 				9BDC466A1BE646C000162557 /* IXPoiQueue.m */,
 				9BDC466D1BE64C6900162557 /* IXPendingOperations.h */,
@@ -991,6 +994,7 @@
 				9BDC466F1BE64C6900162557 /* IXPendingOperations.m in Sources */,
 				7706F1FC1BFE1C42005B5048 /* IXPositioningManager.swift in Sources */,
 				77906E331BEE000D00114B0D /* IXDownloadGuidesVC.swift in Sources */,
+				777AAD2D1CEF09CE00ECE448 /* IXData+API.swift in Sources */,
 				9BDC495F1BE8F95B00162557 /* Dictionary+Operations.swift in Sources */,
 				9BDC496F1BE8F95B00162557 /* NoCancelledDependencies.swift in Sources */,
 				770966801C3B165D003CB2E9 /* AlertOperation.swift in Sources */,
